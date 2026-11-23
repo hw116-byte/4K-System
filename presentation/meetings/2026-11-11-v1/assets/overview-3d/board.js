@@ -5,8 +5,8 @@ import {addPcb5Bodies} from './pcb5.js?v=3';
 import {addProbeBodies} from './probe.js?v=1';
 
 const boards = {
- hdmi: ['HDMI Extension Board · V39','hdmi-extension-v39.glb?v=20261118','V38 copper and parts + 20 probe pads (V39) · nine voltage test holes at J920'],
- frontend: ['Frontend FPGA Board · 14 layers V13 in test frame V3','frontend-test-frame-v3.glb?v=20261119','The board in its break-off test frame, the fab and assembly panel · 2x8 box header C3406 · 14 layers · pin map V8'],
+ hdmi: ['HDMI Extension Board · V40','hdmi-extension-v40.glb?v=20261123','V39 copper (20 probe pads) with four stocked-part swaps (V40) · nine voltage test holes at J920'],
+ frontend: ['Frontend FPGA Board · 14 layers V14 in test frame V4','frontend-test-frame-v4.glb?v=20261123','The board in its break-off test frame, the fab and assembly panel · 2x8 box header C3406 · 14 layers · pin map V8'],
  ldo: ['FPGA-LDO Option A · V24 in test frame V4','fpga-ldo-a-test-frame-v4.glb?v=20261119','The board in its break-off test frame, the fab and assembly panel · 2x10 box header C3405 · pin map V8 · vendor connector models'],
  asic: ['ASIC board · PCB-5','asic-pcb5-real.glb','0.8 mm board · Hirose DF40C-80 connectors · two ASIC dies with probes (probe size illustrative)'],
  asic_top: ['ASIC board · top · V15','asic-top-v15.glb?v=20261119','0.8 mm board · Hirose DF40C-80 connectors · two ASIC dies, each with its SC512 probe'],

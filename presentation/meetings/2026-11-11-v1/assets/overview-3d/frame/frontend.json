@@ -1,9 +1,9 @@
 {
  "key": "frontend",
  "title": "Frontend FPGA Board",
- "glb": "frontend-test-frame-v3.glb",
+ "glb": "frontend-test-frame-v4.glb",
  "render": "frame/frontend-iso.png",
- "detail": "Test frame V3 · board 14 layers V13 · edited 19 Nov 2026, 11:24 CST · 16 header pins",
+ "detail": "Test frame V4 · board 14 layers V14 · edited 20 Nov 2026, 16:26 CST · 16 header pins",
  "summary": "<strong>Frontend FPGA Board in its break-off test frame.</strong> The board sits in a routed cut-out held by tabs; short traces cross the tabs to the box header on the frame, whose pin names are printed beside the pins. Power the board and probe it here, then break it out; its own test pads stay usable afterwards. The frame is also the JLC assembly panel.",
  "pins": [
   {
@@ -113,7 +113,7 @@
    "label": "Top view"
   },
   {
-   "href": "../downloads/frontend-v13/Frontend_14L_V13_Test_Frame_V3_KiCad.zip",
+   "href": "../downloads/frontend-v14/Frontend_14L_V14_Test_Frame_V4_KiCad.zip",
    "label": "Test frame KiCad ↓",
    "dl": true
   }

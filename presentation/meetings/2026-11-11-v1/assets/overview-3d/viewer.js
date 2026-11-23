@@ -7,9 +7,9 @@ import {mergeGeometries} from './vendor/BufferGeometryUtils.js';
 
 const $=id=>document.getElementById(id),stage=$('stage'),canvas=$('canvas');
 const INFO={
- hdmi:{name:'HDMI Extension Board',kicker:'V39 · edited 18 Nov 2026, 12:22 CST',role:'Hosts the XEM8310. Eight Micro-HDMI ports, one per Frontend FPGA Board, and PCIe x4 to the PC.',was:'Was: XEM8310 breakout, BRK8310 Custom'},
+ hdmi:{name:'HDMI Extension Board',kicker:'V40 · edited 20 Nov 2026, 16:13 CST',role:'Hosts the XEM8310. Eight Micro-HDMI ports, one per Frontend FPGA Board, and PCIe x4 to the PC.',was:'Was: XEM8310 breakout, BRK8310 Custom'},
  xem8310:{name:'XEM8310',kicker:'Opal Kelly module',role:'FPGA module that mounts on the HDMI Extension Board (MC1–MC3).',was:''},
- frontend:{name:'Frontend FPGA Board',kicker:'Layout V13 · 14 layers · edited 19 Nov 2026, 11:24 CST · test frame V3',role:'Reads its ASIC boards and sends the data over one HDMI cable.',was:'Was: Artix-7 FPGA board, 35T FPGA PCB, custom FPGA'},
+ frontend:{name:'Frontend FPGA Board',kicker:'Layout V14 · 14 layers · edited 20 Nov 2026, 16:26 CST · test frame V4',role:'Reads its ASIC boards and sends the data over one HDMI cable.',was:'Was: Artix-7 FPGA board, 35T FPGA PCB, custom FPGA'},
  fpgaldo:{name:'FPGA-LDO PCB · Option A',kicker:'Layout V24 · edited 19 Nov 2026, 11:46 CST · one per stack · test frame V4',role:'One board under the Frontend FPGA Board; powers the four ASIC boards.',was:''},
  fpgaldob:{name:'FPGA-LDO PCB · Option B',kicker:'Router V2 + LDO board V2 · four of the eight stacks',role:'Same circuit on two boards: the router carries the ASIC boards, the plug-in LDO board sits under the Frontend, joined by the 120-pin J5.',was:''},
  asic:{name:'ASIC boards · top and bottom',kicker:'V15 · top edited 19 Nov 2026, 07:43 CST · bottom 07:44 CST · two bottom and two top boards per stack',role:'Two ASICs per board, each with its SC512 four-shank, 512-channel probe leaving the board edge. On each FPGA-LDO port a bottom board plugs in and a top board stacks on it.',was:''},
@@ -64,7 +64,7 @@ function nativeBoard(gltf,x,y,z,rotation=0){
 
 async function buildCustom(){
  const list=pickables.custom,root=roots.custom;
- const [hdmiG,xemG,feG,ldoG,asicG,routerBG,ldoBG,asicTG]=await Promise.all([loader.loadAsync('assets/hdmi-extension-v39.glb?v=20261118'),loader.loadAsync('assets/xem8310.glb'),loader.loadAsync('assets/frontend-14l-v13.glb?v=20261119'),loader.loadAsync('assets/fpga-ldo-a-v24.glb?v=20261119'),loader.loadAsync('assets/asic-bottom-v15.glb?v=20261119'),null,null,loader.loadAsync('assets/asic-top-v15.glb?v=20261119')]);
+ const [hdmiG,xemG,feG,ldoG,asicG,routerBG,ldoBG,asicTG]=await Promise.all([loader.loadAsync('assets/hdmi-extension-v40.glb?v=20261123'),loader.loadAsync('assets/xem8310.glb'),loader.loadAsync('assets/frontend-14l-v14.glb?v=20261123'),loader.loadAsync('assets/fpga-ldo-a-v24.glb?v=20261119'),loader.loadAsync('assets/asic-bottom-v15.glb?v=20261119'),null,null,loader.loadAsync('assets/asic-top-v15.glb?v=20261119')]);
  // HDMI Extension Board + XEM8310. MC1–MC3 coordinates are unchanged from BRK8310 Custom V1, so the earlier XEM registration applies.
  const host=new THREE.Group();host.position.set(160,0,0);root.add(host);
  const hdmi=compact(hdmiG.scene);hdmi.scale.setScalar(1000);const hb=new THREE.Box3().setFromObject(hdmi),hc=hb.getCenter(new THREE.Vector3());hdmi.position.set(-hc.x,0,-hc.z);const hdmiPart=new THREE.Group();hdmiPart.add(hdmi);host.add(tag(hdmiPart,'hdmi','HDMI Extension Board',list,true));hdmiPart.userData.anchor=[.82,.15];
@@ -73,7 +73,7 @@ async function buildCustom(){
  // and the 80-pin centres for PCB-5. Heights use nominal 1.5 mm DF40 mating gaps.
  const ldo=nativeBoard(ldoG,-100,0,-128.72);
  const fe=nativeBoard(feG,113.505,3.1,110.855,Math.PI);
- // ASIC boards V15 (0.8 mm as saved; same outline and connector positions as V14). HDMI V39 has its own model.: the bottom board sits next to the FPGA-LDO connector, the top board on it.
+ // ASIC boards V15 (0.8 mm as saved; same outline and connector positions as V14). HDMI V40 has its own model.: the bottom board sits next to the FPGA-LDO connector, the top board on it.
  addProbeBodies(asicG.scene);addProbeBodies(asicTG.scene);// SC512 probe outline from the design handoff, one per ASIC (14 Nov 2026)
  const asic=nativeBoard(asicG,135.323,0,55.803,Math.PI),asicT=nativeBoard(asicTG,135.323,0,55.803,Math.PI);
  const j3=new THREE.Vector3(113.505-112.5,3.1+3.0,110.855-96.5);// J3 (112.5, 98.28) plug mouth at the board edge y = 96.5

@@ -5,7 +5,7 @@ import {OrbitControls} from './vendor/OrbitControls.js';
 // Break-off test frame view (18 Nov 2026): the board in its test frame, as in the ONIX NRIC1384 test-board photo.
 // The model is the KiCad 3D export of the saved frame project; the pin table comes from its HEADER_PINS.csv.
 const $ = id => document.getElementById(id);
-const V = '?v=20261119-f5';
+const V = '?v=20261123-f6';
 const key = new URLSearchParams(location.search).get('board') || 'frontend';
 if (new URLSearchParams(location.search).get('embed') === '1') document.documentElement.classList.add('embedded');
 const canvas = $('canvas'), stage = $('stage');
