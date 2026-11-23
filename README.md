@@ -23,5 +23,6 @@ Each folder has the KiCad project, a schematic PDF, a KiCad ZIP and the
 fab/assembly files (Gerbers, BOM, placement). Open the `.kicad_pro` file with
 **KiCad 10**; libraries and 3D models are inside each project.
 
-The website's board viewers still show the 19 Nov layouts (Frontend V13, HDMI V39).
-The KiCad files in `boards/` are the newer Frontend V14 and HDMI V40 (part swaps only).
+The website's viewers and downloads show the same boards as `boards/`. The datasheet
+text and the design review were written against HDMI V39 and Frontend V13; V40 and V14
+differ from those only by stocked-part swaps.
