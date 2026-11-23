@@ -7,6 +7,7 @@ This repository holds only the latest version of each board. The earlier site
 - **Website:** https://hw116-byte.github.io/4K-System/
 - **Datasheet and user guide:** [datasheet/](https://hw116-byte.github.io/4K-System/datasheet/) (web) or [System_Datasheet_V1.pdf](System_Datasheet_V1.pdf)
 - **Direct LDO carrier page:** [direct-ldo/](https://hw116-byte.github.io/4K-System/direct-ldo/)
+- **Direct LDO carrier datasheet and programming guide** (XEM8305 pin map, XDC, power-up): [direct-ldo/datasheet/](https://hw116-byte.github.io/4K-System/direct-ldo/datasheet/) · [XDC](direct-ldo/datasheet/Direct_LDO_Carrier_V6_XEM8305.xdc)
 - **KiCad projects and fab files:** [boards/](boards/)
 
 ## Boards

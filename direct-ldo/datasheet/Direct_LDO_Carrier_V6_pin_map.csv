@@ -1,0 +1,24 @@
+signal,direction_from_fpga,xdc_port,ldo_connector_J1_pin,xem_MC1_pin,fpga_ball,fpga_pin_name,bank,xem_trace_mm,xem_trace_ps,fpga_package_ps,function
+D1,in,asic_d1,4,85,AF22,B64_L7N,64,22.01,141.02,113.47,Recording data line 1 of 8 (serial ADC bits).
+D2,in,asic_d2,6,83,AE22,B64_L7P,64,21.87,140.15,113.91,Recording data line 2.
+D3,in,asic_d3,8,81,AE23,B64_L8N,64,24.27,152.89,95.51,Recording data line 3.
+D4,in,asic_d4,10,79,AD23,B64_L8P,64,23.83,149.90,90.96,Recording data line 4.
+CLKH,out,asic_clkh,12,77,AC23,B64_L9N,64,21.25,135.63,90.02,Master clock to the ASIC (intended 32 MHz).
+CHIP_RESET,out,asic_chip_reset,14,75,AC22,B64_L9P,64,21.72,138.93,86.26,"Whole-chip reset, active high."
+IMP_TEST,out,asic_imp_test,18,71,AA22,B64_L10P,64,23.02,144.03,87.77,Impedance-test control. Hold low unless testing.
+FE_RESET,out,asic_fe_reset,20,69,AE21,B64_L11N_GC,64,19.83,125.87,98.74,"Amplifier (front-end) reset, high = reset."
+SPI_CLK,out,asic_spi_clk,22,49,AB20,B64_L21N,64,21.08,134.52,100.68,"Settings clock, shared by both settings data lines."
+SPI_LATCH,out,asic_spi_latch,24,65,AC21,B64_L12N_GC,64,21.82,135.77,88.42,Settings latch: one high pulse after the last bit.
+SPI_DINL,out,asic_spi_dinl,26,63,AB21,B64_L12P_GC,64,22.01,137.11,87.84,"Settings data, left half of the chip."
+STIM_START,out,asic_stim_start,27,73,AB22,B64_L10N,64,23.2,145.32,87.41,Stimulation start pulse. Low at idle.
+SPI_DINR,out,asic_spi_dinr,28,57,Y21,B64_L19N,64,22.61,145.19,83.37,"Settings data, right half of the chip (carries the 12-bit gain/DAC suffix)."
+STIM_CLK,out,asic_stim_clk,29,55,Y20,B64_L19P,64,22.44,144.08,82.72,Stimulation timing clock.
+STIM_EN,out,asic_stim_en,31,53,AB19,B64_L20N,64,22.08,137.57,85.01,Stimulation enable. Low at idle.
+STIM_CHB,out,asic_stim_chb,33,37,AA18,B64_L24N,64,24.02,150.93,97.19,Charge-balance phase. Low at idle.
+SYNC,in,asic_sync,34,51,AA19,B64_L20P,64,21.96,136.76,81.31,Frame marker from the ASIC.
+CLK32MHZ,in,asic_clk32mhz,36,67,AD21,B64_L11P_GC,64,19.88,126.24,98.74,Clock returned by the ASIC. Capture D1–D8 and READ with it. On a global-clock pin.
+D5,in,asic_d5,38,47,AA20,B64_L21P,64,21.42,136.84,98.74,Recording data line 5.
+D6,in,asic_d6,40,45,AC17,B64_L22N,64,24.49,154.20,104.61,Recording data line 6.
+D7,in,asic_d7,42,43,AB17,B64_L22P,64,24.46,153.97,104.46,Recording data line 7.
+D8,in,asic_d8,44,41,AA17,B64_L23N,64,22.61,145.05,89.64,Recording data line 8.
+READ,in,asic_read,46,39,Y17,B64_L23P,64,22.7,145.61,94.60,Group marker from the ASIC: high on the cycle that starts each 64-cycle READ slot.
