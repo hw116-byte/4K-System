@@ -1,0 +1,292 @@
+(footprint "C_1206_3216Metric"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+	(tags "capacitor")
+	(property "Reference" "REF**"
+		(at 0.000092 1.939395 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "69ecdd0e-6947-420c-a1e2-108cf0e4489d")
+		(effects
+			(font
+				(size 1 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "C_1206_3216Metric"
+		(at 0 1.85 0)
+		(layer "F.Fab")
+		(uuid "6d877943-1665-4fd0-9dfc-8f9206a5dfd7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://product.tdk.com/info/en/documents/chara_sheet/C3216X5R1V226M160AC.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fb4fa494-4a7d-4431-8ad5-0b864f946368")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Unpolarized capacitor"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6d147629-40a4-4777-a95a-c6c24bae2165")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "80f8b20e-497f-4173-9025-c56d57174537")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Role" "Local input bulk; retained user capacitance and rating"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "550d0fed-9907-450c-b1b0-fa60773553c5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Selection_note" "Schematic candidate only. Actual component ratings, effective capacitance/current, footprint fit and powered behavior remain unqualified."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "479e7f9d-5122-413a-8318-a783bf7a5019")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "TDK"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e85b3622-4921-464f-8c9b-aeea665d8313")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "MPN" "C3216X5R1V226M160AC"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "91cdaed5-ba9d-4de5-a877-17b2f1b9ce2c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "LCSC Part #" "C69612"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dad3f919-c038-40a5-9360-1b550ef902f0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Procurement_route" "JLC/LCSC code available; confirm selectable stock or preorder"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4cb825a1-6e19-45e1-9307-6a15d265e303")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Supplier_source" "https://www.lcsc.com/product-detail/C69612.html"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2d2c2956-8b84-452d-9d89-193063b0b91c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "V2_part_selection" "22uF35V20%X5R1206; adopts exact part already cited in CAD datasheet."
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aace1496-52fd-4e36-b939-71ffb4deca30")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Voltage" "35V"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8363456a-3aea-4d42-8cf5-12ce2945040b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Tolerance" "20%"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "edd1484e-0a1f-48af-be4c-2cb5f6cd69c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Dielectric" "X5R"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b90dc66-17f8-4821-a186-f13bc8a5b9b2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property ki_fp_filters "C_*")
+	(sheetname "/")
+	(sheetfile "Carrier_V1.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -2.3 -1.15)
+		(end 2.3 1.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "c15f71e5-0bd0-4a9e-a45e-c9320767b6b8")
+	)
+	(fp_line
+		(start -0.711252 -0.91)
+		(end 0.711252 -0.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d485b09d-1727-493f-88a5-16f03e53bf96")
+	)
+	(fp_line
+		(start -0.711252 0.91)
+		(end 0.711252 0.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "45d7cd36-8c5a-4b93-80e7-2ffae3460776")
+	)
+	(fp_rect
+		(start -1.6 -0.8)
+		(end 1.6 0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "fafc1c33-9718-4c64-898f-6f11736a34c0")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.475 0.1 0)
+		(layer "F.Fab")
+		(uuid "231b48a3-8d6f-4545-9968-383d8c4beb0e")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.475 0)
+		(size 1.15 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.217391)
+		(uuid "377ad537-0b84-4f7a-bef8-c0d00d2a7dba")
+	)
+	(pad "2" smd roundrect
+		(at 1.475 0)
+		(size 1.15 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.217391)
+		(uuid "3bff2c67-366b-40a5-bcf9-81efc6d846d4")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/Full3D_V1/KiCad/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

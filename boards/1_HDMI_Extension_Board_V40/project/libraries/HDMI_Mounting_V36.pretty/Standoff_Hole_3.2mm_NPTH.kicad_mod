@@ -1,0 +1,91 @@
+(footprint "Standoff_Hole_3.2mm_NPTH"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "V36 XEM8310 standoff hole: 3.2 mm unplated for an M3 standoff and screw (Opal Kelly mating-board diagram), outer-layer keep-out radius 3.1 mm (5.0 mm hex or 6 mm round standoff, screw head 6 mm or less)")
+	(tags "mounting hole standoff M3 XEM8310")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Standoff M3"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr board_only exclude_from_pos_files exclude_from_bom)
+	(fp_circle
+		(center 0 0)
+		(end 3.1 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 3.1 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 3.1 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 3.2 3.2)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layers "F.Cu" "B.Cu")
+		(name "Standoff keep-out")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts (xy 3.1000 0.0000) (xy 3.0735 0.4046) (xy 2.9944 0.8023) (xy 2.8640 1.1863) (xy 2.6847 1.5500) (xy 2.4594 1.8872) (xy 2.1920 2.1920) (xy 1.8872 2.4594) (xy 1.5500 2.6847) (xy 1.1863 2.8640) (xy 0.8023 2.9944) (xy 0.4046 3.0735) (xy 0.0000 3.1000) (xy -0.4046 3.0735) (xy -0.8023 2.9944) (xy -1.1863 2.8640) (xy -1.5500 2.6847) (xy -1.8872 2.4594) (xy -2.1920 2.1920) (xy -2.4594 1.8872) (xy -2.6847 1.5500) (xy -2.8640 1.1863) (xy -2.9944 0.8023) (xy -3.0735 0.4046) (xy -3.1000 0.0000) (xy -3.0735 -0.4046) (xy -2.9944 -0.8023) (xy -2.8640 -1.1863) (xy -2.6847 -1.5500) (xy -2.4594 -1.8872) (xy -2.1920 -2.1920) (xy -1.8872 -2.4594) (xy -1.5500 -2.6847) (xy -1.1863 -2.8640) (xy -0.8023 -2.9944) (xy -0.4046 -3.0735) (xy -0.0000 -3.1000) (xy 0.4046 -3.0735) (xy 0.8023 -2.9944) (xy 1.1863 -2.8640) (xy 1.5500 -2.6847) (xy 1.8872 -2.4594) (xy 2.1920 -2.1920) (xy 2.4594 -1.8872) (xy 2.6847 -1.5500) (xy 2.8640 -1.1863) (xy 2.9944 -0.8023) (xy 3.0735 -0.4046))
+		)
+	)
+)

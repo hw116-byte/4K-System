@@ -1,0 +1,43 @@
+ASIC boards V15 (top board and bottom board) - notes for the PCBWay order
+Written 19 Nov 2026. Nothing has been uploaded or ordered. Two different boards: order them as two items.
+
+FILES
+  ASIC_Top_Board_V15_Gerbers.zip      ASIC_Top_Board_V15_BOM.csv      ASIC_Top_Board_V15_CPL.csv
+  ASIC_Bottom_Board_V15_Gerbers.zip   ASIC_Bottom_Board_V15_BOM.csv   ASIC_Bottom_Board_V15_CPL.csv
+  Each Gerber ZIP has 21 files: 10 copper layers (F_Cu, In1_Cu ... In8_Cu, B_Cu), top and bottom solder mask, paste and
+  silkscreen, Edge_Cuts, PTH.drl, NPTH.drl (empty), front-in1.drl (laser vias, layer 1 to layer 2) and the Gerber job file.
+
+BOARD (as drawn in the KiCad files)
+  Size 22.37 x 17.03 mm, 10 copper layers, finished thickness 0.8 mm, surface finish ENEPIG (the dies are wire bonded).
+  Stack in the file, top to bottom (mm): F.Cu 0.035 / prepreg 0.06 / In1 0.0175 / core 0.05 / In2 0.0175 / prepreg 0.10 /
+  In3 0.0175 / core 0.05 / In4 0.0175 / prepreg 0.05 / In5 0.0175 / core 0.05 / In6 0.0175 / prepreg 0.10 / In7 0.0175 /
+  core 0.05 / In8 0.0175 / prepreg 0.06 / B.Cu 0.035, plus 0.01 solder mask each side. Please propose your own stack if this
+  one cannot be built in 0.8 mm; no impedance-controlled lines are specified on these boards.
+  Through vias: 402 per board, 0.15 mm hole, 0.305 mm pad (one is 0.3026 mm).
+  Laser vias, F.Cu to In1 only: 126 on the top board, 125 on the bottom board, 0.10 mm hole, 0.255 mm pad.
+  Every via is to be filled and capped (plated over); many sit in or beside pads. Vias are covered by solder mask.
+  Smallest track and gap 0.0762 mm (3 mil). Hole to copper at least 0.1524 mm. Copper to board edge at least 0.20 mm.
+  Solder mask colour and silkscreen colour are not set in the files.
+
+QUESTIONS FOR PCBWAY BEFORE THE ORDER (not yet answered)
+  1. Can you build 10 layers in 0.8 mm with this via structure (through + one laser span, all filled and capped)?
+  2. Your help page asks for 0.30 mm between vias of different nets. Measured edge to edge, 117 pairs (top board) and
+     111 pairs (bottom board) are closer than 0.30 mm, the closest 0.233 mm; centre to centre every pair is at least 0.359 mm.
+     Which measurement applies, and is this layout accepted?
+  3. Are 3 mil tracks and gaps and ENEPIG accepted on this build?
+
+ASSEMBLY (33 parts per board: 31 capacitors, J3, J4)
+  NOT fitted by the assembler: U01_BCD1 and U01_BCD2 (the two bare dies; they are attached and wire bonded separately)
+  and J1. They are not in the BOM or the placement file. No paste is printed on the die bond pads (352 pads per board,
+  mask open, no paste). Keep the bond pads clean: no flux residue, no marking ink.
+  J3, bottom side: Hirose DF40C-80DS-0.4V(51), receptacle, HRS No. CL0684-4002-0-51.
+  J4, top side:    Hirose DF40C-80DP-0.4V(51), plug,       HRS No. CL0684-4001-8-51.
+  Mated (stacking) height of this pair: 1.5 mm. Source: Hirose DF40 Series Catalog, Jan. 2025, pages 6, 8 and 14,
+  https://www.hirose.com/en/product/series/DF40/documents?path=%2Fapi%2Fv1%2Fseries%2FDF40%2Fdocuments%2Fproduct_series_catalog%2Fcontent%3Flang%3DEN
+  No substitutes for J3 and J4 without asking: other DF40 receptacles (DF40HC and the 2.0 to 4.0 mm types) change the stack height.
+  Pin 1 of each connector is marked on the board by a small triangle and a 0.65 mm dot beside it.
+  Capacitors: 15 x 10 nF Murata GRM033R71E103KE14D and 16 x 100 nF Samsung CL03A104KA3NNNC, both 0201.
+
+TELLING THE TWO BOARDS APART
+  Each board is marked on both faces: "TOP" or "BOTTOM", and "V15". One recording head uses two TOP and two BOTTOM boards.
+  Please keep the two types in separate, labelled bags.

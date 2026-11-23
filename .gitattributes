@@ -1,0 +1,110 @@
+# Preserve original document/image bytes and avoid treating PDF streams as text.
+*.pdf binary
+*.pptx binary
+*.docx binary
+*.xlsx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.stl binary
+*.zip binary
+
+# Preserve imported fixed-format manufacturer tables and original source spacing.
+hardware/** -text -whitespace
+sources/** -text -whitespace
+firmware/FPGA_512/** -text -whitespace
+
+# Preserve KiCad-generated SVG spacing and pinned third-party bundle/license bytes.
+# Their exact hashes are recorded in the export and vendor provenance manifests.
+presentation/fpga/assets/core-*.svg -text -whitespace
+presentation/fpga/assets/current-*.svg -text -whitespace
+presentation/fpga/viewer/vendor/** -text -whitespace
+
+# Require deliberate resolution when both branches change the same CAD file.
+# Different sheets and board projects can still merge as separate files.
+*.kicad_pcb -merge
+*.kicad_sch -merge
+*.kicad_pro -merge
+*.kicad_sym -merge
+*.kicad_mod -merge
+
+# Preserve native KiCad SVG exports and pinned runtime bytes in the V16 deck.
+presentation/meetings/2026-10-14-v16/**/*.svg -text -whitespace
+presentation/meetings/2026-10-14-v16/carrier_viewer/vendor/** -text -whitespace
+presentation/meetings/2026-10-14-v16/fpga_viewer/vendor/** -text -whitespace
+presentation/meetings/2026-10-14-v16/**/*.kicad_pcb -text -whitespace
+
+# Preserve exact source-native SVG bytes in the current overview.
+presentation/overview/assets/*.svg -text -whitespace
+
+# Preserve pinned V23 runtime and the original CC0 notice bytes.
+presentation/overview/assembly-v23/vendor/** -text -whitespace
+presentation/overview/assembly-v23/licenses/Quaternius_CC0.txt -text -whitespace
+
+# Preserve source-native export spacing and pinned bytes in the 21 October deck.
+presentation/meetings/2026-10-21-v2/**/*.svg -text -whitespace
+presentation/meetings/2026-10-21-v2/**/*.kicad_pcb -text -whitespace
+presentation/meetings/2026-10-21-v2/assembly-v23/vendor/** -text -whitespace
+presentation/meetings/2026-10-21-v2/assembly-v23/licenses/Quaternius_CC0.txt -text -whitespace
+presentation/meetings/2026-10-21-v2/carrier-viewer-v42/vendor/** -text -whitespace
+presentation/meetings/2026-10-21-v2/carrier-viewer-v42/review-files/** -text -whitespace
+
+# Preserve source-native V8 SVG exports and the CSV exporter's CRLF bytes.
+xem8310-v8/assets/*.svg -text -whitespace
+xem8310-v8/assets/components.csv -text whitespace=cr-at-eol
+xem8310-v8/assets/vendor/** -text -whitespace
+
+# Preserve exact V9 native schematic export and component CSV bytes.
+xem8310/assets/*.svg -text -whitespace
+xem8310/assets/components.csv -text whitespace=cr-at-eol
+
+# Preserve the earlier V9 native exports and pinned V10 runtime/CSV bytes.
+xem8310-v9/assets/*.svg -text -whitespace
+xem8310-v9/assets/components.csv -text whitespace=cr-at-eol
+xem8310/assets/vendor/** -text -whitespace
+xem8310/assets/board-features.csv -text whitespace=cr-at-eol
+
+# Preserve exact KiCad export spacing and pinned vendor bytes in the 28 October deck.
+# Authored HDMI SVG, slide HTML/CSS/JS and comments UI remain whitespace-checked.
+presentation/meetings/2026-10-28-v8/assets/breakout/*.svg -text -whitespace
+presentation/meetings/2026-10-28-v8/assets/carrier/*.svg -text -whitespace
+presentation/meetings/2026-10-28-v8/assets/system-viewer/vendor/** -text -whitespace
+presentation/meetings/2026-10-28-v8/assets/carrier/assembly-viewer/vendor/** -text -whitespace
+
+# Preserve native layout snapshots and pinned dependency/license bytes in the V8 update.
+presentation/meetings/2026-10-28-v8/assets/layout-viewer/vendor/** -text -whitespace
+presentation/meetings/2026-10-28-v8/assets/layout-viewer/**/*.kicad_pcb -text -whitespace
+
+# Preserve archived V10 native exports and pinned runtime bytes.
+xem8310-v10/assets/*.svg -text -whitespace
+xem8310-v10/assets/*.csv -text whitespace=cr-at-eol
+xem8310-v10/assets/vendor/** -text -whitespace
+# Preserve newly published native KiCad files without reformatting.
+xem8310/assets/files/*.kicad_* -text -whitespace
+
+# Preserve native export spacing and CSV line endings for the three current PCBs.
+frontend/assets/*.svg -text -whitespace
+direct-ldo/assets/*.svg -text -whitespace
+frontend/assets/*.csv -text whitespace=cr-at-eol
+direct-ldo/assets/*.csv -text whitespace=cr-at-eol
+frontend/assets/files/*.kicad_* -text -whitespace
+direct-ldo/assets/files/*.kicad_* -text -whitespace
+
+# Preserve the existing JLC V21 CSV files byte-for-byte, including CRLF endings.
+xem8310/assets/files/HDMI_Extension_Board_V21_BOM.csv -text whitespace=cr-at-eol
+xem8310/assets/files/HDMI_Extension_Board_V21_CPL.csv -text whitespace=cr-at-eol
+
+# 4 November 2026 meeting deck: KiCad-generated SVG/PCB exports and vendored viewers keep their original spacing.
+presentation/meetings/2026-11-04-v16/** -text -whitespace
+presentation/meetings/2026-11-11-v1/**/*.svg -text -whitespace
+presentation/meetings/2026-11-11-v1/**/*.kicad_pcb -text -whitespace
+presentation/meetings/2026-11-11-v1/**/*.step -text -whitespace
+presentation/meetings/2026-11-11-v1/**/*.csv -text -whitespace
+presentation/meetings/2026-11-11-v1/**/vendor/** -text -whitespace
+presentation/library/sc512-probe/downloads/*.json -text -whitespace
+presentation/library/sc512-probe/bonding-steps/vendor/** -text -whitespace
+presentation/library/sc512-probe/bonding-steps/assets/*.json -text -whitespace
+presentation/meetings/2026-11-18-v9/**/vendor/** -text -whitespace
+presentation/meetings/2026-11-18-v9/**/*.json -text -whitespace
+presentation/meetings/2026-11-18-v10/**/vendor/** -text -whitespace
+presentation/meetings/2026-11-18-v10/**/*.json -text -whitespace

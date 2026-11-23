@@ -1,0 +1,87 @@
+(footprint "TestPoint_Pad_D1.0mm_Compact015"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SMD 1.0 mm round test pad, 0.15 mm courtyard margin, no silk ring (FPGA-LDO layout V20, 18 Nov 2026: oscilloscope probe pads within the existing outline)")
+	(tags "test point SMD pad")
+	(property "Reference" "REF**"
+		(at 0 -1.448 0)
+		(layer "F.SilkS")
+		(uuid "413168a3-11f2-4ac9-8d2a-6c13416d5c3e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TestPoint_Pad_D1.0mm"
+		(at 0 1.55 0)
+		(layer "F.Fab")
+		(uuid "88ca5a94-e14c-4b2c-9940-8d005d71598b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f029c388-f45d-49d1-9b31-ebe59aeeadc2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a38d076b-8173-4b47-a395-6b4bc0f55dd4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 0.65 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "6f2065b9-312d-4fb5-9239-720683dc2e0b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -1.45 0)
+		(layer "F.Fab")
+		(uuid "68f09bd6-0170-4a4a-8b92-d82d5097a9fe")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd circle
+		(at 0 0)
+		(size 1.0 1.0)
+		(layers "F.Cu" "F.Mask")
+		(uuid "4e2fba20-e0c6-409f-88d3-8e518390b028")
+	)
+	(embedded_fonts no)
+)

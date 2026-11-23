@@ -1,0 +1,12 @@
+{
+ "board": "ASIC_Bottom_Board_V12.kicad_pcb",
+ "iterations": 250,
+ "violations_left": 266,
+ "worst_left": 0.0335,
+ "unmovable": [],
+ "n_unmovable": 0,
+ "vias_moved": 167,
+ "via_move_max": 0.0833,
+ "corners_moved": 317,
+ "corner_move_max": 0.0702
+}

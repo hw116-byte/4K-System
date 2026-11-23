@@ -1,0 +1,374 @@
+(footprint "D_SMB"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Diode SMB (DO-214AA)")
+	(tags "Diode SMB (DO-214AA)")
+	(property "Reference" "REF**"
+		(at 0.021429 2.948329 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "8e7db684-a3d2-426c-ac7a-39e953936859")
+		(effects
+			(font
+				(size 1 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "D_SMB"
+		(at -0.65 3.4 180)
+		(layer "B.Fab")
+		(uuid "421b5d73-0c07-4a39-b450-9f92d56c518c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Datasheet" "https://www.diodes.com/assets/Datasheets/SMBJ5.0A.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "42cfe410-49ee-4bd6-8a7a-b4a7e3b28bb8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Bidirectional transient-voltage-suppression diode; 15 V standoff"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "18591828-cdf1-4a71-853e-ad39262fc0d4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Sim.Device" "D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "40640cbf-f58f-41de-950f-89e3483fe27b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Sim.Pins" "1=K 2=A"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ce87d5b4-2155-4b6b-b907-73ab857b198d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Diodes Incorporated"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d31b8209-8ee4-471c-a194-08d803ae742b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "MPN" "SMBJ15CA-13-F"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "73768f62-edab-4cb1-aa7c-9e297d7de6c2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "LCSC Part #" "C135047"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e41e2b43-a19d-45b4-ac83-e4f1e0a54b4e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Procurement_route" "JLC/LCSC code available; confirm selectable stock or preorder"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae2efd62-0692-415a-a7e0-a7c740735267")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Supplier_source" "https://www.lcsc.com/product-detail/C135047.html"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "26112b91-09ee-46b0-be79-7f7767bf112f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "V2_part_selection" "Exact existing Value: bidirectional15V TVS, SMB package. This is part identity, not proof of system surge coordination."
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bbf12bda-8e6e-4ec1-8af3-548596cb4985")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
+	(sheetname "/")
+	(sheetfile "Carrier_V1.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.65 -2.25)
+		(end 3.65 -2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1e14c99e-6877-4a90-b29a-9cfebe8b2723")
+	)
+	(fp_line
+		(start -3.65 2.25)
+		(end -3.65 -2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e8171952-4dfc-45be-ba2d-2e38b434d151")
+	)
+	(fp_line
+		(start 3.65 -2.25)
+		(end 3.65 2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "de93f7eb-fb55-4a88-8873-28bcda95279c")
+	)
+	(fp_line
+		(start 3.65 2.25)
+		(end -3.65 2.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4e39ac99-da5c-48a0-8d6b-4840360f382a")
+	)
+	(fp_line
+		(start -3.66 -2.15)
+		(end -3.66 2.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fc8e9522-ca58-415d-aa30-4ba8362c90be")
+	)
+	(fp_line
+		(start -3.66 -2.15)
+		(end 2.15 -2.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "67476fb9-a757-42cd-9f9d-52554f9b4428")
+	)
+	(fp_line
+		(start -3.66 2.15)
+		(end 2.15 2.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "aa6e4629-f968-4c38-b0cb-99b7062f4236")
+	)
+	(fp_line
+		(start -2.3 2)
+		(end -2.3 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "eeee7064-9a2c-4b2f-b221-019e4c9208e2")
+	)
+	(fp_line
+		(start -0.64944 -0.79908)
+		(end -0.64944 0.80112)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "40321f79-a7de-4a18-a481-e94e7a3e96dd")
+	)
+	(fp_line
+		(start -0.64944 0.00102)
+		(end -1.55114 0.00102)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b78f91a7-1997-41d9-9cd0-d1e16e5ca582")
+	)
+	(fp_line
+		(start -0.64944 0.00102)
+		(end 0.50118 -0.79908)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ffa675b2-5a0b-4156-8863-f87e7754a60a")
+	)
+	(fp_line
+		(start -0.64944 0.00102)
+		(end 0.50118 0.75032)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a3947a66-cead-4eb3-82e1-ef68cb08bdad")
+	)
+	(fp_line
+		(start 0.50118 0.00102)
+		(end 1.4994 0.00102)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a73afcfa-bedb-4342-918e-331b398e5d7a")
+	)
+	(fp_line
+		(start 0.50118 0.75032)
+		(end 0.50118 -0.79908)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "124284ca-c007-4ca8-80cc-ff4c13f3ae38")
+	)
+	(fp_line
+		(start 2.3 -2)
+		(end -2.3 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ad0c0eb8-5155-4bfd-a16a-245356182f71")
+	)
+	(fp_line
+		(start 2.3 -2)
+		(end 2.3 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c0ff40d5-b001-45c3-8091-6450b20fdb3d")
+	)
+	(fp_line
+		(start 2.3 2)
+		(end -2.3 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "543936f0-9b2c-4877-8dd0-4d93fd062adf")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -3 180)
+		(layer "F.Fab")
+		(uuid "39827b43-250d-455a-a065-7326a48bb89d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -2.15 0)
+		(size 2.5 2.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.1086956522)
+		(uuid "3219d3bf-6676-4a6b-afd0-c00680e3ca40")
+	)
+	(pad "2" smd roundrect
+		(at 2.15 0)
+		(size 2.5 2.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.1086956522)
+		(uuid "79c88101-4754-4008-ab7f-cca9f0b88dc6")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/Full3D_V1/KiCad/Diode_SMD.3dshapes/D_SMB.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,447 @@
+(footprint "PJ102AH"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Thin-pin DC Barrel Jack, https://cdn-shop.adafruit.com/datasheets/21mmdcjackDatasheet.pdf")
+	(tags "Power Jack")
+	(property "Reference" "REF**"
+		(at 1.72918 -2.589396 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "27e4c37b-c6e1-4d1b-896f-2d26bb4467f4")
+		(effects
+			(font
+				(size 1 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PJ102AH"
+		(at -4.21 7.75 270)
+		(layer "F.Fab")
+		(uuid "71950a6c-b2d4-4301-a156-02990387a1eb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.sameskydevices.com/product/resource/pj-102ah.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "eca8bbb2-0b63-4fb6-b932-fbdc11826cdf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "DC Barrel Jack with an internal switch"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bbb1b789-77c6-4eec-9132-7ce1dac59432")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Same Sky"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4dc48543-0709-4e8a-923e-40fe67ba0133")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "MPN" "PJ-102AH"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c69a498c-cc12-4a5e-9f36-49cfd5df2652")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "LCSC Part #" "C3096093"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "07c4d60a-f0e7-44aa-b732-5177f168c437")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Procurement_route" "JLC/LCSC code available; confirm selectable stock or preorder"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "db900e73-cdbf-4b82-8860-abc7fed80e02")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Supplier_source" "https://www.lcsc.com/product-detail/C3096093.html"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7322ac8e-bbc4-4975-8e4b-e81f3b8d5d38")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "V2_part_selection" "Same Sky (formerly CUI Devices) PJ-102AH; supplier retains CUI brand label. Exact existing Value;2mmcenter pin24V5A right-angle THT. Separate THT service or fit after SMT."
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "57477556-5e3f-4c21-8c67-a597318ad9b2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property ki_fp_filters "PJ102AH")
+	(sheetname "/")
+	(sheetfile "Carrier_V1.kicad_sch")
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -5 -1.2)
+		(end -1.8 -1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7c7638fd-27e1-4f84-8dc4-953e75e02489")
+	)
+	(fp_line
+		(start -5 14.2)
+		(end -5 -1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1cbed0f1-e482-45f7-9f55-4412c5f3ff3e")
+	)
+	(fp_line
+		(start -1.8 -1.8)
+		(end 1.8 -1.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6c667cdb-9294-4c99-9573-6e912055a9d6")
+	)
+	(fp_line
+		(start -1.8 -1.2)
+		(end -1.8 -1.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "eb5bb5b0-73dd-4b2f-94b1-29cc1b0217d8")
+	)
+	(fp_line
+		(start 1.8 -1.8)
+		(end 1.8 -1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a5894f58-f02b-4898-9cb7-457f112b8488")
+	)
+	(fp_line
+		(start 1.8 -1.2)
+		(end 5 -1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1e197bcf-0888-432e-b822-00ea06deb643")
+	)
+	(fp_line
+		(start 5 -1.2)
+		(end 5 1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f81bbcde-638e-4545-9443-383c562772d3")
+	)
+	(fp_line
+		(start 5 1.2)
+		(end 6.5 1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "355fec7c-c983-483f-9b16-d3e7034cc859")
+	)
+	(fp_line
+		(start 5 4.8)
+		(end 5 14.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "af11366e-029b-44ec-9149-2c8d51cd6942")
+	)
+	(fp_line
+		(start 5 14.2)
+		(end -5 14.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1cdcb9fe-7eb1-4b64-95bf-8eb3ee2b1b6c")
+	)
+	(fp_line
+		(start 6.5 1.2)
+		(end 6.5 4.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bf0c63f0-2b56-480e-9b34-b8a621127af8")
+	)
+	(fp_line
+		(start 6.5 4.8)
+		(end 5 4.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f9b5d49e-c043-4120-ba63-a66eeeac17c1")
+	)
+	(fp_line
+		(start -4.84 -1.04)
+		(end -3.1 -1.04)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ff219261-0b2c-45f4-912f-b931e053bcfc")
+	)
+	(fp_line
+		(start -4.84 0.7)
+		(end -4.84 -1.04)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1132d937-f580-4056-9259-0d458787d330")
+	)
+	(fp_line
+		(start -4.6 -0.8)
+		(end -1.8 -0.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3c4e357f-4e61-4842-a430-d2d72dcf35c5")
+	)
+	(fp_line
+		(start -4.6 9.9)
+		(end -4.6 -0.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d4552e78-6a65-46fb-be8a-031de32a863e")
+	)
+	(fp_line
+		(start -4.5 0.3)
+		(end -3.5 -0.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6a7ae9da-f49f-47fb-a2e8-7ca0042b37fd")
+	)
+	(fp_line
+		(start -4.5 10.2)
+		(end 4.5 10.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e271bc87-c9c8-4ca7-b03a-7d181a131b7f")
+	)
+	(fp_line
+		(start -4.5 13.7)
+		(end -4.5 0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7f9d01af-5833-46b2-b4a3-2fc7c32e9909")
+	)
+	(fp_line
+		(start -3.5 -0.7)
+		(end 4.5 -0.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8e238ec0-1e66-4bbf-bca8-dbe9f7a21aee")
+	)
+	(fp_line
+		(start 1.8 -0.8)
+		(end 4.6 -0.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "deeb1098-70ba-46c2-aada-bf8a09c5ed8c")
+	)
+	(fp_line
+		(start 4.5 -0.7)
+		(end 4.5 13.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2dea3bc8-caad-4f1e-999c-c50dddead89c")
+	)
+	(fp_line
+		(start 4.5 13.7)
+		(end -4.5 13.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0f11553a-5a8e-4b84-bfb9-ac23141d3f6a")
+	)
+	(fp_line
+		(start 4.6 -0.8)
+		(end 4.6 1.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "84c30155-86a5-4261-973a-276798da1dc0")
+	)
+	(fp_line
+		(start 4.6 4.8)
+		(end 4.6 9.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ac3696fc-3fd4-492c-bdf3-bab89ff267c2")
+	)
+	(fp_line
+		(start 4.6 13.3)
+		(end -4.6 13.3)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9d7d9232-9437-4a96-8974-a0f3ec590bee")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 132.369524 6.5 180)
+		(layer "F.Fab")
+		(uuid "66040af7-acaa-4615-b764-6f769f5f5131")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 2.6 2.6)
+		(drill 1.6)
+		(layers "*.Mask" "F.Cu" "B.Cu" "In1.Cu" "In2.Cu")
+		(remove_unused_layers no)
+		(uuid "e256aefa-acd6-4302-a88b-4088de253510")
+	)
+	(pad "2" thru_hole circle
+		(at 0 6)
+		(size 2.6 2.6)
+		(drill 1.6)
+		(layers "*.Mask" "F.Cu" "B.Cu" "In1.Cu" "In2.Cu")
+		(remove_unused_layers no)
+		(uuid "b370f733-f55a-4791-9a34-3b87ce64e90d")
+	)
+	(pad "3" thru_hole circle
+		(at 4.7 3)
+		(size 2.6 2.6)
+		(drill 1.6)
+		(layers "*.Mask" "F.Cu" "B.Cu" "In1.Cu" "In2.Cu")
+		(remove_unused_layers no)
+		(uuid "b637708a-a795-4311-b395-43cafcc47a58")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/Complete3D/SameSky_PJ102AH_Registered.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,20 @@
+(version 1)
+# PCBWay limits for the ASIC boards (V12, 18 Nov 2026). Sources: https://www.pcbway.com/advanced-pcb-capabilities.html
+# (via ring 3 mil, hole to inner/outer conductor 6 mil), https://www.pcbway.com/hdi-pcb.html (laser 4 mil standard,
+# min mechanical drill 0.15 mm, HDI trace/space 0.065 mm), https://www.pcbway.com/capabilities.html (line to routed edge 0.20 mm),
+# https://www.pcbway.com/helpcenter/Engineering_Questions/limited_holes_spacing.html (same-net vias 0.15 mm).
+(rule "PCBWay via ring 3 mil"
+  (condition "A.Type == 'Via'")
+  (constraint annular_width (min 0.0762mm)))
+(rule "PCBWay hole to copper 6 mil"
+  (constraint hole_clearance (min 0.1524mm)))
+(rule "PCBWay copper to routed edge"
+  (constraint edge_clearance (min 0.2mm)))
+(rule "PCBWay laser via hole"
+  (condition "A.Type == 'Via' && A.Via_Type == 'Blind/buried'")
+  (constraint hole_size (min 0.1mm)))
+(rule "PCBWay mechanical drill"
+  (condition "A.Type == 'Via' && A.Via_Type == 'Through'")
+  (constraint hole_size (min 0.15mm)))
+(rule "PCBWay hole to hole"
+  (constraint hole_to_hole (min 0.15mm)))

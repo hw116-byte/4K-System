@@ -1,0 +1,145 @@
+{
+ "key": "ldo",
+ "title": "FPGA-LDO PCB · Option A",
+ "glb": "fpga-ldo-a-test-frame-v4.glb",
+ "render": "frame/ldo-iso.png",
+ "detail": "Test frame V4 · board layout V24 · edited 19 Nov 2026, 11:48 CST · 20 header pins",
+ "summary": "<strong>FPGA-LDO PCB · Option A in its break-off test frame.</strong> The board sits in a routed cut-out held by tabs; short traces cross the tabs to the box header on the frame, whose pin names are printed beside the pins. Power the board and probe it here, then break it out; its own test pads stay usable afterwards. The frame is also the JLC assembly panel.",
+ "pins": [
+  {
+   "pin": "1",
+   "label": "AC_IN",
+   "net": "ASIC_AC_IN",
+   "fn": "AC_IN test-signal input of all eight ASICs (R6 10k to AGND on the board); inject a 0-1.5 V test signal · reaches TP7 (east tab, top)"
+  },
+  {
+   "pin": "2",
+   "label": "GND",
+   "net": "GND",
+   "fn": "digital return · reaches C15.2 (SW tab, bottom, 0.30 mm), GND track at R23.2 (east tab, top, 0.20 mm)"
+  },
+  {
+   "pin": "3",
+   "label": "STCHB",
+   "net": "STIM_CHB_SHARED",
+   "fn": "STIM_CHB, all eight ASICs (R4 10k pull-down); drive from a pattern generator without the Frontend · reaches R4.1 (east tab, top)"
+  },
+  {
+   "pin": "4",
+   "label": "+12V",
+   "net": "STIM_POS_12V",
+   "fn": "+12 V output of the LT3582 (monitor) · reaches TP2 (south-west tab, top)"
+  },
+  {
+   "pin": "5",
+   "label": "STEN",
+   "net": "STIM_EN_SHARED",
+   "fn": "STIM_EN, all eight ASICs (R2 10k pull-down) · reaches R2.1 (east tab, bottom)"
+  },
+  {
+   "pin": "6",
+   "label": "EN",
+   "net": "EN_ASIC_RAILS",
+   "fn": "enable of all ASIC rail regulators (R1 10k to VIN_3V3, C3 delay); pull low to hold the rails off · reaches TP4 (south-west tab, top)"
+  },
+  {
+   "pin": "7",
+   "label": "STCLK",
+   "net": "STIM_CLK_SHARED",
+   "fn": "STIM_CLK, all eight ASICs (R5 10k pull-down) · reaches R5.1 (east tab, bottom)"
+  },
+  {
+   "pin": "8",
+   "label": "GND",
+   "net": "GND",
+   "fn": "digital return · reaches C15.2 (SW tab, bottom, 0.30 mm), GND track at R23.2 (east tab, top, 0.20 mm)"
+  },
+  {
+   "pin": "9",
+   "label": "STRT",
+   "net": "STIM_START_SHARED",
+   "fn": "STIM_START, all eight ASICs (R3 10k pull-down) · reaches TP25 (east tab, bottom)"
+  },
+  {
+   "pin": "10",
+   "label": "-12V",
+   "net": "STIM_NEG_12V",
+   "fn": "-12 V output of the LT3582 (monitor) · reaches TP3 (south-east tab, top)"
+  },
+  {
+   "pin": "11",
+   "label": "VADC",
+   "net": "ASIC_VDD_ADC",
+   "fn": "ASIC rail VDD_ADC, U3 TPS7A2015 1.50 V (monitor) · reaches TP12 (east tab, bottom)"
+  },
+  {
+   "pin": "12",
+   "label": "AGND",
+   "net": "AGND",
+   "fn": "analog return (the AGND-GND star stays at NT1 on the board; no AGND pour on the frame) · reaches TP6 (south-east tab, top)"
+  },
+  {
+   "pin": "13",
+   "label": "3V3",
+   "net": "VIN_3V3",
+   "fn": "3.3 V input: bench supply in (normally from the Frontend through J1/J2); pins 13 and 15 are joined on the frame · reaches C1.1 (south-east tab, bottom)"
+  },
+  {
+   "pin": "14",
+   "label": "GND",
+   "net": "GND",
+   "fn": "digital return · reaches C15.2 (SW tab, bottom, 0.30 mm), GND track at R23.2 (east tab, top, 0.20 mm)"
+  },
+  {
+   "pin": "15",
+   "label": "3V3",
+   "net": "VIN_3V3",
+   "fn": "3.3 V input: bench supply in (normally from the Frontend through J1/J2); pins 13 and 15 are joined on the frame · reaches C1.1 (south-east tab, bottom)"
+  },
+  {
+   "pin": "16",
+   "label": "GND",
+   "net": "GND",
+   "fn": "digital return · reaches C15.2 (SW tab, bottom, 0.30 mm), GND track at R23.2 (east tab, top, 0.20 mm)"
+  },
+  {
+   "pin": "17",
+   "label": "GND",
+   "net": "GND",
+   "fn": "digital return · reaches C15.2 (SW tab, bottom, 0.30 mm), GND track at R23.2 (east tab, top, 0.20 mm)"
+  },
+  {
+   "pin": "18",
+   "label": "-PRE",
+   "net": "STIM_PRE_NEG",
+   "fn": "negative stimulation pre-regulator rail (U10 LT3094 input; JP2 bridges it to STIM_NEG_12V) · reaches TP9 (south-east tab, top)"
+  },
+  {
+   "pin": "19",
+   "label": "CGEN",
+   "net": "ASIC_VDD_CGEN",
+   "fn": "ASIC rail VDD_CGEN, U7 TPS7A2015 1.50 V (monitor) · reaches TP16 (south-west tab, bottom)"
+  },
+  {
+   "pin": "20",
+   "label": "GND",
+   "net": "GND",
+   "fn": "digital return · reaches C15.2 (SW tab, bottom, 0.30 mm), GND track at R23.2 (east tab, top, 0.20 mm)"
+  }
+ ],
+ "files": [
+  {
+   "href": "frame/ldo_header_pins.csv",
+   "label": "Header pins (CSV)"
+  },
+  {
+   "href": "frame/ldo-top.png",
+   "label": "Top view"
+  },
+  {
+   "href": "../downloads/fpga-ldo-v24/FPGA_LDO_A_Test_Frame_V4_KiCad.zip",
+   "label": "Test frame KiCad ↓",
+   "dl": true
+  }
+ ]
+}

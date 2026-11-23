@@ -1,0 +1,68 @@
+ref,net,function,side,x_mm,y_mm,pad_mm,nearest_gnd_pad,reachable_assembled,silk_label,connection,status
+TP720,JTAG_TCK_1V8,"JTAG clock to the selected target, 1.8 V side (after U602 and R601)",bottom (L6),137.708,67.2,1.0,TP721 (2.3 mm),yes,TCK,on existing JTAG_TCK_1V8 track (0.15 mm),new in V39
+TP721,DGND,ground reference for the scope probe ground spring,bottom (L6),136.488,65.192,1.0,is ground,yes,GND,"on existing DGND pour ""U700 thermal L6""",new in V39
+TP722,JTAG_TMS_1V8,"JTAG mode select to the selected target, 1.8 V side (after U602 and R603)",bottom (L6),150.767,83.6,1.0,TP725 (2.3 mm),yes,TMS,on existing JTAG_TMS_1V8 track (0.15 mm),new in V39
+TP723,JTAG_TDI_1V8,"JTAG data to the selected target, 1.8 V side (after U602 and R602)",bottom (L6),154.532,81.132,1.0,TP725 (2.6 mm),yes,TDI,on existing JTAG_TDI_1V8 track (0.15 mm),new in V39
+TP724,JTAG_TDO_1V8,"JTAG data back from the selected target, 1.8 V side (into U602)",bottom (L6),153.855,79.3,0.8,TP725 (3.0 mm),yes,TDO,on existing JTAG_TDO_1V8 track x2 (0.15 mm),new in V39
+TP725,DGND,ground reference for the scope probe ground spring,bottom (L6),152.0,81.6,1.0,is ground,yes,GND,new 0.4/0.2 mm DGND via under the pad,new in V39
+TP726,HOST_TCK,"FT232H TCK output, 3.3 V side (before U602): compare with TCK to check the translator",bottom (L6),150.792,72.958,0.6,TP728 (2.8 mm),yes,HCK,on existing HOST_TCK via + existing HOST_TCK track (0.15 mm),new in V39
+TP727,DRIVE_ENABLE,U605 output: high turns on the U602 JTAG drivers (after the reset delay),bottom (L6),168.2,72.2,0.8,TP731 (4.4 mm),yes,(none: no room; see picture),new 0.80 mm stub (0.2 mm wide) to the existing DRIVE_ENABLE copper,new in V39
+TP728,DGND,ground reference for the scope probe ground spring,bottom (L6),151.0,75.8,0.8,is ground,yes,GND,new 0.4/0.2 mm DGND via under the pad,new in V39
+TP729,VREF_SELECTED,reference voltage of the selected JTAG target (through the U61x switch); U603 checks it,bottom (L6),170.6,68.8,1.0,TP731 (1.6 mm),yes,VREF,new 1.66 mm stub (0.2 mm wide) to the existing VREF_SELECTED copper,new in V39
+TP730,WINDOW_GATE,U603 window output with the SW601 MASTER switch: high when VREF_SELECTED is in range and enabled,bottom (L6),165.684,68.4,0.6,TP731 (3.6 mm),yes,WIN,on existing WINDOW_GATE track (0.15 mm),new in V39
+TP731,DGND,ground reference for the scope probe ground spring,bottom (L6),169.218,67.908,0.6,is ground,yes,(none: no room; see picture),on existing DGND track x2 (0.25 mm),new in V39
+TP732,HOST_TDO,"TDO into the FT232H, 3.3 V side (after U602)",top (L1),170.0,56.7,1.0,TP733 (2.9 mm),yes,HTDO,on existing HOST_TDO via + existing HOST_TDO track (0.15 mm),new in V39
+TP733,DGND,ground reference for the scope probe ground spring,top (L1),171.3,54.15,1.0,is ground,yes,GND,on existing DGND via,new in V39
+TP734,USB5V,USB-C VBUS from J500 (FT232H supply before FB502),bottom (L6),150.283,56.45,1.0,TP735 (1.8 mm),yes,VBUS,on existing USB5V via + existing USB5V track x3 (0.5 mm),new in V39
+TP735,DGND,ground reference for the scope probe ground spring,bottom (L6),149.85,58.2,1.0,is ground,yes,GND,on existing DGND via,new in V39
+TP736,PORT_ENABLE,U700 power-good: enables all eight port 5 V switches U701-U708,bottom (L6),103.0,64.0,1.0,TP737 (2.3 mm),yes,PEN,new 0.85 mm stub (0.2 mm wide) to the existing PORT_ENABLE copper,new in V39
+TP737,DGND,ground reference for the scope probe ground spring,bottom (L6),104.0,66.126,1.0,is ground,yes,GND,"on existing DGND pour ""U700 thermal L6""",new in V39
+TP738,VIO_PG,VIO1 power-good from Q1: enables the U5 PCIe 3.3 V AUX switch,bottom (L6),108.675,139.3,1.0,TP739 (2.0 mm),yes,VIO_PG,on existing VIO_PG track x2 (0.15 mm),new in V39
+TP739,DGND,ground reference for the scope probe ground spring,bottom (L6),107.0,138.3,1.0,is ground,yes,GND,on existing DGND via,new in V39
+TP21,Net-(TP21-PIN),existing V38 test point,top (L1),119.094,146.386,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP20,+12V_PCIE_C,existing V38 test point,top (L1),108.688,146.288,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP11,PCIE_SMCLK_3V3,existing V38 test point,top (L1),111.353,142.114,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP709,DGND,existing V38 test point,top (L1),133.5,57.0,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP14,PCIE_PERST_B_3V3,existing V38 test point,top (L1),116.255,142.334,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP13,PCIE_PERST_B_VIO,existing V38 test point,top (L1),116.005,136.134,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP15,PCIE_WAKE_B_VIO,existing V38 test point,top (L1),120.476,136.365,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP700,FE_5V,existing V38 test point,top (L1),134.25,65.5,1.5,TP709 / J920 DGND holes,standalone only,existing,unchanged,existing
+TP10,PCIE_SMDAT_3V3,existing V38 test point,top (L1),111.353,143.584,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP712,+3.3V,existing V38 test point,top (L1),139.0,62.0,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP16,PCIE_WAKE_B_3V3,existing V38 test point,top (L1),120.38,142.334,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP710,+VDCIN,existing V38 test point,top (L1),117.0,58.0,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP711,+1.8V,existing V38 test point,top (L1),139.0,58.5,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP12,PCIE_SMCLK_VIO,existing V38 test point,top (L1),111.353,134.664,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP9,PCIE_SMDAT_VIO,existing V38 test point,top (L1),111.353,136.177,BRK TP,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP713,FTDI3V3,existing V38 test point,top (L1),170.5,60.0,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP703,PORT3_5V,existing V38 test point,bottom (L6),98.6,119.1,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP705,PORT5_5V,existing V38 test point,bottom (L6),98.6,92.9,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP708,PORT8_5V,existing V38 test point,bottom (L6),98.6,53.6,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP707,PORT7_5V,existing V38 test point,bottom (L6),98.6,66.7,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP701,PORT1_5V,existing V38 test point,bottom (L6),113.4,145.3,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP704,PORT4_5V,existing V38 test point,bottom (L6),98.6,106.0,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP702,PORT2_5V,existing V38 test point,bottom (L6),98.6,132.2,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+TP706,PORT6_5V,existing V38 test point,bottom (L6),98.6,79.8,1.5,TP709 / J920 DGND holes,yes,existing,unchanged,existing
+J920,"+1.2V_DDR, VIO1, +1.8V, DGND, +VDCIN, DGND, +3.3V, VIO3, VIO2",existing voltage test holes (pins 1-9),through hole,165.0,146.7,1.65 hole,J920 pins 4 and 6,yes,existing,unchanged,existing
+(no pad),P1 B64_L6P/N ... P8 B64_L24P/N,"per-port 32 MHz clock, LVDS (J61x pins 6/8)",,,,,,yes,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)","probe here: J61x pins 6 and 8, or ESD U809-U816 pins 4-7 (top, x 75.4)"
+(no pad),P1 B64_L5P/N ... P8 B64_L21P/N,"per-port command + SYNC, LVDS (J61x pins 9/11)",,,,,,yes,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)","probe here: J61x pins 9 and 11, or ESD U801-U808 pins 4-7 (top, x 75.4)"
+(no pad),"B64_L16, L23, L22, L18 P/N","separate SYNC, LVDS, ports 3-6 (J61x pins 12/14)",,,,,,yes,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)","probe here: J612-J615 pins 12 and 14, or ESD U811-U814 pins 1/2/9/10"
+(no pad),"MGT_RXP/N0-3_224, _226",GT recording lanes from the ports (J61x pins 3/5),,,,,,ESD yes; caps standalone only,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)","probe here: AC capacitors C745-C760 (top, under the XEM8310) or ESD U801-U808 pins 1/2/9/10"
+(no pad),"MGT_TX/RX*_225, MGT_REFCLK1*_225_C",PCIe lanes and 100 MHz reference clock,,,,,,"standalone only (below the card shoulder at y 149.3, inside the PCIe slot when plugged)",,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)","probe here: AC capacitors C7/C8 (refclk) and C13-C20 (TX), bottom, y 151.9-154.0"
+(no pad),USB_D_P / USB_D_N,USB 2.0 data pair,,,,,,yes,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)","probe here: D500 pins (top, beside J500)"
+(no pad),Net-(U501-OSCI/OSCO),12 MHz crystal,,,,,,yes,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)","probe here: C503 / C504 pads (top); a scope probe loads the crystal, use a 10x probe and expect a small shift"
+(no pad),HDMIn_JTAG_TCK/TMS/TDI/TDO,per-port JTAG at the cable,,,,,,yes,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)","probe here: 100 ohm series resistors R640-R671 (bottom, x 75.2); only the selected port is driven"
+(no pad),Net-(D70x-K),per-port 5 V fault flag,,,,,,yes,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)",probe here: red LED D701-D708 on the bottom shows a fault; probe the LED cathode
+(no pad),/PCIE_*,"PCIe SMBus, PERST#, WAKE#",,,,,,yes,,"no pad added on purpose (fast or impedance-controlled pair, or already probeable)",probe here: existing BRK test points TP9-TP16
+R13.2 / R23.2,+3.3VAUX_PCIE,"PCIe 3.3 V AUX after the U5 switch (U5 pin 6 OUT; also C31, R13, R23)",top (L1),115.05,142.88,0402 pad,C10.1 DGND (3.1 mm); or across C31 (standalone only),yes (R13/R23); C31 standalone only,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+R18.2,+3.3VAUX_PCIE_C,"PCIe slot 3.3 V AUX into U5 (J6 B10, U5 pin 1 IN; also C32, R18)",top (L1),119.09,147.67,0402 pad,R24.1 DGND (1.4 mm); or across C32 (standalone only),yes (R18); C32 standalone only,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C12.2,+3.3V_PCIE_C,"PCIe slot 3.3 V (J6 A9/A10/B8), U4 B-side supply",top (L1),119.15,140.8,0402 pad,C12.1 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C11.2,Net-(U4-Vcca),U4 A-side supply = +1.2V_DDR through R2 (0 ohm); +1.2V_DDR is also on J920,top (L1),119.15,138.7,0402 pad,C11.1 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C515.1 / C516.1,FTDI3V3_PHY,FTDI3V3 after FB501 into U501 pin 3 (VPHY),bottom (L6),158.92,52.5,0402 pad,C515.2 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C513.1 / C514.1,FTDI3V3_PLL,FTDI3V3 after FB500 into U501 pin 8 (VPLL),bottom (L6),154.52,52.5,0402 pad,C513.2 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C500.1 / C501.1,FTDI5V_FILTERED,USB5V after FB502 into U501 pin 40 (VREGIN),bottom (L6),154.52,50.5,0402 pad,C500.2 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C517.2,Net-(U501-VCORE),U501 pin 38 core supply from the FT232H internal regulator,bottom (L6),164.28,52.5,0402 pad,C517.1 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C518.2,Net-(U501-VCCA),U501 pin 37 analog supply from the FT232H internal regulator,bottom (L6),166.48,52.5,0402 pad,C518.1 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C519.1,Net-(U501-~{RESET}),"U501 pin 34 RESET# (R506 pull-up, C519 delay)",bottom (L6),167.72,52.5,0402 pad,C519.2 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C10.2,Net-(U2-EN),U2 PCA9306 enable (from +3.3VAUX_PCIE through R13),top (L1),115.05,140.79,0402 pad,C10.1 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad
+C28.2,Net-(U6-EN),U6 PCA9306 enable (from +3.3VAUX_PCIE through R23),top (L1),123.78,140.8,0402 pad,C28.1 DGND (1.0 mm),yes,part reference,"existing part pad, no new copper",no TP: probe at the capacitor/resistor pad

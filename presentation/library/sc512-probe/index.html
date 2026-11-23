@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SC512 four-shank, 512-channel probe, its ribbon cable and holder, and where it sits on the ASIC boards.">
+<title>SC512 probe · FPGA 4K</title>
+<style>
+:root{--ink:#172a32;--accent:#126a71;--bg:#ffffff;--soft:#edf0ef;--line:#c9d2d0;--mut:#4c5b60}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#e6eeee;--accent:#5fc3c9;--bg:#121a1d;--soft:#1c272b;--line:#2c3a3f;--mut:#9fb0b4}}
+:root[data-theme="dark"]{--ink:#e6eeee;--accent:#5fc3c9;--bg:#121a1d;--soft:#1c272b;--line:#2c3a3f;--mut:#9fb0b4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}
+.bar{background:#172a32;color:#fff;height:54px;display:flex;align-items:center;gap:18px;padding:0 16px}
+.bar a{color:#fff;text-decoration:none;font-size:14px}.bar strong{font-size:15px}
+main{max-width:1100px;margin:0 auto;padding:18px 16px 48px}
+h1{font-size:28px;margin:0 0 4px}.sub{color:var(--mut);margin:0 0 16px}
+.files{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.files a{border:1px solid var(--accent);color:var(--accent);border-radius:4px;padding:5px 10px;text-decoration:none;font-size:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:780px){.grid{grid-template-columns:1fr}}
+figure{margin:0;background:var(--soft);padding:10px;border-radius:6px}
+figure img{width:100%;height:auto;display:block;background:#fff}
+figcaption{font-size:13px;color:var(--mut);margin-top:6px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin-top:18px}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.parts{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:18px;align-items:start;margin-top:8px}@media(max-width:780px){.parts{grid-template-columns:1fr}}
+.parts>figure img{max-width:300px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--bg)}
+.card img{width:100%;height:240px;object-fit:contain;background:#fff;display:block;border-bottom:1px solid var(--line)}
+.card div{padding:8px 10px;font-size:14px}.card h3{margin:0 0 4px;font-size:15px}.card h3 b{color:var(--accent);margin-right:6px}
+.card p{margin:0;color:var(--mut)}
+.wide{margin:0 0 14px}.wide img{width:100%;height:auto;display:block;background:#fff}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}.jump a{color:var(--accent);font-size:14px}
+h2{font-size:21px;margin:26px 0 6px}
+.detail{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(230px,1fr);gap:18px;align-items:start;padding:14px 0;border-top:1px solid #d5dedd}.detail .fig{display:block;text-align:center;background:#fff;border:1px solid #d5dedd;border-radius:5px;padding:6px}.detail .fig img{max-width:100%;max-height:82vh;width:auto;height:auto;display:inline-block}.detail .spec h3{margin:2px 0 6px;font-size:17px}.detail .spec h3 b{color:#126a71;margin-right:8px}.detail .spec ul{margin:0 0 8px;padding-left:18px;font-size:14px;line-height:1.5}.detail .spec li{margin:0 0 4px}.detail .spec a.full{font-size:13px;color:#126a71}@media(max-width:780px){.detail{grid-template-columns:1fr}}
+.detail{border-top-color:var(--line)}.detail .spec h3 b{color:var(--accent)}.detail .spec a.full{color:var(--accent)}
+</style>
+</head>
+<body>
+<header class="bar"><strong>FPGA 4K</strong><a href="../../../index.html">← System overview</a></header>
+<main>
+<h1>SC512 probe</h1>
+<p class="sub">Four shanks, 512 channels. One probe sits on each ASIC, so there are two per ASIC board and eight per head stack.</p>
+<div class="files">
+<a download="" href="downloads/SC512_device.oas">Probe drawing (OASIS) ↓</a>
+<a href="#all">All parts at the same scale</a>
+<a download="" href="downloads/NET-EBL-4-512.json">Contact positions (JSON) ↓</a>
+<a download="" href="downloads/SC_chip_WB_holder_manufacture.pdf">Holder drawing (PDF) ↓</a>
+<a href="../../../index.html#board/asic">ASIC boards page</a>
+<a href="bonding-steps/index.html">Bonding steps (3D, click through or autoplay)</a>
+</div>
+<div class="grid">
+<figure><img src="probe_on_asic_top_board_v7.png" alt="Two SC512 probes placed on the ASIC top board"><figcaption>ASIC top board (V14 is 0.2 mm wider on each side; same ASIC positions), with one probe (red) on each ASIC. The shanks leave the board's bottom edge, with about 7.5 mm past the edge.</figcaption></figure>
+<figure><img src="sc512_probe_overview.png" alt="SC512 probe layout: four shanks, pads and fan-out"><figcaption>The probe on its own: the pad field at the top fans out into four shanks 500 µm apart.</figcaption></figure>
+</div>
+<!-- probe-detail:start -->
+<p class="jump"><a href="#all">All parts</a> · <a href="#parts">Probe parts</a> · <a href="#ribbon">Ribbon cable</a> · <a href="#holder">Holder</a></p>
+<h2 id="all">All parts at the same scale</h2>
+<div class="detail"><a class="fig" href="parts/all_parts_same_scale.png" title="Open full size"><img src="parts/all_parts_same_scale.png" alt="Probe, ribbon cable and holder drawn at the same scale" loading="lazy"></a><div class="spec"><h3>All parts at the same scale</h3><ul><li>Probe: 3.24 × 14.78 mm.</li><li>Ribbon cable: 18.14 mm long, 6.54 mm wide.</li><li>Holder: 12.05 × 3.70 mm opening and four Ø2.60 mm holes.</li><li>Shown side by side to compare sizes only. No record says how they mount together.</li></ul><a class="full" href="parts/all_parts_same_scale.png">Open full size ↗</a></div></div>
+<h2 id="parts">Probe parts</h2>
+<div class="detail"><a class="fig" href="parts/probe_parts_overview.png" title="Open full size"><img src="parts/probe_parts_overview.png" alt="Whole SC512 probe with every part labelled and dimensioned" loading="lazy"></a><div class="spec"><h3>One complete probe</h3><ul><li>3.24 mm wide, 14.78 mm long.</li><li>From top to bottom: reference pads (B), bond pad field (A, 5.69 mm), fan-out (C, 1.4 mm), four shanks (D, 7.12 mm) with recording sites in the last 2.0 mm (E).</li><li>This is the face that sits on the ASIC. There is one probe on every ASIC: 2 per ASIC board, 8 per head stack.</li></ul><a class="full" href="parts/probe_parts_overview.png">Open full size ↗</a></div></div><div class="detail"><a class="fig" href="parts/part_a_bond_pads.png" title="Open full size"><img src="parts/part_a_bond_pads.png" alt="Close-up of the bond pad grid with 180 µm pitch and 110 µm pad marked" loading="lazy"></a><div class="spec"><h3><b>A</b>Bond pads</h3><ul><li>512 pads, one per channel.</li><li>16 columns × 32 rows, in two halves of 8 columns.</li><li>180 µm centre to centre, across and down.</li><li>Each pad is 110 µm across, inside a 120 µm ring.</li><li>The whole field is 3.04 × 5.69 mm.</li><li>Thin green lines carry each pad's signal down a lane between the columns into the fan-out.</li></ul><a class="full" href="parts/part_a_bond_pads.png">Open full size ↗</a></div></div><div class="detail"><a class="fig" href="parts/part_b_reference_pads.png" title="Open full size"><img src="parts/part_b_reference_pads.png" alt="The four reference pads along the top edge, labelled Ref 1 to Ref 4" loading="lazy"></a><div class="spec"><h3><b>B</b>Reference pads</h3><ul><li>4 pads, about 120 µm, along the top edge outside the 512-pad grid.</li><li>Each is wired down the outer edge of the fan-out.</li></ul><a class="full" href="parts/part_b_reference_pads.png">Open full size ↗</a></div></div><div class="detail"><a class="fig" href="parts/part_c_fan_out.png" title="Open full size"><img src="parts/part_c_fan_out.png" alt="Fan-out from the bond pads into the four shanks, 1.4 mm long" loading="lazy"></a><div class="spec"><h3><b>C</b>Fan-out</h3><ul><li>1.4 mm from the bottom pad row to the start of the shanks.</li><li>The pad wiring gathers into 4 bundles of 128 traces, one bundle per shank.</li><li>Bundles enter the shanks 0.5 mm apart.</li></ul><a class="full" href="parts/part_c_fan_out.png">Open full size ↗</a></div></div><div class="detail"><a class="fig" href="parts/part_d_shanks.png" title="Open full size"><img src="parts/part_d_shanks.png" alt="The four shanks with length, pitch, width and recording zone marked" loading="lazy"></a><div class="spec"><h3><b>D</b>Shanks</h3><ul><li>4 shanks, each 80 µm wide.</li><li>7.12 mm long, from the end of the fan-out to the tip.</li><li>0.5 mm centre to centre.</li><li>Each shank carries 128 traces.</li><li>The recording sites fill the last 2.0 mm of each shank.</li></ul><a class="full" href="parts/part_d_shanks.png">Open full size ↗</a></div></div><div class="detail"><a class="fig" href="parts/part_e_recording_sites.png" title="Open full size"><img src="parts/part_e_recording_sites.png" alt="Recording sites at one shank tip with column spacing and row step marked" loading="lazy"></a><div class="spec"><h3><b>E</b>Recording sites</h3><ul><li>128 sites per shank, 512 in total.</li><li>Three columns 21.4 µm apart.</li><li>A row every 23.3 µm, alternating 2 outer sites and 1 centre site.</li><li>Each opening is drawn 9 µm. The channel map models each contact as a 20 µm circle.</li><li>One larger opening, 30 × 34 µm, sits at the very tip.</li><li>Site positions are in the contact-position download.</li></ul><a class="full" href="parts/part_e_recording_sites.png">Open full size ↗</a></div></div>
+<h2 id="ribbon">Ribbon cable</h2>
+<div class="detail"><a class="fig" href="parts/part_f_ribbon.png" title="Open full size"><img src="parts/part_f_ribbon.png" alt="One complete 512-channel ribbon cable with length, widths and step marked" loading="lazy"></a><div class="spec"><h3><b>F</b>One complete ribbon</h3><ul><li>18.14 mm long and 6.54 mm wide at both ends.</li><li>The body steps 2.06 mm sideways in the middle.</li><li>512 traces run side by side between the two ends.</li><li>Two thin reference lines run along the top edge to a tab pad in the corner.</li><li>From the confirmed ribbon design, RibbonEChipv5_SC_probe_reentered_litho1.</li><li>24 ribbons per wafer. The newest revision uses the left-hand ribbon in all 24 places, scaled ×1.0057 for the mask.</li></ul><a class="full" href="parts/part_f_ribbon.png">Open full size ↗</a></div></div><div class="detail"><a class="fig" href="parts/part_f_ribbon_left_end.png" title="Open full size"><img src="parts/part_f_ribbon_left_end.png" alt="Ribbon end 1 with 32 rows, 16 columns, 180 µm pitch and reference pads labelled" loading="lazy"></a><div class="spec"><h3><b>F1</b>Ribbon end 1 (left)</h3><ul><li>512 pads in 16 columns × 32 rows at 180 µm, the same grid as the probe's bond pads.</li><li>The columns are in two groups of 8.</li><li>4 reference pads (Ref 1 to 4) sit above the grid.</li><li>A tab pad in the corner is where the reference lines of both ends meet.</li><li>Thin cuts in the body separate the pad rows.</li></ul><a class="full" href="parts/part_f_ribbon_left_end.png">Open full size ↗</a></div></div><div class="detail"><a class="fig" href="parts/part_f_ribbon_right_end.png" title="Open full size"><img src="parts/part_f_ribbon_right_end.png" alt="Ribbon end 2 with 32 rows, 16 columns, 180 µm pitch and reference pads labelled" loading="lazy"></a><div class="spec"><h3><b>F2</b>Ribbon end 2 (right)</h3><ul><li>The same 512-pad grid: 16 × 32 at 180 µm in two groups of 8 columns.</li><li>4 reference pads (Ref 1 to 4) sit above the grid.</li></ul><a class="full" href="parts/part_f_ribbon_right_end.png">Open full size ↗</a></div></div>
+<h2 id="holder">Holder</h2>
+<div class="detail"><a class="fig" href="parts/part_g_holder.png" title="Open full size"><img src="parts/part_g_holder.png" alt="Wire-bond holder drawing with the opening and four holes labelled" loading="lazy"></a><div class="spec"><h3><b>G</b>Wire-bond holder</h3><ul><li>One 12.05 × 3.70 mm opening and four Ø2.60 mm holes.</li><li>Holes 1 and 2 are centred 1.60 mm and 1.70 mm beyond the ends of the opening.</li><li>Holes 3 and 4 are centred 11.51 mm below the opening's lower edge, 1.55 mm and 1.50 mm in from its ends.</li><li>All dimensions in mm, from SC_chip_WB_holder_manufacture.pdf (5 Mar 2026).</li><li>The outer shape, material and thickness are not on this drawing.</li></ul><a class="full" href="parts/part_g_holder.png">Open full size ↗</a></div></div>
+<!-- probe-detail:end -->
+<table>
+<tr><th>Item</th><th>Value</th></tr>
+<tr><td>Channels</td><td>512 (4 shanks × 128)</td></tr>
+<tr><td>Probe size</td><td>3.6 × 15.2 mm, shanks about 7 mm long, 500 µm apart</td></tr>
+<tr><td>Recording sites</td><td>128 per shank, 3 columns, 23.3 µm vertical step, last 2 mm of the shank</td></tr>
+<tr><td>Pad field</td><td>16 × 32 pads at 180 µm</td></tr>
+<tr><td>Per head stack</td><td>8 probes, 32 shanks, 4,096 channels</td></tr>
+<tr><td>Ribbon</td><td>About 18.1 mm long, 512 traces, the same 512-pad grid at both ends; 24 per wafer</td></tr>
+<tr><td>Holder</td><td>12.05 × 3.7 mm opening, four Ø2.6 mm holes</td></tr>
+<tr><td>Source</td><td>SC512 design handoff, device drawing <code>SC512_device.oas</code> (handoff dated 12 Nov 2026); site positions from the channel map <code>NET-EBL-4-512.json</code>; ribbon from <code>RibbonEChipv5_SC_probe_reentered_litho1.GDS</code>; holder from <code>SC_chip_WB_holder_manufacture.pdf</code></td></tr>
+</table>
+</main>
+</body>
+</html>

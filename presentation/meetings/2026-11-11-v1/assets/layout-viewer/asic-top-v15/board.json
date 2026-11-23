@@ -1,0 +1,17 @@
+{
+  "title": "ASIC board · top · V15",
+  "revision": "V15",
+  "sha256": "95cb997a649c41c9b742eeeb295b3129a652a188c1025273c5e7c973ad564bed",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 10
+  },
+  "native": "ASIC_Top_Board_V15.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": true,
+  "source_note": "Unmodified copy of the saved native board.",
+  "source_relative_to_workspace": "Final Versions/4_ASIC_Boards_V15/ASIC_Top_Board_V15/ASIC_Top_Board_V15.kicad_pcb"
+}

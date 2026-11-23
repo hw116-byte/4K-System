@@ -1,0 +1,123 @@
+{
+ "report": "Whole system",
+ "reviewed": "All boards together: HDMI Extension Board V39, Frontend 14 layers V13, FPGA-LDO A layout V24, ASIC boards V15, pin map V8",
+ "review": "V6",
+ "review_date": "19 November 2026",
+ "readiness": "No blocker or major item is open. 3 minor items to settle.",
+ "counts": {
+  "blocker": 0,
+  "major": 0,
+  "minor": 3,
+  "note": 6
+ },
+ "findings": [
+  {
+   "id": "SYS-91",
+   "severity": "minor",
+   "category": "Pin map & connectors",
+   "title": "The ±8 V connector pins sit next to 1.5 V ASIC supply pins, so one solder bridge can put ±8 V on all eight chips.",
+   "what": "Every 80-pin ASIC port connector (DF40, 0.4 mm pitch) has the same layout: +8.06 V (VDD10, pin 36, from U9) sits between DVDD (34) and VDD_DRIVER (38), and -8.06 V (VSS10, pin 54, from U10) sits between REF_VDD (52) and VDD_ADC (56). This holds on FPGA-LDO A J3/J4 and on J3/J4 of both ASIC boards. The copper gap is 0.17 mm on the plugs and 0.20 mm on the receptacles. Both ports share the 1.5 V rails, so they feed all eight chips. The 1.5 V regulators (TPS7A2015 U3-U5, LT3042 U6) can only source current. A bridge from pin 36 therefore pulls DVDD or VDD_DRIVER up toward 8 V, and a bridge from pin 54 pulls REF_VDD or VDD_ADC negative. Every DF40 has a paste opening equal to its pad (Hirose recommends 80 %), and no order note asks for inspection of the DF40 joints. The user guide's checks are voltage readings with power on, so a bridge on an ASIC board's own connector shows up only after it has done its damage. The Frontend-to-FPGA-LDO A connector J2 has the same pattern. There, VIN_3V3 (pin 69) is 0.4 mm from STIM_START_SHARED (pin 67), with no ground pin between. Pin 67 is a 1.5 V FPGA output that reaches all eight chips.",
+   "consequence": "A single bridge, hard to see once the connectors are mated, would very likely destroy every bonded chip on the head. The chips are bonded by hand and cannot be replaced. A J2 bridge puts 3.3 V on a 1.5 V FPGA pin and on the start input of all eight chips.",
+   "do": "Before each board's first mating and after any rework, use an ohmmeter with power off. Pins 36-34, 36-38, 54-52 and 54-56 must read open on every FPGA-LDO A and ASIC board connector, and J2 pins 67-69 on the Frontend and FPGA-LDO A. Add this step to the user guide. Ask the assembler for 80 % paste openings on the DF40 pads and for optical (AOI) or X-ray inspection of the DF40 joints. A ground pin on each side of pins 36 and 54 would remove the risk, but that needs a change of the port pin order, which is final.",
+   "where": "FPGA-LDO A J3 (plug, top): pads 36 (98.783, 114.868) and 54 (102.383, 114.868). FPGA-LDO A J4 (receptacle, bottom): same x at y 115.058. ASIC boards J4 (plug, top): pads 36 (136.54, 69.65) and 54 (132.94, 69.65). ASIC boards J3 (receptacle, bottom): same x at y 69.47. J2 pins 67/69: Frontend (103.205, 106.17)/(103.205, 105.77); FPGA-LDO A (110.11, 133.4)/(110.11, 133.8).",
+   "source": "Pin map V8 (PIN_MAP_V8.csv, ASIC_PORT_PINS_V8.csv); FPGA_LDO_A_Layout_V24.kicad_pcb and .kicad_sch; ASIC_Top_Board_V15 / ASIC_Bottom_Board_V15; Artix_Frontend_8L_V3.kicad_pcb (J2); Hirose DF40 catalog, operating precautions (0.12 mm stencil, 80 % opening), https://www.hirose.com/en/product/series/DF40; TI TPS7A20 data sheet SBVS338H, https://www.ti.com/lit/ds/symlink/tps7a20.pdf",
+   "basis": "confirmed_in_files"
+  },
+  {
+   "id": "SYS-92",
+   "severity": "minor",
+   "category": "Power & regulators",
+   "title": "The ASIC supplies start from their own delay circuit, not from the Frontend, so at every power-down the ASIC outputs drive the FPGA's unpowered input banks.",
+   "what": "FPGA-LDO A switches on the ±12 V converter U1 and all nine ASIC regulators (U2-U10) from EN_ASIC_RAILS, an R1 (10 kΩ) / C3 (4.7 µF) delay from VIN_3V3. No connector pin carries this line and the regulators' power-good outputs are unused, so the Frontend can neither switch the ASIC supplies nor see them. Power-up: the supplies do not all start together. The four 1.5 V TPS7A20 regulators (U3, U4, U5, U7) switch on at 0.3-0.9 V on EN, about 3-16 ms after VIN_3V3. The FPGA-LDO A note says about 20 ms and the system datasheet says 15-23 ms, and both say the ASIC rails start after the Frontend's 1.5 V I/O supply VCCO_1V5. VCCO_1V5 is estimated at about 4-5 ms after the head's 5 V arrives but has not been measured, so that order is not guaranteed and the margin is thin. The ±8 V regulators U9/U10 (LT3042/LT3094) ramp slowly and reach their final value about 0.35-0.4 s after VIN_3V3. Power-down: the Frontend's MPM3833C regulators stop near 1.9-2.35 V of VIN_3V3, while the TPS7A20 rails hold about 1.5 V until VIN_3V3 is down to about 1.6 V. At every cable unplug, port trip or 12 V loss this leaves a window of about 1-3 ms. During it, any of the 88 ASIC output lines that is high, and the R19 (10 kΩ) CHIP_RESET pull-up, sit near 1.5 V against a collapsing VCCO_1V5 (R19 alone can push only about 0.15 mA). AMD allows inputs up to VCCO + 0.55 V and 10 mA per pin through the clamp diodes. The ASIC output drive strength is not on record.",
+   "consequence": "Each power-down pushes clamp current into the unpowered FPGA banks. Damage is unlikely, but the stress repeats at every unplug and port trip. If firmware enables stimulation or releases the chips from reset before the ±8 V rails settle, the chips start on rails that are still rising.",
+   "do": "Correct the FPGA-LDO A enable note and the system datasheet: 1.5 V rails about 3-16 ms after VIN_3V3, ±8 V settled after about 0.4 s, and no guaranteed start after VCCO_1V5. In firmware, keep STIM_EN off and do not release CHIP_RESET until about 0.5 s after the head powers up. On the first stack, scope TP4 (EN_ASIC_RAILS), VCCO_1V5 and one ASIC DATA line held high during a cable pull. If more than a few mA flows per pin, in a later revision drive EN_ASIC_RAILS from the Frontend, from an FPGA pin or a Frontend power-good. That needs a board-to-board contact, and pin map V8 has no spare one.",
+   "where": "FPGA-LDO A: R1, C3, net EN_ASIC_RAILS (TP4); U3/U4/U5/U7 (TPS7A2015); U9/U10; R19 on CHIP_RESET_SHARED; note box 'VIN_3V3 ENTRY, DELAYED ENABLE' at (410, 60). Frontend: U4 (MPM3833C, VCCO_1V5).",
+   "source": "FPGA_LDO_A_Layout_V24.kicad_sch and Artix_Frontend_8L_V3.kicad_sch (schematic V57) netlists; system datasheet power and power-up pages (https://hw116-byte.github.io/4K-System/datasheet/power.html, https://hw116-byte.github.io/4K-System/datasheet/power-up.html); TI TPS7A20 data sheet SBVS338H, EN thresholds and UVLO (https://www.ti.com/lit/ds/symlink/tps7a20.pdf); MPS MPM3833C data sheet Rev 1.0 p.4, UVLO (https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/713/MPM3833C_r1.0.pdf); ADI LT3042 and LT3094 data sheets, start-up with PGFB tied to IN (https://www.analog.com/media/en/technical-documentation/data-sheets/lt3042.pdf, https://www.analog.com/media/en/technical-documentation/data-sheets/lt3094.pdf); AMD DS181 Tables 1-2 (https://docs.amd.com/v/u/en-US/ds181_Artix_7_Data_Sheet)",
+   "basis": "calculated"
+  },
+  {
+   "id": "SYS-88",
+   "severity": "minor",
+   "category": "Safety, ESD & bring-up",
+   "title": "The PC board drives clock and command into a head whose FPGA input bank has no power, at plug-in or after a port switch trips.",
+   "what": "Each port's 32 MHz clock and command pairs, and the SYNC pair on ports 3-6, are LVDS (low-voltage differential signalling) lines that run straight from the XEM8310 to the cable. Only ESD (static) clamps sit in the path. On the Frontend they run straight from J3 to FPGA pins powered by VCCO_1V5, the last Frontend supply to come up. The XEM cannot see whether a head has power. PORT_ENABLE comes from U700's power-good and drives only the port switches U701-U708. Each switch's FAULT output only lights its LED (D701-D708). So the lines keep toggling (about 1.2 V common mode) into a bank at 0 V in two cases: a head is plugged in while the XEM runs, or a port switch trips and cuts that head's 5 V. That is above the FPGA's input limit of VCCO + 0.55 V. The current is a few milliamps, so damage is unlikely; AMD allows up to 10 mA per pin through the clamp diodes.",
+   "consequence": "Repeated hot-plugging or port trips stress the Frontend FPGA's input pins. The XEM firmware gets no signal that a port has lost power.",
+   "do": "In firmware, keep a port's outputs off until its head answers (JTAG or the GT link). Turn them off again as soon as that port's GT link drops, because the XEM cannot otherwise see a tripped port. Or plug heads in before the XEM is configured.",
+   "where": "HDMI Extension Board J610-J617 pins 6/8 (clock), 9/11 (command) and 12/14 (SYNC, ports 3-6 only), from the XEM8310 connector MC1 (bank 64). PORT_ENABLE (U700 pin 13) goes to U701-U708; FAULT goes to D701-D708 only. Frontend J3 to U1 P14/R15, M14/N14, B9/A9 (VCCO_1V5).",
+   "source": "HDMI_Extension_Board_V39.kicad_sch and Artix_Frontend_8L_V3.kicad_sch (schematic V57) netlists; AMD DS181, absolute maximum ratings and Table 2 clamp current (https://docs.amd.com/v/u/en-US/ds181_Artix_7_Data_Sheet); TI TPS2553 data sheet, FAULT output (https://www.ti.com/lit/ds/symlink/tps2553.pdf)",
+   "basis": "confirmed_in_files"
+  },
+  {
+   "id": "SYS-93",
+   "severity": "note",
+   "category": "Pin map & connectors",
+   "title": "The Frontend schematic calls cable contact J3.1 unused, but the HDMI Extension Board uses it to decide whether to drive JTAG.",
+   "what": "The Frontend J3 note and R27's own fields describe R27 (1 kΩ to VCCAUX_1V8) as a series resistor on 'the unused sense contact J3.1'. On the HDMI Extension Board, each port's pin 1 (for example J610.1) goes through that port's selector (U611-U618, one per port) to the window comparator U603 (TPS3700). Through U605, U603 enables the JTAG level shifter U602. The window is about 1.58-2.01 V. Through R27 and about 52 kΩ of HDMI-side load, the Frontend presents about 1.74-1.79 V. That is inside the window, so JTAG (the FPGA programming port) over the cable works today.",
+   "consequence": "No fault now. If someone trusts the note and removes or raises R27, or reuses J3.1, the HDMI board never enables JTAG to that head. The Frontend can then no longer be programmed over the cable, and no error points to the cause.",
+   "do": "Correct the J3 note and R27's Function and selection fields: J3.1 is the target-voltage sense for the HDMI board's JTAG drivers. Keep R27 at 1 kΩ or less so the sensed voltage stays above the 1.58 V lower window edge.",
+   "where": "Frontend J3.1, net CABLE_TARGET_SENSE, R27; J3 note box item 2 at (737, 235). HDMI Extension Board J610-J617 pin 1, port selectors U611-U618, U603, U605, U602 (output enable).",
+   "source": "Artix_Frontend_8L_V3.kicad_sch (schematic V57): J3 note and R27 fields; HDMI_Extension_Board_V39.kicad_sch netlist; TI TPS3700 data sheet, https://www.ti.com/lit/ds/symlink/tps3700.pdf",
+   "basis": "confirmed_in_files"
+  },
+  {
+   "id": "SYS-56",
+   "severity": "note",
+   "category": "Grounding & return paths",
+   "title": "Grounding of eight heads on one animal must be tested.",
+   "what": "The system datasheet suggests one ground electrode for the whole system with one wire from each head, and a double-insulated 12 V adapter. If heads share ground through the animal, supply return current can flow through the recording reference.",
+   "consequence": "Hum or load-step noise on the recordings.",
+   "do": "Test two powered stacks in saline, add heads one at a time while watching hum, and measure leakage from the rig to earth.",
+   "where": "Rig level",
+   "source": "System datasheet, grounding with several heads (https://hw116-byte.github.io/4K-System/datasheet/mechanical.html)",
+   "basis": "needs_measurement"
+  },
+  {
+   "id": "SYS-94",
+   "severity": "note",
+   "category": "Layout & manufacturing",
+   "title": "The Gerber zips for the JLC boards come without a job file, and the Frontend order notes do not list the layer order.",
+   "what": "None of the three Gerber zips made for JLC contains a .gbrjob, the Gerber job file that tells the fabricator the layer stack order: the Frontend test-frame zip (14 copper layers), the FPGA-LDO A test-frame zip and the HDMI Extension Board zip. The FPGA-LDO A and HDMI order notes have a layer-order line; the Frontend order notes do not. Inside each Frontend copper file the layer attribute is correct, for example L2-GND.g1 = copper L2 inner and L14-Bottom.gbl = copper L14 bottom. Every file name carries its layer number, and the .g1-.g12 extensions run without gaps. The order remark already asks JLC to send the production file for confirmation.",
+   "consequence": "Very low. A wrong stack would need the fabricator to ignore both the layer attributes and the gap-free .g1-.g12 numbering, for example by ordering the files by name (L10 before L2). The production-file confirmation should catch it.",
+   "do": "Add 'Layer order: .gtl = L1, .g1 = L2 … .g12 = L13, .gbl = L14' to the Frontend order notes. Include the .gbrjob the next time the Gerbers are exported. Check the layer order in JLC's production file before approving it.",
+   "where": "Frontend_14L_V13_Test_Frame_V3_Gerbers.zip, FPGA_LDO_A_V24_Test_Frame_V4_gerbers.zip, HDMI_Extension_Board_V39_Gerbers.zip; Frontend JLC_ORDER_NOTES.txt.",
+   "source": "Frontend 14 layers V13 test frame V3 order files; FPGA-LDO A V24 test frame V4 order files and remarks (layer-order line used as the model); HDMI Extension Board V39 order files V1",
+   "basis": "confirmed_in_files"
+  },
+  {
+   "id": "SYS-03",
+   "severity": "note",
+   "category": "Mechanical, stack & thermal",
+   "title": "Head temperature must be measured on the first stack.",
+   "what": "A head takes about 1.2 W typically and up to about 2.5 W, which gives roughly +14 to +62 °C surface rise depending on air flow. The commercial-grade FPGA is rated to 85 °C.",
+   "consequence": "A hot head can exceed the FPGA's rating or be too warm on the animal.",
+   "do": "Measure one powered stack running the real program and set a head-surface temperature limit.",
+   "where": "Frontend FPGA and regulators",
+   "source": "System datasheet, heat section (https://hw116-byte.github.io/4K-System/datasheet/mechanical.html); AMD DS181",
+   "basis": "needs_measurement"
+  },
+  {
+   "id": "SYS-09",
+   "severity": "note",
+   "category": "Safety, ESD & bring-up",
+   "title": "The board-to-board connectors are not keyed; line up the pin-1 dots.",
+   "what": "The DF40 board-to-board connectors have no polarity (Hirose), and no head board has a mounting hole, key or other locating feature. An ASIC board mated turned 180° meets pin n with pin 81-n. The FPGA-LDO's +8 V (pin 36) then lands on the ASIC board's CLK32MHZ pin (45) and -8 V (pin 54) on data pin 27 (D<4>(2)). DVDD (34) lands on SYNC (47), VDD_DRIVER (38) on D<5> (43), and the ground pins 3 and 5 on data lines. On port J3 (front) a turned bottom board reaches the line of the Frontend's connectors, so it could hit the Frontend only if the Frontend is already fitted, and the user guide fits the ASIC boards first. On port J4 (back) and at the joint between the two ASIC boards, nothing stops a turned board at all. Pin-1 dots are on both sides of every ASIC connector pair.",
+   "consequence": "A turned board can destroy the bonded ASICs.",
+   "do": "Check the pin-1 dots with power off before every plug-in, as the user guide says, at every joint: both ports and the joint between the two ASIC boards. In the user guide's assembly order nothing else stops a turned board.",
+   "where": "ASIC boards V15 J3/J4 (both joints of each stack); FPGA-LDO A V24 J3 (front) and J4 (back)",
+   "source": "System datasheet, user guide B2 Assembling a head (https://hw116-byte.github.io/4K-System/datasheet/assembling-a-head.html); FPGA_LDO_A_Layout_V24.kicad_pcb and ASIC_Top_Board_V15 / ASIC_Bottom_Board_V15 pad positions; Hirose DF40 series (connector has no polarity), https://www.hirose.com/en/product/series/DF40",
+   "basis": "confirmed_in_files"
+  },
+  {
+   "id": "SYS-60",
+   "severity": "note",
+   "category": "Firmware & constraints",
+   "title": "All eight ASICs share the stimulation control lines, and their settings cannot be read back.",
+   "what": "STIM_EN and the stimulation timing lines go to all eight chips of a head together. A chip that powers up with its stimulators enabled stimulates whenever any chip in the head does.",
+   "consequence": "Unwanted stimulation after a power-up or reset, with no way to detect it.",
+   "do": "Ask the ASIC designer what the stimulation registers hold after power-up and CHIP_RESET. In firmware, load an all-off table into all eight chips after every power-up and reset, before STIM_EN goes high.",
+   "where": "Pin map V8 shared stimulation nets",
+   "source": "Pin map V8 (PIN_MAP_V8.csv)",
+   "basis": "needs_vendor_answer"
+  }
+ ]
+}

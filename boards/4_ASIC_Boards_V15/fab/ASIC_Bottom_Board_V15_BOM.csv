@@ -1,0 +1,5 @@
+"Designator","Value","Footprint","LCSC","MPN","Manufacturer","Quantity","DNP"
+"C1,C2,C4-C7,C14,C18,C25,C33,C34,C41,C42,C46,C48","10nF","Capacitor_SMD:C_0201_0603Metric","C85930","GRM033R71E103KE14D","Murata","15",""
+"C19,C26,C50-C63","100nF","Capacitor_SMD:C_0201_0603Metric","C307379","CL03A104KA3NNNC","Samsung Electro-Mechanics","16",""
+"J3","DF40C-80DS-0.4V(51)","Connector_Hirose_DF40:Hirose_DF40C-80DS-0.4V_2x40_P0.4mm","C312960","DF40C-80DS-0.4V(51)","Hirose Electric","1",""
+"J4","DF40C-80DP-0.4V(51)","Connector_Hirose_DF40:Hirose_DF40C-80DP-0.4V_2x40-1MP_P0.4mm","C294544","DF40C-80DP-0.4V(51)","Hirose Electric","1",""

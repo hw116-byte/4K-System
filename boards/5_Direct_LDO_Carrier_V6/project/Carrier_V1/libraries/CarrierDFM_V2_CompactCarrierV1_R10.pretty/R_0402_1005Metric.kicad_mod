@@ -1,0 +1,271 @@
+(footprint "R_0402_1005Metric"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+	(tags "resistor")
+	(property "Reference" "REF**"
+		(at -1.629219 1.022128 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "817295b3-222b-44a9-a339-3781592681fc")
+		(effects
+			(font
+				(size 1 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "R_0402_1005Metric"
+		(at 0 1.17 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "28acf716-b6fe-445b-b53a-b9f031e4d9d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ebd9b7e2-4883-4178-aa98-63c0414af85a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "17ffca21-6f2f-4f9b-9b4d-df57e554a6fb")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae42eafc-0eda-4235-ba59-70b516b9e691")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Vishay"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c3d0d97d-4824-4b9e-8590-5603fce62774")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "CRCW04022K00FKED"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6af7245f-cea3-495d-8f1f-2d356a524238")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Tolerance" "1%"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2b5087bb-30e0-4786-9011-bca446100adf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Source_Reference" "Opal Kelly BRK8305 A03 JTAG sheet8 / PDFp4; https://pins.opalkelly.com/downloads/583/download?category_id=3"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a716745d-2dfd-4315-9a99-48e1d7ce250a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Role" "BRK R509: DO series connection to shared FTDI EEDATA"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "24afbdd0-41b0-4646-9c00-09846549ab63")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Source_changes" "BRK value and connection retained; reference renumbered, local redraw."
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b2cdfa0a-1aee-47ed-ba4a-8661e724c01b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part #" "C482125"
+		(at 0 0 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5de5bb9b-75a9-4722-9176-ca6829c95980")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Procurement_route" "JLC/LCSC code available; confirm selectable stock or preorder"
+		(at 0 0 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "111efc67-2a1c-4536-9696-f2689cfbe9a5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Supplier_source" "https://www.lcsc.com/product-detail/C482125.html"
+		(at 0 0 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "00798ec6-674d-4a65-8918-8ba615c8bd19")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "V2_part_selection" "Exact existing Vishay MPN verified; Yageo replacement is unnecessary."
+		(at 0 0 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1f2773cb-25ff-4d24-a538-4bd022a4f952")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -0.93 -0.47)
+		(end 0.93 0.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "a37254dd-6512-4480-b294-e131e2fe44ec")
+	)
+	(fp_line
+		(start -0.153641 -0.38)
+		(end 0.153641 -0.38)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7e262c87-8d44-4566-925b-8e688d0ff733")
+	)
+	(fp_line
+		(start -0.153641 0.38)
+		(end 0.153641 0.38)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "75434878-31d4-4ab1-a570-d9e2dddb392c")
+	)
+	(fp_rect
+		(start -0.525 -0.27)
+		(end 0.525 0.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "e5ade5e6-357e-41ac-ad39-ec866194ea44")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "0c52f052-b889-43ad-a577-ad7650879534")
+		(effects
+			(font
+				(size 0.26 0.26)
+				(thickness 0.04)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.51 0)
+		(size 0.54 0.64)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "0af6ab53-f2a0-4a73-815b-cb75a6cf063d")
+	)
+	(pad "2" smd roundrect
+		(at 0.51 0)
+		(size 0.54 0.64)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "408d6408-b51a-4705-bb22-41a3933f0127")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/libraries/models/CompactCarrierV1/R_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

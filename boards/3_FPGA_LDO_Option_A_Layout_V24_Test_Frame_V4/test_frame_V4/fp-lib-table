@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "FPGA_LDO_V35A")(type "KiCad")(uri "${KIPRJMOD}/FPGA_LDO_V35A.pretty")(options "")(descr "Project-local copies of KiCad 10.0.6 stock footprints")) (lib (name "TEST_FRAME_V1")(type "KiCad")(uri "${KIPRJMOD}/TEST_FRAME_V1.pretty")(options "")(descr "Test frame V1: KiCad 10.0.6 stock Connector_IDC footprint, project-local copy")))

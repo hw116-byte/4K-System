@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekly Update 18 Nov</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css?v=10b">
+<script defer src="app.js?v=10"></script>
+</head>
+<body>
+<header class="bar">
+  <div class="brand">Weekly update · 18 November 2026<small id="version">V10 · edited 18 Nov 2026, 08:39 CST</small></div>
+  <nav aria-label="Presentation controls"><button id="notes" aria-pressed="false">Notes</button><button id="full">Fullscreen</button><button id="prev" aria-label="Previous slide">←</button><span id="counter">1 / 7</span><button id="next" aria-label="Next slide">→</button></nav>
+</header>
+<main>
+
+<!-- 1 · Cover -->
+<section class="slide cover active" data-notes="This week: the boards are finished and three are in the JLC cart, not paid. The JLC quotes from 16 November, with all five HDMI boards assembled, add up to about 2,880 dollars; with the missing parts from Global Sourcing (about 137 dollars, U15 not priced yet) and shipping, about 3,090 dollars, before JLC's HDI review fees. The Direct LDO Carrier sent on 31 October is at JLC; they contacted me about some assembly issues, and so far those have been resolved. On the probe side: the EFO errors, and a suction device. And the 4K stack leaves only about 1.1 millimetres above each ASIC board, which is why I am proposing to put the probe directly on the ASIC board.">
+  <h1>Weekly update</h1>
+  <p class="date">18 November 2026</p>
+  <ul class="bullets">
+    <li><b>Boards</b> · HDMI Extension, Frontend FPGA and FPGA-LDO in the JLC cart, not paid
+      <table class="cost">
+        <tr><th>Estimate (JLC quote, 16 Nov)</th><th>PCB</th><th>Assembly + parts</th><th>Shipping</th><th>Total</th></tr>
+        <tr><td>HDMI Extension · 5 assembled</td><td>$273</td><td>$812</td><td>$26</td><td>$1,111</td></tr>
+        <tr><td>Frontend FPGA · 5 assembled</td><td>$972</td><td>$403</td><td>$26</td><td>$1,401</td></tr>
+        <tr><td>FPGA-LDO · 5 assembled</td><td>$197</td><td>$354</td><td>$26</td><td>$578</td></tr>
+        <tr class="sum"><td>Total</td><td>$1,443</td><td>$1,570</td><td>$78</td><td>≈ $3,091</td></tr>
+      </table></li>
+    <li><b>Direct LDO Carrier</b> · at JLC; assembly issues raised, resolved so far</li>
+    <li><b>Probe bonding</b> · EFO errors; suction device</li>
+    <li><b>4K stack</b> · only 1.1 mm above each ASIC board</li>
+    <li><b>Proposal</b> · probe directly on the ASIC board</li>
+  </ul>
+</section>
+
+<!-- 2 · Boards -->
+<section class="slide edge" data-notes="This is the overview page with every board. Scroll through it; each board opens its layout, 3D, files and review. Since last week the ASIC designer's answers are built in: final pin order, two grounds joined at one point, plus and minus 8 volt stimulation rails and 0.8 millimetre ASIC boards. Today the ASIC boards also got their capacitor values from a short talk with the ASIC designer: 10 nanofarad plus 100 nanofarad on every pair, one more capacitor on VDD_CGEN, and a wider VDD_CGEN line to both chips. That is ASIC board V10; he is checking it. This morning, ASIC board V11 moved that capacitor clear of a connector on the bottom board; nothing else changed. Every board was re-checked. The JLC cart is about 2,880 dollars with all five HDMI boards assembled; Frontend U7, R10, R13, U15 and FPGA-LDO U1 are not in JLC stock.">
+  <div class="full"><div class="frame"><iframe data-src="../../../index.html#overview" title="Overview page with every board"></iframe><a class="open" href="../../../index.html#overview" target="_blank" rel="noopener">Open ↗</a></div></div>
+</section>
+
+<!-- 3 · EFO -->
+<section class="slide" data-notes="On the G-chip the bonder keeps stopping on EFO errors, and they show up as several different failure modes: small balls, crushed wire ends, no ball at all, flattened bumps. These are pictures from the bonder: the ASIC wire bonds on the G-chip, the ball bumps on the pixel pads, and a wire end with no ball, 23 micrometre wire with a 39 micrometre squashed end. Click any picture to zoom in. I diagnosed them and they come from several different sources, and each failure mode has more than one cause. I have been removing the possible causes one at a time. And I designed suction fixtures, version 15: one holds the G-chip board and one holds the probe, flat and still on the bonder's suction deck. The plates now cover the open deck area, and a recess underneath always meets the deck holes. Both print in about an hour, and there is a stainless version for the machine shop. Details are in the EFO error report.">
+  <h1>G-chip bonding: EFO errors</h1>
+  <div class="split efo">
+    <ul class="bullets">
+      <li><b>Several failure modes</b></li>
+      <li>Each from <b>more than one cause</b></li>
+      <li>Removing causes <b>one at a time</b></li>
+      <li><b>New suction fixtures</b> hold the board and probe flat</li>
+    </ul>
+    <div class="gallery">
+      <figure><img data-zoom src="assets/photos/bond_1.jpg" alt="ASIC wire bonds on the G-chip, top row and right side"><figcaption>ASIC wire bonds on the G-chip</figcaption></figure>
+      <figure><img data-zoom src="assets/photos/bond_2.jpg" alt="The same chip with more wire bonds on both sides"><figcaption>Same chip, more bonds</figcaption></figure>
+      <figure><img data-zoom src="assets/photos/bond_3.jpg" alt="Ball bumps on the pixel pads of the ASIC, uneven shapes"><figcaption>Ball bumps on the pixel pads</figcaption></figure>
+      <figure><img data-zoom src="assets/photos/bond_4.jpg" alt="Wire end with no ball: 23 micrometre wire, 39 micrometre squashed end"><figcaption>No ball: 23 µm wire, 39 µm end</figcaption></figure>
+      <figure class="wide"><img data-zoom src="assets/fixtures/fixtures_v15_clean.png" alt="Suction fixtures V15: one holds the G-chip board, one holds the probe"><figcaption>Suction fixtures V15</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · Bonding today -->
+<section class="slide" data-notes="This is how one probe goes onto one ASIC today. The counter shows the wire bonder: once for the ASIC wire bonds, then a ball and tail on the 512 ASIC contacts, again on the 512 probe pads, then a second ball at each end of the ribbon to rivet it. Five times, 1,024 rivets, then the probe is flipped over the chip.">
+  <h1>Current probe bonding</h1>
+  <div class="full"><div class="frame"><iframe data-src="assets/bonding-steps/index.html?autoplay=1&amp;v=5" title="Current probe bonding, step by step" allow="fullscreen"></iframe><a class="open" href="assets/bonding-steps/index.html" target="_blank" rel="noopener">Open ↗</a></div></div>
+</section>
+
+<!-- 5 · Thickness -->
+<section class="slide" data-notes="Thickness. Today the G-chip board is 0.5 millimetres, and the finished device in its enclosure measures 4.34 millimetres with calipers. On the right is the actual 3D model of two ASIC boards V10 stacked as in the 4K head stack, drawn to scale: 0.8 millimetre boards, 1.5 millimetres between boards set by the Hirose DF40C connector, and the next board's capacitors hang down into that gap. That leaves 1.1 millimetres above each ASIC board for the die, its wire bonds and the probe. The ribbon fold and holder we use today cannot fit there.">
+  <h1>The 4K stack needs a thinner build</h1>
+  <div class="thick">
+    <figure>
+      <div><h2>G-chip today</h2><p class="num">Board <b>0.5 mm</b><br>Finished device <b>4.34 mm</b> (measured)</p></div>
+      <img data-zoom class="photo" src="assets/photos/gchip_caliper.jpg" alt="Calipers reading 4.34 mm across the finished G-chip device">
+    </figure>
+    <figure>
+      <div><h2>4K head stack</h2><p class="num">ASIC board V10 3D model, to scale</p></div>
+      <img data-zoom src="assets/stack/asic_stack_side_v10.png" alt="Side view of two stacked ASIC boards: 0.8 mm boards, 1.5 mm to the next board, 1.1 mm left above the board under the next board's capacitors">
+    </figure>
+  </div>
+</section>
+
+<!-- 6 · Proposal -->
+<section class="slide" data-notes="Today versus the proposal. Today the ribbon is riveted to the ASIC and to the probe, then folded over, and the wire bonder is used five times; the build stands about 2.8 millimetres above the board. Proposed: the probe is riveted straight onto the ASIC, three wire-bonder passes, and it has to fit in the 1.1 millimetres the 4K stack leaves. Still to work out: holding the probe flat over the die while riveting, and releasing its wafer piece.">
+  <h1>Proposal: probe directly on the ASIC board</h1>
+  <div class="two">
+    <figure><div class="shot"><iframe data-src="assets/bond3d/index.html?clean=1&amp;mode=current&amp;epoxy=0" title="Today: G-chip with the ribbon to the probe"></iframe></div>
+      <figcaption><b>Today</b> · ribbon between the ASIC and the probe</figcaption>
+      <dl class="stat"><dt>Wire bonder</dt><dd>5×</dd><dt>Height above the board</dt><dd>≈2.8 mm</dd></dl></figure>
+    <figure><div class="shot"><iframe data-src="assets/bond3d/index.html?clean=1&amp;mode=direct&amp;epoxy=0" title="Proposed: probe directly on the ASIC board"></iframe></div>
+      <figcaption><b>Proposed</b> · probe directly on the ASIC</figcaption>
+      <dl class="stat"><dt>Wire bonder</dt><dd>3×</dd><dt>Height above the board</dt><dd>≤ 1.1 mm</dd></dl></figure>
+  </div>
+</section>
+
+<!-- 7 · Next steps -->
+<section class="slide" data-notes="Next steps, in two groups. Boards: once the five missing parts are sourced, pay for the three JLC boards; the ASIC designer checks ASIC board V10 and sends the bond diagram, then it goes to PCBWay with ENEPIG; and a bring-up plan for when the boards arrive. Probe: try the printed suction fixtures on the bonder, with the stainless set at the machine shop; keep removing EFO causes one at a time; and a first trial of the probe directly on an ASIC board.">
+  <h1>Next steps</h1>
+  <div class="center">
+    <div class="nextcols">
+      <div><h2>Boards</h2>
+        <ol class="steps">
+          <li><span>Source the 5 missing parts, then <b>order the 3 JLC boards</b></span></li>
+          <li><span>ASIC boards: designer <b>checks V10</b> and sends the <b>bond diagram</b>, then <b>order at PCBWay</b></span></li>
+          <li><span><b>Bring-up plan</b> for when the boards arrive</span></li>
+        </ol></div>
+      <div><h2>Probe</h2>
+        <ol class="steps">
+          <li><span><b>Test the suction fixtures</b> on the bonder; stainless set to the machine shop</span></li>
+          <li><span>Keep removing <b>EFO causes</b> one at a time</span></li>
+          <li><span>First trial: <b>probe directly on an ASIC board</b></span></li>
+        </ol></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<aside id="speaker" hidden><strong>Speaker notes</strong><p></p></aside>
+</body></html>

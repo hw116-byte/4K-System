@@ -1,0 +1,47 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "BackupR3")(type "KiCad")(uri "${KIPRJMOD}/libraries/BackupR3.pretty")(options "")(descr "Inherited carrier connector footprints with local or embedded 3D models"))
+  (lib (name "BRK8305_A03")(type "KiCad")(uri "${KIPRJMOD}/libraries/BRK8305_A03.pretty")(options "")(descr "BRK8305 A03 imported reference footprints plus native TPS54429ERSAR"))
+
+  (lib (name "CompactCarrierV1")(type "KiCad")(uri "${KIPRJMOD}/libraries/CompactCarrierV1.pretty")(options "")(descr "24 October compact carrier parts and exact TLV75515 DQN pin map"))
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  (lib (name "CarrierDFM_V2_BRK8305_A03")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_BRK8305_A03.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_BackupR3")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_BackupR3.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_Capacitor_SMD")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_Capacitor_SMD_C1")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD_C1.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_Capacitor_SMD_C3")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD_C3.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_Capacitor_SMD_C4")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD_C4.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_Capacitor_SMD_C8")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD_C8.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_CompactCarrierV1")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_CompactCarrierV1_C11")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_CompactCarrierV1_C16")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_CompactCarrierV1_R1")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_R1.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_CompactCarrierV1_R10")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_CompactCarrierV1_R14")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_R14.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_CompactCarrierV1_R5")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_R5.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_Diode_SMD")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_Diode_SMD.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_LED_SMD")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_LED_SMD.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_Resistor_SMD_R3")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_Resistor_SMD_R3.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+  (lib (name "CarrierDFM_V2_Resistor_SMD_R4")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierDFM_V2_Resistor_SMD_R4.pretty")(options "")(descr "Final DFM V2 footprint masters exported from verified carrier geometry"))
+
+  (lib (name "CarrierParts_V3")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierParts_V3.pretty")(options "")(descr "V3 exact C2 FT halogen-free selection; verified unchanged D8 geometry"))
+
+ (lib (name "CarrierParts_V4")(type "KiCad")(uri "${KIPRJMOD}/libraries/CarrierParts_V4.pretty")(options "")(descr "V4 Murata selection on reviewed retained BRK-derived lands"))
+)

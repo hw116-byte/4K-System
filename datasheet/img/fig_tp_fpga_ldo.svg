@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190 645" width="1190" height="645">
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172a32}.l{font-size:11px}.lb{font-size:11px;font-weight:700}.h{font-size:14px;font-weight:700}.xs{font-size:10.5px;fill:#53656b}</style>
+<rect width="1190" height="645" fill="#fff"/>
+<text x="16" y="24" class="h">FPGA-LDO A layout V24: test points</text>
+<text x="151.0" y="66" class="lb">Top (front) view</text>
+<rect x="151.0" y="80" width="294.3" height="477.9" rx="6" fill="#2f5e45" stroke="#1f3f2e" stroke-width="1.5"/>
+<rect x="174.5" y="89.1" width="241.7" height="61.0" fill="#3e7357" stroke="#9fc5b0" stroke-dasharray="3 2"/>
+<text x="295.3" y="123.6" text-anchor="middle" class="xs" style="fill:#d9ebe1">J3</text>
+<rect x="383.2" y="188.7" width="61.0" height="215.7" fill="#3e7357" stroke="#9fc5b0" stroke-dasharray="3 2"/>
+<text x="413.7" y="300.6" text-anchor="middle" class="xs" style="fill:#d9ebe1">J2</text>
+<rect x="155.7" y="188.7" width="61.0" height="215.7" fill="#3e7357" stroke="#9fc5b0" stroke-dasharray="3 2"/>
+<text x="186.2" y="300.6" text-anchor="middle" class="xs" style="fill:#d9ebe1">J1</text>
+<polyline points="232.5,411.1 145.0,399.9 139.0,399.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="232.5" cy="411.1" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="136.0" y="398.9" text-anchor="end" class="lb">TP17</text>
+<text x="136.0" y="411.9" text-anchor="end" class="xs">ASIC_REF_VCM</text>
+<polyline points="297.5,430.6 145.0,429.9 139.0,429.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="297.5" cy="430.6" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="136.0" y="428.9" text-anchor="end" class="lb">TP11</text>
+<text x="136.0" y="441.9" text-anchor="end" class="xs">ASIC_VDD_FE</text>
+<polyline points="200.7,522.8 145.0,459.9 139.0,459.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="200.7" cy="522.8" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="136.0" y="458.9" text-anchor="end" class="lb">TP5</text>
+<text x="136.0" y="471.9" text-anchor="end" class="xs">GND</text>
+<polyline points="221.5,522.8 145.0,489.9 139.0,489.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="221.5" cy="522.8" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="136.0" y="488.9" text-anchor="end" class="lb">TP1</text>
+<text x="136.0" y="501.9" text-anchor="end" class="xs">VIN_3V3</text>
+<polyline points="221.5,543.6 145.0,519.9 139.0,519.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="221.5" cy="543.6" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="136.0" y="518.9" text-anchor="end" class="lb">TP4</text>
+<text x="136.0" y="531.9" text-anchor="end" class="xs">EN_ASIC_RAILS</text>
+<polyline points="200.7,543.6 145.0,549.9 139.0,549.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="200.7" cy="543.6" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="136.0" y="548.9" text-anchor="end" class="lb">TP2</text>
+<text x="136.0" y="561.9" text-anchor="end" class="xs">STIM_POS_12V</text>
+<polyline points="430.8,95.1 451.3,95.1 457.3,95.1" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="430.8" cy="95.1" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="460.3" y="94.1" text-anchor="start" class="lb">TP7</text>
+<text x="460.3" y="107.1" text-anchor="start" class="xs">ASIC_AC_IN</text>
+<polyline points="336.5,422.9 451.3,422.9 457.3,422.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="336.5" cy="422.9" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="460.3" y="421.9" text-anchor="start" class="lb">TP15</text>
+<text x="460.3" y="434.9" text-anchor="start" class="xs">ASIC_REF_VDD</text>
+<polyline points="402.2,521.5 451.3,489.9 457.3,489.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="402.2" cy="521.5" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="460.3" y="488.9" text-anchor="start" class="lb">TP6</text>
+<text x="460.3" y="501.9" text-anchor="start" class="xs">AGND</text>
+<polyline points="423.0,521.5 451.3,519.9 457.3,519.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="423.0" cy="521.5" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="460.3" y="518.9" text-anchor="start" class="lb">TP9</text>
+<text x="460.3" y="531.9" text-anchor="start" class="xs">STIM_PRE_NEG</text>
+<polyline points="402.2,542.3 451.3,549.9 457.3,549.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="402.2" cy="542.3" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="460.3" y="548.9" text-anchor="start" class="lb">TP3</text>
+<text x="460.3" y="561.9" text-anchor="start" class="xs">STIM_NEG_12V</text>
+<text x="745.3199999999998" y="66" class="lb">Back view (seen from the back, mirrored)</text>
+<rect x="745.3199999999998" y="80" width="294.3" height="477.9" rx="6" fill="#2f5e45" stroke="#1f3f2e" stroke-width="1.5"/>
+<rect x="767.6" y="85.7" width="255.5" height="67.0" fill="#3e7357" stroke="#9fc5b0" stroke-dasharray="3 2"/>
+<text x="895.3" y="123.2" text-anchor="middle" class="xs" style="fill:#d9ebe1">J4</text>
+<rect x="771.3" y="260.0" width="46.1" height="60.8" fill="#3e7357" stroke="#9fc5b0" stroke-dasharray="3 2"/>
+<text x="794.3" y="294.4" text-anchor="middle" class="xs" style="fill:#d9ebe1">U10</text>
+<rect x="929.2" y="260.0" width="46.2" height="60.9" fill="#3e7357" stroke="#9fc5b0" stroke-dasharray="3 2"/>
+<text x="952.3" y="294.4" text-anchor="middle" class="xs" style="fill:#d9ebe1">U9</text>
+<rect x="859.4" y="471.4" width="61.1" height="56.0" fill="#3e7357" stroke="#9fc5b0" stroke-dasharray="3 2"/>
+<text x="889.9" y="503.4" text-anchor="middle" class="xs" style="fill:#d9ebe1">U1</text>
+<polyline points="769.9,196.4 739.3,130.9 733.3,130.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="769.9" cy="196.4" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="730.3" y="129.9" text-anchor="end" class="lb">TP26</text>
+<text x="730.3" y="142.9" text-anchor="end" class="xs">GND</text>
+<polyline points="804.4,196.4 739.3,160.9 733.3,160.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="804.4" cy="196.4" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="730.3" y="159.9" text-anchor="end" class="lb">TP24</text>
+<text x="730.3" y="172.9" text-anchor="end" class="xs">ASIC3_4_TOP_SPI_CLK</text>
+<polyline points="756.5,196.5 739.3,190.9 733.3,190.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="756.5" cy="196.5" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="730.3" y="189.9" text-anchor="end" class="lb">TP25</text>
+<text x="730.3" y="202.9" text-anchor="end" class="xs">STIM_START_SHARED</text>
+<polyline points="763.1,213.5 739.3,220.9 733.3,220.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="763.1" cy="213.5" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="730.3" y="219.9" text-anchor="end" class="lb">TP12</text>
+<text x="730.3" y="232.9" text-anchor="end" class="xs">ASIC_VDD_ADC</text>
+<polyline points="888.5,218.8 739.3,250.9 733.3,250.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="888.5" cy="218.8" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="730.3" y="249.9" text-anchor="end" class="lb">TP30</text>
+<text x="730.3" y="262.9" text-anchor="end" class="xs">AGND</text>
+<polyline points="804.7,243.9 739.3,280.9 733.3,280.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<rect x="800.2" y="239.4" width="9" height="9" fill="#9be7ff" stroke="#172a32" stroke-width="1.2"/>
+<text x="730.3" y="279.9" text-anchor="end" class="lb">C1002</text>
+<text x="730.3" y="292.9" text-anchor="end" class="xs">ASIC_VSS10</text>
+<polyline points="859.3,280.5 739.3,310.9 733.3,310.9" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="859.3" cy="280.5" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="730.3" y="309.9" text-anchor="end" class="lb">TP29</text>
+<text x="730.3" y="322.9" text-anchor="end" class="xs">GND</text>
+<polyline points="965.2,186.5 1045.6,93.7 1051.6,93.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="965.2" cy="186.5" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="92.7" text-anchor="start" class="lb">TP22</text>
+<text x="1054.6" y="105.7" text-anchor="start" class="xs">ASIC4_DATA1</text>
+<polyline points="982.9,188.9 1045.6,123.7 1051.6,123.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="982.9" cy="188.9" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="122.7" text-anchor="start" class="lb">TP21</text>
+<text x="1054.6" y="135.7" text-anchor="start" class="xs">ASIC4_SPI_DL</text>
+<polyline points="990.9,197.8 1045.6,153.7 1051.6,153.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="990.9" cy="197.8" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="152.7" text-anchor="start" class="lb">TP20</text>
+<text x="1054.6" y="165.7" text-anchor="start" class="xs">ASIC4_SPI_DR</text>
+<polyline points="997.1,217.4 1045.6,183.7 1051.6,183.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="997.1" cy="217.4" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="182.7" text-anchor="start" class="lb">TP14</text>
+<text x="1054.6" y="195.7" text-anchor="start" class="xs">ASIC_DVDD</text>
+<polyline points="1001.8,238.1 1045.6,213.7 1051.6,213.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="1001.8" cy="238.1" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="212.7" text-anchor="start" class="lb">TP23</text>
+<text x="1054.6" y="225.7" text-anchor="start" class="xs">GND</text>
+<polyline points="958.5,243.9 1045.6,243.7 1051.6,243.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<rect x="954.0" y="239.4" width="9" height="9" fill="#9be7ff" stroke="#172a32" stroke-width="1.2"/>
+<text x="1054.6" y="242.7" text-anchor="start" class="lb">C902</text>
+<text x="1054.6" y="255.7" text-anchor="start" class="xs">ASIC_VDD10</text>
+<polyline points="916.5,249.4 1045.6,273.7 1051.6,273.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<rect x="912.0" y="244.9" width="9" height="9" fill="#9be7ff" stroke="#172a32" stroke-width="1.2"/>
+<text x="1054.6" y="272.7" text-anchor="start" class="lb">C402</text>
+<text x="1054.6" y="285.7" text-anchor="start" class="xs">ASIC_VDD_DRIVER</text>
+<polyline points="896.8,269.3 1045.6,303.7 1051.6,303.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="896.8" cy="269.3" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="302.7" text-anchor="start" class="lb">TP27</text>
+<text x="1054.6" y="315.7" text-anchor="start" class="xs">BOARD1_SPI_LATCH</text>
+<polyline points="896.8,281.6 1045.6,333.7 1051.6,333.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="896.8" cy="281.6" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="332.7" text-anchor="start" class="lb">TP28</text>
+<text x="1054.6" y="345.7" text-anchor="start" class="xs">FE_RESET_SHARED</text>
+<polyline points="1013.4,321.3 1045.6,363.7 1051.6,363.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="1013.4" cy="321.3" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="362.7" text-anchor="start" class="lb">TP31</text>
+<text x="1054.6" y="375.7" text-anchor="start" class="xs">AGND</text>
+<polyline points="988.7,326.5 1045.6,393.7 1051.6,393.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="988.7" cy="326.5" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="392.7" text-anchor="start" class="lb">TP8</text>
+<text x="1054.6" y="405.7" text-anchor="start" class="xs">STIM_PRE_POS</text>
+<polyline points="1014.7,383.7 1045.6,423.7 1051.6,423.7" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="1014.7" cy="383.7" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="422.7" text-anchor="start" class="lb">TP10</text>
+<text x="1054.6" y="435.7" text-anchor="start" class="xs">VIN_5V</text>
+<polyline points="1016.6,541.1 1045.6,541.1 1051.6,541.1" fill="none" stroke="#126a71" stroke-width="1"/>
+<circle cx="1016.6" cy="541.1" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="1054.6" y="540.1" text-anchor="start" class="lb">TP16</text>
+<text x="1054.6" y="553.1" text-anchor="start" class="xs">ASIC_VDD_CGEN</text>
+<text x="16" y="613" class="xs">To scale, board outline 22.64 × 36.76 mm, read from the saved board file. Dashed outlines: connectors and main ICs for orientation.</text>
+<circle cx="22" cy="627" r="4.2" fill="#ffd34d" stroke="#172a32" stroke-width="1"/>
+<text x="32" y="631" class="xs">test pad</text>
+<rect x="97.5" y="622.5" width="9" height="9" fill="#9be7ff" stroke="#172a32" stroke-width="1.2"/>
+<text x="112" y="631" class="xs">capacitor to measure on (supply with no test pad)</text>
+</svg>

@@ -1,0 +1,64 @@
+=== PCB REMARK (paste into the PCB "Remark" box) ===
+14-layer 3-step HDI, finished 1.57 mm, 1 oz all layers, ENIG, TG170. Stack-up: JLC template JLCH141611Y3-1078 (please confirm the finished thickness 1.57 mm).
+Drill files, one per span (file names carry the span):
+  Laser 0.10 mm hole / 0.25 mm land: L1-L2, L2-L3, L3-L4, L11-L12, L12-L13, L13-L14. Copper filled and planarised. They are stacked on each other and on the buried via.
+  Mechanical buried 0.15 mm hole / 0.30 mm land: L4-L11. Resin plugged and copper capped.
+  PTH file: four plated slots 0.65 x 1.70 mm (connector shield, on the board), written as G85 slot commands; please confirm they are read as slots; and the 16 plated 1.00 mm holes of the test header JT1 (on the frame). There are no through vias. NPTH file: 21 non-plated holes, all on the frame and the tabs: 17 x 0.60 mm (break-off holes), 4 x 2.00 mm (tooling).
+Vias in pads: 828 laser vias sit inside SMD / BGA / test pads on L1 (424) and L14 (404); please keep them filled, flat and solderable. All other vias are tented.
+Tight spots, please confirm in your review: hole to other-net copper 0.170 mm least on inner layers; same-net hole spacing 0.13 mm least; part pads 0.20 mm wide (0.4 mm pitch parts, makers' footprints).
+Tracks: 0.08 mm on six nets (LVDS pairs CABLE_CLK, CABLE_CMDSYNC, CABLE_SYNC on L8 / L10 / L12), 0.09 mm least elsewhere. Please do not change widths without asking.
+Impedance: the three LVDS pairs are 0.08 mm wide with 0.31 mm gap on L8 (reference L7 / L9) and L10 (reference L9 / L11). Please report the differential impedance of this geometry on your stack.
+Impedance, 3.125 Gb/s pair: nets GTP_TX0_P / GTP_TX0_N on L1, from U1 balls H2 / H1 to J3 pins 5 / 3. Design target 100 ohm differential. Both tracks are 0.10 mm wide and 12.378 mm long, with no via; the gap is 0.32 mm along 9.3 mm of the run (wider at the two ends). Reference plane: L2 GND, through the 0.071 mm L1-L2 prepreg of the template. Please report the differential impedance of this geometry on your stack. If it is outside 100 ohm +/- 10 %, please tell us the width and gap you propose before changing anything.
+Solder mask: solder mask bridge is required between all fine-pitch pads (0.15 mm least in the data).
+Silkscreen: no text on the board itself; the frame carries the title, the power and tab instructions and the header pin names (1.0 mm text). The outline of header JT1 is drawn with 0.10 - 0.12 mm lines (KiCad library footprint); please widen them to your minimum. Order number: "Specify a location"; the text JLCJLCJLCJLC is on the frame.
+Panel 70 x 70 mm, drawn by us: one 22.59 x 25.42 mm board in a test frame. Delivery format: Panel by Customer, 1 x 1. Edge rails: No; the frame is the rail, 12.0 mm or more wide on every side (north 12.0, south 28.6, west 21.7, east 21.7 mm).
+Routed slot 2.0 mm. 4 break-off tabs with 0.60 mm non-plated holes: two on the south edge (4.56 mm wide with 4 holes, 4.87 mm with 4 holes), one west (5.37 mm, 5 holes), one east (4.77 mm, 4 holes). No tab on the north edge: connector J3 overhangs it by 0.62 mm, into the slot.
+Test tracks cross the tabs from the board to the frame ON PURPOSE: six 0.10 mm tracks on L1 across the two south tabs, one 0.30 mm track on L14 across the west tab, two 0.25 mm tracks on L14 across the east tab. Copper therefore reaches the routed board edge at these nine places only; please do not remove or pull back this copper. Break-off hole edge to copper is 0.209 mm least.
+Frame: three 1.0 mm fiducials on each side (2.0 mm mask opening, 3.85 mm from the panel edge) and four 2.0 mm tooling holes, 5 mm from the corners. The frame also carries a GND copper pour on all 14 layers (copper balance; kept off the tabs, fiducials and tooling holes), the test tracks (0.10 - 0.20 mm on L1, 0.25 - 1.0 mm on L14) and the through-hole header JT1.
+Please ship the panels whole, with the frame attached (no depanelling).
+Please send the production file for confirmation before fabrication.
+Flatness: the two 70-pin board-to-board connectors J1 / J2 (bottom side) need 0.02 mm flatness along each connector; please keep bow and twist as low as you can (0.5 % or better) and report the measured bow.
+Please add no balancing copper inside the board outline. The frame already has a GND pour on every layer; please add no other copper there.
+
+=== ASSEMBLY REMARK (paste into the PCBA remark box) ===
+One board per 70 x 70 mm test frame. The placement file is in the coordinates of the Gerbers. The frame carries one part: the through-hole box header JT1 (C3406, 2 x 8 pins, 2.54 mm pitch), top side.
+Standard PCBA, both sides. 169 placements (168 SMD on the board, 1 through-hole on the frame), 53 BOM lines. TP1-TP47 are bare copper test pads and C4, C59 and C89 are not fitted: all are left out of the BOM and CPL on purpose. Please leave the pads of C4, C59 and C89 empty.
+0201 parts on both sides; U1 is a 0.8 mm BGA (top), U7 a 0.5 mm WLCSP (bottom): please X-ray both.
+EVERY BOM LINE IS MANDATORY. Please do not leave out or replace any part without asking us first; if a part is short, please stop and ask. This matters most for R10 (1.3k), R13 and U15: R10 and R13 are the upper feedback resistors of the regulators U5 and U6. If one is missing, that regulator drives its rail toward its 1.4 V input, above the limit of U1 (1.1 V on MGTAVCC, 1.32 V on MGTAVTT). U15 enables that 1.4 V supply. Please confirm in the placement review that R10, R11, R13, R14 and U15 are all fitted.
+U7 solder paste: the 21 paste openings of U7 are round, 0.25 mm (bottom paste file). With a 0.10 mm stencil the area ratio is 0.625, below the usual 0.66 minimum; with 0.08 mm it is 0.78. Please use a 0.08 mm stencil for the bottom side (or a step-down at U7), or apply your own WLCSP opening rule, and tell us which you used.
+J3 (micro-HDMI, top): the four shield tabs sit in plated slots with solder paste on the top side (pin-in-paste); please make sure all four are soldered.
+Part spacing is below your recommended table in places (0201 parts 0.2 mm from U5 / U6, 0.3 mm from the U1 body): please confirm you can place and inspect them.
+JT1 (frame, top): through-hole, soldered from the bottom of the frame; the nearest bottom-side part is more than 13 mm away. Pin 1 is the square pad at X 105.300, Y -138.265 (the silkscreen "1" marks that end of the header); your library footprint for C3406 lands on all 16 pads at 0 deg with its origin at the middle of the pad field.
+U1: use XC7A35T-2CSG325C (C1521720) from our parts inventory.
+U5, U6: TPS74801DRCR (C105263), from stock (52,885 free to order on 2026-11-19 07:54 CST). The schematic and BOM now name this exact part (it was written TPS74801DRCRM3 before 19 Nov 2026). TI ships this part number with either of two chips; if you can, please tell us the CSO code on the reel label (DLN or RFB). Y1: AX3DAF1-125.0000 (C1670018) is the same part as AX3DAF1-125.0000T3.
+R7 is RT0402BRD07150KL (C852538) and R27 is RC0201FR-071KL (C138165), both from stock. R10 is 1.3k AC0201FR-071K3L (C226451), from stock (264 free to order on 2026-11-19 11:26 CST); the earlier R10 parts, 1.24k RC0201DR-071K24L (C851666) and 1.3k ERA-1AEB132C (C2087906), are not used. Bought in advance through Global Sourcing into my JLC parts library (please take them from there): R13 TNPW02012K49BEED (C1870640); U7 W25Q128JWYIQ (C56129941; public listing C6750401). U1 XC7A35T-2CSG325C (C1521720) is also in my parts library.
+R17, R18, R20, R21, R49, R50 are RC0201FR-074K7L (C138135), from stock (2,741,308 free to order on 2026-11-19 07:54 CST). R17 and R18 were 4.99k (C273265) before 19 Nov 2026.
+Please confirm parts placement (polarity and rotation) with us before production.
+Placement file (12 Nov 2026, same points and angles as placement file V2 of 14 layers V3; JT1 added 18 Nov 2026; unchanged on 19 Nov 2026, only the values of R10, R17 and R18 changed in the BOM): the angles of U1, U8, U11, U15, U17 and U18 now include the offset to your library footprints, and J3's point is the origin of your footprint for C563878. Bottom-side angles are KiCad's own (part flipped top-to-bottom, then turned).
+Please place every polarised part by pin 1 (table below and in Frontend_14L_V14_Test_Frame_V4_Pin1_Table.csv), not by the angle alone.
+U1 (BGA, top): ball A1 is the north-west corner at X 109.420, Y -106.200, beside the silkscreen triangle. All 324 balls land on pads at any quarter turn, so the X-ray cannot show a wrong turn: please confirm A1 in the placement preview.
+U7 (WLCSP, bottom): the A1 corner has no ball; it is at X 116.500, Y -103.250, beside balls A2 and B1. There is no silkscreen mark.
+Pin 1 positions (X, Y as in the CPL):
+  J1   Bottom   90 deg    120.705  -119.370   pin 1
+  J2   Bottom   90 deg    103.205  -119.370   pin 1
+  J3   Top     180 deg    110.700  -103.055   pin 1
+  U1   Top     270 deg    109.420  -106.200   ball A1
+  U2   Top     270 deg    105.650  -110.640   pin 1
+  U3   Top     180 deg    105.450  -102.150   pin 1
+  U4   Top     270 deg    105.650  -116.510   pin 1
+  U5   Bottom    0 deg    115.005  -119.920   pin 1
+  U6   Bottom    0 deg    108.875  -119.920   pin 1
+  U7   Bottom  270 deg    116.500  -103.250   A1 corner (no ball there); beside balls A2 and B1
+  U8   Bottom   90 deg    113.780  -106.250   pin 1
+  U10  Bottom    0 deg    118.050   -99.150   pin 1
+  U11  Bottom  180 deg    111.900  -100.260   pin 1
+  U12  Bottom   90 deg    114.000   -98.550   pin 1
+  U13  Top     270 deg    105.650  -105.400   pin 1
+  U14  Bottom    0 deg    109.925  -106.750   pin 1
+  U15  Bottom  270 deg    115.513  -115.400   pin 1
+  U16  Top     180 deg    123.890   -99.900   pin 1
+  U17  Bottom  270 deg    112.185  -101.400   pin 1
+  U18  Bottom   90 deg    113.235  -101.810   pin 1
+  Y1   Bottom    0 deg    105.500  -101.500   pin 1
+  Y2   Bottom    0 deg    109.350  -115.070   pin 1
+  JT1  Top       0 deg    105.300  -138.265   pin 1 (square pad, on the frame)

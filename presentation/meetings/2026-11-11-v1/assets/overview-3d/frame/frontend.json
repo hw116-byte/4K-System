@@ -1,0 +1,121 @@
+{
+ "key": "frontend",
+ "title": "Frontend FPGA Board",
+ "glb": "frontend-test-frame-v3.glb",
+ "render": "frame/frontend-iso.png",
+ "detail": "Test frame V3 · board 14 layers V13 · edited 19 Nov 2026, 11:24 CST · 16 header pins",
+ "summary": "<strong>Frontend FPGA Board in its break-off test frame.</strong> The board sits in a routed cut-out held by tabs; short traces cross the tabs to the box header on the frame, whose pin names are printed beside the pins. Power the board and probe it here, then break it out; its own test pads stay usable afterwards. The frame is also the JLC assembly panel.",
+ "pins": [
+  {
+   "pin": "1",
+   "label": "3V3 OUT",
+   "net": "VIN_3V3",
+   "fn": "3.3 V OUTPUT of the 5 V to 3.3 V converter U16 (the rail that also feeds the FPGA-LDO A board through J2.68-70): measure here; do not feed while 5 V is applied"
+  },
+  {
+   "pin": "2",
+   "label": "3V3 OUT",
+   "net": "VIN_3V3",
+   "fn": "3.3 V OUTPUT of the 5 V to 3.3 V converter U16 (the rail that also feeds the FPGA-LDO A board through J2.68-70): measure here; do not feed while 5 V is applied"
+  },
+  {
+   "pin": "3",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  },
+  {
+   "pin": "4",
+   "label": "RAILPG",
+   "net": "BOOT_RAILS_PG_3V3",
+   "fn": "All boot rails good (high when the boot rails are up)"
+  },
+  {
+   "pin": "5",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  },
+  {
+   "pin": "6",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  },
+  {
+   "pin": "7",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  },
+  {
+   "pin": "8",
+   "label": "INIT_B",
+   "net": "FPGA_INIT_B",
+   "fn": "FPGA INIT_B (configuration init / CRC error, open drain)"
+  },
+  {
+   "pin": "9",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  },
+  {
+   "pin": "10",
+   "label": "VCCO",
+   "net": "VCCO_1V5",
+   "fn": "ASIC bank rail VCCO 1.5 V (U4), monitor only"
+  },
+  {
+   "pin": "11",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  },
+  {
+   "pin": "12",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  },
+  {
+   "pin": "13",
+   "label": "5V IN",
+   "net": "VIN_5V",
+   "fn": "5 V INPUT: bench supply in, return on pin 16 (GND). It feeds U16, which makes VIN_3V3; in the head this 5 V arrives on the cable, J3.19"
+  },
+  {
+   "pin": "14",
+   "label": "VCCAUX",
+   "net": "VCCAUX_1V8",
+   "fn": "VCCAUX 1.8 V rail (U3), monitor only"
+  },
+  {
+   "pin": "15",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  },
+  {
+   "pin": "16",
+   "label": "GND",
+   "net": "GND",
+   "fn": "Ground return"
+  }
+ ],
+ "files": [
+  {
+   "href": "frame/frontend_header_pins.csv",
+   "label": "Header pins (CSV)"
+  },
+  {
+   "href": "frame/frontend-top.png",
+   "label": "Top view"
+  },
+  {
+   "href": "../downloads/frontend-v13/Frontend_14L_V13_Test_Frame_V3_KiCad.zip",
+   "label": "Test frame KiCad ↓",
+   "dl": true
+  }
+ ]
+}

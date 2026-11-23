@@ -1,0 +1,41 @@
+(footprint
+  "TestPoint_Pad_D0.6mm_Edge_NoPaste"
+  (version
+    20241229)
+  (generator
+    "pcbnew")
+  (layer
+    "F.Cu")
+  (descr
+    "Bare0.6mm front copper probe with0.7mm maskopening, no paste or mountedbody;0.8mm probe courtyard. Keep assembled access clear.")
+  (attr
+    smd
+    exclude_from_bom
+    exclude_from_pos_files)
+  (property
+    "Reference"
+    "REF**"
+    (at 0 -0.85)
+    (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (property
+    "Value"
+    "TestPoint_Pad_D0.6mm_NoPaste"
+    (at 0 0.85)
+    (layer "F.Fab")
+    (hide yes)
+    (effects (font (size 0.5 0.5) (thickness 0.08))))
+  (fp_circle
+    (center 0 0)
+    (end 0.31 0)
+    (stroke (width 0.05) (type solid))
+    (fill none)
+    (layer "F.CrtYd"))
+  (pad
+    "1"
+    smd
+    circle
+    (at 0 0)
+    (size 0.6 0.6)
+    (layers "F.Cu" "F.Mask")
+    (solder_mask_margin 0.05)))

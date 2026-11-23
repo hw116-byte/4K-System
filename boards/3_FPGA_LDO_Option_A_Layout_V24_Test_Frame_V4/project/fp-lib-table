@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "FPGA_LDO_V35A")(type "KiCad")(uri "${KIPRJMOD}/FPGA_LDO_V35A.pretty")(options "")(descr "Project-local copies of KiCad 10.0.6 stock footprints")))

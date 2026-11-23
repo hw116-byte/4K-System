@@ -1,0 +1,99 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Probe Bonding Steps</title><link rel="icon" href="data:,">
+<style>
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{display:flex;flex-direction:column;font:14px -apple-system,system-ui,sans-serif;color:#172a32;background:#fff}
+.bar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:8px 12px;border-bottom:1px solid #dde3e5}
+.bar strong{margin-right:6px}.grow{flex:1}
+button,a.btn{font:inherit;cursor:pointer;background:#fff;color:#172a32;border:1px solid #c8d3d6;border-radius:999px;padding:5px 12px;text-decoration:none}
+button[aria-pressed=true]{background:#126a71;color:#fff;border-color:#126a71}button:disabled{opacity:.4;cursor:default}
+#next{background:#126a71;color:#fff;border-color:#126a71;padding:6px 18px}
+#stage{position:relative;flex:1;min-height:300px}canvas{width:100%;height:100%;display:block}
+.lab{position:absolute;transform:translate(-50%,-100%);background:rgba(23,42,50,.88);color:#fff;padding:3px 7px;border-radius:5px;font-size:12px;max-width:230px;pointer-events:none}
+.lab:after{content:"";position:absolute;left:50%;bottom:-5px;border:5px solid transparent;border-top-color:rgba(23,42,50,.88);border-bottom:0;transform:translateX(-50%)}
+.panel{border-top:1px solid #dde3e5;padding:10px 14px 12px;display:grid;gap:6px}
+.dots{display:flex;gap:5px;flex-wrap:wrap}.dots button{width:28px;height:28px;padding:0;border-radius:50%;font-size:12px}
+.dots button.done{background:#e3eff0;border-color:#9cc3c6}
+#stitle{font-size:17px;font-weight:600}#stext{max-width:900px;line-height:1.4}#ssrc{color:#55656b;font-size:12px;max-width:900px}
+[hidden]{display:none!important}#loading{position:absolute;inset:0;display:grid;place-items:center;color:#55656b}
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head><body>
+<div class="bar"><strong>Probe bonding steps V5 · current 512 device</strong>
+<button id="back">◀ Back</button><button id="next">Next ▶</button><button id="replay">↻ Replay</button><button id="play" aria-pressed="false">▶ Autoplay</button><span class="grow"></span>
+<button data-epoxy aria-pressed="true">Epoxy</button><button data-lab aria-pressed="true">Labels</button><a class="btn" href="../index.html">Probe page</a></div>
+<div id="stage"><canvas id="c" aria-label="Animated 3D steps of bonding the probe to the ASIC"></canvas><div id="loading">Loading…</div></div>
+<div class="panel"><div class="dots" id="dots"></div><div id="stitle"></div><div id="stext"></div><div id="ssrc"></div></div>
+<script type="module">
+import {THREE,OrbitControls} from './scene.js';
+import {buildSteps} from './steps.js';
+const stage=document.getElementById('stage'),canvas=document.getElementById('c');
+const r=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});r.setPixelRatio(Math.min(devicePixelRatio,1.5));r.toneMapping=THREE.ACESFilmicToneMapping;
+const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(35,1,.00002,10),ctl=new OrbitControls(cam,canvas);
+scene.add(new THREE.HemisphereLight(0xffffff,0xa6b8c3,2.0));{const es=new THREE.Scene();const sk=new THREE.Mesh(new THREE.SphereGeometry(10,32,16),new THREE.MeshBasicMaterial({side:THREE.BackSide,vertexColors:true}));const pc=sk.geometry.attributes.position,col=[];for(let i=0;i<pc.count;i++){const t=(pc.getY(i)/10+1)/2;col.push(.35+.65*t,.36+.64*t,.38+.62*t);}sk.geometry.setAttribute('color',new THREE.Float32BufferAttribute(col,3));es.add(sk);for(const [x,y,z] of [[5,6,3],[-6,5,-2],[0,7,-6]]){const b=new THREE.Mesh(new THREE.BoxGeometry(3,.2,3),new THREE.MeshBasicMaterial({color:0xffffff}));b.position.set(x,y,z);b.lookAt(0,0,0);es.add(b);}scene.environment=new THREE.PMREMGenerator(r).fromScene(es,.02).texture;}
+for(const p of [[75,120,80],[-45,-90,-60]]){const l=new THREE.DirectionalLight(0xffffff,1.8);l.position.set(...p);scene.add(l);}
+let S,STEPS,cur=0,anim=null,playing=false,holdT=null,showLab=true,showEpo=true,labEls=[];
+const iso=(t,d,dir=[.55,.75,.9])=>{const v=new THREE.Vector3(...dir).normalize().multiplyScalar(d);return {t,p:[t[0]+v.x,t[1]+v.y,t[2]+v.z]};};
+function render(){r.render(scene,cam);const {width,height}=stage.getBoundingClientRect();
+ labEls.forEach(([el,p])=>{const v=new THREE.Vector3(...p.map(x=>x/1000)).project(cam);el.style.display=showLab&&v.z<1&&Math.abs(v.x)<1.1&&Math.abs(v.y)<1.1?'block':'none';el.style.left=((v.x+1)/2*width)+'px';el.style.top=((1-v.y)/2*height)+'px';});}
+ctl.addEventListener('change',()=>{if(!anim)render();});THREE.DefaultLoadingManager.onLoad=()=>render();
+function apply(k,e){S.reset();for(let i=0;i<k;i++)S.run[i](1);S.run[k](e);if(!showEpo)S.epo.visible=false;}
+function setPlay(on){playing=on;clearTimeout(holdT);const b=document.getElementById('play');b.textContent=on?'❚❚ Pause':'▶ Autoplay';b.setAttribute('aria-pressed',String(on));
+ if(on&&!anim){cur>=STEPS.length-1?go(0):go(cur+1);}}
+const ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+function go(k){clearTimeout(holdT);cur=Math.max(0,Math.min(STEPS.length-1,k));const st=STEPS[cur];
+ document.getElementById('stitle').textContent=`Step ${cur+1} of ${STEPS.length} · ${st.title}`;document.getElementById('stext').textContent=st.text;document.getElementById('ssrc').textContent=st.src;
+ document.getElementById('back').disabled=cur===0;document.getElementById('next').disabled=cur===STEPS.length-1;
+ document.querySelectorAll('#dots button').forEach((b,i)=>{b.setAttribute('aria-pressed',String(i===cur));b.classList.toggle('done',i<cur);});
+ labEls.forEach(([el])=>el.remove());labEls=st.labels.map(([t,p])=>{const el=document.createElement('div');el.className='lab';el.textContent=t;el.style.display='none';stage.appendChild(el);return [el,p];});
+ const t0=ctl.target.clone(),p0=cam.position.clone(),t1=new THREE.Vector3(...st.cam.t).multiplyScalar(.001),p1=new THREE.Vector3(...st.cam.p).multiplyScalar(.001);
+ const sp=playing?.6:1,start=performance.now(),camDur=1100*sp,dur=st.dur*1000*sp,delay=500*sp,id={};anim=id;
+ const tick=now=>{if(anim!==id)return;const a=Math.min(1,(now-start)/camDur),e=Math.min(1,Math.max(0,(now-start-delay)/dur)),c=ease(a);
+  ctl.target.lerpVectors(t0,t1,c);cam.position.lerpVectors(p0,p1,c);ctl.update();apply(cur,ease(e));render();
+  if(a<1||e<1)requestAnimationFrame(tick);else{anim=null;if(playing)holdT=setTimeout(()=>{cur<STEPS.length-1?go(cur+1):setPlay(false);},Math.min(3200,700+12*st.text.length));}};
+ requestAnimationFrame(tick);}
+function resize(){const {width,height}=stage.getBoundingClientRect();if(width<1||height<1)return;r.setSize(width,height,false);cam.aspect=width/height;cam.updateProjectionMatrix();render();}
+(async()=>{S=await buildSteps();scene.add(S.root);const {EX,EZ,T,DT,az,pzc,SPAN,yP,zE,loopTop}=S.P;
+ const close={t:[100,.87,80.3],p:[102.4,3.0,83.5]};const closeP={t:[EX-SPAN,DT+.02,pzc+.06],p:[EX-SPAN+2.4,DT+2.15,pzc+3.26]};
+ STEPS=[
+  {title:'The G-chip board and the ASIC',text:'The ASIC die (8.1 × 7.0 mm) is glued onto the G-chip T board (16.00 × 17.25 mm).',src:'From records: board outline and die position (fixture V10 parameters), die from the die photo.',dur:1.4,cam:iso([100,.5,82],30),
+   labels:[['G-chip T board',[EX-6,T,EZ+6]],['ASIC die',[EX,DT,EZ-3.5]]]},
+  {title:'Wire-bond the ASIC to the board',text:'176 gold wire bonds on three sides: a ball on each chip pad, a stitch on each board finger.',src:'From records: G-chip photo (bonds on three sides). Finger layout copied from the V8 footprint.',dur:3,cam:iso([101,.8,80],13),
+   labels:[['Ball on the chip pad, stitch on the board finger',[EX+4.4,DT,EZ-2]]]},
+  {title:'Epoxy over the wire bonds',text:'Right after wire bonding, clear epoxy goes over the side wire bonds to protect them.',src:'From the lab: epoxy goes on after the first wire bond. From records: G-chip photo. Assumed: epoxy shape and height.',dur:1.6,cam:iso([101,.8,80.5],18),
+   labels:[['Clear epoxy over the side wire bonds',[EX+5.3,DT+.35,EZ+2.5]]]},
+  {title:'Dry-fit into the EBL512 enclosure',text:'The board is fitted into the enclosure base before the ribbon and probe are put on, but not glued yet. It sits in the 12.50 mm cavity, front edge on the front stops.',src:'From the lab: fit into the enclosure first, glue only after all bonding. From records: EBL512 enclosure V3 STEP; fit from the G-chip photo widths. Assumed: the holder stays off until after the flip, so the bonder can reach the die.',dur:1.8,cam:iso([100,1,83],38),
+   labels:[['EBL512 enclosure V3 (base)',[EX-7,1.6,EZ+3]]]},
+  {title:'Set the probe beside the enclosure',text:'The SC512 probe, still on its 3.8 × 15.5 mm wafer piece, is held outside the left wall, 14.29 mm left of the chip and 2.00 mm back.',src:'From records: offset from the R5 ribbon layout, wafer size measured in the lab. Assumed: wafer 0.5 mm thick; the holding fixture is not drawn.',dur:1.6,cam:iso([93,.6,83],34),
+   labels:[['SC512 probe on its wafer piece',[EX-SPAN,DT,pzc+6]]]},
+  {title:'First ball + tail on the ASIC',text:'On the board, the wire bonder puts a gold ball on each of the ASIC’s 512 in-pixel contacts and leaves the wire standing up as a tail.',src:'From records: EFO report Fig. 1. Not on record: which end is done first.',dur:2.6,cam:close,
+   labels:[['Ball + standing tail on each in-pixel contact (512)',[100,DT+.06,79.3]]]},
+  {title:'First ball + tail on the probe',text:'The same on the probe: a gold ball with a standing tail on each of its 512 pads, while it is still on its wafer.',src:'From records: EFO report Fig. 1, probe pad layout (SC512_device.oas).',dur:2.6,cam:closeP,
+   labels:[['Ball + standing tail on each probe pad (512)',[EX-SPAN,DT+.06,pzc-.9]]]},
+  {title:'Lay the ribbon over the tails',text:'The ribbon’s ≈40 µm hollow pads drop over the standing tails at both ends. Between the ends it arches over the side epoxy and the enclosure’s left wall.',src:'From records: EFO report Fig. 1, R5 ribbon layout, enclosure wall height (1.6 mm above the board base). Assumed: the arch shape.',dur:1.8,cam:iso([94,.9,82],26),
+   labels:[['Ribbon (R5), pads over the tails',[EX-7.5,1.8,az-3.5]]]},
+  {title:'Second ball on the ASIC end: a rivet',text:'A second gold ball on top of each tail locks the ribbon down on the ASIC like a rivet: 512 joints.',src:'From records: EFO report Fig. 1.',dur:2.6,cam:close,
+   labels:[['Second ball on top: rivet',[100,DT+.08,79.3]]]},
+  {title:'Second ball on the probe end',text:'The same at the probe end: a second ball on each of the 512 tails rivets the ribbon to the probe. 1,024 joints in all.',src:'From records: EFO report Fig. 1.',dur:2.6,cam:closeP,
+   labels:[['Second ball on top: rivet',[EX-SPAN,DT+.08,pzc-.9]]]},
+  {title:'Glue the board into the enclosure',text:'With all bonding done, the board is glued into the enclosure base.',src:'From the lab: the board is glued only after everything is bonded. Assumed: where the glue goes (drawn along both side walls) and that it comes before the black glob.',dur:1.6,cam:iso([100,.4,80],20,[.75,.6,.6]),
+   labels:[['Glue between board edge and wall',[EX+6.13,T+.12,EZ+1]]]},
+  {title:'Black glob over the die',text:'A black glob covers the die and the rivets on it.',src:'From records: G-chip photo. Assumed: that it goes on here; it covers the rivet field, so it cannot go on with the first epoxy.',dur:1.6,cam:iso([99,.9,81],24),
+   labels:[['Black glob over the die',[EX-1,DT+.75,EZ-4]]]},
+  {title:'Flip the probe over',text:'The probe end folds over to the left and back over the chip, so the probe lies face down above the die. The ribbon loops in the gap beside the left wall.',src:'From the lab: the ribbon leaves to the left; probe and ribbon end up under the holder. Assumed: loop shape and the fold motion.',dur:3.2,cam:iso([95,1.5,82],30,[.15,.35,1]),
+   labels:[['Ribbon loops to the left',[EX-6,loopTop,az]],['Probe face down over the die',[EX+2,yP+.2,pzc+5]]]},
+  {title:'Holder on',text:'The insertion holder goes on over the die. The probe, still on its wafer, sits face down in the holder’s 3.8 mm underside channel.',src:'From the lab: probe and ribbon under the holder. From records: holder V3 STEP. Assumed: the probe height in the channel.',dur:1.8,cam:iso([100,1.5,84],32),
+   labels:[['Holder (see-through)',[EX+3,3.4,EZ-1]],['Probe on its wafer in the underside channel',[EX,yP,zE(-8)]]]},
+  {title:'Nickel etch frees the shanks',text:'A nickel etch removes the wafer, so the probe’s 4 shanks stick out about 8.2 mm past the holder front.',src:'From the lab. Assumed: when in the sequence the etch is done.',dur:2.2,cam:iso([100,1.8,89],20,[.6,.7,.9]),
+   labels:[['4 shanks, free after the etch',[EX,yP,zE(-11)]]]},
+  {title:'Thread the tungsten wires',text:'One ≈25 µm tungsten wire per shank, laid in the holder’s 4 top grooves and run along each shank to its tip.',src:'From the lab. Assumed: the bend from the groove down to the shank.',dur:3,cam:iso([100,2.4,85],16),
+   labels:[['Tungsten wire in each top groove',[EX,3.1,zE(-2)]],['…then along each shank to the tip',[EX,yP,zE(-11)]]]},
+ ];
+ const dots=document.getElementById('dots');STEPS.forEach((s,i)=>{const b=document.createElement('button');b.textContent=i+1;b.title=s.title;b.onclick=()=>{setPlay(false);go(i);};dots.appendChild(b);});
+ const man=k=>{setPlay(false);go(k);};document.getElementById('back').onclick=()=>man(cur-1);document.getElementById('next').onclick=()=>man(cur+1);document.getElementById('replay').onclick=()=>man(cur);document.getElementById('play').onclick=()=>setPlay(!playing);
+ document.querySelector('[data-epoxy]').onclick=e=>{showEpo=!showEpo;e.target.setAttribute('aria-pressed',String(showEpo));if(!anim){apply(cur,1);render();}};
+ document.querySelector('[data-lab]').onclick=e=>{showLab=!showLab;e.target.setAttribute('aria-pressed',String(showLab));render();};
+ addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();man(cur+1);}else if(e.key==='ArrowLeft'){man(cur-1);}else if(e.key==='p'||e.key==='P'){setPlay(!playing);}});
+ new ResizeObserver(resize).observe(stage);resize();
+ const s0=+(new URLSearchParams(location.search).get('step')||1)-1;const c=STEPS[Math.max(0,s0)].cam;ctl.target.set(...c.t.map(x=>x/1000));cam.position.set(...c.p.map(x=>x/1000));
+ go(s0);if(new URLSearchParams(location.search).get('autoplay'))setPlay(true);document.getElementById('loading').hidden=true;document.body.dataset.ready='true';window.__go=go;
+})().catch(e=>{document.getElementById('loading').textContent='Unable to load the 3D model.';console.error(e);});
+</script></body></html>

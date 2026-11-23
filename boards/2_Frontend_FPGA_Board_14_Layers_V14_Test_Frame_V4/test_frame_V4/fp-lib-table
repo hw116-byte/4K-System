@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "LearningFPGA")(type "KiCad")(uri "${KIPRJMOD}/LearningFPGA.pretty")(options "")(descr ""))
+  (lib (name "TestFrame")(type "KiCad")(uri "${KIPRJMOD}/TestFrame.pretty")(options "")(descr "Connector_IDC IDC-Header_2x08_P2.54mm_Vertical, KiCad 10 library copy"))
+)

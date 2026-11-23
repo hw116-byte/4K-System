@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test frame</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="viewer.css?v=20261111-head2">
+<link rel="stylesheet" href="frame.css?v=20261119-f5">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<script type="module" src="frame.js?v=20261119-f5"></script>
+</head>
+<body>
+<div class="controls">
+ <strong id="title">Test frame</strong>
+ <div class="tools" aria-label="View">
+  <button data-mode="3d" aria-pressed="true">3D</button><button data-mode="photo" aria-pressed="false">Render</button>
+  <span class="sep"></span>
+  <button data-view="iso">Isometric</button><button data-view="top">Top</button><button data-view="bottom">Bottom</button>
+ </div>
+</div>
+<div class="fr-main">
+ <div id="stage"><canvas id="canvas" aria-label="Interactive 3D model of the board in its break-off test frame"></canvas><div id="loading" role="status">Loading the test frame…</div>
+  <img id="photo" alt="" hidden>
+ </div>
+ <aside id="side">
+  <div id="summary"></div>
+  <h3>Header pins</h3>
+  <table id="pins"><thead><tr><th>Pin</th><th>Label · net</th><th>What it is</th></tr></thead><tbody></tbody></table>
+  <p id="files"></p>
+ </aside>
+</div>
+<div class="caption"><span id="detail"></span><span>Drag to rotate · scroll to zoom · right-drag to pan</span></div>
+</body>
+</html>
