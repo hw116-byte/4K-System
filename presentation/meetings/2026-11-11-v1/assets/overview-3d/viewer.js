@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import {addPcb5Bodies} from './pcb5.js?v=2';
 import {addProbeBodies} from './probe.js?v=1';
-import {makeFan,makeFanCable,FAN} from './fan.js?v=2';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {mergeGeometries} from './vendor/BufferGeometryUtils.js';
@@ -9,7 +8,6 @@ import {mergeGeometries} from './vendor/BufferGeometryUtils.js';
 const $=id=>document.getElementById(id),stage=$('stage'),canvas=$('canvas');
 const INFO={
  hdmi:{name:'HDMI Extension Board',kicker:'V41 · edited 24 Nov 2026, 21:42 CST',role:'Hosts the XEM8310. Eight Micro-HDMI ports, one per Frontend FPGA Board, and PCIe x4 to the PC. V41 adds male test pins and a 12 V fan header; copper unchanged from V40.',was:'Was: XEM8310 breakout, BRK8310 Custom'},
- fan:{name:'Fan · 60 × 60 × 15 mm, 12 V',kicker:'On HDMI Extension Board V41 fan header J930 · 12 V from the barrel jack',role:'Cools the XEM8310. Suggested: Noctua NF-A6x15 FLX, 0.085 A. Drawn under the board below the XEM8310; the mount is not designed yet, so the position is illustrative.',was:''},
  xem8310:{name:'XEM8310',kicker:'Opal Kelly module',role:'FPGA module that mounts on the HDMI Extension Board (MC1–MC3).',was:''},
  frontend:{name:'Frontend FPGA Board',kicker:'Layout V14 · 14 layers · edited 20 Nov 2026, 16:26 CST · test frame V4',role:'Reads its ASIC boards and sends the data over one HDMI cable.',was:'Was: Artix-7 FPGA board, 35T FPGA PCB, custom FPGA'},
  fpgaldo:{name:'FPGA-LDO PCB · Option A',kicker:'Layout V24 · edited 19 Nov 2026, 11:46 CST · one per stack · test frame V4',role:'One board under the Frontend FPGA Board; powers the four ASIC boards.',was:''},
@@ -22,7 +20,7 @@ const INFO={
  sheep:{name:'Sheep (illustration)',kicker:'Low-poly model, approximate size',role:'Shows where the eight head stages sit. "Sheep" by Poly by Google, CC BY 3.0, via Poly Pizza. Not a surgical plan.',was:''},
  brain:{name:'Brain (nominal shape)',kicker:'Illustration only',role:'About 80 × 60 × 45 mm, drawn just under the scalp so the probe shanks reach it. Skull, scalp thickness and implant sites are not modelled.',was:''}
 };
-const SCOPE={custom:'8 head stages (4 Option A + 4 Option B) → 8 HDMI cables → HDMI Extension Board V41 + XEM8310 + 60 mm fan · Option B router V3 and LDO board V3: placement only, routing in progress',
+const SCOPE={custom:'8 head stages (4 Option A + 4 Option B) → 8 HDMI cables → HDMI Extension Board V41 + XEM8310 · Option B router V3 and LDO board V3: placement only, routing in progress',
  direct:'XEM8305 + G-chip Direct LDO Carrier + existing LDO board',
  head:'8 head stages on a sheep head (4 Option A + 4 Option B) · probe shanks point down into the brain · 8 HDMI cables leave toward the HDMI Extension Board · sheep: Poly by Google, CC BY 3.0'};
 // Head view: what stays on the head permanently and what unplugs after a recording. Option B follows the
@@ -75,10 +73,6 @@ async function buildCustom(){
  // HDMI Extension Board + XEM8310. MC1–MC3 coordinates are unchanged from BRK8310 Custom V1, so the earlier XEM registration applies.
  const host=new THREE.Group();host.position.set(160,0,0);root.add(host);
  const hdmi=compact(hdmiG.scene);hdmi.scale.setScalar(1000);const hb=new THREE.Box3().setFromObject(hdmi),hc=hb.getCenter(new THREE.Vector3());hdmi.position.set(-hc.x,0,-hc.z);const hdmiPart=new THREE.Group();hdmiPart.add(hdmi);host.add(tag(hdmiPart,'hdmi','HDMI Extension Board',list,true));hdmiPart.userData.anchor=[.82,.15];
- // 60 mm 12 V fan on V41 header J930 (24 Nov 2026). Drawn under the board below the XEM8310; the mount position is illustrative.
- {const fan=makeFan(),top=-7.5;fan.position.set(FAN.centre[0]-hc.x,top-FAN.thick,FAN.centre[1]-hc.z);const fp=new THREE.Group();fp.add(fan);
-  const a=new THREE.Vector3(FAN.centre[0]-30-hc.x,top-FAN.thick/2,FAN.centre[1]-30-hc.z),b=new THREE.Vector3(FAN.j930[0]-hc.x,-4,FAN.j930[1]-hc.z);fp.add(makeFanCable(a,b));
-  host.add(tag(fp,'fan','Fan · 60 mm, 12 V',list,true));fp.userData.below=true}
  const xem=xemG.scene;xem.traverse(o=>{if(!o.isMesh)return;const ms=Array.isArray(o.material)?o.material:[o.material];o.material=ms.map(m=>{if(m.opacity>=1&&!m.transparent)return m;const c=m.clone();c.opacity=1;c.transparent=false;c.depthWrite=true;return c});if(o.material.length===1)o.material=o.material[0]});xem.matrixAutoUpdate=false;xem.matrix.set(-1,0,0,232.326,0,0,1,7.905,0,-1,0,135.154,0,0,0,1);xem.matrix.premultiply(new THREE.Matrix4().makeTranslation(-hc.x,0,-hc.z));const xemPart=new THREE.Group();xemPart.add(xem);host.add(tag(xemPart,'xem8310','XEM8310',list,true));
  // The Option A stack uses the 70-pin connector centres for Frontend registration
  // and the 80-pin centres for PCB-5. Heights use nominal 1.5 mm DF40 mating gaps.
