@@ -1,0 +1,12 @@
+{
+  "title": "Option B Router V3 · layout V1 (routed)",
+  "revision": "V3 layout V1",
+  "sha256": "601210769bf932d43b0d7ceb55ea75dbe4f9de001b0c0d0c08fcb3c7bfd6adbb",
+  "defaults": ["F.Cu", "B.Cu"],
+  "expected": {"copperLayers": 6},
+  "native": "Option_B_Router_V3.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": true,
+  "source_note": "Unmodified copy of the saved routed board (25 Nov 2026, 07:54 CST).",
+  "source_relative_to_workspace": "2026-11-25_FPGA_Work/02_Option_B_Router_V3_Layout_V1/project/Option_B_Router_V3.kicad_pcb"
+}

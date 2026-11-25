@@ -14,6 +14,7 @@ const boards = {
  ldob_router: ['FPGA-LDO Option B · router V2','fpga-ldo-b-router-v2.glb','On the head · J5 (120-pin) has no vendor model yet'],
  ldob_ldo: ['FPGA-LDO Option B · LDO board V2','fpga-ldo-b-ldo-v2.glb','Plug-in board · J5 (120-pin) has no vendor model yet'],
  ldob_router_v3: ['FPGA-LDO Option B · router V3','optb-router-v3-placement.glb?v=202611241613','Stays on the animal · 22.69 × 17.62 mm · J3 top / J4 bottom to the ASIC boards, J6 + J5 DF40C-80DS to the drive board · placement only, not routed'],
+ ldob_router_v3_l1: ['Option B Router V3 · layout V1 (routed)','optb-router-v3-layout-v1.glb?v=202611250754','Stays on the animal · 22.69 × 17.62 mm · 6 layers 1+4+1 HDI · all 142 nets routed, DRC 0 · J3 top / J4 bottom to the ASIC boards, J6 + J5 DF40C-80DS to the drive board'],
  ldob_ldo_v3: ['FPGA-LDO Option B · LDO board V3','optb-ldo-board-v3-placement.glb?v=202611241613','Plugs in each session · 22.69 × 40.30 mm · J6 + J5 DF40C-80DP to the router, J1/J2 to the Frontend, regulators on the bottom · placement only, not routed'],
  carrier_v7: ['4K Direct LDO Carrier · V7 layout V2','4k-direct-ldo-carrier-v7-placement.glb?v=202611241955','XEM8305 sockets MC1–MC3 + ASIC-rail regulators + J5/J6 DF40C-80DP to the Option B router on the MC1-edge tongue · 63.85 × 83.05 mm · 203 parts placed, not routed'],
  hdmi_v41: ['HDMI Extension Board · V41','hdmi-extension-v41.glb?v=202611242142','V40 copper unchanged · 2.00 mm male headers J900–J902, J910, J911 · 2.54 mm rail pins J920–J928 · 12 V fan header J930 on the bottom']
