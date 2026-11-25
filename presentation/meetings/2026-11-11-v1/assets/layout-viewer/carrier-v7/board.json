@@ -1,0 +1,12 @@
+{
+  "title": "4K Direct LDO Carrier V7 · layout V2 · placement (not routed)",
+  "revision": "V2",
+  "sha256": "f3638242622c65f7fffe295a4e960f27889852360199e169ace055198f6ed378",
+  "defaults": ["F.Cu", "B.Cu"],
+  "expected": {"copperLayers": 6},
+  "native": "Carrier_V7.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved layout V2 (24 Nov 2026, 19:55 CST): all 203 parts placed, DRC 0, no copper yet.",
+  "source_relative_to_workspace": "2026-11-24_FPGA_Work/11_4K_Direct_Carrier_V7_V1/layout_V2/project/Carrier_V7.kicad_pcb"
+}

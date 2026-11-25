@@ -1,0 +1,12 @@
+{
+  "title": "Option B router V3 · placement (not routed)",
+  "revision": "V3",
+  "sha256": "445513cc4b8221d626b8a3213f0c03708e18e55bc19a52b464bc1694d5f07211",
+  "defaults": ["F.Cu", "B.Cu"],
+  "expected": {"copperLayers": 6},
+  "native": "router_V3_placement.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved placement board (24 Nov 2026, 16:13 CST). Connectors, outline and parts placed; no copper yet.",
+  "source_relative_to_workspace": "2026-11-24_FPGA_Work/10_Option_B_Router_V3_Contract_Review_V1/placement_boards/router_V3_placement/router_V3_placement.kicad_pcb"
+}

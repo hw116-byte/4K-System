@@ -1,0 +1,94 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Router V3 Stack</title><link rel="icon" href="data:,">
+<style>
+/* look copied from the 4K-System site: overview-3d/viewer.css + the site header bar */
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;color:#172a32;background:#fff;font:13px Arial,Helvetica,sans-serif;display:flex;flex-direction:column}button{font:inherit;cursor:pointer;background:#fff;color:#172a32;border:1px solid #c8d3d6;border-radius:3px;padding:6px 10px}button.active,button[aria-pressed=true],button:hover{border-color:#126a71;color:#126a71}button:disabled{opacity:.5;cursor:default}
+.bar{height:54px;flex:none;background:#fff;border-bottom:1px solid #e0e6e7;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 22px;font-size:13px}.brand{font-weight:600;color:#126a71;text-decoration:none}.bar nav{display:flex;gap:14px}.bar nav a{color:#126a71;text-decoration:none}.bar nav a[aria-current]{text-decoration:underline;text-underline-offset:3px}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:7px;border-bottom:1px solid #e0e6e7}.approach,.tools{display:flex;gap:5px;flex-wrap:wrap}
+#stage{flex:1;min-height:200px;position:relative;background:#eef2f2;overflow:hidden}canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}canvas.pick{cursor:pointer}
+#loading{position:absolute;top:12px;left:12px;background:#fffe;padding:8px 10px;pointer-events:none}
+#labels{position:absolute;inset:0;pointer-events:none;font-size:12px}#labels span{position:absolute;transform:translate(-50%,-115%);padding:3px 6px;background:#ffffffe6;color:#126a71;border:1px solid #c8d3d6;border-radius:3px;white-space:nowrap;font-weight:600}#labels span.conn{border-color:#126a71;font-weight:400;font-size:11px}#labels span.selected{background:#126a71;color:#fff;border-color:#126a71;font-size:13px;z-index:2}
+#tip{position:absolute;pointer-events:none;background:#172a32;color:#fff;padding:4px 7px;border-radius:3px;font-size:12px;white-space:nowrap;transform:translate(12px,12px)}
+#card{position:absolute;left:12px;bottom:12px;max-width:min(360px,calc(100% - 24px));background:#fff;border:1px solid #c8d3d6;border-top:3px solid #126a71;padding:11px 32px 11px 13px;box-shadow:0 4px 16px #172a3218}#card span{display:block;color:#126a71;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}#card strong{display:block;font-size:19px;margin:4px 0 5px}#card p{margin:3px 0 0;color:#53656b;line-height:1.35}#card p b{color:#172a32;font-weight:600}#card #card-was:empty{display:none}#card-close{position:absolute;top:5px;right:5px;border:0;padding:2px 7px;font-size:16px;color:#53656b}
+.caption{display:flex;justify-content:space-between;gap:15px;color:#53656b;font-size:12px;padding:7px 10px;border-top:1px solid #e0e6e7}.caption span:last-child{white-space:nowrap}
+@media(max-width:700px){.caption span:last-child{display:none}#card strong{font-size:16px}.bar{padding:9px 16px}}
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head><body>
+
+<div class="controls"><div class="approach" role="group" aria-label="Boards shown"><button data-show="router" aria-pressed="true">Router V3</button><button data-show="ldo" aria-pressed="true">LDO board V3</button><button data-show="frontend" aria-pressed="true">Frontend</button><button data-show="asic" aria-pressed="true">ASIC boards</button></div><div class="tools"><button id="explode" aria-pressed="false">Separate boards</button><button id="names" aria-pressed="true">Show all names</button><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="fit">Fit view</button></div></div>
+<div id="stage"><canvas id="canvas" aria-label="Interactive Option B head stack. Drag to rotate, scroll to zoom."></canvas><div id="loading">Loading boards…</div><div id="labels"></div><div id="tip" hidden></div>
+<aside id="card"><button id="card-close" aria-label="Close">×</button><span id="card-kicker"></span><strong id="card-name"></strong><p id="card-role"></p><p id="card-was"></p></aside></div>
+<div class="caption"><span>Placement only: router V3 and LDO board V3 have connectors and outline, no copper yet; ASIC boards V15 and Frontend V14 are the real boards.</span><span>Scroll to zoom to the pointer · double-click a part to zoom to it · drag to rotate</span></div>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from './vendor/GLTFLoader.js';
+import {OrbitControls} from './vendor/OrbitControls.js';
+import {mergeGeometries} from './vendor/BufferGeometryUtils.js';
+import {addProbeBodies} from './probe.js';
+const INFO={"stack": {"name": "Option B head stack", "kicker": "Router V3 change · placement only", "role": "<b>Router:</b> 22.7 × 12.7 mm with a 27.9 mm wide end → one 22.7 × 17.6 mm rectangle. The 120-pin J5 becomes two 80-pin receptacles underneath, in the order J4 → J6 → J5.<br><b>LDO board:</b> now a plain 22.7 × 40.3 mm rectangle (the 27.95 mm wide end was only for the 120-pin plug); 5 mm longer, north edge stays put.<br><b>Frontend:</b> moves 5 mm south with the LDO board.", "was": "Head stack 52.9 → 57.9 mm long (measured on the board models)."}, "router": {"name": "Router V3", "kicker": "V3 placement · edited 24 Nov 2026, 16:13 CST", "role": "Carries the four ASIC boards: J3 on top, J4 underneath. Two 80-pin DF40C-80DS receptacles underneath, J6 and J5, plug onto the LDO board. 22.7 × 17.6 mm. Connectors and outline only, no copper yet.", "was": "Was V2: 22.7 × 12.7 mm plus a 27.9 mm wide end, with one 120-pin J5."}, "ldo": {"name": "LDO board V3", "kicker": "V3 placement · edited 24 Nov 2026, 16:13 CST", "role": "Under the router and the Frontend. Two DF40C-80DP plugs (J6, J5) mate the router; J1/J2 take the Frontend. Plain 22.7 × 40.3 mm rectangle. V2 parts moved 5 mm south, north edge kept. No copper yet.", "was": "Was V2: one 120-pin J5 plug and a 27.95 mm wide end (needed only for that plug)."}, "frontend": {"name": "Frontend FPGA Board", "kicker": "Layout V14 · 14 layers · edited 20 Nov 2026, 16:26 CST", "role": "Plugs into LDO board J1/J2, beside the router at the same height. Moves 5 mm south with the LDO board; 0.525 mm from the router edge.", "was": "The board itself is unchanged."}, "asic": {"name": "ASIC boards · top and bottom", "kicker": "V15 · top edited 19 Nov 2026, 07:43 CST · bottom 07:44 CST", "role": "A bottom board plugs onto router J3 (above) and J4 (below); a top board stacks on each. Unchanged.", "was": ""}},CONN=[["router", [-0.217, 4.2, -16.487], "Router J3", false], ["router", [-0.217, 0.0, -16.482], "Router J4", true], ["router", [-0.217, 1.5, -9.8], "Router J6", false], ["router", [-0.217, 1.5, -4.8], "Router J5", false], ["ldo", [-0.217, 0.0, -9.8], "J6 plug", true], ["ldo", [-0.217, 0.0, -4.8], "J5 plug", true]],NUMS={"length_v3": 57.884, "length_v2": 52.884};
+const $=id=>document.getElementById(id),stage=$('stage'),canvas=$('canvas');
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,.1,4000);
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;
+scene.add(new THREE.HemisphereLight(0xffffff,0x8c9b97,1.6));const sun=new THREE.DirectionalLight(0xffffff,1.6);sun.position.set(80,180,100);scene.add(sun);const fill=new THREE.DirectionalLight(0xffffff,.6);fill.position.set(-120,60,-80);scene.add(fill);
+const controls=new OrbitControls(camera,canvas);controls.addEventListener('change',render);controls.minDistance=.8;controls.maxDistance=2500;controls.zoomToCursor=true;controls.zoomSpeed=2.2;
+const loader=new GLTFLoader();
+const highlight=new THREE.Box3Helper(new THREE.Box3(),0xe9a72e);highlight.visible=false;scene.add(highlight);
+const root=new THREE.Group();scene.add(root);
+const groups={router:new THREE.Group(),ldo:new THREE.Group(),frontend:new THREE.Group(),asic:new THREE.Group()};for(const k in groups)root.add(groups[k]);
+const pickables=[],movers=[],markers=[];let ready=false,selected=null,showAll=true,flight=null,exploded=false,explodeK=0,boxCache=null;
+function render(){renderer.render(scene,camera);drawLabels()}
+function resize(){const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();render()}
+new ResizeObserver(resize).observe(stage);
+// Merge native CAD faces per material (as the site viewer does).
+function compact(src){src.updateMatrixWorld(true);const out=new THREE.Group(),batches=new Map();src.traverse(o=>{if(!o.isMesh)return;const mats=Array.isArray(o.material)?o.material:[o.material];if(mats.length!==1)return;let m=mats[0];if(m.transparent&&m.opacity>=.99){m=m.clone();m.transparent=false}const g=o.geometry.clone().applyMatrix4(o.matrixWorld),key=[m.type,m.color?.getHex(),m.metalness,m.roughness,m.opacity,m.transparent,m.map?.uuid||'',m.side,Object.keys(g.attributes).sort().join(','),!!g.index].join('|');if(!batches.has(key))batches.set(key,{m,geoms:[]});batches.get(key).geoms.push(g)});for(const {m,geoms} of batches.values()){const g=geoms.length===1?geoms[0]:mergeGeometries(geoms,false);if(g)out.add(new THREE.Mesh(g,m));else geoms.forEach(one=>out.add(new THREE.Mesh(one,m)))}return out}
+// KiCad GLB (metres, PCB X->X, PCB Y->Z, board bottom at y=0). Exported with --user-origin so that, in the scene frame
+// (router/LDO KiCad frame, origin (100,130) mm), each board needs only a 0/180 degree turn about vertical and its bottom-face height.
+function nativeBoard(model,rotation,y){const b=model.clone();b.scale.setScalar(1000);b.rotation.y=rotation;b.position.set(0,y,0);return b}
+function tag(obj,key,label,anchor,below=false){obj.userData={key,label,anchor,below};pickables.push(obj);return obj}
+async function build(){
+ const files=['router-v3-placement','ldo-board-v3-placement','frontend-14l-v14','asic-bottom-v15','asic-top-v15'];
+ const [routerG,ldoG,feG,asicBG,asicTG]=await Promise.all(files.map(f=>loader.loadAsync('models/'+f+'.glb?v=202611241614')));
+ for(const g of [asicBG,asicTG]){const pg=new THREE.Group();pg.position.set(-.135323,0,-.054523);addProbeBodies(pg);g.scene.add(pg)}// SC512 probes, shifted by the GLB user origin
+ const [R,L,F,AB,AT]=[routerG,ldoG,feG,asicBG,asicTG].map(g=>compact(g.scene));
+ const add=(key,obj,dy)=>{const h=new THREE.Group();h.add(obj);groups[key].add(h);movers.push([h,dy]);return h};
+ tag(add('router',nativeBoard(R,0,1.5),0),'router','Router V3',[1,.85]);
+ tag(add('ldo',nativeBoard(L,0,-1.6),-7),'ldo','LDO board V3',[.9,.9],true);
+ tag(add('frontend',nativeBoard(F,Math.PI,1.5),0),'frontend','Frontend V14',[.5,.75]);
+ // Bottom boards sit next to the router (J3 above, J4 below); a top board stacks on each. 0.8 mm boards, 1.5 mm mated DF40.
+ const asics=new THREE.Group();[[AT,-3.1,-11],[AB,-.8,-5],[AB,4.6,6],[AT,6.9,12]].forEach(([m,y,dy])=>{const h=new THREE.Group();h.add(nativeBoard(m,Math.PI,y));asics.add(h);movers.push([h,dy])});
+ groups.asic.add(tag(asics,'asic','ASIC boards V15 · 2 above, 2 below',[.9,.12]));
+ for(const [owner,p,label,below] of CONN){const m=new THREE.Object3D();m.position.set(...p);const mover=movers.find(([h])=>h.parent===groups[owner]||h===groups[owner]);(mover?mover[0]:groups[owner]).add(m);m.userData={label,below,owner};markers.push(m)}
+ ready=true;
+}
+function applyExplode(k){explodeK=k;for(const [h,dy] of movers)h.position.y=dy*k;boxCache=null;if(selected)highlight.box.setFromObject(selected).expandByScalar(.4);render()}
+function setExploded(on){exploded=on;const from=explodeK,to=on?1:0,t0=performance.now();const step=now=>{const u=Math.min(1,(now-t0)/450),e=u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2;applyExplode(from+(to-from)*e);if(u<1)requestAnimationFrame(step)};requestAnimationFrame(step);const b=$('explode');b.setAttribute('aria-pressed',String(on));b.textContent=on?'Put boards together':'Separate boards'}
+function zoomBy(f){flight=null;const v=camera.position.clone().sub(controls.target);const d=Math.max(controls.minDistance,Math.min(controls.maxDistance,v.length()*f));camera.position.copy(controls.target).add(v.setLength(d));controls.update();render()}
+const ray=new THREE.Raycaster(),ndc=new THREE.Vector2();
+const visible=o=>{let v=o.visible;o.traverseAncestors(a=>{if(!a.visible)v=false});return v};
+function zoomToPoint(x,y){const r=canvas.getBoundingClientRect();ndc.set((x-r.left)/r.width*2-1,-(y-r.top)/r.height*2+1);ray.setFromCamera(ndc,camera);const hit=ray.intersectObjects(pickables.filter(visible),true)[0];if(!hit)return;const dir=camera.position.clone().sub(hit.point),d=Math.max(6,dir.length()*.35);const toPos=hit.point.clone().add(dir.setLength(d));flight={t0:performance.now(),fromPos:camera.position.clone(),fromT:controls.target.clone(),toPos,toT:hit.point.clone()};requestAnimationFrame(fly)}
+function boxesOf(objs){return objs.map(o=>new THREE.Box3().setFromObject(o)).filter(b=>!b.isEmpty())}
+function frame(boxes,dir,animate=true){const bounds=boxes.reduce((a,b)=>a.union(b),new THREE.Box3());if(bounds.isEmpty())return;const center=bounds.getCenter(new THREE.Vector3()),d0=dir.clone().normalize(),q=new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().lookAt(d0,new THREE.Vector3(),new THREE.Vector3(0,1,0))).invert(),tanV=Math.tan(camera.fov*Math.PI/360),tanH=tanV*camera.aspect;let d=0;for(const b of boxes)for(const x of [b.min.x,b.max.x])for(const y of [b.min.y,b.max.y])for(const z of [b.min.z,b.max.z]){const p=new THREE.Vector3(x,y,z).sub(center).applyQuaternion(q);d=Math.max(d,p.z+Math.abs(p.x)/tanH,p.z+Math.abs(p.y)/tanV)}d*=1.08;const toPos=center.clone().addScaledVector(d0,d);camera.near=Math.max(.05,d/2000);camera.far=d*20+800;camera.updateProjectionMatrix();if(!animate){controls.target.copy(center);camera.position.copy(toPos);controls.update();render();return}flight={t0:performance.now(),fromPos:camera.position.clone(),fromT:controls.target.clone(),toPos,toT:center};requestAnimationFrame(fly)}
+function fly(now){if(!flight)return;const k=Math.min(1,(now-flight.t0)/650),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;camera.position.lerpVectors(flight.fromPos,flight.toPos,e);controls.target.lerpVectors(flight.fromT,flight.toT,e);controls.update();render();if(k<1)requestAnimationFrame(fly);else flight=null}
+const VIEW=new THREE.Vector3(-1,.55,.4);
+function fitAll(animate=true){frame(boxesOf(pickables.filter(visible)),VIEW,animate)}
+function place(e,v,below){const p=v.project(camera);if(p.z<-1||p.z>1)return false;e.style.left=((p.x+1)*stage.clientWidth/2)+'px';e.style.top=((1-p.y)*stage.clientHeight/2)+'px';if(below)e.style.transform='translate(-50%,15%)';return true}
+function drawLabels(){const overlay=$('labels');overlay.replaceChildren();if(!ready)return;
+ for(const o of pickables){const isSel=selected===o;if(!visible(o)||(!isSel&&!showAll))continue;const b=new THREE.Box3().setFromObject(o),a=o.userData.anchor;const v=new THREE.Vector3(b.min.x+(b.max.x-b.min.x)*a[0],o.userData.below?b.min.y-1:b.max.y+.5,b.min.z+(b.max.z-b.min.z)*a[1]);const e=document.createElement('span');e.textContent=isSel?INFO[o.userData.key].name:o.userData.label;if(isSel)e.className='selected';if(place(e,v,o.userData.below))overlay.appendChild(e)}
+ if(showAll)for(const m of markers){if(!visible(m))continue;const e=document.createElement('span');e.className='conn';e.textContent=m.userData.label;if(place(e,m.getWorldPosition(new THREE.Vector3()),m.userData.below))overlay.appendChild(e)}}
+function pickAt(x,y){const r=canvas.getBoundingClientRect();ndc.set((x-r.left)/r.width*2-1,-(y-r.top)/r.height*2+1);ray.setFromCamera(ndc,camera);if(!boxCache)boxCache=pickables.map(o=>[o,new THREE.Box3().setFromObject(o).expandByScalar(.6)]);let best=null,bd=Infinity;for(const [o,b] of boxCache){if(!visible(o)||!ray.ray.intersectBox(b,new THREE.Vector3()))continue;const h=ray.intersectObject(o,true)[0];if(h&&h.distance<bd){bd=h.distance;best=o}}return best}
+function showCard(info){$('card-kicker').textContent=info.kicker;$('card-name').textContent=info.name;$('card-role').innerHTML=info.role;$('card-was').textContent=info.was;$('card').hidden=false}
+function select(o,{focus=false}={}){selected=o;if(!o){highlight.visible=false;$('card').hidden=true;render();return}highlight.box.setFromObject(o).expandByScalar(.4);highlight.visible=true;showCard(INFO[o.userData.key]);if(focus){const b=new THREE.Box3().setFromObject(o),s=b.getSize(new THREE.Vector3());frame([b.expandByScalar(Math.max(1.5,Math.max(s.x,s.z)*.08))],new THREE.Vector3(.7,.9,1))}render()}
+let down=null;canvas.addEventListener('pointerdown',e=>{down={x:e.clientX,y:e.clientY};flight=null});
+canvas.addEventListener('pointerup',e=>{if(!down||Math.hypot(down.x-e.clientX,down.y-e.clientY)>5){down=null;return}down=null;select(pickAt(e.clientX,e.clientY))});
+let hoverPending=false;canvas.addEventListener('pointermove',e=>{if(e.buttons||hoverPending)return;hoverPending=true;requestAnimationFrame(()=>{hoverPending=false;const o=ready?pickAt(e.clientX,e.clientY):null,tip=$('tip');canvas.classList.toggle('pick',!!o);if(o){const r=stage.getBoundingClientRect();tip.textContent=INFO[o.userData.key].name;tip.style.left=(e.clientX-r.left)+'px';tip.style.top=(e.clientY-r.top)+'px';tip.hidden=false}else tip.hidden=true})});
+canvas.addEventListener('pointerleave',()=>{$('tip').hidden=true});
+$('card-close').onclick=()=>{if(selected)select(null);else $('card').hidden=true};
+$('names').onclick=()=>{showAll=!showAll;$('names').setAttribute('aria-pressed',String(showAll));render()};
+$('explode').onclick=()=>setExploded(!exploded);$('zin').onclick=()=>zoomBy(.6);$('zout').onclick=()=>zoomBy(1/.6);canvas.addEventListener('dblclick',e=>zoomToPoint(e.clientX,e.clientY));
+$('fit').onclick=()=>{select(null);fitAll()};
+document.querySelectorAll('[data-show]').forEach(b=>b.onclick=()=>{const g=groups[b.dataset.show],on=!g.visible;g.visible=on;b.setAttribute('aria-pressed',String(on));if(selected&&!visible(selected))select(null);boxCache=null;render()});
+window.stackViewer={view:(x,y,z)=>frame(boxesOf(pickables.filter(visible)),new THREE.Vector3(x,y,z),false),explode:on=>setExploded(on),state:()=>{const all=new THREE.Box3();pickables.filter(visible).forEach(o=>all.union(new THREE.Box3().setFromObject(o)));const s=all.getSize(new THREE.Vector3());return {ready,exploded,length:+s.z.toFixed(3),width:+s.x.toFixed(3),height:+s.y.toFixed(3),expected:NUMS,calls:renderer.info.render.calls}}};
+resize();
+try{await build();$('loading').hidden=true;document.body.dataset.ready='1';fitAll(false)}catch(err){console.error(err);$('loading').textContent='Unable to load models: '+err.message}
+</script>
+</body></html>

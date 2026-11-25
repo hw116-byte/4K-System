@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekly Update 25 Nov</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="deck.css?v=9">
+<script defer src="app.js?v=1"></script>
+</head>
+<body>
+<header class="bar">
+  <div class="brand">Weekly update · 25 November 2026<small id="version">V9 · edited 24 Nov 2026, 21:55 CST</small></div>
+  <nav aria-label="Presentation controls"><button id="notes" aria-pressed="false">Notes</button><button id="full">Fullscreen</button><button id="prev" aria-label="Previous slide">←</button><span id="counter">1 / 8</span><button id="next" aria-label="Next slide">→</button></nav>
+</header>
+<main>
+
+<!-- 1 · Cover -->
+<section class="slide cover active" data-notes="This week. From now on there are two Direct LDO carriers: the G-chip Direct LDO Carrier, V6, which arrived on 23 November and works, and the new 4K Direct LDO Carrier, V7. The G-chip carrier's datasheet, pin map and checked XDC are online. The three boards are in a JLC bare-board review order, not paid, and the parts order for five sets is 898 dollars, waiting on payment. The system overview now shows eight head stages, four Option A and four of the new Option B. The new Option B: only a small router and the ASIC boards stay on the animal, and either the Frontend or the Direct LDO board plugs in for each session; its two boards are placed and routing is in progress. On wire bonding, I talked with Alan at the wire-bonder company; the next step is the bonder vendor in China. And the desiccator now has a sign-out log for the 4K electronics.">
+  <h1>Weekly update</h1>
+  <p class="date">25 November 2026</p>
+  <ul class="bullets">
+    <li><b>Direct LDO carriers</b> · G-chip carrier V6 works (Jiaao testing); 4K carrier V7 placed, uses the Option B router</li>
+    <li><b>Boards at JLC</b> · bare-board review order, not paid; parts order waiting on payment
+      <table class="cost">
+        <tr><th>JLC order</th><th>What</th><th>Total</th><th>Status</th></tr>
+        <tr><td>Bare boards · W2026112222107614</td><td>Frontend, FPGA-LDO, HDMI · 5 each</td><td>$2,285</td><td>Under JLC review, not paid</td></tr>
+        <tr><td>Parts · COB202611240148821</td><td>All 138 BOM parts · 5 sets</td><td>$899</td><td>Waiting on payment</td></tr>
+      </table></li>
+    <li><b>System overview</b> · 8 head stages: 4 Option A + 4 Option B</li>
+    <li><b>Option B V3</b> · router + ASIC boards stay on the animal; placement done, routing in progress</li>
+    <li><b>HDMI Extension Board V41</b> · male test pins + 12 V fan header</li>
+    <li><b>Wire bonding</b> · talk with Alan; next: bonder vendor in China</li>
+    <li><b>Desiccator</b> · sign-out log for the 4K electronics</li>
+  </ul>
+</section>
+
+<!-- 2 · System overview -->
+<section class="slide edge" data-notes="This is the system overview with every board. The eight head stages now show both options: four are Option A, with the FPGA-LDO board under the Frontend, and four are the new Option B, where the router and the four ASIC boards stay on the animal and the LDO board with the Frontend plugs into the router. All eight cables go to the HDMI Extension Board with the XEM8310. The Option B router V3 and LDO board V3 have their connectors and outlines placed but are not routed yet; that should be done soon. The head view shows the same eight stages on the sheep, and the direct approach shows the Direct LDO Carrier, which arrived on 23 November. Each card on the right opens the board's files.">
+  <div class="full"><div class="frame"><iframe data-src="../../../index.html#overview" title="System overview with every board"></iframe><a class="open" href="../../../index.html#overview" target="_blank" rel="noopener">Open ↗</a></div></div>
+</section>
+
+<!-- 3 · Direct LDO carriers -->
+<section class="slide" data-notes="Since there are now many boards, from now on the Direct LDO carriers have two names. The G-chip Direct LDO Carrier is the current board, V6: the XEM8305 driving one G-chip. It arrived on 23 November. These are JLC's photos before shipment, and my photo on the bench. All the first tests pass: 12 volts, 3.3 volts, USB, and the XEM8305 works correctly. Jiaao is testing it now. I am installing Vivado on my MacBook; that is not the top priority. The one issue is that no fan is connected, so HDMI Extension Board V41 now has a 12 volt fan header. The 4K Direct LDO Carrier is the new V7: the same XEM8305 with the ASIC regulators on board. I prepared this version so that it plugs into the same router as Option B, which is convenient: one router on the animal works with either driver. Its schematic V2 is done and checked, and in layout V2 all 203 parts are placed with DRC clean; it is not routed yet.">
+  <h1>Direct LDO carriers · two boards</h1>
+  <div class="carriers">
+    <div class="col">
+      <h2>G-chip Direct LDO Carrier · V6</h2>
+      <p class="sub">Current board · XEM8305 + one G-chip · arrived 23 Nov</p>
+      <div class="photos">
+        <figure><img data-zoom src="assets/direct_ldo_v6_received.jpg" alt="G-chip Direct LDO Carrier V6 powered on the bench with the XEM8305 and its fan"><figcaption class="cap">On the bench</figcaption></figure>
+        <div class="jlc">
+          <figure><img data-zoom src="assets/gchip_carrier_v6_jlc_top.jpg" alt="JLC photo before shipment, top"><figcaption class="cap">JLC photo · top</figcaption></figure>
+          <figure><img data-zoom src="assets/gchip_carrier_v6_jlc_bottom.jpg" alt="JLC photo before shipment, bottom"><figcaption class="cap">JLC photo · bottom</figcaption></figure>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li><b>12 V, 3.3 V, USB</b> good · <b>XEM8305</b> works</li>
+        <li><b>Jiaao</b> is testing it now · Vivado setup on my MacBook (not top priority)</li>
+        <li>Issue: <b>no fan</b> connected → <b>fan header added</b> on HDMI Extension Board V41</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h2>4K Direct LDO Carrier · V7</h2>
+      <p class="sub">New · XEM8305 + ASIC regulators · plugs into the <b>same router as Option B</b></p>
+      <figure class="sch"><img data-zoom src="assets/4k_direct_ldo_carrier_v7_layout_v2_iso.png" alt="4K Direct LDO Carrier V7 layout V2 placement, 3D top view"><figcaption class="cap">Layout V2 · placement · edited 24 Nov 2026, 19:55 CST</figcaption></figure>
+      <ul class="bullets">
+        <li>Prepared so it uses the <b>same router as Option B</b>: one router fits both drivers</li>
+        <li><b>Schematic V2</b> done (ERC 0) · <b>layout V2</b>: 203 parts placed, DRC 0, not routed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4K Direct LDO Carrier V7 -->
+<section class="slide vslide" data-notes="The 4K Direct LDO Carrier V7 in KiCad. I prepared it so that it connects to the same router as Option B, through the same two 80-pin DF40C-80 plugs on a tongue at the XEM8305's MC1 edge, so one router on the animal works with either the Frontend and LDO board or this carrier. It keeps the V6 parts: the XEM8305 sockets, 12 volt input, 3.3 volt buck and USB, and adds the ASIC-rail regulators from the FPGA-LDO board. The schematic V2 passes ERC and 2,000 netlist checks. Layout V2 has all 203 parts placed, 63.85 by 83.05 millimetres, six layers, DRC clean; no copper yet. Open items: the pin table V3 to cut crossings under MC1, and a few stack and via questions.">
+  <h1>4K Direct LDO Carrier V7</h1>
+  <p class="vstatus">Plugs into the <b>same router as Option B</b> (2 × DF40C-80 on the MC1-edge tongue) · 63.85 × 83.05 mm · 6 layers · schematic V2 ERC 0 · layout V2: 203 parts placed, DRC 0, <b>not routed</b></p>
+  <div class="vtabs" role="group" aria-label="4K Direct LDO Carrier V7 views"><button data-src="../2026-11-11-v1/assets/layout-viewer/carrier-v7/index.html?embed=1" aria-pressed="true">Layout</button><button data-src="../2026-11-11-v1/assets/overview-3d/board.html?board=carrier_v7&amp;v=v7" aria-pressed="false">3D</button><button data-src="../2026-11-11-v1/assets/carrier-v7/4K_Direct_LDO_Carrier_V7_schematic_V2.pdf" aria-pressed="false">Schematic V2</button></div>
+  <div class="frame vframe"><iframe allow="fullscreen" data-src="../2026-11-11-v1/assets/layout-viewer/carrier-v7/index.html?embed=1" title="4K Direct LDO Carrier V7"></iframe><a class="open" href="../2026-11-11-v1/assets/layout-viewer/carrier-v7/index.html" target="_blank" rel="noopener">Open ↗</a></div>
+</section>
+
+<!-- Option B V3 boards -->
+<section class="slide vslide" data-notes="The new Option B, as saved in KiCad today. The tabs show the real stack in 3D, each board's native KiCad layout and 3D, and the schematic. The schematic is still the V2 drawing; V3 only changes the router-to-drive connector. Only the router and the four ASIC boards stay on the animal; for each session the LDO board with the Frontend, or the 4K Direct LDO Carrier V7, plugs into the router. Router V3 is 22.69 by 17.62 millimetres. The ASIC boards plug into J3 on top and J4 underneath, and two 80-pin DF40C-80 receptacles underneath, J6 and J5, take the drive board. It is a straight pass-through with no regulators; its port capacitors moved to the drive boards. The pin map, version B V2, is checked on all 160 pins and does not change the Frontend. LDO board V3 is 22.69 by 40.30 millimetres, six layers on the FPGA-LDO A V24 stack: two DF40C-80 plugs mate the router, J1 and J2 take the Frontend, and it gets the A V24 regulators plus 17 one-microfarad capacitors beside the plugs. Connectors and outlines are placed; the copper is not routed yet. That is in progress and should be done soon. The head stack gets 5 millimetres longer, 57.9 instead of 52.9. DF40 is rated for about 30 mating cycles, so the router may need a cycle log or a saver board.">
+  <h1>Option B boards V3</h1>
+  <p class="vstatus">Router V3 22.69 × 17.62 mm · LDO board V3 22.69 × 40.30 mm · 2 × DF40C-80 · pin map B V2 · <b>placement done, routing in progress</b> · schematic shown is V2 (same circuit, old 120-pin J5)</p>
+  <div class="vtabs" role="group" aria-label="Option B boards V3 views"><button data-src="../2026-11-11-v1/assets/optb-v3/stack3d/stack3d.html?v=p2" aria-pressed="true">Stack 3D</button><button data-src="../2026-11-11-v1/assets/layout-viewer/router-v3/index.html?embed=1" aria-pressed="false">Router layout</button><button data-src="../2026-11-11-v1/assets/layout-viewer/ldo-board-v3/index.html?embed=1" aria-pressed="false">LDO board layout</button><button data-src="../2026-11-11-v1/assets/overview-3d/board.html?board=ldob_router_v3&amp;v=v3" aria-pressed="false">Router 3D</button><button data-src="../2026-11-11-v1/assets/overview-3d/board.html?board=ldob_ldo_v3&amp;v=v3" aria-pressed="false">LDO board 3D</button><button data-src="../2026-11-11-v1/assets/optb-v3/router_V2_schematic.pdf" aria-pressed="false">Router schematic (V2)</button><button data-src="../2026-11-11-v1/assets/optb-v3/ldo_board_V2_schematic.pdf" aria-pressed="false">LDO board schematic (V2)</button></div>
+  <div class="frame vframe"><iframe allow="fullscreen" data-src="../2026-11-11-v1/assets/optb-v3/stack3d/stack3d.html?v=p2" title="Option B boards V3"></iframe><a class="open" href="../2026-11-11-v1/assets/optb-v3/stack3d/stack3d.html?v=p2" target="_blank" rel="noopener">Open ↗</a></div>
+</section>
+
+<!-- HDMI Extension Board V41 -->
+<section class="slide vslide" data-notes="HDMI Extension Board V41. After a quick talk with Xiaorong: the many test holes beside the HDMI ports are now male pins, so we can push a jumper wire straight on to probe. The 115 XEM GPIO and ground holes are on 2 millimetre pitch, so they get 2 millimetre male headers and need 2 millimetre female jumpers; the nine rail test holes get standard 2.54 millimetre pins. There is also a new 12 volt fan header on the bottom, fed from the barrel jack, for a 60 millimetre fan, because the board gets hot and the carrier had no fan connected. The copper is unchanged from V40: same tracks, vias and zones; DRC, ERC and parity are all zero. No order files yet; the JLC order still has V40.">
+  <h1>HDMI Extension Board V41</h1>
+  <p class="vstatus"><b>Male pins</b> on the test holes: 2.00 mm headers J900–J902, J910, J911 (115 GPIO/GND, need 2.0 mm female jumpers) · 2.54 mm rail pins J920–J928 · <b>12 V fan header</b> J930 on the bottom (barrel jack) · copper unchanged from V40 · DRC/ERC/parity 0 · no order files yet</p>
+  <div class="vtabs" role="group" aria-label="HDMI Extension Board V41 views"><button data-src="../2026-11-11-v1/assets/layout-viewer/hdmi-v41/index.html?embed=1" aria-pressed="true">Layout</button><button data-src="../2026-11-11-v1/assets/overview-3d/board.html?board=hdmi_v41&amp;v=v41" aria-pressed="false">3D</button><button data-src="assets/hdmi_v41_pins.html" aria-pressed="false">Pins close-up</button><button data-src="../2026-11-11-v1/assets/hdmi-v41/HDMI_Extension_Board_V41_Schematic.pdf" aria-pressed="false">Schematic</button></div>
+  <div class="frame vframe"><iframe allow="fullscreen" data-src="../2026-11-11-v1/assets/layout-viewer/hdmi-v41/index.html?embed=1" title="HDMI Extension Board V41"></iframe><a class="open" href="../2026-11-11-v1/assets/layout-viewer/hdmi-v41/index.html" target="_blank" rel="noopener">Open ↗</a></div>
+</section>
+
+<!-- Wire bonding · Alan -->
+<section class="slide" data-notes="Wire bonding. I talked with Alan, who helps customers at the wire-bonder company. The main thing he pointed to is the free air ball size. I changed it; it helped a little but did not fix everything. I sent him all our files, and going through them he changed a few more parameters with me, and those bonds came out clean and neat. Next, not started yet: send some of our devices, with our recipe, to the wire-bonder vendor in China, so they can bond a few chips and help us diagnose the problem. Gerald shared that contact with me; I have their email and WeChat and will ask whether they are interested in helping.">
+  <h1>Wire bonding · talk with Alan</h1>
+  <div class="center">
+    <div class="nextcols">
+      <div><h2>Done with Alan (wire-bonder company)</h2>
+        <ul class="bullets">
+          <li><b>Free air ball size</b> changed · helped a little, not everything</li>
+          <li>Sent him <b>all our files</b>; he changed a few <b>parameters</b></li>
+          <li>Those bonds came out <b>clean and neat</b></li>
+        </ul></div>
+      <div><h2>Next · not started</h2>
+        <ol class="steps">
+          <li><span>Send some <b>devices + our recipe</b> to the bonder vendor in China</span></li>
+          <li><span>They <b>bond a few chips</b> and help us diagnose</span></li>
+          <li><span>Contact from Gerald · <b>email and WeChat</b>; ask if they are interested</span></li>
+        </ol></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Desiccator -->
+<section class="slide" data-notes="This is the new desiccator box on the bench, with the clear box on top for the boards. It holds the 4K electronics: the ASICs, the G-chips, the XEM8310 and BRK8310 and the Direct LDO carrier boards. Next to it there is now a shared sign-out sheet. When you take something, write the date, your name, the item, how many and what it is for; tick Returned when you bring it back. The inventory tab counts what is signed out and what is still in the box. Please use it so we always know where the 4K parts are.">
+  <h1>Desiccator sign-out log</h1>
+  <div class="desic">
+    <figure class="photo"><img data-zoom src="assets/desiccator.jpg" alt="The desiccator box on the bench with the 4K boards in the clear box on top"></figure>
+    <div class="inv">
+      <table class="status">
+        <tr><th>Item</th><th>Count</th><th>Status</th></tr>
+        <tr><td>ASIC chip</td><td>56</td><td>Ready</td></tr>
+        <tr><td>Dummy G-chip</td><td>8</td><td>Ready</td></tr>
+        <tr><td>G-chip, batch 6</td><td>4</td><td>In assembly</td></tr>
+        <tr><td>G-chip, batch 5</td><td>2</td><td>Assembled</td></tr>
+        <tr><td>G-chip Direct LDO Carrier</td><td>2+</td><td>Ready</td></tr>
+        <tr><td>XEM8310</td><td>1</td><td>Ready</td></tr>
+        <tr><td>BRK8310</td><td>1</td><td>Ready</td></tr>
+      </table>
+      <p class="how">Take something: <b>date, name, item, quantity, purpose</b> · bring it back: tick <b>Returned</b></p>
+      <a class="open-link" href="https://claude.ai/artifact/6xiKUZavRYT9PCBKkcK7cp?sk=2_cyNyPjHyLajz1BAsBxCA#sheet-sht_hra4jhcb75.0" target="_blank" rel="noopener">Open the sign-out log ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · Next steps -->
+<section class="slide" data-notes="Next steps. Wire bonding: contact the bonder vendor in China and send devices and our recipe for test bonds. Boards: pay the parts order before JLC cancels it; pick test-pad Plan A or B, put that Frontend into the JLC order, add the HDMI board back, send JLC our answers and pay; send the ASIC boards to PCBWay. Router and Direct LDO: Jiaao brings up a G-chip on the G-chip Direct LDO Carrier; settle how the drive board is held and the 30 mating cycles; finish routing router V3 and LDO board V3 and lay out the 4K Direct LDO Carrier V7; and decide whether HDMI Extension Board V41, with the male pins and fan header, replaces V40 in the JLC order.">
+  <h1>Next steps</h1>
+  <div class="center">
+    <div class="nextcols three">
+      <div><h2>Boards</h2>
+        <ol class="steps">
+          <li><span><b>Pay the parts order</b> before JLC cancels it</span></li>
+          <li><span>Pick <b>test pads A or B</b>; swap the Frontend into the JLC order</span></li>
+          <li><span>Add the <b>HDMI board</b> back; answer JLC; <b>pay</b></span></li>
+          <li><span>ASIC boards V15 to <b>PCBWay</b></span></li>
+        </ol></div>
+      <div><h2>Router and Direct LDO</h2>
+        <ol class="steps">
+          <li><span><b>Bring up a G-chip</b> on the G-chip Direct LDO Carrier (Jiaao)</span></li>
+          <li><span>Decide the <b>holder</b> and the <b>mating-cycle</b> plan</span></li>
+          <li><span>Finish routing the <b>router V3</b> and <b>LDO board V3</b>; lay out the <b>4K Direct LDO Carrier V7</b></span></li>
+          <li><span>Decide if <b>HDMI V41</b> replaces V40 in the JLC order</span></li>
+        </ol></div>
+      <div><h2>Wire bonding</h2>
+        <ol class="steps">
+          <li><span>Contact the <b>bonder vendor in China</b> (email, WeChat)</span></li>
+          <li><span>Send <b>devices + recipe</b> for test bonds</span></li>
+        </ol></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<aside id="speaker" hidden><strong>Speaker notes</strong><p></p></aside>
+<script>
+document.querySelectorAll('.vtabs').forEach(g=>g.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  const fr=g.nextElementSibling, f=fr.querySelector('iframe'), a=fr.querySelector('a.open');
+  f.dataset.src=b.dataset.src; f.src=b.dataset.src; a.href=b.dataset.src.replace('?embed=1','');
+}));
+</script>
+</body></html>

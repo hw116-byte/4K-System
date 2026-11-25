@@ -1,0 +1,12 @@
+{
+  "title": "HDMI Extension Board V41 · male pins + fan header",
+  "revision": "V41",
+  "sha256": "8eb64f25a4018ec3ce5068273dd7f61eed81cb4e8173a4dc24bcab36c4350897",
+  "defaults": ["F.Cu", "B.Cu"],
+  "expected": {"copperLayers": 6},
+  "native": "HDMI_Extension_Board_V41.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": true,
+  "source_note": "Unmodified copy of the saved native board (24 Nov 2026, 21:42 CST).",
+  "source_relative_to_workspace": "2026-11-24_FPGA_Work/17_HDMI_Extension_Board_V41_Male_Pins_And_Fan_Header/project/HDMI_Extension_Board_V41.kicad_pcb"
+}

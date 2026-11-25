@@ -1,0 +1,12 @@
+{
+  "title": "Option B LDO board V3 · placement (not routed)",
+  "revision": "V3",
+  "sha256": "a1a70298ab14d38621b0abc626b18e897a7c8b86243e3debe2d1c1517a2f164b",
+  "defaults": ["F.Cu", "B.Cu"],
+  "expected": {"copperLayers": 6},
+  "native": "ldo_board_V3_placement.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved placement board (24 Nov 2026, 16:13 CST). Connectors, outline and parts placed; no copper yet.",
+  "source_relative_to_workspace": "2026-11-24_FPGA_Work/10_Option_B_Router_V3_Contract_Review_V1/placement_boards/ldo_board_V3_placement/ldo_board_V3_placement.kicad_pcb"
+}
