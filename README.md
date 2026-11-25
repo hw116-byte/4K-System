@@ -10,6 +10,7 @@ This repository holds only the latest version of each board. The earlier site
 - **Direct LDO carrier datasheet and programming guide** (XEM8305 pin map, XDC, power-up): [direct-ldo/datasheet/](https://hw116-byte.github.io/4K-System/direct-ldo/datasheet/) · [XDC](direct-ldo/datasheet/Direct_LDO_Carrier_V6_XEM8305.xdc)
 - **KiCad projects and fab files:** [boards/](boards/)
 - **24 Nov 2026 overview update:** HDMI Extension Board V41 (male test pins, 12 V fan header), Option B router V3 + LDO board V3 (placement, routing in progress) on 4 of the 8 head stages, G-chip Direct LDO Carrier V6 and the new 4K Direct LDO Carrier V7 (layout placement), printable models set V5, weekly deck [2026-11-25-v9](presentation/meetings/2026-11-25-v9/)
+- **25 Nov 2026 weekly deck V11:** adds test-pad slides: Frontend Plan A (V17, frame header) vs Plan B (V18, edge half holes), both with the new 4 × 3 mm flash; FPGA-LDO Plan A (V24) vs Plan B (V26). [Deck](presentation/meetings/2026-11-25-v11/).
 - **25 Nov 2026 weekly deck V10:** Option B router V3 routed (layout V1, 6 layers, DRC 0), new schematics for router V3, LDO board V3 and 4K Direct LDO Carrier V7 (schematic V4); LDO board V3 and Carrier V7 routing in progress. [Deck](presentation/meetings/2026-11-25-v10/).
 
 ## Boards

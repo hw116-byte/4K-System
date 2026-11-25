@@ -1,0 +1,12 @@
+{
+  "title": "Frontend 14 layers V18 · test pads Plan B (edge half holes) · frame V8",
+  "revision": "14 layers V18",
+  "sha256": "ad171b976bccd83fc70728da016fd78cacbe347ce430db8a30dece56d2fe0829",
+  "defaults": ["F.Cu","B.Cu"],
+  "expected": {"copperLayers": 14},
+  "native": "Frontend_14L_V18_Frame_V8.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": true,
+  "source_note": "Unmodified copy of the saved board in its frame (24 Nov 2026, 11:15 CST).",
+  "source_relative_to_workspace": "2026-11-24_FPGA_Work/04_Frontend_14L_V18_Test_Pad_Plan_B_Flash_USON/frame_V8/project/Frontend_14L_V18_Frame_V8.kicad_pcb"
+}

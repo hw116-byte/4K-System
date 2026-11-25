@@ -1,0 +1,12 @@
+{
+  "title": "Frontend 14 layers V17 · test pads Plan A (frame header) · test frame V7",
+  "revision": "14 layers V17",
+  "sha256": "ad0765c6aa45a0ce04e4c37c51586bba903acf40fdc1dda6269f7882502abe73",
+  "defaults": ["F.Cu","B.Cu"],
+  "expected": {"copperLayers": 14},
+  "native": "Frontend_14L_V17_Test_Frame_V7.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": true,
+  "source_note": "Unmodified copy of the saved board in its frame (24 Nov 2026, 11:16 CST).",
+  "source_relative_to_workspace": "2026-11-24_FPGA_Work/03_Frontend_14L_V17_Test_Pad_Plan_A_Flash_USON/test_frame_V7/project/Frontend_14L_V17_Test_Frame_V7.kicad_pcb"
+}

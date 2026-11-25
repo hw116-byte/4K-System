@@ -1,0 +1,12 @@
+{
+  "title": "FPGA-LDO A layout V26 · test pads Plan B (edge half holes) · frame V6",
+  "revision": "V26",
+  "sha256": "1d6911b355e7f41be948433c7aa528b0bd130815ba6969431c745c78f5791a61",
+  "defaults": ["F.Cu","In4.Cu","B.Cu"],
+  "expected": {"copperLayers": 6},
+  "native": "FPGA_LDO_A_V26_Frame_V6.kicad_pcb",
+  "vendor": "../vendor/kicanvas/",
+  "initialPlanes": true,
+  "source_note": "Unmodified copy of the saved board in its frame (23 Nov 2026, 10:13 CST).",
+  "source_relative_to_workspace": "2026-11-23_FPGA_Work/05_FPGA_LDO_A_Layout_V26_Test_Pad_Plan_B/frame_V6/project/FPGA_LDO_A_V26_Frame_V6.kicad_pcb"
+}

@@ -17,6 +17,9 @@ const boards = {
  ldob_router_v3_l1: ['Option B Router V3 · layout V1 (routed)','optb-router-v3-layout-v1.glb?v=202611250754','Stays on the animal · 22.69 × 17.62 mm · 6 layers 1+4+1 HDI · all 142 nets routed, DRC 0 · J3 top / J4 bottom to the ASIC boards, J6 + J5 DF40C-80DS to the drive board'],
  ldob_ldo_v3: ['FPGA-LDO Option B · LDO board V3','optb-ldo-board-v3-placement.glb?v=202611241613','Plugs in each session · 22.69 × 40.30 mm · J6 + J5 DF40C-80DP to the router, J1/J2 to the Frontend, regulators on the bottom · placement only, not routed'],
  carrier_v7: ['4K Direct LDO Carrier · V7 layout V2','4k-direct-ldo-carrier-v7-placement.glb?v=202611241955','XEM8305 sockets MC1–MC3 + ASIC-rail regulators + J5/J6 DF40C-80DP to the Option B router on the MC1-edge tongue · 63.85 × 83.05 mm · 203 parts placed, not routed'],
+ fe_v17_f7: ['Frontend · 14 layers V17 · test pads Plan A · test frame V7','frontend-v17-test-frame-v7.glb?v=202611241116','Plan A: 67 probe pads on the board + 2x8 header on the break-off test frame · new 4 × 3 mm flash U7 · U12 and Y1 have no 3D model'],
+ fe_v18_f8: ['Frontend · 14 layers V18 · test pads Plan B · frame V8','frontend-v18-frame-v8.glb?v=202611241115','Plan B: 9 plated half holes on the south edge + the probe pads · new 4 × 3 mm flash U7 · U12 and Y1 have no 3D model'],
+ ldo_v26_f6: ['FPGA-LDO A · layout V26 · test pads Plan B · frame V6','fpga-ldo-a-v26-frame-v6.glb?v=202611231013','Plan B: 15 plated half holes on four edges + the probe pads'],
  hdmi_v41: ['HDMI Extension Board · V41','hdmi-extension-v41.glb?v=202611242142','V40 copper unchanged · 2.00 mm male headers J900–J902, J910, J911 · 2.54 mm rail pins J920–J928 · 12 V fan header J930 on the bottom']
 };
 const views = {iso:[.8,1.1,1.25],top:[0,1,.001],bottom:[0,-1,.001]};
