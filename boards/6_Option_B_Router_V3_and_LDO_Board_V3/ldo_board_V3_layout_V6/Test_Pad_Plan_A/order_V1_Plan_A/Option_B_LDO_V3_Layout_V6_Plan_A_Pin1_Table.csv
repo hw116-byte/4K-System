@@ -1,0 +1,17 @@
+Designator,JLC part,Layer,CPL rotation,Pin 1 X (mm),"Pin 1 Y (mm, CPL sign)",What,Net on that pad,JLC library pad that lands there,Miss (mm),Worst pad error of the whole part (mm)
+U1,C670975,Bottom,0,101.438,-152.660,pin 1,GND,1,0.062,0.062
+U2,C580010,Bottom,180,97.850,-144.960,pin 1,/Frontend_And_Regulators/VIN_3V3,1,0.043,0.043
+U3,C2877859,Bottom,90,101.150,-133.512,pin 1,/Frontend_And_Regulators/VIN_3V3,1,0.038,0.038
+U4,C2877859,Bottom,90,101.150,-139.012,pin 1,/Frontend_And_Regulators/VIN_3V3,1,0.038,0.038
+U5,C2877859,Bottom,270,98.250,-135.787,pin 1,/Frontend_And_Regulators/VIN_3V3,1,0.038,0.038
+U6,C580010,Bottom,180,103.500,-144.960,pin 1,/Frontend_And_Regulators/VIN_3V3,1,0.043,0.043
+U7,C2877859,Top,0,102.037,-156.710,pin 1,/Frontend_And_Regulators/VIN_3V3,1,0.038,0.038
+U8,C580010,Bottom,180,92.200,-144.960,pin 1,/Frontend_And_Regulators/VIN_3V3,1,0.043,0.043
+U9,C580010,Bottom,0,94.650,-138.600,pin 1,/Frontend_And_Regulators/STIM_PRE_POS,1,0.043,0.043
+U10,C670492,Bottom,0,110.125,-138.600,pin 1,/Frontend_And_Regulators/STIM_PRE_NEG,1,0.043,0.043
+D11,C668860,Bottom,270,96.800,-154.260,cathode (board pad 1),/Frontend_And_Regulators/CAPP,2 (cathode),0.150,0.150
+D12,C668860,Bottom,0,102.850,-156.310,cathode (board pad 1),/Frontend_And_Regulators/SW_N,2 (cathode),0.150,0.150
+J1,C2692097,Top,270,92.610,-131.010,"pin 1 (Hirose numbering, board pad 1)",ASIC6_DATA1,70,0.006,0.014
+J2,C2692097,Top,270,110.110,-131.010,"pin 1 (Hirose numbering, board pad 1)",STIM_CHB_SHARED,70,0.006,0.014
+J5,C294544,Top,0,91.983,-123.845,"pin 1 (Hirose numbering, board pad 1)",ASIC_VDD_CGEN,80,0.000,0.000
+J6,C294544,Top,0,91.983,-118.845,"pin 1 (Hirose numbering, board pad 1)",ASIC4_READ,80,0.000,0.000

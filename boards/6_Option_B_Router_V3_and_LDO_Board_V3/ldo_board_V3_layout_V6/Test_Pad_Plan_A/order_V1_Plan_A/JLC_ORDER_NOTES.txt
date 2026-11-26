@@ -1,0 +1,71 @@
+Option B LDO board V3 · layout V6 · Test Pad Plan A · schematic V1 · order files V1
+Upload Option_B_LDO_V3_Layout_V6_Plan_A_Gerbers.zip (17 files), Option_B_LDO_V3_Layout_V6_Plan_A_BOM_JLC.csv, Option_B_LDO_V3_Layout_V6_Plan_A_CPL_JLC.csv. Coordinates in every file are those of the Gerbers (X right, Y up, negative).
+
+=== ORDER FORM CHOICES ===
+Base material FR-4, 6 layers, HDI (blind / buried vias): yes, 1 step (1+4+1). Board size 22.69 x 40.30 mm. Thickness 1.6 mm. Outer copper 1 oz, inner copper 1 oz. Surface finish ENIG. Solder mask green.
+Stack-up: JLCH061611Y1-1078 (1.6 mm nominal, +/-10 %; the board file carries its build-up: L1 / 0.071 mm 1078 prepreg / L2 / 0.201 mm 7628 / L3 / 0.83 mm core / L4 / 0.201 mm 7628 / L5 / 0.071 mm 1078 / L6 = 1.584 mm). Impedance control: no.
+Via covering: epoxy filled and capped (laser vias copper filled). Min via hole 0.15 mm (laser 0.10 mm).
+Castellated holes: no. Edge plating: no.
+Delivery format: Panel by JLCPCB. The single board (22.69 x 40.30 mm) is below the 70 x 70 mm minimum of Standard PCBA, so please build the panel: your array, 5 mm edge rails, fiducials and tooling holes.
+  Routed slots (2.0 mm) with break-off tabs and mouse bites; no V-cut: copper is 0.30 mm from the board outline (your V-cut rule asks 0.40 mm).
+  Edge stretches of 5 mm or more with no part pad within 0.6 mm of the edge (possible tab positions, Gerber coordinates):
+    north edge (Y = -117.634): X 89.7 to 110.3
+    south edge (Y = -157.935): X 89.7 to 98.2, X 98.8 to 110.3
+    west  edge (X = 88.655): Y -118.6 to -156.9
+    east  edge (X = 111.345): Y -118.6 to -124.2, Y -127.7 to -156.9
+  Please keep the order number off the board (Remove Mark, or place it on a rail).
+PCB assembly: Standard, both sides, 5 boards. Confirm parts placement: yes.
+
+=== PCB REMARK (short form for the 200-character box) ===
+6L 1-step HDI, stack-up JLCH061611Y1-1078, 1.6 mm, ENIG. Laser vias stacked on buried vias, all filled and capped; via-in-pad flat. Mouse-bite panel by JLC, no V-cut.
+
+=== PCB REQUIREMENTS (full list) ===
+6-layer 1-step HDI, stack-up JLCH061611Y1-1078, 1 oz all layers, ENIG. Please confirm the stack-up or name the nearest one.
+Vias: laser 0.10 mm hole / 0.26 mm pad on L1-L2 (218) and L5-L6 (124), copper filled and planarised;
+mechanical buried on L2-L5: 72 x 0.20 / 0.40 mm and 116 x 0.15 / 0.35 mm (the same drill and pad as the through vias), resin plugged and capped; through 0.15 / 0.35 mm L1-L6 (58), epoxy filled and capped.
+Stacked vias: 151 laser vias sit on the axis of a buried via (86 on L1-L2, 65 on L5-L6); at 51 of these places the stack is three high (L1-L2 laser, L2-L5 buried, L5-L6 laser on one axis).
+  The buried vias must be plugged and copper capped flat so that the laser vias land on the cap.
+Vias in pads: 202 laser vias and 38 through-via ends sit in SMD pads (0.4 mm pitch connector pads, DFN / SOT-23-5 and chip pads, test pads). These pads must come out flat and solderable.
+Drill files: -PTH.drl = through L1-L6 (58 x 0.15 mm vias); -front-in1.drl = laser L1-L2 (218); -in4-back.drl = laser L5-L6 (124); -in1-in4.drl = buried L2-L5 (72 x 0.20 mm, 116 x 0.15 mm). There are no non-plated holes and no slots.
+Layer order: .gtl = L1, .g1 = L2, .g2 = L3, .g3 = L4, .g4 = L5, .gbl = L6.
+Minimum track / space 0.10 / 0.10 mm, hole to copper 0.20 mm, copper to board edge 0.30 mm.
+Silkscreen: text 1.0 mm high with 0.15 mm stroke (titles 1.2 / 0.18 mm). Part outlines from the KiCad library are drawn with 0.12 mm lines; please widen them to your minimum.
+No part overhangs the board outline; the closest part courtyard is 0.17 mm from the edge (C16).
+Please add no balancing copper inside the board outline.
+Please send the production file for confirmation before fabrication.
+
+=== ASSEMBLY REMARK (short form for the 500-character box) ===
+Standard PCBA, both sides: 92 placements, 22 BOM lines (83 bottom, 9 top). Place polarised parts by the pin-1 table (Option_B_LDO_V3_Layout_V6_Plan_A_Pin1_Table.csv); CPL angles already include the offset to your library footprints. U1 must be LT3582EUD-12 (no base part, no -5). D11, D12 (C668860): your pad 1 is the anode. J1, J2, J5, J6: 0.4 mm pitch, filled vias in pads. Please confirm placement with us before production.
+
+=== ASSEMBLY REQUIREMENTS (full list) ===
+Double-sided Standard PCBA, 92 placements, 22 BOM lines: 83 bottom, 9 top (C701, C702, J1, J2, J5, J6, R4, R23, U7).
+JP1, JP2, NT1, TP1-TP6, TP8-TP20 are bare copper (test pads, bridged solder jumpers, net tie): no part, not in the BOM or CPL.
+J1, J2 (DF40C-70DP) and J5, J6 (DF40C-80DP) are 0.4 mm pitch Hirose plugs on the top side with filled vias in their pads.
+U3, U4, U5 (bottom) and U7 (top) are SOT-23-5; U1, U2, U6, U8, U9, U10 are 3 x 3 mm QFN / DFN with exposed pads.
+Top stencil: 0.10 mm is preferred for the 0.4 mm pitch plugs; please tell us the thickness you will use.
+U1: ONLY the -12 version (LT3582EUD-12#PBF or #TRPBF, C670975) is acceptable. Do not substitute the base LT3582 or the -5 version: the board cannot program the part.
+D11, D12: MCC B0540WS-TP (C668860). Your library pad 1 of this part is the ANODE. The cathode (marked end) must be at the positions in the table below.
+L11, L12: TDK VLS201612HBX-6R8M-1 (C501945), 6.8 uH, 2.0 x 1.6 x 1.2 mm.
+Every BOM line must be fitted: please do not leave a part out or substitute one without asking us.
+Please confirm parts placement (polarity and rotation) with us before production.
+Placement file: the angles of D11, D12, U2, U3, U4, U5, U6, U7, U8, U9, U10 include the offset to your library footprints (read from easyeda.com/api/products/<C>/components).
+Bottom-side angles follow your own convention: the part is turned counter-clockwise in its own view and then mirrored left-right (angle = 180 minus KiCad's bottom angle), as in the placement file of our Direct LDO Carrier V6 that you assembled.
+Please place every polarised part by pin 1 (table below and in Option_B_LDO_V3_Layout_V6_Plan_A_Pin1_Table.csv, drawings Option_B_LDO_V3_Layout_V6_Plan_A_pin1_top.pdf / _pin1_bottom.pdf), not by the angle alone.
+The DF40C plugs J1, J2, J5, J6 land on the same pads when turned half a turn; pin 1 below uses the Hirose numbering.
+Pin 1 positions (X, Y as in the CPL):
+  U1   Bottom    0 deg    101.438    -152.660   pin 1
+  U2   Bottom  180 deg     97.850    -144.960   pin 1
+  U3   Bottom   90 deg    101.150    -133.512   pin 1
+  U4   Bottom   90 deg    101.150    -139.012   pin 1
+  U5   Bottom  270 deg     98.250    -135.787   pin 1
+  U6   Bottom  180 deg    103.500    -144.960   pin 1
+  U7   Top       0 deg    102.037    -156.710   pin 1
+  U8   Bottom  180 deg     92.200    -144.960   pin 1
+  U9   Bottom    0 deg     94.650    -138.600   pin 1
+  U10  Bottom    0 deg    110.125    -138.600   pin 1
+  D11  Bottom  270 deg     96.800    -154.260   cathode
+  D12  Bottom    0 deg    102.850    -156.310   cathode
+  J1   Top     270 deg     92.610    -131.010   pin 1
+  J2   Top     270 deg    110.110    -131.010   pin 1
+  J5   Top       0 deg     91.983    -123.845   pin 1
+  J6   Top       0 deg     91.983    -118.845   pin 1

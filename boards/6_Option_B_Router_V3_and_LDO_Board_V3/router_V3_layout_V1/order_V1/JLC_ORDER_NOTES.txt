@@ -1,0 +1,70 @@
+JLC ORDER NOTES · Option B Router V3 · layout V1 (board file edited 25 Nov 2026, 07:54 CST) · order files V1 made 26 Nov 2026, 15:10 CST
+Manufacturing requirements only. JLC reads the order form and the two remark boxes; it does not read text files inside the Gerber ZIP,
+so this file stays outside the ZIP. Not uploaded, not ordered.
+
+=== FILES TO UPLOAD ===
+PCB:        Option_B_Router_V3_Layout_V1_Gerbers.zip   (18 files: 13 Gerbers, 5 drill files)
+Assembly:   Option_B_Router_V3_Layout_V1_BOM_JLC.csv   (3 lines, 5 parts)
+            Option_B_Router_V3_Layout_V1_CPL_JLC.csv   (5 placements: 3 bottom, 2 top)
+For the engineer, on request: Option_B_Router_V3_Layout_V1_Pin1_Table.csv, Option_B_Router_V3_Layout_V1_pin1_top.pdf / _pin1_bottom.pdf, Option_B_Router_V3_Layout_V1_assembly_top.pdf / _assembly_bottom.pdf, Option_B_Router_V3_Layout_V1_layers.pdf.
+
+=== ORDER FORM CHOICES (cart.jlcpcb.com/quote) ===
+Base material FR-4, 6 layers, HDI (blind/buried vias): yes, 1 step (1+4+1).
+Size 22.69 x 17.62 mm, one design. Thickness 1.6 mm (stack-up nominal 1.584 mm; JLC controls 1.6 mm +/-10 %).
+Outer copper 1 oz, inner copper 1 oz. Surface finish ENIG. Solder mask green, white legend.
+Stack-up: JLCH061611Y1-1078. Impedance control: no.
+Via covering: epoxy filled and capped (laser vias copper filled). Min via hole 0.15 mm (laser 0.10 mm).
+Delivery format: the board alone is below JLC's 70 x 70 mm minimum for Standard PCBA, so it needs a panel with edge rails.
+  We ask JLC to panel it ("Panel by JLCPCB", edge rails on, fiducials and tooling holes on the rails).
+  The panel must use a ROUTED outline with stamp-hole (mouse-bite) tabs and 2 mm spacing, NOT V-cut:
+  copper is 0.30 mm from the board edge on L1, L3, L4, L6 (JLC V-cut needs 0.40 mm; stamp-hole panels need 0.20 mm), and the outline is a mating
+  dimension (22.69 x 17.62 mm, the south edge sits 0.5 mm from the next board), which the V-cut edge tolerance of +/-0.4 mm does not hold.
+  Tabs: none on the south edge (y = 127.935 in the Gerbers). Nearest solder pad to an edge: west 2.68 mm, north 1.31 mm, east 0.70 mm (TP7, bare), south 0.85 mm.
+  No part overhangs the outline.
+Confirm production file: yes. PCB assembly: Standard, both sides. Confirm parts placement: yes.
+
+=== PCB REMARK (paste into the PCB remark box; 200 of 200 characters) ===
+6L 1-step HDI, stack-up JLCH061611Y1-1078, 1.6 mm, 1 oz, ENIG. Laser vias copper filled; buried and through vias resin filled, capped (vias in 0.4 mm pitch pads). 42 laser vias stacked on buried vias.
+
+=== ASSEMBLY REMARK (paste into the PCBA remark box; 457 of 500 characters) ===
+Standard PCBA, both sides, 5 parts: top J3 (C294544 DF40C-80DP) and R6 (C25744 10k 0402); bottom J4, J5, J6 (C312960 DF40C-80DS). TP7 is bare copper, no part. The connectors are 0.4 mm pitch with filled vias in their pads; pads must be flat. Pin 1 (X, Y as in the CPL): J3 91.983 -112.158; J4 91.983 -111.978; J5 91.983 -123.660; J6 91.983 -118.660. Board is 22.69 x 17.62 mm: add edge rails with fiducials. Please confirm parts placement before production.
+
+=== FULL MANUFACTURING DATA (for e-mail or chat with the JLC engineer; too long for the remark boxes) ===
+Layers: .gtl = L1 (F.Cu, signals), .g1 = L2 (In1.Cu, signals), .g2 = L3 (In2.Cu, GND plane), .g3 = L4 (In3.Cu, GND plane), .g4 = L5 (In4.Cu, signals), .gbl = L6 (B.Cu, signals).
+Stack-up as drawn (JLCH061611Y1-1078): L1 35 um / 1078 prepreg 71 um / L2 30 um / 7628 prepreg 201 um / L3 30 um / core 830 um / L4 30 um / 7628 prepreg 201 um / L5 30 um / 1078 prepreg 71 um / L6 35 um.
+Vias, 344 in all:
+  laser L1-L2:     39 x 0.10 mm hole / 0.26 mm land, copper filled and planarised      -> Option_B_Router_V3-front-in1.drl
+  laser L5-L6:    126 x 0.10 mm hole / 0.26 mm land, copper filled and planarised      -> Option_B_Router_V3-in4-back.drl
+  buried L2-L5:    58 x 0.15 mm hole / 0.35 mm land, resin plugged and capped           -> Option_B_Router_V3-in1-in4.drl
+  through L1-L6:  121 x 0.15 mm hole / 0.35 mm land, epoxy filled and capped            -> Option_B_Router_V3-PTH.drl
+  Option_B_Router_V3-NPTH.drl is empty (no non-plated holes).
+Stacked vias: 42 of the L5-L6 laser vias sit exactly on a L2-L5 buried via of the same net (same centre): 40 under the north pad row of J5 and 2 under J6 pads 4 and 6 (GND).
+  No laser via is stacked on another laser via. The buried vias under them must be plugged, capped and plated flat.
+Vias in pads: 156 laser vias (38 in J3 pads on top; 38 in J4, 40 in J5, 40 in J6 pads on the bottom) and 44 through-via ends (40 in J5 pads, 2 in J3 pads and the same 2 vias in J4 pads).
+  Pads are 0.20 x 0.70 mm (J4, J5, J6) and 0.23 x 0.66 mm (J3) at 0.40 mm pitch; the 0.26 mm and 0.35 mm via lands are wider than the pads. These pads must come out flat and solderable.
+Minimum track / space 0.10 / 0.10 mm. Hole to copper 0.20 mm. Copper to board edge 0.30 mm. Least via hole edge to board edge 0.46 mm.
+Least hole edge to hole edge: 0.25 mm same net, 0.30 mm different nets (same span), 0.31 mm different nets (spans that share a layer).
+Silkscreen: text is 1.0 mm high / 0.15 mm stroke. 9 lines on the top and 27 on the bottom legend are 0.12 mm wide (connector outlines of the KiCad library footprints); please widen them to your minimum.
+No part of the legend is needed on pads. Please add no copper inside the board outline. Order number: please put it on the panel rail, not on the board (no room).
+
+=== ASSEMBLY DATA ===
+Double-sided Standard PCBA, 5 placements, 3 BOM lines. TP7 is a bare 1.0 mm copper test pad: no part, not in the BOM or CPL.
+The placement file is in the coordinates of the Gerbers (Mid Y = minus KiCad Y). Bottom-side angles follow your own convention: the part is turned counter-clockwise in its own view and then mirrored left-right (angle = 180 minus KiCad's bottom angle), as in the placement file of our Direct LDO Carrier V6 that you assembled.
+The angles were checked against your library footprints (easyeda.com/api/products/<C>/components, read 2026-11-26 14:55 CST):
+  C294544 (CONN-SMD_DF40C-80DP-0.4V-51) lands on all 84 pads of J3 at 0 deg, worst pad error 0.000 mm;
+  C312960 (CONN-SMD_DF40C-80DS-0.4V-51) lands on all 80 pads of J4, J5, J6 at 180 deg (bottom side, your convention); its pad centres are 0.22 mm nearer the part centre line than the board's (longer board pads), no offset;
+  C25744 (R0402) at 270 deg, not polarised.
+The DF40C connectors land on the same pads when turned half a turn and have no key; pin 1 below uses the Hirose numbering. Your library numbers the pads round the part,
+so on J3 your pad 80 lands on board pad 1; on J4, J5, J6 your pad 1 lands on board pad 1.
+Pin 1 positions (X, Y as in the CPL):
+  J4   Bottom   180 deg     91.983   -111.978   pin 1   (C312960)
+  J5   Bottom   180 deg     91.983   -123.660   pin 1   (C312960)
+  J6   Bottom   180 deg     91.983   -118.660   pin 1   (C312960)
+  J3   Top      0 deg     91.983   -112.158   pin 1   (C294544)
+All four connectors are 0.4 mm pitch with filled vias in their pads: please use a stencil thickness suited to 0.4 mm pitch (0.10 mm) and tell us the thickness.
+Every BOM line must be fitted; please do not substitute a part without asking.
+
+=== PARTS (live JLC stock read 2026-11-26 15:04 CST, for 5 boards) ===
+  C294544   DF40C-80DP-0.4V(51)    need   5   orderable 10798     Extended  in stock
+  C312960   DF40C-80DS-0.4V(51)    need  15   orderable 5233      Extended  in stock
+  C25744    0402WGF1002TCE         need   5   orderable 26187734  Basic     in stock

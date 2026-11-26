@@ -1,0 +1,47 @@
+(version 1)
+# Option B Router V3 · Layout V1 (D1 straight-lane + D3 GND corridor, 6L 1+4+1 HDI JLCH061611Y1-1078)
+# Explicit JLC HDI limits (read 19 Nov 2026; capability confirmed 20 Nov 2026 by JLC Mory Lan).
+# Via-in-pad on 0.4 mm pitch DF40C pads and laser-on-buried stacks require JLC engineering review before fab.
+
+(rule "JLC HDI laser microvia annular ring 3 mil"
+   (condition "A.Via_Type == 'Micro'")
+   (constraint annular_width (min 0.0762mm)))
+
+(rule "JLC through and buried via annular ring 0.1 mm"
+   (condition "A.Type == 'Via' && A.Via_Type != 'Micro'")
+   (constraint annular_width (min 0.1mm)))
+
+(rule "JLC hole to copper clearance (project 0.20 mm >= JLC 0.15 mm)"
+   (constraint hole_clearance (min 0.2mm)))
+
+(rule "JLC hole to hole different nets 0.24 mm"
+   (condition "A.Net != B.Net")
+   (constraint hole_to_hole (min 0.24mm)))
+
+(rule "JLC hole to hole same net 0.13 mm"
+   (condition "A.Net == B.Net")
+   (constraint hole_to_hole (min 0.13mm)))
+
+(rule "JLC copper to routed edge (project 0.30 mm >= JLC 0.20 mm)"
+   (constraint edge_clearance (min 0.3mm)))
+
+(rule "JLC blind microvia to routed edge 0.35 mm"
+   (condition "A.Via_Type == 'Micro'")
+   (constraint edge_clearance (min 0.35mm)))
+
+(rule "JLC legend to pad 0.15 mm"
+   (condition "B.Type == 'Pad'")
+   (constraint silk_clearance (min 0.15mm)))
+
+(rule "JLC legend text 1.0 mm high, 0.15 mm stroke"
+   (layer "?.Silkscreen")
+   (constraint text_height (min 1.0mm))
+   (constraint text_thickness (min 0.15mm)))
+
+(rule "Lower ASIC side-pin keep-out on B.Cu (x 88.7-91.5, y 115.2-117.3; no copper or other bottom parts)"
+   (layer "B.Cu")
+   (condition "A.intersectsArea('LOWER_ASIC_SIDE_PIN_KO') && !(A.Type == 'Footprint' && A.Reference == 'J4')")
+   (constraint disallow track)
+   (constraint disallow via)
+   (constraint disallow zone)
+   (constraint disallow footprint))

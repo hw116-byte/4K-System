@@ -1,0 +1,18 @@
+Designator,JLC part,Layer,CPL rotation,Pin 1 X (mm),"Pin 1 Y (mm, CPL sign)",What,Net on that pad,JLC library pad that lands there,Miss (mm),Worst pad error of the whole part (mm)
+U1,C670975,Bottom,0,101.438,-141.850,pin 1,GND,1,0.062,0.062
+U2,C580010,Bottom,180,97.850,-134.150,pin 1,/VIN_3V3,1,0.043,0.043
+U3,C2862700,Bottom,270,109.925,-124.420,pin 1,/ASIC_VDD_ADC,1,0.000,0.000
+U4,C2862700,Bottom,270,97.825,-124.420,pin 1,/ASIC_VDD_DRIVER,1,0.000,0.000
+U5,C2862700,Bottom,270,89.625,-124.420,pin 1,/ASIC_DVDD,1,0.000,0.000
+U6,C580010,Bottom,180,103.500,-134.150,pin 1,/VIN_3V3,1,0.043,0.043
+U7,C2862700,Bottom,90,90.275,-141.930,pin 1,/ASIC_VDD_CGEN,1,0.000,0.000
+U8,C580010,Bottom,180,92.200,-134.150,pin 1,/VIN_3V3,1,0.043,0.043
+U9,C580010,Bottom,0,96.400,-127.790,pin 1,/STIM_PRE_POS,1,0.043,0.043
+U10,C670492,Bottom,0,108.675,-127.790,pin 1,/STIM_PRE_NEG,1,0.043,0.043
+D11,C668860,Bottom,270,96.800,-143.450,cathode (board pad 1),/CAPP,2 (cathode),0.150,0.150
+D12,C668860,Bottom,0,102.850,-145.500,cathode (board pad 1),/SW_N,2 (cathode),0.150,0.150
+J1,C2692097,Top,270,92.610,-120.200,"pin 1 (Hirose numbering, board pad 1)",/ASIC6_DATA1,70,0.006,0.014
+J2,C2692097,Top,270,110.110,-120.200,"pin 1 (Hirose numbering, board pad 1)",/STIM_CHB_SHARED,70,0.006,0.014
+J3,C294544,Top,0,91.983,-112.158,"pin 1 (Hirose numbering, board pad 1)",/ASIC_VDD_CGEN,80,0.000,0.000
+J4,C312960,Bottom,180,91.983,-111.978,"pin 1 (Hirose numbering, board pad 1)",/ASIC_VDD_CGEN,1,0.220,0.220
+J5,C3405,Top,270,124.000,-116.000,pin 1 (square pad; on the test frame),/ASIC_AC_IN,1,0.000,0.000

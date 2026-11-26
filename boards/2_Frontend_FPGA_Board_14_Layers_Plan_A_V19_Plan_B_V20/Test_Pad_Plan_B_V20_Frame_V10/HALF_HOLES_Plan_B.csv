@@ -1,0 +1,10 @@
+ref,frame_label,net,function,edge,x_mm,y_mm,hole_mm,pad_mm,copper_on,stub_layer,stub_width_mm,stub_length_mm,stub_lands_on,hole_wall_to_other_net_copper_mm,pad_to_other_net_copper_mm,nearest_corner_mm
+TP48,3V3 OUT,VIN_3V3,3.3 V OUTPUT of U16 (measure only; do not feed while 5 V is applied),south,105.32,121.92,0.6,1.1,"L1-Top, L4-Power, L14-Bottom",L4,0.5,0.92,"the VIN_3V3 pour on L4, ending on the buried via at (105.32, 121.00)",0.250,0.263,3.110
+TP49,RAILPG,BOOT_RAILS_PG_3V3,All boot rails good (high when the boot rails are up),south,107.1,121.92,0.6,1.1,"L1-Top, L14-Bottom",L1,0.3,0.95,"TP10 (0.6 mm pad, L1)",0.250,0.202,4.890
+TP50,GND,GND,Ground return,south,108.4,121.92,0.6,1.1,"L1-Top, L14-Bottom",L1,0.3,0.82,"TP20 (0.6 mm pad, L1)",0.250,0.202,6.190
+TP51,INIT_B,FPGA_INIT_B,"FPGA INIT_B (configuration init / CRC error, open drain)",south,109.7,121.92,0.6,1.1,"L1-Top, L14-Bottom",L1,0.3,0.97,"TP11 (0.6 mm pad, L1)",0.250,0.202,7.490
+TP52,VCCO,VCCO_1V5,ASIC bank rail VCCO 1.5 V (monitor only),south,114.1,121.92,0.6,1.1,"L1-Top, L14-Bottom",L1,0.3,0.88,"TP6 (0.6 mm pad, L1)",0.250,0.202,10.700
+TP53,GND,GND,Ground return,south,115.4,121.92,0.6,1.1,"L1-Top, L14-Bottom",L1,0.3,0.90,"TP21 (0.6 mm pad, L1)",0.250,0.202,9.400
+TP54,VCCAUX,VCCAUX_1V8,VCCAUX 1.8 V rail (monitor only),south,116.7,121.92,0.6,1.1,"L1-Top, L14-Bottom",L1,0.3,0.86,"TP9 (0.6 mm pad, L1)",0.250,0.202,8.100
+TP55,GND,GND,Ground return,south,118,121.92,0.6,1.1,"L1-Top, L14-Bottom",L1,0.3,0.80,"TP1 (0.6 mm pad, L1)",0.250,0.202,6.800
+TP56,5V IN,VIN_5V,5 V bench power INPUT (current-limited supply; return on TP55),south,121.2,121.92,0.6,1.1,"L1-Top, L8-Signal, L14-Bottom",L8,0.3,10.61,"the VIN_5V via stack at J1.32 (123.90, 113.37) on L8",0.250,0.660,3.600

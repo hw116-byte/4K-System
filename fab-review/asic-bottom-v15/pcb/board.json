@@ -1,0 +1,16 @@
+{
+  "title": "ASIC Bottom Board V15",
+  "revision": "V15",
+  "sha256": "af4a15c50b75875b6cdc5b3e0e7a49d893972df1907454e72f198b8edee3c235",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 10
+  },
+  "native": "../../../boards/4_ASIC_Boards_V15/ASIC_Bottom_Board_V15/ASIC_Bottom_Board_V15.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}

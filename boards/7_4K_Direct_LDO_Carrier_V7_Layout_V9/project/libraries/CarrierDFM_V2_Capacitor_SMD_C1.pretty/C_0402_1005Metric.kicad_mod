@@ -1,0 +1,292 @@
+(footprint "C_0402_1005Metric"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+	(tags "capacitor")
+	(property "Reference" "REF**"
+		(at -0.045598 -1.410143 270)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2c0ab5ba-896d-4921-97d7-7301db5c46d5")
+		(effects
+			(font
+				(size 1 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "C_0402_1005Metric"
+		(at 0 1.16 0)
+		(layer "F.Fab")
+		(uuid "6094a150-7dc5-4714-8025-956019de5546")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://product.samsungsem.com/part/download.do?masterKey=CL05B104KA5NNN&type=specsheet"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "831df272-5c1a-49eb-af6c-c142066df2fc")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Unpolarized capacitor"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6e725e4a-3ab6-4b65-91db-d34b5db4fee6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bbfa2f8f-09f2-400b-9677-a0e025776fda")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Reference_MPN" "TMK105BJ104KV-F"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b3885aa5-0a9e-47bc-8ae5-ce9caa70460a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Procurement_note" "Reference example only; final component selection and capacitor/regulator compatibility remain unverified."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b7508715-aabc-45e3-b5b9-65dd6d8a1611")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Samsung Electro-Mechanics"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6e3a0ded-e538-4d47-bfad-126d17c984eb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "MPN" "CL05B104KA5NNNC"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b34e8863-9cef-453d-8170-edda82d26ff2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "LCSC Part #" "C155422"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "50ecb276-3015-43ac-b7ef-2eca0f28e763")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Procurement_route" "JLC/LCSC code available; confirm selectable stock or preorder"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b53111e6-9a34-4454-b54a-01a54e09d445")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Supplier_source" "https://www.lcsc.com/product-detail/C155422.html"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e0217674-7fe5-4ad7-b68a-4b3955310991")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "V2_part_selection" "100nF25V10%X7R0402; selects exact part for former reference-only Taiyo X5R candidate; capacitance/rating/footprint retained."
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a35dce20-9ff7-437e-894a-40837720bf5e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Voltage" "25V"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c2e877d0-bc3a-4d8c-aa4e-490981524e94")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Tolerance" "10%"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "25661b1f-45e3-41a3-bede-c8b4e9c8a905")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Dielectric" "X7R"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2710bc2f-0dd2-4973-aa7f-3f8be15b1b80")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property ki_fp_filters "C_*")
+	(sheetname "/")
+	(sheetfile "Carrier_V1.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -0.91 -0.46)
+		(end 0.91 0.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "41c33848-77f2-48d8-88ac-47cf373fc9fd")
+	)
+	(fp_line
+		(start -0.107836 -0.36)
+		(end 0.107836 -0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d97fbfcf-e5be-48b5-8447-a51dca0ba510")
+	)
+	(fp_line
+		(start -0.107836 0.36)
+		(end 0.107836 0.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "259039d3-417f-4e1c-b528-b2ce2cd25121")
+	)
+	(fp_rect
+		(start -0.5 -0.25)
+		(end 0.5 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "32a258ec-0cba-4609-bffc-e8cd48ed2975")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "eec1d4c9-ad1a-43f2-bddc-43fe9ae1a76f")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.48 0)
+		(size 0.56 0.62)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "f1131952-e9b5-40be-86e4-3922f4daea43")
+	)
+	(pad "2" smd roundrect
+		(at 0.48 0)
+		(size 0.56 0.62)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "662afa8e-8b0b-4abd-9c9f-2f066bfa30c2")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/Full3D_V1/KiCad/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

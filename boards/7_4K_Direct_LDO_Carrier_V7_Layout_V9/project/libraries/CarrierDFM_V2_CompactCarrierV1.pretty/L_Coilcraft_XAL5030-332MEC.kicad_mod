@@ -1,0 +1,270 @@
+(footprint "L_Coilcraft_XAL5030-332MEC"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Coilcraft XAL5030-332MEC, 3.3uH +/-20%, body nominal 5.28x5.48, maximum 5.48x5.68x3.1mm. Unchanged KiCad XAL5030-XXX pad geometry matches manufacturer recommended land pattern, centers 3.31mm, pads 1.18x4.70mm. Coilcraft Document 908 revision 2026-02-26 and physical drawing xal5000d.gif. https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf")
+	(tags "xal")
+	(property "Reference" "REF**"
+		(at 0.021428 3.787819 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "c70903b3-fad8-44ee-bc21-51aa88eeac08")
+		(effects
+			(font
+				(size 1 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "L_Coilcraft_XAL5030-332MEC"
+		(at -13.59086 -0.442157 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c6df1bb4-fef8-4da2-af94-89f037b89e5d")
+		(effects
+			(font
+				(size 1.143 1.143)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "39bc0e4e-7837-4230-9b1b-f8f06c45ac97")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Inductor"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "481a658a-b529-4e4d-bc82-aa1c813b876d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "inductor/SMD"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cae3dc4d-ba2b-413f-9401-8a4a678e9070")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Role" "Output power inductor; retained user 3.3 uH; differs from TI 2.2 uH 3.3 V table row"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "99341326-d33c-4ab1-b3f3-defacc0656c0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Selection_note" "3.3 uH retained; 5.48 x 5.68 x 3.1 mm maximum body. Published Isat 8.7 A is typical at 25 C, not a hot minimum. Nominal frequency/current screening only; actual load, hot saturation, copper cooling and AC/core loss remain unqualified. Marked short-lead side should face SW; assembly marking review remains open."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d30c5e64-9b42-4bec-b76e-ffc35b4f1a9e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Coilcraft"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b06b9e8d-6dab-468c-9b27-d9238324504d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "XAL5030-332MEC"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "04809dbc-30f5-4c04-96ac-04eb019e8e04")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part #" "C5342047"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "437bf266-67bb-40c4-9204-51967025ffa1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Procurement_route" "JLC/LCSC code available; confirm selectable stock or preorder"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8fa172fb-e98c-4576-affb-02404c5432af")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Supplier_source" "https://www.lcsc.com/product-detail/C5342047.html"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c8784c37-2c7c-47b7-bb10-d1e9d502bc64")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "V2_part_selection" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "497493b0-bf64-4fc1-a53b-7ff083ede719")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -2.99 -3.09)
+		(end 2.99 3.09)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e1241bdd-3e37-4d25-8bbc-6f701aacc64c")
+	)
+	(fp_line
+		(start -2.85 -2.95)
+		(end 2.85 -2.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "09cf37fc-b186-47b3-8669-1c3e2f9fe24d")
+	)
+	(fp_line
+		(start -2.85 2.95)
+		(end -2.85 -2.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1323a04c-189e-40ae-b5a8-2140075a1f48")
+	)
+	(fp_line
+		(start 2.85 -2.95)
+		(end 2.85 2.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c13000f4-7bf9-47f7-ae12-61bdd38ddd84")
+	)
+	(fp_line
+		(start 2.85 2.95)
+		(end -2.85 2.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5a1da404-2ebc-4a13-b6e0-4341d1c264ae")
+	)
+	(fp_rect
+		(start -2.74 -2.84)
+		(end 2.74 2.84)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "9f5bba90-4015-46b3-abdd-fbab4b580a7d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "16879c2b-d62e-45a8-97d2-913dcbeddcbb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.655 0)
+		(size 1.18 4.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.211864)
+		(uuid "e1d4c087-2fc6-4a71-b704-4cdffb1e2c80")
+	)
+	(pad "2" smd roundrect
+		(at 1.655 0)
+		(size 1.18 4.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.211864)
+		(uuid "b4b499dc-3f33-41d7-af28-0c4802daca68")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/libraries/models/CompactCarrierV1/L_Coilcraft_XAL5030-XXX.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

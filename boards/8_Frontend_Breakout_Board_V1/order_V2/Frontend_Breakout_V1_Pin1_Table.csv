@@ -1,0 +1,12 @@
+Designator,JLC part,Layer,CPL rotation,Pin 1 X (mm),"Pin 1 Y (mm, CPL sign)",What,Net on that pad,JLC library pad that lands there,Miss (mm),Worst pad error of the whole part (mm),JLC library footprint
+D1,C8678,Top,90,92.600,-92.600,cathode (board pad 1),/VIN_5V,1 (K),0.200,0.200,SMA_L4.3-W2.6-LS5.2-RD
+D2,C2297,Top,180,99.938,-95.050,cathode (board pad 1),GND,2 (K),0.113,0.113,LED0805-R-RD
+D3,C84256,Top,180,138.537,-173.600,cathode (board pad 1),GND,1 (-),0.163,0.163,LED0805-RD
+J1,C2692097,Top,270,92.610,-120.200,"pin 1 (Hirose numbering, board pad 1)",/ASIC6_DATA1,70,0.006,0.014,CONN-SMD_DF40C-70DP-0.4V-51
+J2,C2692097,Top,270,110.110,-120.200,"pin 1 (Hirose numbering, board pad 1)",/STIM_CHB_SHARED,70,0.006,0.014,CONN-SMD_DF40C-70DP-0.4V-51
+J3,C56434801,Top,270,70.200,-83.820,pin 1 (square pad),/ASIC6_DATA1,1,0.000,0.000,"BY ANALOGY: HDR-TH_70P-P2.54-V-F-R2-C35-S2.54 (library footprint of C56435498, the same maker's 2x35 socket; JLC has no library footprint for C56434801; the 2x20 pin headers C25503140 and C42431816 use the same row and pin-1 convention)"
+J4,C56434801,Top,270,127.270,-83.820,pin 1 (square pad),/STIM_CHB_SHARED,1,0.000,0.000,"BY ANALOGY: HDR-TH_70P-P2.54-V-F-R2-C35-S2.54 (library footprint of C56435498, the same maker's 2x35 socket; JLC has no library footprint for C56434801; the 2x20 pin headers C25503140 and C42431816 use the same row and pin-1 convention)"
+J5,C165948,Top,180,103.250,-85.695,pad A1 (GND end of the pad row),GND,A1B12 (GND),0.089,0.089,USB-C_SMD-TYPE-C-31-M-12_1
+J6,C492401,Top,270,106.500,-89.000,pin 1 (square pad),/5V_USB,1,0.000,0.000,HDR-TH_2P-P2.54-V-M
+J7,C42431787,Top,0,58.000,-80.200,pin 1 (square pad),GND,1,0.000,0.000,HDR-TH_4P-P2.54-V-M
+J8,C42431787,Top,180,142.010,-80.200,pin 1 (square pad),GND,1,0.000,0.000,HDR-TH_4P-P2.54-V-M

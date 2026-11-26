@@ -8,6 +8,7 @@ This repository holds only the latest version of each board. The earlier site
 - **Datasheet and user guide:** [datasheet/](https://hw116-byte.github.io/4K-System/datasheet/) (web) or [System_Datasheet_V1.pdf](System_Datasheet_V1.pdf)
 - **Direct LDO carrier page:** [direct-ldo/](https://hw116-byte.github.io/4K-System/direct-ldo/)
 - **Direct LDO carrier datasheet and programming guide** (XEM8305 pin map, XDC, power-up): [direct-ldo/datasheet/](https://hw116-byte.github.io/4K-System/direct-ldo/datasheet/) · [XDC](direct-ldo/datasheet/Direct_LDO_Carrier_V6_XEM8305.xdc)
+- **Boards for fab review (schematic + PCB in the browser):** [fab-review/](https://hw116-byte.github.io/4K-System/fab-review/)
 - **KiCad projects and fab files:** [boards/](boards/)
 - **24 Nov 2026 overview update:** HDMI Extension Board V41 (male test pins, 12 V fan header), Option B router V3 + LDO board V3 (placement, routing in progress) on 4 of the 8 head stages, G-chip Direct LDO Carrier V6 and the new 4K Direct LDO Carrier V7 (layout placement), printable models set V5, weekly deck [2026-11-25-v9](presentation/meetings/2026-11-25-v9/)
 - **25 Nov 2026 weekly deck V11:** adds test-pad slides: Frontend Plan A (V17, frame header) vs Plan B (V18, edge half holes), both with the new 4 × 3 mm flash; FPGA-LDO Plan A (V24) vs Plan B (V26). [Deck](presentation/meetings/2026-11-25-v11/).
@@ -15,18 +16,27 @@ This repository holds only the latest version of each board. The earlier site
 
 ## Boards
 
-| Folder | Board | Version | Last edit |
-|---|---|---|---|
-| [1_HDMI_Extension_Board_V40](boards/1_HDMI_Extension_Board_V40) | HDMI Extension Board (PC side, carries the XEM8310, eight Micro-HDMI ports) | V40 | 20 Nov 2026, 16:13 CST |
-| [2_Frontend_FPGA_Board_14_Layers_V14_Test_Frame_V4](boards/2_Frontend_FPGA_Board_14_Layers_V14_Test_Frame_V4) | Frontend FPGA board (head, Artix-7), with its test frame | 14 layers V14, schematic V58, test frame V4 | 20 Nov 2026, 16:26 CST |
-| [3_FPGA_LDO_Option_A_Layout_V24_Test_Frame_V4](boards/3_FPGA_LDO_Option_A_Layout_V24_Test_Frame_V4) | FPGA-LDO board (head base, ASIC supplies), with its test frame | layout V24, schematic V43, test frame V4 | 19 Nov 2026, 11:46 CST |
-| [4_ASIC_Boards_V15](boards/4_ASIC_Boards_V15) | ASIC top and bottom boards (two chips each) | V15 | 19 Nov 2026, 07:44 CST |
-| [5_Direct_LDO_Carrier_V6](boards/5_Direct_LDO_Carrier_V6) | Direct LDO carrier for the XEM8305 (bench board, built) | V6 | 31 Oct 2026, 20:17 CST |
+**Review page: [Boards for fab review](https://hw116-byte.github.io/4K-System/fab-review/)** opens every board's native KiCad schematic
+(all sheets) and PCB in the browser, with the parts list and every file.
+
+`boards/` is a copy of the workspace's Final Versions folder (26 Nov 2026): the latest version of every board with its order files.
+Its [START_HERE.md](boards/START_HERE.md) lists versions, order files and open points per board.
+
+| Folder | Board | Version |
+|---|---|---|
+| [1_HDMI_Extension_Board_V42](boards/1_HDMI_Extension_Board_V42) | HDMI Extension Board | V42 · order_V4 |
+| [2_Frontend_FPGA_Board_14_Layers_Plan_A_V19_Plan_B_V20](boards/2_Frontend_FPGA_Board_14_Layers_Plan_A_V19_Plan_B_V20) | Frontend FPGA Board, Test Pad Plan A and Plan B | 14 layers V19 + test frame V9 / V20 + frame V10 |
+| [3_FPGA_LDO_Option_A_Plan_A_V24_Plan_B_V26](boards/3_FPGA_LDO_Option_A_Plan_A_V24_Plan_B_V26) | FPGA-LDO PCB Option A, Plan A and Plan B | layout V24 + test frame V4 / V26 + frame V6 |
+| [4_ASIC_Boards_V15](boards/4_ASIC_Boards_V15) | ASIC top and bottom boards (PCBWay) | V15 |
+| [5_Direct_LDO_Carrier_V6](boards/5_Direct_LDO_Carrier_V6) | G-chip Direct LDO Carrier (built) | V6 |
+| [6_Option_B_Router_V3_and_LDO_Board_V3](boards/6_Option_B_Router_V3_and_LDO_Board_V3) | Option B router and LDO board (Plan A and Plan B) | router V3 layout V1 · LDO board V3 layout V6 |
+| [7_4K_Direct_LDO_Carrier_V7_Layout_V9](boards/7_4K_Direct_LDO_Carrier_V7_Layout_V9) | 4K Direct LDO Carrier | V7 · layout V9 |
+| [8_Frontend_Breakout_Board_V1](boards/8_Frontend_Breakout_Board_V1) | Frontend Breakout Board | V1 · order_V2 |
 
 Each folder has the KiCad project, a schematic PDF, a KiCad ZIP and the
 fab/assembly files (Gerbers, BOM, placement). Open the `.kicad_pro` file with
 **KiCad 10**; libraries and 3D models are inside each project.
 
-The website's viewers and downloads show the same boards as `boards/`. The datasheet
-text and the design review were written against HDMI V39 and Frontend V13; V40 and V14
-differ from those only by stocked-part swaps.
+The fab-review pages read the files in `boards/` directly. The overview page's 3D views and card
+downloads, the datasheet text and the design review were made against earlier revisions and were not
+refreshed in this update.

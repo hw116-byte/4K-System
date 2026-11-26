@@ -1,0 +1,66 @@
+(footprint "TestPoint_HalfHole_D0.6mm_Pad1.1mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Plated half-hole (castellated) edge test pad: 0.60 mm hole centred on the board outline, 1.10 mm round copper on top and bottom, mask open both sides. JLCPCB castellated-hole rules, read 23 Nov 2026 (FPGA-LDO A layout V26, Test Pad Plan B)")
+	(tags "test point half hole castellated edge")
+	(property "Reference" "REF**"
+		(at 0 -1.2 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "45f20ef7-46f6-40f9-b681-8b7c44246b7a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "TestPoint_HalfHole_D0.6mm_Pad1.1mm"
+		(at 0 1.2 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "af70caa5-e02d-465e-a426-afd7791d5925")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "91e62720-5c8f-4c99-a4a0-eb2aa5e96d53")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "795d746b-d648-42cc-abc1-add107ed791a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.1 1.1)
+		(drill 0.6)
+		(property pad_prop_castellated)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(zone_connect 2)
+		(uuid "d80c9c72-83f0-4567-9de7-4012a94783e2")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,16 @@
+{
+  "title": "Frontend Breakout Board V1",
+  "revision": "V1",
+  "sha256": "860a05c104e330b692d936dbfd12810656495fae429269724560cb95f82166e0",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 4
+  },
+  "native": "../../../boards/8_Frontend_Breakout_Board_V1/project/Frontend_Breakout_V1.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}

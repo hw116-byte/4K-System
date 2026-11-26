@@ -1,0 +1,12 @@
+Comment,Designator,Footprint,JLCPCB Part #,Qty,Note
+Samsung CL21A106KAYNNNE 10uF 25V X5R 0805,"C1,C2",C_0805_2012Metric,C15850,2,
+MDD SS34 40V 3A Schottky SMA,D1,D_SMA,C8678,1,JLC library pad 1 is the cathode.
+KENTO KT-0805G green LED 0805,D2,LED_0805_2012Metric,C2297,1,"JLC library pad 1 is the ANODE, pad 2 the cathode. Cathode position is in the pin-1 table."
+NationStar NCD0805R1 red LED 0805,D3,LED_0805_2012Metric,C84256,1,JLC library pad 1 is the cathode (-).
+Hirose DF40C-70DP-0.4V(51),"J1,J2",Hirose_DF40C-70DP-0.4V_2x35-1MP_P0.4mm,C2692097,2,
+YIXINYING YXY-PZ2.54-2X35PIN-DIP 2x35 pin header 2.54mm,"J3,J4",PinHeader_2x35_P2.54mm_Vertical,C56434801,2,Through-hole. JLC has no library footprint for this part number (read 2026-11-26 14:55 CST): placement angle and centre are given by analogy with HDR-TH_70P-P2.54-V-*-R2-C35-S2.54; pin 1 is in the pin-1 table.
+HRO TYPE-C-31-M-12 USB-C receptacle,J5,USB_C_Receptacle_HRO_TYPE-C-31-M-12,C165948,1,"SMD pins, through-hole shell tabs (4 plated slots)."
+XFCN PZ254V-11-02P 1x2 pin header 2.54mm,J6,PinHeader_1x02_P2.54mm_Vertical,C492401,1,Through-hole.
+JXTCONN PZ2.54-1X4P-H25 1x4 pin header 2.54mm,"J7,J8",PinHeader_1x04_P2.54mm_Vertical,C42431787,2,Through-hole.
+Uniroyal 0603WAF5101T5E 5.1k 1% 0603,"R1,R2",R_0603_1608Metric,C23186,2,
+Uniroyal 0603WAF1001T5E 1k 1% 0603,"R3,R4",R_0603_1608Metric,C21190,2,

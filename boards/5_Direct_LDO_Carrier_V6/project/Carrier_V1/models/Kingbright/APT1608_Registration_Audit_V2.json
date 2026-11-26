@@ -1,0 +1,224 @@
+{
+  "source": "/Users/howardwang/Desktop/Rice Research/FPGA PCB/2026-10-30_FPGA_Work/02_LDO_Carrier_JLCPCB_Fixes_V2/research/parts/manufacturer_models/APT1608.STEP",
+  "source_sha256": "02e16614ab736f6531ed65bae784290547bcaf57d8a1d877a15f91cc68c5e557",
+  "registered_file": "/Users/howardwang/Desktop/Rice Research/FPGA PCB/2026-10-30_FPGA_Work/02_LDO_Carrier_JLCPCB_Fixes_V2/research/dfm_independent/led_model/Kingbright_APT1608_Cathode_Left_Registered_V2.step",
+  "registered_sha256": "772a201f8c8dc7e0badaf41c96a1aa81041dd04d7d3332e01a4dff54fa17a5fa",
+  "raw_bounds_mm": [
+    -0.8010001000000003,
+    -0.1251001000000001,
+    -0.4000000000000002,
+    0.8100000999999999,
+    0.6249999999999999,
+    0.4000001000000878
+  ],
+  "registered_bounds_mm": [
+    -0.8100001,
+    -0.40000000000000013,
+    -9.999999995836663e-08,
+    0.8010001000000002,
+    0.40000010000000014,
+    0.7501
+  ],
+  "registered_size_mm": [
+    1.6110002000000003,
+    0.8000001000000003,
+    0.7501000999999999
+  ],
+  "face_count_before_after": [
+    314,
+    314
+  ],
+  "solid_count_before_after": [
+    3,
+    3
+  ],
+  "valid_registered_brep": true,
+  "surface_area_before_after_mm2": [
+    8.106727496562637,
+    8.106727496561287
+  ],
+  "source_color_palette_rgb": [
+    [
+      0.0,
+      0.0,
+      0.50196078
+    ],
+    [
+      0.0,
+      0.75294118,
+      0.0
+    ],
+    [
+      0.75294118,
+      0.75294118,
+      0.75294118
+    ],
+    [
+      1.0,
+      0.75294118,
+      0.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.75294118
+    ],
+    [
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "registered_color_palette_rgb": [
+    [
+      0.0,
+      0.0,
+      0.50196079
+    ],
+    [
+      0.0,
+      0.75294116,
+      0.0
+    ],
+    [
+      0.75294116,
+      0.75294116,
+      0.75294116
+    ],
+    [
+      1.0,
+      0.75294116,
+      0.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.75294116
+    ]
+  ],
+  "imported_colored_shape_inventory_before": {
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(0, 0, 55)": {
+      "count": 278,
+      "surface_area_mm2": 0.0032192169933438408
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(255, 255, 134)": {
+      "count": 9,
+      "surface_area_mm2": 2.5641977824214166
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(255, 134, 0)": {
+      "count": 13,
+      "surface_area_mm2": 1.0180799999999997
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(0, 134, 0)": {
+      "count": 5,
+      "surface_area_mm2": 0.5558824807014588
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(255, 255, 255)": {
+      "count": 8,
+      "surface_area_mm2": 3.7651880164464333
+    },
+    "TopAbs_ShapeEnum.TopAbs_SOLID|Surf|(134, 134, 134)": {
+      "count": 3,
+      "surface_area_mm2": 8.10672749656265
+    }
+  },
+  "imported_colored_shape_inventory_after": {
+    "TopAbs_ShapeEnum.TopAbs_SOLID|Surf|(134, 134, 134)": {
+      "count": 3,
+      "surface_area_mm2": 8.106727496561298
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(255, 255, 255)": {
+      "count": 8,
+      "surface_area_mm2": 3.7651880164453733
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(0, 134, 0)": {
+      "count": 5,
+      "surface_area_mm2": 0.5558824807006819
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(255, 134, 0)": {
+      "count": 13,
+      "surface_area_mm2": 1.01808
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(255, 255, 134)": {
+      "count": 9,
+      "surface_area_mm2": 2.564197782421928
+    },
+    "TopAbs_ShapeEnum.TopAbs_FACE|Surf|(0, 0, 55)": {
+      "count": 278,
+      "surface_area_mm2": 0.0032192169933108836
+    }
+  },
+  "color_handling": "STEPCAF reader/writer ColorMode, NameMode and LayerMode enabled. Imported per-face/solid color-group counts and colored areas match. RGB inventory keys are rounded linear-channel values times255. Serialized white changes from COLOUR_RGB to predefined white, with its8face assignments preserved; tiny nonwhite serialization differences are float precision only.",
+  "right_handed_transform_3x4": [
+    [
+      -1.0,
+      -1.359631073446891e-32,
+      1.2246467991473532e-16,
+      0.0
+    ],
+    [
+      1.2246467991473532e-16,
+      -1.1102230246251565e-16,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      1.1102230246251565e-16,
+      0.1251
+    ]
+  ],
+  "rotation_right_handed_xyz_degrees": [
+    90,
+    0,
+    180
+  ],
+  "rotation_order": "Right-handedX+90, thenZ+180 when cathode_left; translation last",
+  "translation_mm": [
+    0,
+    0,
+    0.1251
+  ],
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "native_registered_model_settings": {
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "native_original_file_alternative": {
+    "rotation": [
+      -90,
+      0,
+      180
+    ],
+    "offset": [
+      0,
+      0,
+      0.1251
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "polarity": "ActualsourcegreenpolarityarrowapexispositiveX; the additional180degreeZrotation putsapex/cathodemarknegativeX, aligningPCBpad1left. Rootrigidmatrixdeterminant+1, no reflection. PDFp1polaritydrawingisbottomview. Finalassemblypolarityrequiresselected-partpreview/inspection.",
+  "qualification": "Manufacturer package CAD, rigid registration only. Source has asymmetric small features, so overall X extent is1.611mm versus nominal1.6mm body; no rescale or invented surfaces. BRep/source geometry checks do not qualify LED photometry, current, reflow or fit tolerances."
+}

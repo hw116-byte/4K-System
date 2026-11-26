@@ -1,0 +1,556 @@
+(footprint "CP_Panasonic_EEEFTE221XAL_D6.3x7.7_V3"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Panasonic EEEFTE221XAL (EEE-FTE221XAL), 220uF25V FT[HF] standard D8, D6.3x7.7mm. V3 exact-part rename of preserved KiCad-derived body/model and standard Panasonic D8 pads, 3.2x1.6mm at +/-2.5mm (gap1.8mm). Copper/mask/paste/courtyard/model geometry unchanged. RDE0000C1269,1Sep2025,pp1-2; DME0000COL48,30Jan2026,p2. https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/RDE0000C1269.pdf https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/DME0000COL48.pdf")
+	(tags "capacitor electrolytic")
+	(property "Reference" "REF**"
+		(at 0.000146 -4.248495 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "ee03d4fc-430c-49b7-97fd-da86f9270771")
+		(effects
+			(font
+				(size 1 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CP_Panasonic_EEEFTE221XAL_D6.3x7.7_V3"
+		(at 3.488918 2.2725 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cf6eac03-82e1-4696-8e34-d77e2209ceee")
+		(effects
+			(font
+				(size 1.143 1.143)
+				(thickness 0.254)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/RDE0000C1269.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ca2a8818-45c5-434c-bf50-c1c8ebbda226")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Polarized aluminum electrolytic capacitor, FT halogen-free high-temperature-reflow type"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "806aab06-921b-410d-a732-3692b3abec06")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "capacitor/SMD/elec_round_polarized"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7e477e7e-86d2-460e-b827-407a052fafb2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Reference_MPN" "EEE-FTE221XAP"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5698b1dd-a4a3-40e1-8b54-e5617c85e68c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Procurement_note" "Exact replacement identity and manufacturer dimensions/land pattern reviewed; live stock is not reserved. See adjacent source/change note."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "96eda234-2bc9-4bef-b5d3-0f1a9d4af535")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Panasonic"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "285cd900-6ae7-47e0-a06b-3371943860ec")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "EEEFTE221XAL"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c4a38247-a797-4677-9bca-bf64d2405367")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Selection_note" "220uF, 25V, +/-20%, 600mArms at 100kHz; 390mArms at 120Hz from the 0.65 catalog factor; 160mOhm max ESR at 100kHz; 2000h at 105C; -55..105C; leakage55uA. D6.3 x H7.7mm nominal, H8.0mm maximum; base6.6+/-0.2mm. Pin1 positive, pin2 negative. Panasonic FT[HF] RDE0000C1269,1Sep2025,pp1-2; DME0000COL48,30Jan2026,p2 standardD8 lands: 3.2x1.6mm pads at +/-2.5mm,1.8mm gap, unchanged. Generic KiCad 3D model remains illustrative. Actual input ripple/transient/fit qualification remains open."
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3b266bd3-b619-4a73-b3f2-2ab4033f4a50")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part #" "C1881633"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "37681a26-3123-4f41-9756-2b83b7b65dee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Procurement_route" "JLC/LCSC C1881633; verify order allocation and preorder to the JLC parts library if required before assembly"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d9231ae2-59f0-48d8-b6c5-128023c86771")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Supplier_source" "https://www.lcsc.com/product-detail/C1881633.html"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2ddaa3b7-ab02-44e5-9501-a98fe1d26e4d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "V2_part_selection" " | Supplier link identifies exact external part; stock is dynamic and not reserved. Do not substitute connector variants or LED operating-current class silently."
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6bb97c7b-39d8-4b02-94e8-b4e607424f01")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.7 -1.05)
+		(end -4.7 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e3000096-5189-4d83-a972-c6da08eb91d3")
+	)
+	(fp_line
+		(start -4.7 1.05)
+		(end -3.55 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ac9d6948-0750-491c-b89b-965e496b1a1f")
+	)
+	(fp_line
+		(start -3.55 -2.4)
+		(end -3.55 -1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fdd65be0-b731-42e2-9562-685df6c44c5d")
+	)
+	(fp_line
+		(start -3.55 -2.4)
+		(end -2.4 -3.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7618ce87-85fe-4129-8a63-3dfecf064ea0")
+	)
+	(fp_line
+		(start -3.55 -1.05)
+		(end -4.7 -1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f97fd62a-8fc0-4e17-af87-0161b5bf1d5f")
+	)
+	(fp_line
+		(start -3.55 1.05)
+		(end -3.55 2.4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "26e1e20b-dacc-45bd-abb4-230d4658e309")
+	)
+	(fp_line
+		(start -3.55 2.4)
+		(end -2.4 3.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "818dd897-0edd-4e4d-a3f0-37b547964e29")
+	)
+	(fp_line
+		(start -2.4 -3.55)
+		(end 3.55 -3.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6c0f52e0-efd5-4fe1-939a-e49415c0c02c")
+	)
+	(fp_line
+		(start -2.4 3.55)
+		(end 3.55 3.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "43da4105-7fe0-421a-af92-5e744161e06d")
+	)
+	(fp_line
+		(start 3.55 -3.55)
+		(end 3.55 -1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3166ab05-149f-4b0a-befe-af2fb64eaffe")
+	)
+	(fp_line
+		(start 3.55 -1.05)
+		(end 4.7 -1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0c9e0a2c-3bf6-4475-8734-a7dbe7a932c8")
+	)
+	(fp_line
+		(start 3.55 1.05)
+		(end 3.55 3.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6430db8e-b5ff-4199-afbc-a9f784c83094")
+	)
+	(fp_line
+		(start 4.7 -1.05)
+		(end 4.7 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7545d94c-e92f-4eab-9d22-434fd5bcfa75")
+	)
+	(fp_line
+		(start 4.7 1.05)
+		(end 3.55 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d9a3ceb2-d67b-4515-981c-fc4538db9b86")
+	)
+	(fp_line
+		(start -4.4375 -1.8475)
+		(end -3.65 -1.8475)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d77f49f0-62de-4aaf-b5fa-e01732885672")
+	)
+	(fp_line
+		(start -4.04375 -2.24125)
+		(end -4.04375 -1.45375)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8563b7c0-0149-4256-bf4a-0a0ea16b4b06")
+	)
+	(fp_line
+		(start -3.41 -2.345563)
+		(end -3.41 -1.06)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9509992b-434d-4a33-a84d-f4d2c8aebcf5")
+	)
+	(fp_line
+		(start -3.41 -2.345563)
+		(end -2.345563 -3.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "abcc76b1-3b6d-42af-9c91-60ba4eadf110")
+	)
+	(fp_line
+		(start -3.41 2.345563)
+		(end -3.41 1.06)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f67d0116-59ae-4ba6-800f-82d1dd5a3f06")
+	)
+	(fp_line
+		(start -3.41 2.345563)
+		(end -2.345563 3.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4436b24e-1a78-4f6c-a97c-5b4a59974b75")
+	)
+	(fp_line
+		(start -3.3 -2.3)
+		(end -3.3 2.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8736376b-96d7-4fa4-822a-126ec62c1913")
+	)
+	(fp_line
+		(start -3.3 -2.3)
+		(end -2.3 -3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fda44d15-3d50-433b-936f-71edcb9efc07")
+	)
+	(fp_line
+		(start -3.3 2.3)
+		(end -2.3 3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "870e8b1a-65ce-4833-a146-c462131d0bda")
+	)
+	(fp_line
+		(start -2.704838 -1.33)
+		(end -2.074838 -1.33)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bb86e541-f6e4-48e5-9306-f79061e1ad8b")
+	)
+	(fp_line
+		(start -2.389838 -1.645)
+		(end -2.389838 -1.015)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5061d07c-4546-41bc-bb11-9da6a94f0e45")
+	)
+	(fp_line
+		(start -2.345563 -3.41)
+		(end 3.41 -3.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f208bca2-5af3-4ef0-b8a5-ac94964c45ec")
+	)
+	(fp_line
+		(start -2.345563 3.41)
+		(end 3.41 3.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "29a30069-cc11-4ecf-a1e9-1330f75efd25")
+	)
+	(fp_line
+		(start -2.3 -3.3)
+		(end 3.3 -3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6c33d53a-4d99-4f6d-9f5c-9c7d711ae69a")
+	)
+	(fp_line
+		(start -2.3 3.3)
+		(end 3.3 3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c21201a3-7580-4351-867f-24fb6182531a")
+	)
+	(fp_line
+		(start 3.3 -3.3)
+		(end 3.3 3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3a92d5cf-52d2-4857-9169-889ff418cd81")
+	)
+	(fp_line
+		(start 3.41 -3.41)
+		(end 3.41 -1.06)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "845741b7-2b57-433f-a8c6-68a42fa8e1eb")
+	)
+	(fp_line
+		(start 3.41 3.41)
+		(end 3.41 1.06)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f0e7052a-417c-4408-b538-438ea24fec52")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 3.15 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "3db6f28e-d5dc-4ddc-b231-7dc677709c4e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "9065f81b-1b60-4b85-9473-28814c3d16fb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -2.5 0)
+		(size 3.2 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15625)
+		(uuid "d84435d4-b02c-4b90-bdb0-1567dbe9b414")
+	)
+	(pad "2" smd roundrect
+		(at 2.5 0)
+		(size 3.2 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15625)
+		(uuid "913a965c-d3e0-4dbc-9e05-1c4c28b1848b")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/libraries/models/CompactCarrierV1/CP_Elec_6.3x7.7.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+
+(property "Previous_MPN_V2" "EEE-FTE221XAP" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1) (thickness 0.15))))
+
+(property "V3_part_selection" "V3: Panasonic EEEFTE221XAL (supplier alias EEE-FTE221XAL), LCSC C1881633, replaces EEE-FTE221XAP with the FT halogen-free high-temperature-reflow configuration. Same 220uF/25V/20%, 600mArms at 100kHz, 160mOhm max ESR, D8 dimensions and standard lands. No capacitance, polarity, wiring, placement, copper, mask or paste geometry change. Live LCSC stock 56 on 2026-10-30; stock is not reserved and JLC order allocation must be checked." (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1) (thickness 0.15))))
+)

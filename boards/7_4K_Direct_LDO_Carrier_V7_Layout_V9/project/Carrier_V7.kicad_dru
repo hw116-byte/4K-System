@@ -1,0 +1,55 @@
+(version 1)
+# Carrier V7 layout V6 (25 Nov 2026; rules of layout V4, placement rules rewritten for the west plug site): JLC HDI rules (from FPGA-LDO A V24), V7 keep-outs,
+# plus explicit USB 90-ohm differential pair (outer 1078 prepreg 0.071 mm, as on the 6-layer stack) and JTAG 3W/3H spacing rules.
+# Sources (read 10 Nov 2026): jlcpcb.com/help/article/hdi-pcb-capabilities-faq, jlcpcb.com/pcb-fabrication/hdi-pcb,
+# jlcpcb.com/capabilities/pcb-capabilities. Layout V7 is an 8-layer 1 + 6 + 1 build whose stack-up is not yet confirmed with JLC; the outer prepregs are those of JLCH061611Y1-1078.
+(rule "JLC HDI laser via ring 3 mil"
+   (condition "A.Via_Type == 'Micro'")
+   (constraint annular_width (min 0.0762mm)))
+(rule "JLC through and buried via ring"
+   (condition "A.Type == 'Via' && A.Via_Type != 'Micro'")
+   (constraint annular_width (min 0.1mm)))
+(rule "JLC hole to copper 0.2"
+   (constraint hole_clearance (min 0.2mm)))
+(rule "JLC copper to routed edge 0.2 (board keeps 0.3)"
+   (constraint edge_clearance (min 0.3mm)))
+(rule "JLC legend to pad 0.15"
+   (condition "B.Type == 'Pad'")
+   (constraint silk_clearance (min 0.15mm)))
+(rule "JLC legend text 1.0 mm high, 0.15 mm stroke"
+   (layer "?.Silkscreen")
+   (constraint text_height (min 1.0mm))
+   (constraint text_thickness (min 0.15mm)))
+# Carrier V7 layout V9 (26 Nov 2026, routed, 8 layers; as layout V8 with D1 turned 180 deg). Router plugs J5/J6 at the Carrier V6 LDO site: bottom side, west edge, on a tongue (10 mm longer than in layout V5).
+# V24 test-frame edge exception (V21) not copied: the carrier has no test frame.
+# Router V3 keep-out (SYNTHESIS section 3): carrier BOTTOM under router outline + 0.5 mm holds only the two plugs.
+# Rule area ROUTER_KO_BOT (B.Cu) = router-frame x 88.155-111.845, y 117.634-128.46 mapped onto the carrier.
+(rule "V7 router keep-out: only J5/J6 on the bottom"
+   (condition "A.Type == 'Footprint' && A.Layer == 'B.Cu' && A.Reference != 'J5' && A.Reference != 'J6' && A.intersectsArea('ROUTER_KO_BOT')")
+   (constraint disallow footprint))
+# Boost loop U11/L11/L12/D11/D12/C15 sits on L8, 0.071 mm under L7: only the loop's own nets may run on L7 over it
+# (rule area BOOST_LOOP_L7 = their courtyards + 0.25 mm).
+(rule "V7 boost loop: no foreign tracks on L7"
+   (layer "In6.Cu")
+   (condition "A.Type == 'Track' && A.intersectsArea('BOOST_LOOP_L7') && A.NetName != '+3V3' && A.NetName != '/ASIC_Rails/CAPP' && A.NetName != '/ASIC_Rails/EN_ASIC_RAILS' && A.NetName != '/ASIC_Rails/RAMPN' && A.NetName != '/ASIC_Rails/RAMPP' && A.NetName != '/ASIC_Rails/STIM_NEG_12V' && A.NetName != '/ASIC_Rails/STIM_POS_12V' && A.NetName != '/ASIC_Rails/SW_N' && A.NetName != '/ASIC_Rails/SW_P' && A.NetName != 'GND' && A.NetName != 'unconnected-(U11-VPP-Pad14)'")
+   (constraint disallow track))
+# Carrier V7 layout V4 (25 Nov 2026): explicit USB 90-ohm differential pair & JTAG 3W/3H rules.
+# USB 2.0 90-ohm diff pair on B.Cu referenced to stitched L5 (In4.Cu) GND island:
+#   Stackup JLCH061611Y1-1078: B.Cu t=0.035 mm, dielectric 5 (1078 RC69%) H=0.071 mm Er=3.99, B.Mask 0.010 mm Er~3.8.
+#   Analytical (Hammerstad-Jensen/Kirschning-Jansen bare Zdiff=98.0 ohm) + 2D FDM coated solver:
+#   W=0.115 mm, S=0.150 mm -> Zdiff=88.5 ohm (gap-filled SM) to 91.7 ohm (conformal 10um SM), midpoint 90.1 ohm.
+(rule "V7 USB 90-ohm diff track width"
+   (condition "A.Type == 'Track' && A.NetClass == 'USB2_90R'")
+   (constraint track_width (min 0.11mm) (opt 0.115mm) (max 0.125mm)))
+(rule "V7 USB 90-ohm intra-pair gap"
+   (condition "A.Type == 'Track' && B.Type == 'Track' && A.NetClass == 'USB2_90R' && B.NetClass == 'USB2_90R'")
+   (constraint clearance (min 0.145mm) (opt 0.15mm)))
+(rule "V7 USB separation from other signals (>= 3W / 5H)"
+   (condition "A.Type == 'Track' && B.Type == 'Track' && A.NetClass == 'USB2_90R' && B.NetClass != 'USB2_90R' && B.NetName != 'GND'")
+   (constraint clearance (min 0.34mm)))   # layout V7: the USB pair and CC1 copper are Carrier V6 copper as built (0.3425 mm)
+# JTAG TCK/TDI/TDO/TMS (1.8V XEM side and 3.3V FT232HQ side) 3W/3H spacing:
+#   W=0.12 mm -> 3W edge-to-edge = 0.36 mm (also > 5H over adjacent L2/L5 0.071 mm dielectric).
+#   Applied track-to-track between JTAG signals and to non-GND/non-power tracks (pads keep native footprint pitch).
+(rule "V7 JTAG 3W/3H track spacing"
+   (condition "A.Type == 'Track' && B.Type == 'Track' && A.NetClass == 'JTAG_3W' && B.NetName != 'GND' && B.NetName != '+3V3' && B.NetName != '/XEM_Power_USB/USBJTAG_3.3V' && B.NetName != '/XEM_Power_USB/XEM_1.8V'")
+   (constraint clearance (min 0.30mm) (opt 0.36mm)))

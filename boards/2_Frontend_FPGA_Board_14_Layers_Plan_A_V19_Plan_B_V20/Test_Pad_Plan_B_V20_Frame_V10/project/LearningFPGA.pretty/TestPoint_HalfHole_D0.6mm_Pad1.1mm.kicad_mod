@@ -1,0 +1,40 @@
+(footprint
+  "TestPoint_HalfHole_D0.6mm_Pad1.1mm"
+  (version
+    20241229)
+  (generator
+    "pcbnew")
+  (layer
+    "F.Cu")
+  (descr
+    "Plated half hole (castellated) edge test pad: 0.60 mm drill centred on the board outline, 1.10 mm round copper on L1 and L14 (ring 0.25 mm), mask open on both faces, no paste. Test Pad Plan B, 23 Nov 2026.")
+  (attr
+    through_hole
+    exclude_from_bom
+    exclude_from_pos_files)
+  (property
+    "Reference"
+    "REF**"
+    (at 0 -1.1)
+    (layer "F.SilkS")
+    (hide yes)
+    (effects (font (size 1 1) (thickness 0.15))))
+  (property
+    "Value"
+    "HALF HOLE 0.6mm"
+    (at 0 1.1)
+    (layer "F.Fab")
+    (hide yes)
+    (effects (font (size 0.5 0.5) (thickness 0.08))))
+  (pad
+    "1"
+    thru_hole
+    circle
+    (at 0 0)
+    (size 1.1 1.1)
+    (drill 0.6)
+    (property pad_prop_castellated)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers yes)
+    (keep_end_layers yes)
+    (zone_connect 0)))

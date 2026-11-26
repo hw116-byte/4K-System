@@ -1,0 +1,16 @@
+{
+  "title": "HDMI Extension Board V42",
+  "revision": "V42",
+  "sha256": "7ac9028d950f9cb6966d5bc8122f1d81cea7852bdfca99a82573a9eec87b603d",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 6
+  },
+  "native": "../../../boards/1_HDMI_Extension_Board_V42/project/HDMI_Extension_Board_V42.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}

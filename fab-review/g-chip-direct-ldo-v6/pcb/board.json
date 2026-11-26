@@ -1,0 +1,16 @@
+{
+  "title": "G-chip Direct LDO Carrier V6",
+  "revision": "V6",
+  "sha256": "d9db1f01d0649196dd799c2348af74ed3c1ef6dbeda343e94275f9968d26b540",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 4
+  },
+  "native": "../../../boards/5_Direct_LDO_Carrier_V6/project/Carrier_V1/Carrier_V1.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}

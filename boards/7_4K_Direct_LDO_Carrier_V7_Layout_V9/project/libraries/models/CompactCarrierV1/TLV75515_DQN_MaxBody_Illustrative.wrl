@@ -1,0 +1,8 @@
+#VRML V2.0 utf8
+# Representative maximum-dimensional body ONLY: 1.05 x 1.05 x 0.40 mm.
+# TI DQN0004A drawing 4215302/E December 2016; NOT manufacturer 3D/assembly geometry.
+# Coordinates in mm; the footprint scale converts these into KiCad VRML units.
+Transform { translation 0 0 0.2 children [ Shape {
+ appearance Appearance { material Material { diffuseColor 0.13 0.13 0.14 } }
+ geometry Box { size 1.05 1.05 0.4 }
+} ] }

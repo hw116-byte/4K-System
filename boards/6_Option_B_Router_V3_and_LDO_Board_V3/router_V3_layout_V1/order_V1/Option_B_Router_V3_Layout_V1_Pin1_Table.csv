@@ -1,0 +1,5 @@
+Designator,JLC part,Layer,CPL rotation,Pin 1 X (mm),"Pin 1 Y (mm, CPL sign)",What,Net on that pad,JLC library pad that lands there,Miss (mm),Worst pad error of the whole part (mm),JLC library footprint
+J4,C312960,Bottom,180,91.983,-111.978,"pin 1 (Hirose numbering, board pad 1)",/ASIC_VDD_CGEN,1,0.220,0.220,CONN-SMD_DF40C-80DS-0.4V-51
+J5,C312960,Bottom,180,91.983,-123.660,"pin 1 (Hirose numbering, board pad 1)",/ASIC_VDD_CGEN,1,0.220,0.220,CONN-SMD_DF40C-80DS-0.4V-51
+J6,C312960,Bottom,180,91.983,-118.660,"pin 1 (Hirose numbering, board pad 1)",/ASIC4_READ,1,0.220,0.220,CONN-SMD_DF40C-80DS-0.4V-51
+J3,C294544,Top,0,91.983,-112.158,"pin 1 (Hirose numbering, board pad 1)",/ASIC_VDD_CGEN,80,0.000,0.000,CONN-SMD_DF40C-80DP-0.4V-51

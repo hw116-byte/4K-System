@@ -1,0 +1,16 @@
+{
+  "title": "Option B LDO Board \u00b7 Test Pad Plan A V3",
+  "revision": "V3 \u00b7 layout V6",
+  "sha256": "84e22cce5bff03b5e383a339ba14889b69c84c0178d1e820ef8cbeaf481c532c",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 6
+  },
+  "native": "../../../boards/6_Option_B_Router_V3_and_LDO_Board_V3/ldo_board_V3_layout_V6/Test_Pad_Plan_A/project/Option_B_LDO_V3.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}

@@ -1,0 +1,16 @@
+{
+  "title": "FPGA-LDO PCB \u00b7 Option A \u00b7 Test Pad Plan A \u00b7 test frame",
+  "revision": "Layout V24 \u00b7 schematic V43 \u00b7 test frame V4",
+  "sha256": "8364363a97d7902f494aae63ac38f007a7025689a73776ea9e70aa17073e81ef",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 6
+  },
+  "native": "../../../boards/3_FPGA_LDO_Option_A_Plan_A_V24_Plan_B_V26/Test_Pad_Plan_A_Layout_V24_Test_Frame_V4/test_frame_V4/FPGA_LDO_A_V24_Test_Frame_V4.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}

@@ -1,0 +1,181 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "9230e6dd-233c-5c68-bd07-492f5ddf0f9a")
+	(paper "A3")
+	(title_block
+		(title "4K Direct LDO Carrier V7 · schematic V9")
+		(date "2026-11-26")
+		(rev "V9")
+		(company "Rice 4K neural recording system - 4K Direct Carrier V7")
+		(comment 1 "Root: three sheets joined by global labels and power symbols")
+		(comment 2 "Sources: Carrier V6, FPGA-LDO A V24 / sch V43, PIN_MAP_B_V2")
+		(comment 3 "Schematic only; not fabrication-ready")
+	)
+	(lib_symbols)
+	(sheet
+		(at 38.1 60.96)
+		(size 76.2 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "92d660f1-5e5a-5e07-8e4d-4541735dca32")
+		(property "Sheetname" "XEM_Power_USB"
+			(at 38.1 60.2484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Carrier_V7_XEM_Power_USB.kicad_sch"
+			(at 38.1 99.6434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Carrier_V7"
+				(path "/9230e6dd-233c-5c68-bd07-492f5ddf0f9a"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 133.35 60.96)
+		(size 76.2 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6a592c67-3527-5737-97d4-d035aeef14e3")
+		(property "Sheetname" "ASIC_Rails"
+			(at 133.35 60.2484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Carrier_V7_ASIC_Rails.kicad_sch"
+			(at 133.35 99.6434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Carrier_V7"
+				(path "/9230e6dd-233c-5c68-bd07-492f5ddf0f9a"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 228.6 60.96)
+		(size 76.2 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3bbce6e4-e761-561d-8fc2-e1529a6df55c")
+		(property "Sheetname" "Router_Interface"
+			(at 228.6 60.2484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Carrier_V7_Router_Interface.kicad_sch"
+			(at 228.6 99.6434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Carrier_V7"
+				(path "/9230e6dd-233c-5c68-bd07-492f5ddf0f9a"
+					(page "4")
+				)
+			)
+		)
+	)
+	(text_box "4K Direct Carrier V7 - schematic V3 (Claude, 24 Nov 2026). The carrier holds an Opal Kelly XEM8305 and drives the whole 4K head directly: two DF40C-80DP plugs (J5/J6) mate the passive Option B router V3, which carries four ASIC boards (8 ASICs). Sheets: XEM_Power_USB = Carrier V6 (XEM sockets, 12 V input, TPS54429E 3.3 V buck, XEM_PG-gated TLV75515 1.5 V now on VCCO_64/84/85/86, FT232H USB-JTAG) minus the old LDO-board plugs; ASIC_Rails = FPGA-LDO A V24 regulator block (LT3582-12, LT3042/LT3094 +/-8.06 V, 3x LT3042 + 4x TPS7A2015 in SOT-23-5) fed from the carrier +3V3; Router_Interface = J5/J6, rail/AGND/GND ties, NT1, 17 x 1 uF, 17 safe-idle pulls, H5/H6. Sheets connect by global labels (121 signals, 9 rails) and power symbols (+12V, +3V3, +1V5, GND, AGND). Contract: inputs/PIN_MAP_B_V2.csv, inputs/XEM8305_PIN_TABLE_V3.csv, inputs/SYNTHESIS.md sections 3 and 6. Record: BUILD_NOTES.md. Review fixes of 24 Nov 2026 (XEM_PG-gated ASIC enable U21 with D13/R34/C68, C42 DNP, stock swaps U1/U8/FB2, I3 netlist check) are listed in BUILD_NOTES.md, section Verification and fixes; the schematic V2 part swaps (U13-U15/U17 TPS7A2015PDQNR X2SON -> TPS7A2015PDBVR SOT-23-5, L1 3.3 uH XAL5030-332MEC -> 2.2 uH XAL5030-222MEC) in section Schematic V2 part swaps. Schematic V3 (24 Nov 2026, Howard: \"Yes, pin table V3\"): the MC1/MC2 signal labels follow pin table V3, which re-derives the XEM side (net to MC1/MC2 pin and FPGA ball) from the board geometry; the router contract PIN_MAP_B_V2, every net and XDC port name and all parts are unchanged (BUILD_NOTES.md, section Pin table V3). Schematic V9 (26 Nov 2026, Howard: \"Yes, swap D1\"): the 12 V input diode D1 is now the one-direction SMBJ15A (JLC C83846) with its cathode on +12V, in place of the bidirectional SMBJ15CA-13-F, so a reversed 12 V adapter is clamped (sheet XEM_Power_USB, 12 V input box). The matching board is layout V9 (26 Nov 2026, routed, 8 layers; D1 turned 180 degrees on its Carrier V6 pads, copper unchanged): the router plugs J5/J6 are on the bottom at the Carrier V6 LDO plug site (west edge, on a tongue 20.8 mm long) and the regulators sit on and beside the tongue, next to the plugs. On the board the sixteen rail capacitors C51-C55, C57-C67 and the AGND-GND tie NT1 sit at the rail entry between the plugs and the rail test pads, and R19 sits beside TP14; the circuit is unchanged. Not fabrication-ready."
+		(exclude_from_sim no)
+		(at 38.1 120.65 0)
+		(size 280 27)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "82e33eb6-af88-506f-99a8-43dce50a5df8")
+	)
+	(text "4K DIRECT CARRIER V7 - SCHEMATIC V4"
+		(exclude_from_sim no)
+		(at 38.1 45.72 0)
+		(effects
+			(font
+				(size 3.5 3.5)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "ff9d2068-b691-5499-a812-1cd03eb7dfd7")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

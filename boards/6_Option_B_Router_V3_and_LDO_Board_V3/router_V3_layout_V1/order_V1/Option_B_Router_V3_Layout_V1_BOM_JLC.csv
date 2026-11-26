@@ -1,0 +1,4 @@
+Comment,Designator,Footprint,JLCPCB Part #,Qty,Note
+Hirose DF40C-80DP-0.4V(51),J3,Hirose_DF40C-80DP-0.4V_2x40-1MP_P0.4mm,C294544,1,
+Hirose DF40C-80DS-0.4V(51),"J4,J5,J6",Hirose_DF40C-80DS-0.4V_2x40_P0.4mm,C312960,3,
+Uniroyal 0402WGF1002TCE 10k 1% 0402,R6,R_0402_1005Metric,C25744,1,JLC Basic part. Pull-down from ASIC_AC_IN to AGND_J5.

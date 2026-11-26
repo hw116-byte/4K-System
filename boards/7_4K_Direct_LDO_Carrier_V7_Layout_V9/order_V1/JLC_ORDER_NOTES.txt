@@ -1,0 +1,101 @@
+4K Direct LDO Carrier V7 - layout V9 / schematic V9 - order notes for JLCPCB, order set V1
+Board file edited 26 Nov 2026, 09:49 CST (sha256 6123212faec77ccf). Quantity 5.
+
+=== ORDER FORM CHOICES (cart.jlcpcb.com/quote, upload Carrier_V7_Layout_V9_Gerbers.zip) ===
+Base material FR-4 (TG170), 8 layers, HDI (blind/buried vias): yes, 1 step (1+6+1).
+Size 73.83 x 83.00 mm, single board: a 53.00 x 83.00 mm rectangle with a 20.83 x 39.75 mm tongue on the west edge (two inside corners, radius 1.0 mm). Quantity 5.
+Thickness 1.6 mm. Outer copper 1 oz, inner copper 1 oz. Surface finish ENIG. Solder mask green, silkscreen white.
+Stack-up: JLCH081611Y1-1078 (JLC lists it as finished thickness 1.59 mm +/-10 %). Impedance control: no.
+Via covering: epoxy filled and capped (laser vias copper filled). Min via hole 0.15 mm.
+Delivery format: single PCB. If you add edge rails for assembly, remove them before delivery. No V-cut.
+Mark on PCB: the board carries no JLCJLCJLCJLC text. Choose "Remove Mark", or let JLC place the order number on the bottom silkscreen away from pads.
+PCB assembly: Standard, both sides, 5 boards. Confirm production file: yes. Confirm parts placement: yes.
+
+=== PCB REMARK, short form for the 200-character remark box (193 characters) ===
+8L 1-step HDI 1+6+1, stack-up JLCH081611Y1-1078, 1.6 mm, 1 oz, ENIG. Laser 0.10 mm L1-2/L7-8, buried 0.15 mm L2-7, through 0.15 mm min. All vias epoxy filled and capped; 368 vias in pads, flat.
+
+=== PCB NOTES, full (for the production-file confirmation and any question from the engineer) ===
+8-layer 1-step HDI (1+6+1), stack-up JLCH081611Y1-1078, 1 oz all layers, ENIG. Please confirm the stack-up or name the nearest one.
+The board file is drawn as: L1 / 1078 0.071 / L2 / 7628 0.201 / L3 / core 0.30 / L4 / 7628 0.201 / L5 / core 0.30 / L6 / 7628 0.201 / L7 / 1078 0.071 / L8 (1.596 mm).
+JLCH081611Y1-1078 is the same build except the 7628 prepreg between L4 and L5, which is 0.186 mm (0.015 mm less). Please build to JLCH081611Y1-1078.
+Vias: laser 0.10 mm hole / 0.26 mm pad on L1-L2 (219) and L7-L8 (204), copper filled and planarised;
+mechanical buried on L2-L7: 303 x 0.15 / 0.35 mm, resin plugged and capped;
+through L1-L8 (365): 176 x 0.15 / 0.35 mm, 102 x 0.25 / 0.50 mm, 52 x 0.30 / 0.50 mm, 35 x 0.30 / 0.60 mm, epoxy filled and capped.
+No stacked vias: the nearest laser via to a buried via is 0.40 mm centre to centre, to a through via 0.56 mm; the nearest L1-L2 laser via to a L7-L8 laser via is 0.47 mm.
+Vias in pads: 198 laser vias (40 top, 158 bottom) and 170 through-via ends (83 top, 87 bottom) sit in SMD pads: the 0.4 mm pitch plug pads of J5/J6,
+the socket pads of MC1-MC3, DFN / QFN and chip pads, test pads. These pads must come out flat and solderable. All other vias are covered by solder mask on both sides.
+Drill files: -Drill_PTH_L1-L8.drl = through L1-L8 (365 vias and the 3 plated 1.60 mm holes of the DC jack J3); -Drill_Laser_L1-L2.drl = 219 x 0.10 mm;
+-Drill_Laser_L7-L8.drl = 204 x 0.10 mm; -Drill_Buried_L2-L7.drl = 303 x 0.15 mm; -Drill_NPTH.drl = 14 non-plated holes: 2 x 0.65 mm (J4 pegs), 6 x 0.95 mm (MC1-MC3 pegs),
+2 x 2.20 mm (M2) and 4 x 3.20 mm (M3 mounting holes).
+Layer order: .gtl = L1, .g1 = L2, .g2 = L3 (GND plane), .g3 = L4, .g4 = L5, .g5 = L6 (GND plane), .g6 = L7, .gbl = L8.
+Minimum track / space 0.10 / 0.10 mm, hole to copper 0.20 mm, hole to hole 0.25 mm, copper to board edge 0.30 mm.
+Solder mask openings are drawn 1:1 with the pads; please do not enlarge them at J5/J6 (0.4 mm pitch) and MC1-MC3.
+Three small copper bridges on L8 are intended and carry no net name in the Gerber: the net tie NT1 (GND to AGND) and the bridged solder jumpers JP1 and JP2.
+Silkscreen: text is 1.0 mm high with 0.15 mm stroke. Some part outlines are drawn with 0.12 mm lines (KiCad library footprints: J5, J6, U11-U21, D11-D13, L11, L12 and some capacitors); please widen them to your minimum.
+Please add no balancing copper inside the board outline.
+Please send the production file for confirmation before fabrication.
+
+=== ASSEMBLY REMARK, short form for the 500-character remark box (410 characters) ===
+Standard PCBA, both sides: 146 bottom (J3 through-hole), 27 top. Place polarised parts by pin 1 as in Carrier_V7_Layout_V9_Pin1_Table.csv, not by angle alone. C42 is not fitted. U11 must be LT3582EUD-12#PBF (-12 version only). U8 stays blank (no programming). J5/J6 are 0.4 mm pitch with filled vias in pads. D1 cathode = +12 V end (bar on silkscreen). Please confirm parts placement with us before production.
+
+=== ASSEMBLY NOTES, full ===
+Double-sided Standard PCBA, 173 placements, 62 BOM lines: 146 bottom, 27 top. The placement file is in the coordinates of the Gerbers.
+Top: C60-C67, MC1-MC3, R16-R18, R20-R28, R30-R33.
+Through-hole: J3 (DC jack PJ-102AH, C3096093), body on the bottom side, three plated 1.60 mm holes, soldered from the top side.
+Not fitted: C42 (in neither file; its pads may be left without solder).
+No part, not in the BOM or the placement file: H1-H6, JP1-JP2, NT1, TP1-TP8, TP11-TP20, TP31-TP36, TP38-TP39 (mounting holes, bridged solder jumpers, net tie, bare copper test pads).
+J5, J6 (bottom): Hirose DF40C-80DP-0.4V(51) (C294544), 0.4 mm pitch, filled vias in the pads. MC1 (C3642350) and MC2, MC3 (C3652484) on the top are Samtec ERF6 sockets, 0.635 mm pitch,
+with locating pegs in the 0.95 mm non-plated holes; exact part numbers only.
+U11: LT3582EUD-12#PBF (C670975). ONLY the -12 version (LT3582EUD-12#PBF or #TRPBF) is acceptable. Do not substitute the base LT3582 or the -5 version: the board cannot program the part.
+U8: 93AA56B-I/MS (C1350563) is fitted blank; no programming.
+U12, U16, U18, U19 (LT3042, C580010) and U20 (LT3094, C670492) are 3 x 3 mm DFN, U11 is a 3 x 3 mm QFN, all with exposed pads; U13, U14, U15, U17 (TPS7A2015PDBVR, C2877859) and U21 (SN74LV1T34DBVR, C100024) are SOT-23-5.
+D1: Littelfuse SMBJ15A (C83846), one direction. The cathode (marked end) must be at the +12 V pad; the bottom silkscreen has a bar at that end.
+D11, D12, D13: MCC B0540WS-TP (C668860). Your library pad 1 of this part is the ANODE. The cathode (marked end) must be at the positions in the table below.
+L11, L12: TDK VLS201612HBX-6R8M-1 (C501945), 6.8 uH, 2.0 x 1.6 x 1.2 mm.
+Every BOM line must be fitted: please do not leave a part out or substitute one without asking us.
+Placement file angles are in your convention: a bottom-side part is mirrored left-right, so a footprint drawn like our KiCad footprint has
+180 deg minus the KiCad angle; where your library footprint is drawn differently, its offset is included.
+  - Parts that are also on our Carrier V6 order (C1-C14, C16-C41, D2-D4, FB1-FB4, J3-J4, L1, MC1-MC3, R1-R15, U1-U8, Y1) have the same rows as the V6 placement file.
+    Of these, C2, D2-D4, J3-J4, U2-U8 were placed again on your library footprints (EasyEDA library): they land on the pads. J3 and J4 are given at your library origin.
+  - New parts D1, D11-D13, J5-J6, U11-U21 were solved on your library footprints; the worst pad-centre difference of all checked parts is 0.21 mm.
+  - U1, Y1, MC1, MC2, MC3: V6 rows; we found no library footprint for these part numbers to check them against. Please place them by pin 1.
+  - Two-pad parts without polarity may be given half a turn away from your library angle; that makes no difference.
+Please place every polarised part by pin 1 (table below and in Carrier_V7_Layout_V9_Pin1_Table.csv), not by the angle alone.
+The DF40C plugs J5 and J6 land on the same pads when turned half a turn; pin 1 below uses the Hirose numbering.
+Please confirm parts placement (polarity and rotation) with us before production.
+Pin 1 positions (X, Y as in the placement file):
+  C2   Bottom   0 deg   132.000    -42.400   positive terminal (board pad 1)
+  D1   Bottom   0 deg   140.350    -42.400   cathode (board pad 1)
+  D2   Bottom  90 deg   125.800    -37.288   cathode (board pad 1)
+  D3   Bottom 270 deg   115.160    -38.400   cathode (board pad 1)
+  D4   Bottom 180 deg   142.175   -104.300   cathode (board pad 1)
+  D11  Bottom   0 deg   123.070    -63.017   cathode (board pad 1)
+  D12  Bottom  90 deg   121.020    -69.067   cathode (board pad 1)
+  D13  Bottom 270 deg   133.700    -77.547   cathode (board pad 1)
+  J3   Bottom   0 deg   138.300    -36.300   pad 1 (+12 V)
+  J4   Bottom   0 deg   130.350   -101.700   pad A1 (GND, USB-C row A)
+  J5   Bottom 270 deg    86.385    -48.200   pin 1 (Hirose numbering, board pad 1)
+  J6   Bottom 270 deg    81.385    -48.200   pin 1 (Hirose numbering, board pad 1)
+  MC1  Top    270 deg   150.150    -94.820   pin 1 (Samtec / Opal Kelly numbering, board pad 1)   [as on Carrier V6; no library footprint to check]
+  MC2  Top    270 deg   103.250    -97.735   pin 1 (Samtec / Opal Kelly numbering, board pad 1)   [as on Carrier V6; no library footprint to check]
+  MC3  Top    180 deg   113.105   -105.300   pin 1 (Samtec / Opal Kelly numbering, board pad 1)   [as on Carrier V6; no library footprint to check]
+  U1   Bottom 180 deg   134.100    -51.475   pin 1   [as on Carrier V6; no library footprint to check]
+  U2   Bottom 270 deg   148.815    -94.210   pin 1
+  U3   Bottom   0 deg   129.900    -93.525   pin 1
+  U4   Bottom 270 deg   113.700    -94.690   pin 1
+  U5   Bottom 270 deg   113.700    -90.990   pin 1
+  U6   Bottom 270 deg   113.700    -83.590   pin 1
+  U7   Bottom 270 deg   113.700    -87.290   pin 1
+  U8   Bottom  90 deg   136.100    -90.975   pin 1
+  U11  Bottom  90 deg   124.670    -67.654   pin 1
+  U12  Bottom 270 deg   103.295    -57.593   pin 1
+  U13  Bottom 180 deg   101.748    -69.952   pin 1
+  U14  Bottom 180 deg   102.347    -48.248   pin 1
+  U15  Bottom 180 deg   102.347    -43.648   pin 1
+  U16  Bottom 270 deg   103.295    -63.242   pin 1
+  U17  Bottom 180 deg   102.347    -39.648   pin 1
+  U18  Bottom 270 deg   103.295    -51.943   pin 1
+  U19  Bottom 270 deg   113.935    -47.470   pin 1
+  U20  Bottom 270 deg   114.585    -64.295   pin 1
+  U21  Bottom   0 deg   128.213    -77.347   pin 1
+  Y1   Bottom 270 deg   132.525    -95.300   pad 1 (crystal; pads 2 and 4 are GND)   [as on Carrier V6; no library footprint to check]

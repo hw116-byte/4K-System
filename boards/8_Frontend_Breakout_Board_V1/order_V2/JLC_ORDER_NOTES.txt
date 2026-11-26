@@ -1,0 +1,76 @@
+JLC ORDER NOTES · Frontend Breakout Board V1 (board file edited 25 Nov 2026, 11:12 CST) · order files V2 made 26 Nov 2026, 15:10 CST
+Manufacturing requirements only. JLC reads the order form and the two remark boxes; it does not read text files inside the Gerber ZIP.
+Not uploaded, not ordered. The board and its Gerbers are unchanged; order files V2 replace the BOM and placement file of 25 Nov (fab/ folder).
+
+=== FILES TO UPLOAD ===
+PCB:        Frontend_Breakout_V1_Gerbers_Drill_upload.zip  (13 files: 11 Gerbers, 2 drill files)
+            = the files of Frontend_Breakout_V1_Gerbers_Drill.zip (25 Nov, kept here unchanged, same SHA-256) without the two drill-map drawings
+            (-PTH-drl_map.gbr, -NPTH-drl_map.gbr) and the .gbrjob file, which are not board layers. Every other file is byte-identical.
+Assembly:   Frontend_Breakout_V1_BOM_JLC.csv   (11 lines, 17 parts)
+            Frontend_Breakout_V1_CPL_JLC.csv   (17 placements, all top)
+For the engineer, on request: Frontend_Breakout_V1_Pin1_Table.csv, Frontend_Breakout_V1_pin1_top.pdf, Frontend_Breakout_V1_assembly_top.pdf.
+
+=== ORDER FORM CHOICES (cart.jlcpcb.com/quote) ===
+Base material FR-4, 4 layers, 96 x 98 mm, one design, Single PCB (no panel needed: larger than 70 x 70 mm). Thickness 1.6 mm.
+Outer copper 1 oz, inner copper 0.5 oz. Standard 4-layer stack-up (JLC04161H-7628 or JLC default); no impedance control.
+Surface finish: ENIG (J1, J2 are 0.4 mm pitch and need flat pads; the 25 Nov record does not name a finish, this is our choice for the order).
+Solder mask green, white legend. Via covering: tented. Min via hole 0.30 mm / 0.55 mm pad. No blind or buried vias, no via in pad.
+Layer order: -F_Cu.gbr = L1, -In1_Cu.gbr = L2 (GND), -In2_Cu.gbr = L3 (GND + one 5 V track), -B_Cu.gbr = L4.
+Confirm production file: yes. PCB assembly: Standard (0.4 mm pitch connectors, through-hole parts), top side. Confirm parts placement: yes.
+
+=== PCB REMARK (paste into the PCB remark box; 191 of 200 characters) ===
+4 layers, FR-4, 1.6 mm, 1 oz outer / 0.5 oz inner, ENIG. Min track/space 0.15/0.15 mm, vias 0.30 mm hole / 0.55 mm pad, tented. 4 plated slots 0.6 mm wide (USB-C shell). No impedance control.
+
+=== ASSEMBLY REMARK (paste into the PCBA remark box; 424 of 500 characters) ===
+Standard PCBA, top side only, 17 parts. J1, J2 (C2692097 DF40C-70DP) are 0.4 mm pitch. Through-hole, fit from the top, solder on the bottom: J3, J4 (C56434801, 2x35 header), J6, J7, J8. J5 (C165948 USB-C) has 4 shell tabs in plated slots. Polarised: D1 cathode at X 92.600 Y -92.600; D2 cathode X 99.938 Y -95.050; D3 cathode X 138.537 Y -173.600. Header pin 1 = square pad. Please confirm parts placement before production.
+
+=== FULL MANUFACTURING DATA ===
+Minimum track / space 0.15 / 0.15 mm; copper to board edge 0.30 mm.
+Plated holes (-PTH.drl): 389 vias 0.30 mm, 1 via 0.40 mm, 150 holes 1.00 mm (pin headers J3, J4, J6, J7, J8) and 4 plated slots 0.60 mm wide (two 0.60 x 1.20 mm, two 0.60 x 1.70 mm; shell tabs of J5).
+Non-plated holes (-NPTH.drl): 2 x 0.65 mm (locating pegs of J5) and 4 x 3.20 mm (mounting holes).
+Silkscreen: text 1.0 mm / 0.15 mm or larger; 263 lines of library footprint outlines are 0.12 mm wide, please widen them to your minimum.
+The USB-C connector J5 sits at the north board edge; its outline on the legend reaches past the board edge on purpose (edge connector).
+
+=== ASSEMBLY DATA ===
+Single-sided Standard PCBA, 17 placements, 11 BOM lines. H1-H4 are mounting holes: no part.
+The placement file is in the coordinates of the Gerbers (Mid Y = minus KiCad Y). Mid X / Mid Y is where the origin of YOUR library footprint has to sit;
+Rotation is the angle at which your library footprint lands on the board pads (checked against easyeda.com/api/products/<C>/components, read 2026-11-26 14:55 CST).
+Changed against the 25 Nov placement file (which had KiCad's anchor = pin 1 and KiCad's angle for the through-hole parts):
+  J3  C56434801   25 Nov file:   70.200   -83.820     0 deg   ->   V2:   71.470  -127.000   270 deg
+  J4  C56434801   25 Nov file:  127.270   -83.820     0 deg   ->   V2:  128.540  -127.000   270 deg
+  J5  C165948     25 Nov file:  100.000   -81.650   180 deg   ->   V2:  100.000   -83.147   180 deg
+  J6  C492401     25 Nov file:  106.500   -89.000     0 deg   ->   V2:  106.500   -90.270   270 deg
+  J7  C42431787   25 Nov file:   58.000   -80.200    90 deg   ->   V2:   61.810   -80.200     0 deg
+  J8  C42431787   25 Nov file:  142.010   -80.200   270 deg   ->   V2:  138.200   -80.200   180 deg
+The other 11 rows are the same as on 25 Nov (KiCad's angle is your library's angle for these parts).
+J3, J4 (C56434801, 2 x 35 pin header): your library has no footprint for this part number. Angle 270 deg and the centre of the 70-pad field are given by analogy with
+  your footprint HDR-TH_70P-P2.54-V-F-R2-C35-S2.54 (C56435498, the same maker's 2 x 35 socket; your 2 x 20 pin headers C25503140 and C42431816 use the same row and pin-1 convention).
+  Pin 1 is the square pad at the north-west corner of each header.
+J5 (C165948): your footprint lands on the 12 signal pads and the 4 shell slots at 180 deg, worst error 0.09 mm (the board's shell slots are 0.07 mm off your footprint's; within the slot clearance).
+D2 (C2297, green): your library pad 1 is the ANODE; D3 (C84256, red): your library pad 1 is the cathode; D1 (C8678, SS34): your pad 1 is the cathode. All three sit with the cathode on board pad 1.
+Pin 1 / cathode positions (X, Y as in the CPL):
+  D1   90 deg     92.600    -92.600   cathode (board pad 1)            (C8678)
+  D2  180 deg     99.938    -95.050   cathode (board pad 1)            (C2297)
+  D3  180 deg    138.537   -173.600   cathode (board pad 1)            (C84256)
+  J1  270 deg     92.610   -120.200   pin 1 (Hirose numbering, board pad 1) (C2692097)
+  J2  270 deg    110.110   -120.200   pin 1 (Hirose numbering, board pad 1) (C2692097)
+  J3  270 deg     70.200    -83.820   pin 1 (square pad)               (C56434801)
+  J4  270 deg    127.270    -83.820   pin 1 (square pad)               (C56434801)
+  J5  180 deg    103.250    -85.695   pad A1 (GND end of the pad row)  (C165948)
+  J6  270 deg    106.500    -89.000   pin 1 (square pad)               (C492401)
+  J7    0 deg     58.000    -80.200   pin 1 (square pad)               (C42431787)
+  J8  180 deg    142.010    -80.200   pin 1 (square pad)               (C42431787)
+Every BOM line must be fitted; please do not substitute a part without asking.
+
+=== PARTS (live JLC stock read 2026-11-26 15:04 CST, for 5 boards) ===
+  C15850     CL21A106KAYNNNE          need  10   orderable 7189304   Basic     in stock
+  C8678      SS34                     need   5   orderable 1958761   Basic     in stock
+  C2297      KT-0805G                 need   5   orderable 2627647   Basic     in stock
+  C84256     NCD0805R1                need   5   orderable 3142070   Basic     in stock
+  C2692097   DF40C-70DP-0.4V(51)      need  10   orderable -25       Extended  out of stock
+  C56434801  YXY-PZ2.54-2X35PIN-DIP   need  10   orderable 100       Extended  in stock
+  C165948    TYPE-C-31-M-12           need   5   orderable 390132    Extended  in stock
+  C492401    PZ254V-11-02P            need   5   orderable 833657    Extended  in stock
+  C42431787  PZ2.54-1X4P-H25          need  10   orderable 16043     Extended  in stock
+  C23186     0603WAF5101T5E           need  10   orderable 16021283  Basic     in stock
+  C21190     0603WAF1001T5E           need  10   orderable 30830387  Basic     in stock

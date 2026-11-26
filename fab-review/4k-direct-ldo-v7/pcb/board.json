@@ -1,0 +1,16 @@
+{
+  "title": "4K Direct LDO Carrier V7",
+  "revision": "V7 \u00b7 layout V9 \u00b7 schematic V9",
+  "sha256": "6123212faec77ccf4e1eee673a087d6498e4530e4a6cf5f97de52661c6124fc0",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 8
+  },
+  "native": "../../../boards/7_4K_Direct_LDO_Carrier_V7_Layout_V9/project/Carrier_V7.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}

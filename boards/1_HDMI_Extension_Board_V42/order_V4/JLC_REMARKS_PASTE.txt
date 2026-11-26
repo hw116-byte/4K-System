@@ -1,0 +1,9 @@
+PCB remark (198 of 200 characters; the same text as on the 22 Nov 2026 order form for V40):
+PCIe card edge: finished thickness 1.44-1.70 mm at the gold fingers. Keep all test pads as bare ENIG. No copper thieving within 1 mm of differential pairs. Do not change track widths without asking.
+
+Assembly remark (472 of 500 characters):
+Place by pin 1 per our pin-1 table; show the placement preview for approval. Through-hole: J900-J911 (2.00 mm headers) and J920-J928 (single pins) sit on the TOP side, soldered on the bottom. J930 (Molex 22-05-3031) sits on the BOTTOM side, soldered on top, pin 1 at X134.60 Y-51.20, plug opening away from the top edge. J610-J617 shell tabs are pin-in-paste: keep the 32 top paste apertures over the slots. Edge rails on left and right only; no tab stub on the left edge.
+
+Order form options (as chosen for V40 on 22 Nov 2026): 6 layers, FR-4 TG155, single board, 1.6 mm, ENIG 1 U", outer 1 oz / inner 0.5 oz, gold fingers yes with 30 degree bevel,
+specify stack-up JLC06161H-2116, impedance control +/-10 % (template inside the Gerber ZIP), via covering epoxy filled and capped, min via hole 0.15 mm, outline tolerance +/-0.1 mm,
+production file confirmation yes. Quantity 5 boards; assembly for 2 boards, both sides, Standard PCBA.

@@ -1,0 +1,60 @@
+ref,kind,net,function,side,x_mm,y_mm,pad_mm,nearest_gnd_pad,reachable_assembled,note
+TP20,new test pad (V20),ASIC4_SPI_DR,"ASIC4 SPI data input DR (FPGA to ASIC), port J4",bottom,92.43,119.4,0.6,"TP23 GND, 3.2 mm",yes,
+TP21,new test pad (V20),ASIC4_SPI_DL,"ASIC4 SPI data input DL (FPGA to ASIC), port J4",bottom,93.048,118.718,0.6,"TP23 GND, 4.1 mm",yes,
+TP22,new test pad (V20),ASIC4_DATA1,"ASIC4 readout DATA1 (ASIC to FPGA), port J4",bottom,94.406,118.534,0.8,"TP23 GND, 4.9 mm",yes,
+TP23,new test pad (V20),GND,GND (digital return),bottom,91.59,122.5,1.0,,yes,
+TP24,new test pad (V20),ASIC3_4_TOP_SPI_CLK,SPI clock of ASIC3/ASIC4 (top board of the J4 stack),bottom,106.778,119.294,0.8,"TP26 GND, 2.7 mm",yes,
+TP25,new test pad (V20),STIM_START_SHARED,"STIM_START, all eight ASICs",bottom,110.46,119.3,0.6,"TP26 GND, 1.0 mm",yes,
+TP26,new test pad (V20),GND,GND (digital return),bottom,109.43,119.29,0.6,,yes,
+TP27,new test pad (V20),BOARD1_SPI_LATCH,SPI latch of the bottom board of port J4 (ASIC1/ASIC2); pin map V8,bottom,99.67,124.9,0.6,"TP29 GND, 3.0 mm",yes,
+TP28,new test pad (V20),FE_RESET_SHARED,"FE_RESET (amplifier reset), all eight ASICs",bottom,99.67,125.85,0.6,"TP29 GND, 2.9 mm",yes,
+TP29,new test pad (V20),GND,GND (digital return),bottom,102.555,125.765,0.8,,yes,
+TP30,new test pad (V20),AGND,AGND (analog return),bottom,100.305,121.015,0.8,,yes,
+TP31,new test pad (V20),AGND,AGND (analog return),bottom,90.7,128.9,0.8,,yes,
+TP1,existing test pad,VIN_3V3,3.3 V input from the Frontend (bench supply entry when standalone),top,94.1,144.4,1.0,"TP5 GND, 1.6 mm",yes,
+TP2,existing test pad,STIM_POS_12V,+12 V LT3582 output,top,92.5,146.0,1.0,"TP5 GND, 1.6 mm",yes,
+TP3,existing test pad,STIM_NEG_12V,-12 V LT3582 output,top,108.0,145.9,1.0,"TP5 GND, 15.6 mm",yes,
+TP4,existing test pad,EN_ASIC_RAILS,enable of all nine ASIC rails (R1/C3 delay),top,94.1,146.0,1.0,"TP5 GND, 2.3 mm",yes,
+TP5,existing test pad,GND,GND (digital return),top,92.5,144.4,1.0,,yes,
+TP6,existing test pad,AGND,AGND (analog return),top,108.0,144.3,1.0,,yes,
+TP7,existing test pad,ASIC_AC_IN,AC_IN test-signal injection (all ASICs),top,110.2,111.5,1.0,"TP6 AGND, 32.9 mm",standalone only,
+TP8,existing test pad,STIM_PRE_POS,+V stimulation pre-regulator (LDO input),bottom,92.6,129.3,1.0,"TP31 AGND, 1.9 mm",yes,
+TP9,existing test pad,STIM_PRE_NEG,-V stimulation pre-regulator (LDO input),top,109.6,144.3,1.0,"TP6 AGND, 1.6 mm",yes,
+TP10,existing test pad,VIN_5V,5 V provision (unused),bottom,90.6,133.7,1.0,"TP23 GND, 11.2 mm",yes,
+TP11,existing test pad,ASIC_VDD_FE,ASIC rail VDD_FE (U2),top,99.95,137.31,0.6,"TP6 AGND, 10.7 mm",standalone only,
+TP12,existing test pad,ASIC_VDD_ADC,ASIC rail VDD_ADC (U3),bottom,109.95,120.61,0.6,"TP30 AGND, 9.7 mm",yes,
+TP14,existing test pad,ASIC_DVDD,ASIC rail DVDD (U5),bottom,91.95,120.91,0.6,"TP23 GND, 1.6 mm",yes,
+TP15,existing test pad,ASIC_REF_VDD,ASIC rail REF_VDD (U6),top,102.95,136.72,0.6,"TP6 AGND, 9.1 mm",standalone only,
+TP16,existing test pad,ASIC_VDD_CGEN,ASIC rail VDD_CGEN (U7),bottom,90.45,145.81,0.6,"TP31 AGND, 16.9 mm",yes,
+TP17,existing test pad,ASIC_REF_VCM,ASIC rail REF_VCM 0.75 V (U8),top,94.95,135.81,0.6,"TP6 AGND, 15.6 mm",standalone only,
+R21.1,existing part pad,BOARD3_CLK,"CLKH fast clock, port J3 (top stack)",bottom,89.55,119.43,part pad,"TP23 GND, 3.7 mm",yes,no room for a test pad
+R20.1,existing part pad,BOARD1_CLK,"CLKH fast clock, port J4 (bottom stack)",bottom,89.55,116.44,part pad,"TP23 GND, 6.4 mm",standalone only,no room for a test pad
+R22.1,existing part pad,BOARD1_SPI_CLK,"SPI clock of the bottom chips, port J4",bottom,100.05,130.36,part pad,"TP29 GND, 5.2 mm",yes,no room for a test pad
+R23.1,existing part pad,BOARD3_SPI_CLK,"SPI clock of the bottom chips, port J3",top,110.42,118.16,part pad,"TP5 GND, 31.8 mm",standalone only,no room for a test pad
+R26.1,existing part pad,ASIC3_4_TOP_SPI_LATCH,SPI latch of ASIC3/ASIC4,bottom,103.45,130.36,part pad,"TP29 GND, 4.7 mm",yes,no room for a test pad
+R25.1,existing part pad,ASIC7_8_TOP_SPI_CLK,SPI clock of ASIC7/ASIC8,bottom,108.5,116.44,part pad,"TP26 GND, 3.0 mm",standalone only,no room for a test pad
+R27.1,existing part pad,ASIC7_8_TOP_SPI_LATCH,SPI latch of ASIC7/ASIC8,bottom,108.5,118.41,part pad,"TP26 GND, 1.3 mm",yes,no room for a test pad
+R28.1,existing part pad,BOARD3_SPI_LATCH,"SPI latch of the bottom board of port J3 (ASIC5/ASIC6); pin map V8, new in layout V24",bottom,89.45,111.04,part pad,"R28.2 GND, 1.0 mm",standalone only,under the ASIC board when the stack is mated; no room for a test pad
+R19.1,existing part pad,CHIP_RESET_SHARED,"CHIP_RESET (active high), all eight ASICs",bottom,101.59,127.75,part pad,"TP29 GND, 2.2 mm",yes,no room for a test pad
+R2.1,existing part pad,STIM_EN_SHARED,"STIM_EN, all eight ASICs",bottom,110.46,116.45,part pad,"TP26 GND, 3.0 mm",standalone only,no room for a test pad
+R5.1,existing part pad,STIM_CLK_SHARED,"STIM_CLK, all eight ASICs",bottom,110.46,117.4,part pad,"TP26 GND, 2.2 mm",yes,no room for a test pad
+R4.1,existing part pad,STIM_CHB_SHARED,"STIM_CHB, all eight ASICs",top,110.5,115.14,part pad,"TP5 GND, 34.4 mm",standalone only,no room for a test pad
+R17.1,existing part pad,IMP_TST_SHARED,"IMP_TEST, all eight ASICs",bottom,100.57,126.8,part pad,"TP29 GND, 2.2 mm",yes,no room for a test pad
+C53.1,existing part pad,ASIC_VDD_DRIVER,ASIC rail VDD_DRIVER (U4),bottom,97.67,122.2,part pad,"TP30 AGND, 2.9 mm",yes,VDD_DRIVER: no room for a test pad (as in V18); also C402.1
+C902.1,existing part pad,ASIC_VDD10,ASIC rail VDD10 +8.06 V (U9),bottom,96.4,122.95,part pad,"TP30 AGND, 4.4 mm",yes,VDD10: no room for a test pad (as in V18)
+C1004.1,existing part pad,ASIC_VSS10,ASIC rail VSS10 -8.06 V (U10),bottom,103.45,121.9,part pad,"TP30 AGND, 3.3 mm",yes,VSS10: no room for a test pad (as in V18); also C1002.1
+TP32,new half-hole edge pad (V26),STIM_CHB_SHARED,"STIM_CHB, all eight ASICs",edge N (top and bottom),100.033,110.34,1.1 (hole 0.6),"TP36 GND, 5.2 mm",from the board edge; not checked against the mated stack,plated half hole on the north edge; bottom track 2.3 mm from J4.49
+TP33,new half-hole edge pad (V26),STIM_EN_SHARED,"STIM_EN, all eight ASICs",edge N (top and bottom),101.333,110.34,1.1 (hole 0.6),"TP36 GND, 3.9 mm",from the board edge; not checked against the mated stack,plated half hole on the north edge; bottom track 1.4 mm from J4.51
+TP34,new half-hole edge pad (V26),STIM_CLK_SHARED,"STIM_CLK, all eight ASICs",edge N (top and bottom),102.633,110.34,1.1 (hole 0.6),"TP36 GND, 2.6 mm",from the board edge; not checked against the mated stack,plated half hole on the north edge; bottom track 1.3 mm from J4.53
+TP35,new half-hole edge pad (V26),STIM_START_SHARED,"STIM_START, all eight ASICs",edge N (top and bottom),103.933,110.34,1.1 (hole 0.6),"TP36 GND, 1.3 mm",from the board edge; not checked against the mated stack,plated half hole on the north edge; bottom track 1.9 mm from J4.55
+TP36,new half-hole edge pad (V26),GND,GND (digital return),edge N (top and bottom),105.2,110.34,1.1 (hole 0.6),,from the board edge; not checked against the mated stack,plated half hole on the north edge; ring on L3 and a 0.40 mm track from the hole into the L3 GND plane
+TP37,new half-hole edge pad (V26),ASIC_AC_IN,AC_IN test-signal injection (all ASICs),edge N (top and bottom),107.2,110.34,1.1 (hole 0.6),"TP30 AGND, 12.7 mm",from the board edge; not checked against the mated stack,plated half hole on the north edge; bottom stub onto the AC_IN track (y 110.95)
+TP38,new half-hole edge pad (V26),STIM_POS_12V,+12 V LT3582 output,edge S (top and bottom),91.75,147.1,1.1 (hole 0.6),"TP39 GND, 1.4 mm",from the board edge; not checked against the mated stack,plated half hole on the south edge; top stub into TP2 and the +12 V pour
+TP39,new half-hole edge pad (V26),GND,GND (digital return),edge S (top and bottom),93.15,147.1,1.1 (hole 0.6),,from the board edge; not checked against the mated stack,plated half hole on the south edge; ring on L3 and a 0.40 mm track from the hole into the L3 GND plane
+TP40,new half-hole edge pad (V26),EN_ASIC_RAILS,enable of all nine ASIC rails (R1/C3 delay),edge S (top and bottom),94.5,147.1,1.1 (hole 0.6),"TP39 GND, 1.3 mm",from the board edge; not checked against the mated stack,plated half hole on the south edge; top stub into TP4
+TP41,new half-hole edge pad (V26),GND,GND (digital return),edge S (top and bottom),99.45,147.1,1.1 (hole 0.6),,from the board edge; not checked against the mated stack,plated half hole on the south edge; ring on L3 and a 0.40 mm track from the hole into the L3 GND plane
+TP42,new half-hole edge pad (V26),STIM_NEG_12V,-12 V LT3582 output,edge S (top and bottom),107.6,147.1,1.1 (hole 0.6),"TP41 GND, 8.1 mm",from the board edge; not checked against the mated stack,plated half hole on the south edge; top stub into TP3 and the -12 V pour
+TP43,new half-hole edge pad (V26),AGND,AGND (analog return),edge E (top and bottom),111.32,129,1.1 (hole 0.6),,from the board edge; not checked against the mated stack,plated half hole on the east edge; bottom stub onto the AGND track (x 110.78)
+TP44,new half-hole edge pad (V26),STIM_PRE_NEG,-V stimulation pre-regulator (LDO input),edge E (top and bottom),111.32,135.9,1.1 (hole 0.6),"TP43 AGND, 6.9 mm",from the board edge; not checked against the mated stack,plated half hole on the east edge; ring on L5 and a 0.25 mm track from the hole onto the L5 STIM_PRE_NEG track (x 110.70)
+TP45,new half-hole edge pad (V26),VIN_3V3,3.3 V input from the Frontend (bench supply entry when standalone),edge E (top and bottom),111.32,144.05,1.1 (hole 0.6),"TP41 GND, 12.3 mm",from the board edge; not checked against the mated stack,"plated half hole on the east edge; bottom pad sits on the VIN_3V3 track (x 110.85, 0.25 mm wide) and the VIN_3V3 pour"
+TP46,new half-hole edge pad (V26),ASIC_VDD_CGEN,ASIC rail VDD_CGEN (U7),edge W (top and bottom),88.68,143.9,1.1 (hole 0.6),"TP31 AGND, 15.1 mm",from the board edge; not checked against the mated stack,plated half hole on the west edge; top stub onto the VDD_CGEN track (x 89.25)

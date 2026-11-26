@@ -1,0 +1,126 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "b68a7987-fa28-5039-8e49-c1b983ce6929")
+	(paper "A3")
+	(title_block
+		(title "Option B LDO Board V3 · schematic V1")
+		(date "2026-11-25")
+		(rev "V1")
+		(company "Rice 4K neural recording system - Option B LDO Board V3")
+		(comment 1 "Option B LDO Board V3 (Frontend FPGA LDO carrier for shared Option B Router V3)")
+		(comment 2 "Contracts: Frontend PIN_MAP_V8 (J1/J2) + Router PIN_MAP_B_V2 (J5/J6)")
+		(comment 3 "JLC stock read 2026-11-25 07:31 CST")
+	)
+	(lib_symbols)
+	(sheet
+		(at 48.26 60.96)
+		(size 114.3 63.5)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "53e9c971-8e4c-59e1-9fa2-2bd2e40a682f")
+		(property "Sheetname" "Frontend_And_Regulators"
+			(at 48.26 59.46 0)
+			(effects
+				(font
+					(size 2.0 2.0)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Option_B_LDO_V3_Frontend_And_Regulators.kicad_sch"
+			(at 48.26 126.96 0)
+			(effects
+				(font
+					(size 1.5 1.5)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Option_B_LDO_V3"
+				(path "/b68a7987-fa28-5039-8e49-c1b983ce6929"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 187.96 60.96)
+		(size 114.3 63.5)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "84834510-e9f0-565f-8f1f-b31abea0a28d")
+		(property "Sheetname" "Router_Interface"
+			(at 187.96 59.46 0)
+			(effects
+				(font
+					(size 2.0 2.0)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Option_B_LDO_V3_Router_Interface.kicad_sch"
+			(at 187.96 126.96 0)
+			(effects
+				(font
+					(size 1.5 1.5)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Option_B_LDO_V3"
+				(path "/b68a7987-fa28-5039-8e49-c1b983ce6929"
+					(page "3")
+				)
+			)
+		)
+	)
+	(text_box "1. Function: Option B LDO Board V3 is the 22.69 x 40.30 mm 6-layer HDI headstage power & signal carrier that mates the unchanged Artix-7 Frontend FPGA Board (J1/J2 DF40C-70DP, PIN_MAP_V8) to the shared Option B Router V3 (J5/J6 DF40C-80DP, PIN_MAP_B_V2). Sheet 1 generates all nine ASIC supply rails from VIN_3V3 (+3.3 V -> +/-12 V LT3582-12 -> +/-8.06 V LT3042/LT3094; 3x LT3042 analog/reference rails; 4x TPS7A2015PDBVR 1.50 V rails) with delayed enable. Sheet 2 ties J5/J6 rails, houses the single AGND-GND star tie NT1, 17 x 1 uF 25 V port capacitors, and 17 safe-idle pull resistors.\n\n2. Source / changes: Built by Antigravity (25 Nov 2026) from FPGA-LDO A V24 / schematic V43 (19 Nov 2026) and Option B Router V3 contract review (SYNTHESIS.md §3 & §5, PIN_MAP_B_V2.csv, PIN_MAP_V8.csv). Resolves all V2->V3 gaps and JLC stock blockers: replaces V2's 120-pin J5 with 2x DF40C-80DP (J5/J6); updates stim rails to +/-8.06 V (80.6k), adds R802 (47k REF_VCM min load), R20-R28 safe-idle pulls, 17x C52923 port caps, TP13/18/19/20; swaps out-of-stock TPS7A2015PDQNR (C2862700) to genuine TI TPS7A2015PDBVR (C2877859, SOT-23-5, matching Carrier V7); unifies all 28 x 1 uF 0402 caps on C52923 Basic 25 V. Stock read 2026-11-25 07:31 CST."
+		(exclude_from_sim no)
+		(at 48.26 145 0)
+		(size 290 25.6)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "0f89ac27-478c-5633-87d9-47fac6e73db5")
+	)
+	(text "OPTION B LDO BOARD V3 · SCHEMATIC V1 — ROOT (FRONTEND J1/J2 + REGULATORS + ROUTER J5/J6)"
+		(exclude_from_sim no)
+		(at 48.26 38.1 0)
+		(effects
+			(font
+				(size 2.6 2.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "dfde9f0b-cf85-55f7-bc97-79b34b536ce2")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,1068 @@
+(kicad_symbol_lib
+ (version 20241209)
+ (generator "kicad_symbol_editor")
+ (generator_version "10.0")
+ (symbol "TLV75515PDQNR"
+  (pin_names (offset 0.635))
+  (exclude_from_sim no)
+  (in_bom yes)
+  (on_board yes)
+  (property "Reference" "U" (at -5.08 6.35 0) (effects (font (size 1.27 1.27)) (justify left)))
+  (property "Value" "TLV75515PDQNR" (at -5.08 8.89 0) (effects (font (size 1.27 1.27)) (justify left)))
+  (property "Footprint" "CompactCarrierV1:Texas_X2SON-4_1x1mm_P0.65mm" (at 0 10.16 0) (effects (font (size 1.27 1.27)) hide))
+  (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv755p.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+  (property "Description" "Fixed 1.5 V LDO; 500 mA device rating subject to thermal/load qualification; X2SON DQN0004A 1 x 1 mm, exposed GND pad 5" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+  (property "Manufacturer" "Texas Instruments" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+  (property "MPN" "TLV75515PDQNR" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+  (property "Source" "TI SBVS320D Sep2024, Fig4-1/Table4-1 p3; DQN0004A package" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+  (property "ki_keywords" "1.5V LDO 500mA enable X2SON DQN TLV755" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+  (property "ki_fp_filters" "Texas*X2SON*1x1mm*P0.65mm*" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+  (symbol "TLV75515PDQNR_0_1"
+   (rectangle (start -5.08 5.08) (end 5.08 -5.08) (stroke (width 0.254) (type default)) (fill (type background)))
+  )
+  (symbol "TLV75515PDQNR_1_1"
+   (pin power_in line (at -7.62 2.54 0) (length 2.54) (name "IN" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+   (pin input line (at -7.62 -2.54 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+   (pin power_out line (at 7.62 2.54 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+   (pin power_in line (at 0 -7.62 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+   (pin power_in line (at 2.54 -7.62 90) (length 2.54) (name "EP" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+  )
+ )
+
+
+
+(symbol "USB4105_GF_A"
+(property "Reference" "J" (at -7.6200 5.0800 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "USB4105-GF-A" (at -7.6200 2.5400 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "CompactCarrierV1:USB_C_Receptacle_GCT_USB4105_GF_A_Horizontal" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://gct.co/files/drawings/usb4105.pdf" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "GCT USB2.0 Type-C receptacle,16 contacts,horizontal side entry,top mount,3.31mm profile; USB4105-GF-A" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "ki_keywords" "USB Type-C USB2 horizontal right-angle USB4105" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "ki_fp_filters" "*USB4105*" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MANUFACTURER" "GCT" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MANUFACTURER_PN" "USB4105-GF-A" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "ALTIUM_VALUE" "" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Reference" "Opal Kelly BRK8305 A03 schematic; source archive https://pins.opalkelly.com/downloads/583/download?category_id=3" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Refs" "J500" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Sheets" "JTAG.kicad_sch" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Symbol" "Codex adaptation of BRK8305 A03 USB4120-03-C graphical pin geometry; GCT USB4105 pin contract verified" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Footprint" "KiCad10 USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal, local SH-to-M1-M4 remap" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_changes" "Codex adapts BRK8305 A03 USB4120 symbol geometry for GCT USB4105-GF-A. All16 A/B and4 shell pin identities and wiring retained. KiCad10 USB4105 horizontal footprint copied locally; its4 SH pads renamed M1-M4 only. GCT USB4105 drawing revB4,18Dec2023,sheet1/2 (PDFp1). PCB edge placement, cable clearance and assembly remain to verify." (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly_Status" "Reference catalog; imported dnp=no does not preserve Altium assembly variants. Original source excludes MC4 and R75; verify fitted BOM." (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "PARTNUMBER" "002404" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(exclude_from_sim no)
+(in_bom yes)
+(on_board yes)
+(in_pos_files yes)
+(duplicate_pin_numbers_are_jumpers no)
+(symbol "USB4105_GF_A_1_0"
+				(rectangle
+					(start 30.48 0)
+					(end 0 -53.34)
+					(stroke
+						(width 0.0254)
+						(type solid)
+						(color 128 0 0 1)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -7.62 0)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -12.7 0)
+					(length 7.62)
+					(name "CC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -17.78 0)
+					(length 7.62)
+					(name "DP1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -22.86 0)
+					(length 7.62)
+					(name "DN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -27.94 0)
+					(length 7.62)
+					(name "SBU1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -33.02 0)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -38.1 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -38.1 180)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -33.02 180)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -27.94 180)
+					(length 7.62)
+					(name "CC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -22.86 180)
+					(length 7.62)
+					(name "DP2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -17.78 180)
+					(length 7.62)
+					(name "DN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -12.7 180)
+					(length 7.62)
+					(name "SBU2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -7.62 180)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -2.54 180)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -45.72 0)
+					(length 7.62)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -45.72 180)
+					(length 7.62)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -50.8 180)
+					(length 7.62)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -50.8 0)
+					(length 7.62)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+(embedded_fonts no)
+)
+
+(symbol "USB4110_GF_A"
+(property "Reference" "J" (at -7.6200 5.0800 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "USB4110-GF-A" (at -7.6200 2.5400 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "CompactCarrierV1:USB_C_Receptacle_GCT_USB4110_GF_A_Horizontal" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://gct.co/files/drawings/usb4110.pdf" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "GCT USB2.0 Type-C horizontal receptacle,16 contacts,4 SMT shell stakes,3.26mm profile; USB4110-GF-A" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "ki_keywords" "USB Type-C USB2 horizontal right-angle USB4110 SMT shell" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "ki_fp_filters" "*USB4110*" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MANUFACTURER" "GCT" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MANUFACTURER_PN" "USB4110-GF-A" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "ALTIUM_VALUE" "" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Reference" "Opal Kelly BRK8305 A03 schematic; source archive https://pins.opalkelly.com/downloads/583/download?category_id=3" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Refs" "J500" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Sheets" "JTAG.kicad_sch" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Symbol" "Codex adaptation of BRK8305 A03 USB graphical pin geometry; original20-pin contract retained" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_Footprint" "KiCad10 USB_C_Receptacle_GCT_USB4110; local four SH-to-M1-M4 SMT shell pad names" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Source_changes" "Codex adapts BRK8305 A03 USB symbol for GCT USB4110-GF-A. All16 A/B and4 shell pin identities and existing wiring retained. KiCad10 USB4110 footprint copied locally; four SH SMT pads renamed M1-M4. GCT drawing USB4110 revB4,22May2024,sheet1/2. Same X/Y footprint origin/body-front edge; mating height1.68mm versus priorUSB4105 1.73mm. 3D uses inherited datasheet-derived shell envelope, not manufacturer CAD; no USB4105 PTH legs. Assembly/mechanical/USB qualification pending." (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly_Status" "Reference catalog; imported dnp=no does not preserve Altium assembly variants. Original source excludes MC4 and R75; verify fitted BOM." (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "PARTNUMBER" "002404" (at 0.0000 0.0000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(exclude_from_sim no)
+(in_bom yes)
+(on_board yes)
+(in_pos_files yes)
+(duplicate_pin_numbers_are_jumpers no)
+(symbol "USB4110_GF_A_1_0"
+				(rectangle
+					(start 30.48 0)
+					(end 0 -53.34)
+					(stroke
+						(width 0.0254)
+						(type solid)
+						(color 128 0 0 1)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -7.62 0)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -12.7 0)
+					(length 7.62)
+					(name "CC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -17.78 0)
+					(length 7.62)
+					(name "DP1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -22.86 0)
+					(length 7.62)
+					(name "DN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -27.94 0)
+					(length 7.62)
+					(name "SBU1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -33.02 0)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -38.1 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -38.1 180)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -33.02 180)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -27.94 180)
+					(length 7.62)
+					(name "CC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -22.86 180)
+					(length 7.62)
+					(name "DP2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -17.78 180)
+					(length 7.62)
+					(name "DN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -12.7 180)
+					(length 7.62)
+					(name "SBU2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -7.62 180)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -2.54 180)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -45.72 0)
+					(length 7.62)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -45.72 180)
+					(length 7.62)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 38.1 -50.8 180)
+					(length 7.62)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -50.8 0)
+					(length 7.62)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+(embedded_fonts no)
+
+(property "3D_Model_Status" "Illustrative datasheet-derived USB4110 shell envelope only; inherited V62 source. Manufacturer/stock production model unavailable; verify enclosure and cable clearance." (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+)
+
+(symbol "TLV75515PDRVR"
+			(pin_names
+				(offset 0.635)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -5.08 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TLV75515PDRVR"
+				(at -5.08 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "CompactCarrierV1:Texas_WSON-6_2x2mm_P0.65mm_EP1x1.6mm_TLV755_DRV_V2"
+				(at 0 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv755p.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fixed 1.5 V LDO; WSON DRV0006A 2x2 mm; exposed GND pad7; 500 mA device rating subject to actual board thermal/load qualification"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Texas Instruments"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "TLV75515PDRVR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Source" "TI TLV755P SBVS320D Sep2024 p3 Fig4-4/Table4-1; DRV0006A 4222173/C Nov2025 PDF pp41-43; https://www.ti.com/lit/ds/symlink/tlv755p.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "1.5V LDO 500mA enable WSON DRV TLV755"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Texas_WSON-6_2x2mm_P0.65mm_EP1x1.6mm_TLV755_DRV_V2"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLV75515PDRVR_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TLV75515PDRVR_1_1"
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -11.43 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -11.43 90)
+					(length 2.54)
+					(name "EP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			
+ (pin no_connect line (at 7.62 -2.54 180)(length 2.54)(name "NC"(effects(font(size 1.27 1.27))))(number "5"(effects(font(size 1.27 1.27)))))
+ (pin no_connect line (at 7.62 0 180)(length 2.54)(name "NC"(effects(font(size 1.27 1.27))))(number "2"(effects(font(size 1.27 1.27))))))
+			(embedded_fonts no)
+		
+(property "LCSC Part #" "C2868685" (at 0 0 0)(hide yes)(effects(font(size 1 1))))
+)
+)

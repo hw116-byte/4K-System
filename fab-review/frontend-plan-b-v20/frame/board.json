@@ -1,0 +1,16 @@
+{
+  "title": "Frontend FPGA Board \u00b7 Test Pad Plan B \u00b7 test frame",
+  "revision": "14 layers V20 \u00b7 schematic V64 \u00b7 frame V10",
+  "sha256": "35b579866ea4a866c8a910dd55a9f7002722cf58c74d062a541e1766a64dc25e",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 14
+  },
+  "native": "../../../boards/2_Frontend_FPGA_Board_14_Layers_Plan_A_V19_Plan_B_V20/Test_Pad_Plan_B_V20_Frame_V10/frame_V10/Frontend_14L_V20_Frame_V10.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}

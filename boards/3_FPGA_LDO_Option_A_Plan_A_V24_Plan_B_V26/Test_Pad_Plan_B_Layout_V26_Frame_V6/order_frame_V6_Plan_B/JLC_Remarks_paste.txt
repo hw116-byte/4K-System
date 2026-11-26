@@ -1,0 +1,81 @@
+=== ORDER FORM CHOICES (cart.jlcpcb.com/quote, upload FPGA_LDO_A_V26_Frame_V6_gerbers.zip) ===
+Base material FR-4, 6 layers, HDI (blind/buried vias): yes, 1 step.
+Size 70 x 70 mm: one 22.64 x 36.76 mm board in a plain frame (panel drawn by us). Thickness 1.6 mm. Outer copper 1 oz, inner copper 1 oz. Surface finish ENIG. Solder mask green.
+Stack-up: JLCH061611Y1-1078 (1.6 mm nominal, +/-10 %, as your support confirmed on 20 Nov 2026). Impedance control: no.
+Via covering: epoxy filled and capped (laser vias copper filled). Min via hole 0.15 mm.
+Castellated holes (plated half holes): YES. 15 half holes, 0.60 mm, on all four edges of the board (see PCB NOTES below).
+Material and finish as chosen for layout V24 on 22 Nov 2026 (order item Y14): NP-175F TG170, ENIG 1 U". Confirm production file: yes.
+Delivery format: Panel by Customer, 1 x 1 (one board per panel). Edge rails: No. The frame is the rail, 14.6 mm or more wide on every side.
+  The board hangs on 4 plain break-off tabs, one on each edge, each 5 mm wide with five 0.60 mm non-plated holes at 0.95 mm pitch
+  (north x 93.53 - 98.53, south x 101.30 - 106.30, west y 134.54 - 139.54, east y 137.475 - 142.475; hole centres 0.22 mm outside the board edge).
+  Everything else of the board outline is a routed slot, 2.0 mm wide. No V-cut anywhere: the router cuts the 15 half holes.
+  Tabs: do not cut them. We break the board out ourselves after assembly (score along the holes, snap, file flush).
+  No copper crosses a tab and the frame carries no tracks. Copper is 0.30 mm or more from the board edge everywhere except at the 15 half-hole pads, which reach the edge on purpose.
+  Order number: "Specify a location"; the text JLCJLCJLCJLC is on the frame, not on the board.
+  Please ship the panels whole, with the frame attached (no depanelling).
+PCB assembly: Standard, both sides. Confirm parts placement: yes.
+
+=== PCB NOTES (full text for the JLC engineer; the form box takes 200 characters, use SHORT PCB REMARK at the end) ===
+6-layer 1-step HDI, stack-up JLCH061611Y1-1078, 1 oz all layers, ENIG. Please confirm the stack-up or name the nearest one.
+Vias: laser 0.10 mm hole / 0.26 mm pad on L1-L2 (125) and L5-L6 (106), copper filled and planarised;
+mechanical buried on L2-L5: 85 x 0.20 / 0.40 mm and 8 x 0.15 / 0.35 mm (the same drill and pad as the through vias), resin plugged and capped; through 0.15 / 0.35 mm L1-L6 (77), epoxy filled and capped.
+The frame has no vias and no plated holes.
+PLATED HALF HOLES (castellated holes), 15: plated through holes 0.60 mm with the centre exactly on the routed board outline (6 north, 5 south, 3 east, 1 west).
+  Pad 1.10 mm round on L1 and L6 (0.25 mm ring, 0.55 mm into the board), solder mask open on both faces, no paste. They are test pads for probes, not solder joints.
+  Hole edge to hole edge 0.667 mm least (north edge, pitch 1.267 - 1.30 mm); 3.05 mm least from a board corner; break-off hole edge to half-hole pad edge 1.06 mm least.
+  Other-net copper keeps 0.25 mm from every half-hole wall on all six layers. Inner-layer copper reaches four of them on purpose: the three GND holes (L3 and L4 planes) and the STIM_PRE_NEG hole (L5 track). The other eleven have no inner-layer copper at the hole.
+  Please plate the holes before routing the outline, keep the half barrels whole and free of burrs, and do not move, shrink or delete any of them. ENIG on the half-hole walls.
+No stacked vias. At 20 places under the J3/J4 pads a L1-L2 laser via and a L5-L6 laser via sit 0.06 - 0.10 mm apart in x/y; they are on separate layer pairs and do not touch.
+Vias in pads: 132 laser vias and 82 through-via ends sit in SMD pads (0.4 mm pitch connector pads, DFN and chip pads, test pads).
+These pads must come out flat and solderable.
+Drill files: -PTH.drl = through L1-L6 (77 x 0.15 mm vias and the 15 x 0.60 mm half holes, which the file header marks as castellated); -front-in1.drl = laser L1-L2; -in4-back.drl = laser L5-L6; -in1-in4.drl = buried L2-L5 (85 x 0.20 mm, 8 x 0.15 mm); -NPTH.drl = 24 non-plated holes, all on the frame and the tabs: 20 x 0.60 mm (break-off holes), 4 x 2.00 mm (tooling).
+Layer order: .gtl = L1, .g1 = L2, .g2 = L3, .g3 = L4, .g4 = L5, .gbl = L6.
+Minimum track / space 0.10 / 0.10 mm, hole to copper 0.20 mm, copper to board edge 0.30 mm (0 at the 15 half-hole pads).
+Frame: three 1.0 mm fiducials on each side (2.0 mm mask opening, 3.85 mm from the panel edge) and four 2.0 mm tooling holes, 5 mm from the corners.
+The frame carries no other copper. Balancing copper on the frame is fine; please add none inside the board outline.
+No part overhangs the board outline;
+the closest part courtyard is 0.14 mm from the edge (C301, C302, east edge).
+Please send the production file for confirmation before fabrication.
+
+=== ASSEMBLY NOTES (full text, attach to the PCBA order; the form box takes 500 characters, use SHORT ASSEMBLY REMARK at the end) ===
+One board per 70 x 70 mm frame. The placement file is in the coordinates of the Gerbers. The frame carries no parts.
+Double-sided Standard PCBA, 82 placements, 23 BOM lines: 76 bottom, 6 top (J1, J2, J3, R4, R23, R802). All parts are surface-mount.
+JP1, JP2, NT1, TP1-TP12, TP14-TP17, TP20-TP31 are bare copper (test pads, bridged solder jumpers, net tie): no part, not in the BOM or CPL.
+TP32-TP46 are the 15 plated half holes on the board edge: no part, no paste. Please keep solder and flux residue out of them.
+J1, J2, J3 (top) and J4 (bottom) are 0.4 mm pitch Hirose DF40C connectors with filled vias in their pads.
+U3, U4, U5, U7 are 1 x 1 mm X2SON; U1, U2, U6, U8, U9, U10 are 3 x 3 mm QFN/DFN with exposed pads.
+Bottom stencil: please use 0.10 mm (or a step-down at U3, U4, U5, U7) and tell us the thickness you will use.
+U1: LT3582EUD-12#PBF (C670975). ONLY the -12 version (LT3582EUD-12#PBF or #TRPBF) is acceptable.
+    Do not substitute the base LT3582 or the -5 version: the board cannot program the part.
+D11, D12: MCC B0540WS-TP (C668860). Your library pad 1 of this part is the ANODE.
+    The cathode (marked end) must be at the positions in the table below.
+L11, L12: TDK VLS201612HBX-6R8M-1 (C501945), 6.8 uH, 2.0 x 1.6 x 1.2 mm.
+R802 (top, 47k 0402, C25792) was added in layout V22. R28 (bottom, 10k 0402, C25744, the same part as R16-R27) was added in layout V24. Every BOM line must be fitted: please do not leave a part out or substitute one without asking us.
+Please confirm parts placement (polarity and rotation) with us before production.
+Placement file: the angles of D11, D12, U2, U6, U8, U9, U10 include the offset to your library footprints.
+Bottom-side angles follow your own convention: the part is turned counter-clockwise in its own view and then mirrored left-right (angle = 180 minus KiCad's bottom angle), as in the placement file of our Direct LDO Carrier V6 that you assembled.
+Please place every polarised part by pin 1 (table below and in FPGA_LDO_A_V26_Frame_V6_Pin1_Table.csv), not by the angle alone.
+The DF40C connectors J1-J4 land on the same pads when turned half a turn; pin 1 below uses the Hirose numbering.
+Pin 1 positions (X, Y as in the CPL):
+  U1   Bottom    0 deg   101.438   -141.850   pin 1
+  U2   Bottom  180 deg    97.850   -134.150   pin 1
+  U3   Bottom  270 deg   109.925   -124.420   pin 1
+  U4   Bottom  270 deg    97.825   -124.420   pin 1
+  U5   Bottom  270 deg    89.625   -124.420   pin 1
+  U6   Bottom  180 deg   103.500   -134.150   pin 1
+  U7   Bottom   90 deg    90.275   -141.930   pin 1
+  U8   Bottom  180 deg    92.200   -134.150   pin 1
+  U9   Bottom    0 deg    96.400   -127.790   pin 1
+  U10  Bottom    0 deg   108.675   -127.790   pin 1
+  D11  Bottom  270 deg    96.800   -143.450   cathode
+  D12  Bottom    0 deg   102.850   -145.500   cathode
+  J1   Top     270 deg    92.610   -120.200   pin 1
+  J2   Top     270 deg   110.110   -120.200   pin 1
+  J3   Top       0 deg    91.983   -112.158   pin 1
+  J4   Bottom  180 deg    91.983   -111.978   pin 1
+
+=== SHORT PCB REMARK (194 characters; JLC form limit 200) ===
+Panel by customer: ship panels whole with the frame. 15 plated half holes 0.60 mm on the routed board edge: keep all, plate before routing. Vias in pads filled, flat. Do not change track widths.
+
+=== SHORT ASSEMBLY REMARK (465 characters; JLC form limit 500) ===
+One board per 70 x 70 mm frame; the CPL is in Gerber coordinates. Place polarised parts by the pin-1 table (U1-U10, D11, D12, J1-J4); for D11/D12 your library pad 1 is the anode. U1 must be LT3582EUD-12 (C670975), no other LT3582 version. Fit every BOM line; no substitution without asking. Bottom stencil 0.10 mm or stepped down at U3/U4/U5/U7 (1 x 1 mm X2SON). TP1-TP46, JP1, JP2, NT1 are bare copper: no part. Keep paste and solder out of the 15 edge half holes.

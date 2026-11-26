@@ -1,0 +1,1688 @@
+{
+  "project": "/Users/howardwang/Desktop/Rice Research/FPGA PCB/2026-10-30_FPGA_Work/02_LDO_Carrier_JLCPCB_Fixes_V2/project/Carrier_V1",
+  "before_pcb_sha256": "45160050c860955ef563ef26bce4a81867f7690f70ebff995caf85f2090aa472",
+  "after_pcb_sha256": "d0523c85201ccab32844b4ccf6295ee4e4ead1d7a681b472652d5dd6885b0479",
+  "library_nickname_prefix": "CarrierDFM_V2",
+  "footprint_count": 92,
+  "unique_masters": 35,
+  "local_libraries": {
+    "CarrierDFM_V2_BRK8305_A03": "${KIPRJMOD}/libraries/CarrierDFM_V2_BRK8305_A03.pretty",
+    "CarrierDFM_V2_BackupR3": "${KIPRJMOD}/libraries/CarrierDFM_V2_BackupR3.pretty",
+    "CarrierDFM_V2_Capacitor_SMD_C1": "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD_C1.pretty",
+    "CarrierDFM_V2_Capacitor_SMD_C4": "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD_C4.pretty",
+    "CarrierDFM_V2_Capacitor_SMD": "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD.pretty",
+    "CarrierDFM_V2_Capacitor_SMD_C3": "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD_C3.pretty",
+    "CarrierDFM_V2_Capacitor_SMD_C8": "${KIPRJMOD}/libraries/CarrierDFM_V2_Capacitor_SMD_C8.pretty",
+    "CarrierDFM_V2_CompactCarrierV1": "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1.pretty",
+    "CarrierDFM_V2_CompactCarrierV1_C16": "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty",
+    "CarrierDFM_V2_CompactCarrierV1_C11": "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty",
+    "CarrierDFM_V2_CompactCarrierV1_R5": "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_R5.pretty",
+    "CarrierDFM_V2_CompactCarrierV1_R10": "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty",
+    "CarrierDFM_V2_CompactCarrierV1_R14": "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_R14.pretty",
+    "CarrierDFM_V2_CompactCarrierV1_R1": "${KIPRJMOD}/libraries/CarrierDFM_V2_CompactCarrierV1_R1.pretty",
+    "CarrierDFM_V2_Diode_SMD": "${KIPRJMOD}/libraries/CarrierDFM_V2_Diode_SMD.pretty",
+    "CarrierDFM_V2_LED_SMD": "${KIPRJMOD}/libraries/CarrierDFM_V2_LED_SMD.pretty",
+    "CarrierDFM_V2_Resistor_SMD_R3": "${KIPRJMOD}/libraries/CarrierDFM_V2_Resistor_SMD_R3.pretty",
+    "CarrierDFM_V2_Resistor_SMD_R4": "${KIPRJMOD}/libraries/CarrierDFM_V2_Resistor_SMD_R4.pretty"
+  },
+  "mapping": {
+    "FB2": {
+      "old_id": "BRK8305_A03:BRK8305_A03_FB503",
+      "new_id": "CarrierDFM_V2_BRK8305_A03:BRK8305_A03_FB503",
+      "library_file": "libraries/CarrierDFM_V2_BRK8305_A03.pretty/BRK8305_A03_FB503.kicad_mod",
+      "geometry_fingerprint": "fe37e2e1b8b029b481fd857195eef19114604c7d1db44f8568300d9e2ab4d115",
+      "shared_with_refs": [
+        "FB2"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "U4": {
+      "old_id": "BRK8305_A03:BRK8305_A03_U500",
+      "new_id": "CarrierDFM_V2_BRK8305_A03:BRK8305_A03_U500",
+      "library_file": "libraries/CarrierDFM_V2_BRK8305_A03.pretty/BRK8305_A03_U500.kicad_mod",
+      "geometry_fingerprint": "6500ee988c37bb7d0de6fdc082f791236350d3493987ed1fa102ca7607df7bc2",
+      "shared_with_refs": [
+        "U4",
+        "U5",
+        "U6",
+        "U7"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "U5": {
+      "old_id": "BRK8305_A03:BRK8305_A03_U500",
+      "new_id": "CarrierDFM_V2_BRK8305_A03:BRK8305_A03_U500",
+      "library_file": "libraries/CarrierDFM_V2_BRK8305_A03.pretty/BRK8305_A03_U500.kicad_mod",
+      "geometry_fingerprint": "6500ee988c37bb7d0de6fdc082f791236350d3493987ed1fa102ca7607df7bc2",
+      "shared_with_refs": [
+        "U4",
+        "U5",
+        "U6",
+        "U7"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "U6": {
+      "old_id": "BRK8305_A03:BRK8305_A03_U500",
+      "new_id": "CarrierDFM_V2_BRK8305_A03:BRK8305_A03_U500",
+      "library_file": "libraries/CarrierDFM_V2_BRK8305_A03.pretty/BRK8305_A03_U500.kicad_mod",
+      "geometry_fingerprint": "6500ee988c37bb7d0de6fdc082f791236350d3493987ed1fa102ca7607df7bc2",
+      "shared_with_refs": [
+        "U4",
+        "U5",
+        "U6",
+        "U7"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "U7": {
+      "old_id": "BRK8305_A03:BRK8305_A03_U500",
+      "new_id": "CarrierDFM_V2_BRK8305_A03:BRK8305_A03_U500",
+      "library_file": "libraries/CarrierDFM_V2_BRK8305_A03.pretty/BRK8305_A03_U500.kicad_mod",
+      "geometry_fingerprint": "6500ee988c37bb7d0de6fdc082f791236350d3493987ed1fa102ca7607df7bc2",
+      "shared_with_refs": [
+        "U4",
+        "U5",
+        "U6",
+        "U7"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "U3": {
+      "old_id": "BRK8305_A03:BRK8305_A03_U501",
+      "new_id": "CarrierDFM_V2_BRK8305_A03:BRK8305_A03_U501",
+      "library_file": "libraries/CarrierDFM_V2_BRK8305_A03.pretty/BRK8305_A03_U501.kicad_mod",
+      "geometry_fingerprint": "2a1210d44fc8aa74f7f449de0a629518b0403cdf456efbcfc0550d34202a46d0",
+      "shared_with_refs": [
+        "U3"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "U8": {
+      "old_id": "BRK8305_A03:BRK8305_A03_U505",
+      "new_id": "CarrierDFM_V2_BRK8305_A03:BRK8305_A03_U505",
+      "library_file": "libraries/CarrierDFM_V2_BRK8305_A03.pretty/BRK8305_A03_U505.kicad_mod",
+      "geometry_fingerprint": "07d189ed655d47c5e9bc47d6c3086208dd9b9fc92c05302fddae4c21298ecd02",
+      "shared_with_refs": [
+        "U8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "Y1": {
+      "old_id": "BRK8305_A03:BRK8305_A03_Y500",
+      "new_id": "CarrierDFM_V2_BRK8305_A03:BRK8305_A03_Y500",
+      "library_file": "libraries/CarrierDFM_V2_BRK8305_A03.pretty/BRK8305_A03_Y500.kicad_mod",
+      "geometry_fingerprint": "da342f52bb344b16c9a1c5a79dd1699bd856693abb08788d5cdf80a63a2d6349",
+      "shared_with_refs": [
+        "Y1"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "MC2": {
+      "old_id": "BackupR3:ERF6-40-03.5-L-DV-A-K-TR",
+      "new_id": "CarrierDFM_V2_BackupR3:ERF6-40-03.5-L-DV-A-K-TR",
+      "library_file": "libraries/CarrierDFM_V2_BackupR3.pretty/ERF6-40-03.5-L-DV-A-K-TR.kicad_mod",
+      "geometry_fingerprint": "207c1abb777b9c37381f8334804773743dadd4516c42560f2df69dc5b57ac116",
+      "shared_with_refs": [
+        "MC2",
+        "MC3"
+      ],
+      "placed_layer": "F.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "MC3": {
+      "old_id": "BackupR3:ERF6-40-03.5-L-DV-A-K-TR",
+      "new_id": "CarrierDFM_V2_BackupR3:ERF6-40-03.5-L-DV-A-K-TR",
+      "library_file": "libraries/CarrierDFM_V2_BackupR3.pretty/ERF6-40-03.5-L-DV-A-K-TR.kicad_mod",
+      "geometry_fingerprint": "207c1abb777b9c37381f8334804773743dadd4516c42560f2df69dc5b57ac116",
+      "shared_with_refs": [
+        "MC2",
+        "MC3"
+      ],
+      "placed_layer": "F.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "MC1": {
+      "old_id": "BackupR3:ERF6-50-03.5-L-DV-A-K-TR",
+      "new_id": "CarrierDFM_V2_BackupR3:ERF6-50-03.5-L-DV-A-K-TR",
+      "library_file": "libraries/CarrierDFM_V2_BackupR3.pretty/ERF6-50-03.5-L-DV-A-K-TR.kicad_mod",
+      "geometry_fingerprint": "ce56f38c1bbdfc9449fb981042550a1cf99d3cf72fb56f1b6a6153ba2eec2dc3",
+      "shared_with_refs": [
+        "MC1"
+      ],
+      "placed_layer": "F.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "J2": {
+      "old_id": "BackupR3:Hirose_DF40C(2.0)-24DS-0.4V_2x12_P0.4mm",
+      "new_id": "CarrierDFM_V2_BackupR3:Hirose_DF40C(2.0)-24DS-0.4V_2x12_P0.4mm",
+      "library_file": "libraries/CarrierDFM_V2_BackupR3.pretty/Hirose_DF40C(2.0)-24DS-0.4V_2x12_P0.4mm.kicad_mod",
+      "geometry_fingerprint": "4057c049cf9cdd33f23d4bdcdb008eebc929db2eeaf5c5d34cd005622312a152",
+      "shared_with_refs": [
+        "J2"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "J1": {
+      "old_id": "BackupR3:Hirose_DF40C(2.0)-50DS-0.4V_2x25_P0.4mm",
+      "new_id": "CarrierDFM_V2_BackupR3:Hirose_DF40C(2.0)-50DS-0.4V_2x25_P0.4mm",
+      "library_file": "libraries/CarrierDFM_V2_BackupR3.pretty/Hirose_DF40C(2.0)-50DS-0.4V_2x25_P0.4mm.kicad_mod",
+      "geometry_fingerprint": "ccfbe299d48358b7533e9430db0a63f41659639c5c992668cb1a3c37eaa0ebfa",
+      "shared_with_refs": [
+        "J1"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "J3": {
+      "old_id": "BackupR3:PJ102AH",
+      "new_id": "CarrierDFM_V2_BackupR3:PJ102AH",
+      "library_file": "libraries/CarrierDFM_V2_BackupR3.pretty/PJ102AH.kicad_mod",
+      "geometry_fingerprint": "4aacea9e3ef75f3db0dec7a51565ae1af105a496ba190746380a364975837717",
+      "shared_with_refs": [
+        "J3"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "U1": {
+      "old_id": "BackupR3:TPS54429E_RSA",
+      "new_id": "CarrierDFM_V2_BackupR3:TPS54429E_RSA",
+      "library_file": "libraries/CarrierDFM_V2_BackupR3.pretty/TPS54429E_RSA.kicad_mod",
+      "geometry_fingerprint": "5146cbc8dfaf3599fed0537c659d856f8729bb08695a16d8b390d1d8a628c080",
+      "shared_with_refs": [
+        "U1"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C1": {
+      "old_id": "Capacitor_SMD:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD_C1:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD_C1.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C1",
+        "C10",
+        "C7"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "C10": {
+      "old_id": "Capacitor_SMD:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD_C1:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD_C1.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C1",
+        "C10",
+        "C7"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C7": {
+      "old_id": "Capacitor_SMD:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD_C1:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD_C1.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C1",
+        "C10",
+        "C7"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "C4": {
+      "old_id": "Capacitor_SMD:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD_C4:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD_C4.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C4",
+        "C6"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C6": {
+      "old_id": "Capacitor_SMD:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD_C4:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD_C4.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C4",
+        "C6"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C5": {
+      "old_id": "Capacitor_SMD:C_0603_1608Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD:C_0603_1608Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "geometry_fingerprint": "dbaa112f9064547bf778ab01726e51342b92e17bbf91c94a145af6436f2465e0",
+      "shared_with_refs": [
+        "C5"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C3": {
+      "old_id": "Capacitor_SMD:C_1206_3216Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD_C3:C_1206_3216Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD_C3.pretty/C_1206_3216Metric.kicad_mod",
+      "geometry_fingerprint": "27b0639b06ab9072823bb0bfb138631d946b53819a8babdb6ac1bba3b033d155",
+      "shared_with_refs": [
+        "C3"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C8": {
+      "old_id": "Capacitor_SMD:C_1206_3216Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD_C8:C_1206_3216Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD_C8.pretty/C_1206_3216Metric.kicad_mod",
+      "geometry_fingerprint": "fb688cde5c7bf79b8a4eaaf227a681e2e649b5d349eafe3e6350f060c213d6a8",
+      "shared_with_refs": [
+        "C8",
+        "C9"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C9": {
+      "old_id": "Capacitor_SMD:C_1206_3216Metric",
+      "new_id": "CarrierDFM_V2_Capacitor_SMD_C8:C_1206_3216Metric",
+      "library_file": "libraries/CarrierDFM_V2_Capacitor_SMD_C8.pretty/C_1206_3216Metric.kicad_mod",
+      "geometry_fingerprint": "fb688cde5c7bf79b8a4eaaf227a681e2e649b5d349eafe3e6350f060c213d6a8",
+      "shared_with_refs": [
+        "C8",
+        "C9"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C2": {
+      "old_id": "CompactCarrierV1:CP_Panasonic_EEE-FTE221XAP_D6.3x7.7",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:CP_Panasonic_EEE-FTE221XAP_D6.3x7.7",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/CP_Panasonic_EEE-FTE221XAP_D6.3x7.7.kicad_mod",
+      "geometry_fingerprint": "ecc2baf6277827b072494137437db47fc185a83e3941ab399ff8523328df84eb",
+      "shared_with_refs": [
+        "C2"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C16": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C18": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C20": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C24": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C26": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C29": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "C31": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C32": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "C33": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C16:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C16.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "9054c3750140755424fc3da3a6012c8ec158d321bacbdf380674a4076ccfa13f",
+      "shared_with_refs": [
+        "C16",
+        "C18",
+        "C20",
+        "C24",
+        "C26",
+        "C29",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "C11": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C12": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C13": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C14": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C17": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C19": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C21": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C22": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C23": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C25": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C27": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "C28": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C30": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C34": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C35": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C36": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C37": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C38": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C39": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C40": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "C41": {
+      "old_id": "CompactCarrierV1:C_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_C11:C_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_C11.pretty/C_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "dcfbed2559e5fd50406cbb2d0b9e8ff4e1a00c9606850b906b2b60ee1b84ff05",
+      "shared_with_refs": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C19",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C27",
+        "C28",
+        "C30",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "FB1": {
+      "old_id": "CompactCarrierV1:Ferrite_Bead_Laird_MI0603_1608Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:Ferrite_Bead_Laird_MI0603_1608Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/Ferrite_Bead_Laird_MI0603_1608Metric.kicad_mod",
+      "geometry_fingerprint": "cd81bb3cf29dc44322991092e9d5f51ae69fed42480b476338a0f8db9503b802",
+      "shared_with_refs": [
+        "FB1",
+        "FB3",
+        "FB4"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "FB3": {
+      "old_id": "CompactCarrierV1:Ferrite_Bead_Laird_MI0603_1608Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:Ferrite_Bead_Laird_MI0603_1608Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/Ferrite_Bead_Laird_MI0603_1608Metric.kicad_mod",
+      "geometry_fingerprint": "cd81bb3cf29dc44322991092e9d5f51ae69fed42480b476338a0f8db9503b802",
+      "shared_with_refs": [
+        "FB1",
+        "FB3",
+        "FB4"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "FB4": {
+      "old_id": "CompactCarrierV1:Ferrite_Bead_Laird_MI0603_1608Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:Ferrite_Bead_Laird_MI0603_1608Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/Ferrite_Bead_Laird_MI0603_1608Metric.kicad_mod",
+      "geometry_fingerprint": "cd81bb3cf29dc44322991092e9d5f51ae69fed42480b476338a0f8db9503b802",
+      "shared_with_refs": [
+        "FB1",
+        "FB3",
+        "FB4"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "D4": {
+      "old_id": "CompactCarrierV1:LED_Kingbright_APT1608LSYCK_J3_PRV_V2",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:LED_Kingbright_APT1608LSYCK_J3_PRV_V2",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/LED_Kingbright_APT1608LSYCK_J3_PRV_V2.kicad_mod",
+      "geometry_fingerprint": "7724dc090fad5a7c2e6709c2dd3de20287c9e776f2d34c1c5da62c1f012b8997",
+      "shared_with_refs": [
+        "D4"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "D3": {
+      "old_id": "CompactCarrierV1:LED_Kingbright_APT1608LZGCK_V2",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:LED_Kingbright_APT1608LZGCK_V2",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/LED_Kingbright_APT1608LZGCK_V2.kicad_mod",
+      "geometry_fingerprint": "7724dc090fad5a7c2e6709c2dd3de20287c9e776f2d34c1c5da62c1f012b8997",
+      "shared_with_refs": [
+        "D3"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "L1": {
+      "old_id": "CompactCarrierV1:L_Coilcraft_XAL5030-332MEC",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:L_Coilcraft_XAL5030-332MEC",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/L_Coilcraft_XAL5030-332MEC.kicad_mod",
+      "geometry_fingerprint": "34033f1fc205a327c34eb23bb606b7da2256b67207ad8c05a267bcdcd9a802f8",
+      "shared_with_refs": [
+        "L1"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "H1": {
+      "old_id": "CompactCarrierV1:MountingHole_3.2mm_XEM_M3_Keepout",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:MountingHole_3.2mm_XEM_M3_Keepout",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/MountingHole_3.2mm_XEM_M3_Keepout.kicad_mod",
+      "geometry_fingerprint": "b4de98d9b78fb0c121352a966c340b18e2cfa40100c31d3f2aa5dc230eda5ee9",
+      "shared_with_refs": [
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "placed_layer": "F.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "H2": {
+      "old_id": "CompactCarrierV1:MountingHole_3.2mm_XEM_M3_Keepout",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:MountingHole_3.2mm_XEM_M3_Keepout",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/MountingHole_3.2mm_XEM_M3_Keepout.kicad_mod",
+      "geometry_fingerprint": "b4de98d9b78fb0c121352a966c340b18e2cfa40100c31d3f2aa5dc230eda5ee9",
+      "shared_with_refs": [
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "placed_layer": "F.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "H3": {
+      "old_id": "CompactCarrierV1:MountingHole_3.2mm_XEM_M3_Keepout",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:MountingHole_3.2mm_XEM_M3_Keepout",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/MountingHole_3.2mm_XEM_M3_Keepout.kicad_mod",
+      "geometry_fingerprint": "b4de98d9b78fb0c121352a966c340b18e2cfa40100c31d3f2aa5dc230eda5ee9",
+      "shared_with_refs": [
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "placed_layer": "F.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "H4": {
+      "old_id": "CompactCarrierV1:MountingHole_3.2mm_XEM_M3_Keepout",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:MountingHole_3.2mm_XEM_M3_Keepout",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/MountingHole_3.2mm_XEM_M3_Keepout.kicad_mod",
+      "geometry_fingerprint": "b4de98d9b78fb0c121352a966c340b18e2cfa40100c31d3f2aa5dc230eda5ee9",
+      "shared_with_refs": [
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "placed_layer": "F.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "R5": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R5:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R5.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "131867bca7687f12f57734327a9267088901d5be1d61d983fa2278e21073db26",
+      "shared_with_refs": [
+        "R5",
+        "R6",
+        "R9"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "R6": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R5:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R5.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "131867bca7687f12f57734327a9267088901d5be1d61d983fa2278e21073db26",
+      "shared_with_refs": [
+        "R5",
+        "R6",
+        "R9"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "R9": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R5:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R5.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "131867bca7687f12f57734327a9267088901d5be1d61d983fa2278e21073db26",
+      "shared_with_refs": [
+        "R5",
+        "R6",
+        "R9"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "R10": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R10:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "c267e2cfd03cd0fbac41f211decc59ef83c3d1075c01b32915cafaca590ba55f",
+      "shared_with_refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R2",
+        "R7",
+        "R8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "R11": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R10:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "c267e2cfd03cd0fbac41f211decc59ef83c3d1075c01b32915cafaca590ba55f",
+      "shared_with_refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R2",
+        "R7",
+        "R8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "R12": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R10:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "c267e2cfd03cd0fbac41f211decc59ef83c3d1075c01b32915cafaca590ba55f",
+      "shared_with_refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R2",
+        "R7",
+        "R8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "R13": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R10:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "c267e2cfd03cd0fbac41f211decc59ef83c3d1075c01b32915cafaca590ba55f",
+      "shared_with_refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R2",
+        "R7",
+        "R8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "R2": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R10:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "c267e2cfd03cd0fbac41f211decc59ef83c3d1075c01b32915cafaca590ba55f",
+      "shared_with_refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R2",
+        "R7",
+        "R8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "R7": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R10:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "c267e2cfd03cd0fbac41f211decc59ef83c3d1075c01b32915cafaca590ba55f",
+      "shared_with_refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R2",
+        "R7",
+        "R8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "R8": {
+      "old_id": "CompactCarrierV1:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R10:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R10.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "c267e2cfd03cd0fbac41f211decc59ef83c3d1075c01b32915cafaca590ba55f",
+      "shared_with_refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R2",
+        "R7",
+        "R8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "R14": {
+      "old_id": "CompactCarrierV1:R_0603_1608Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R14:R_0603_1608Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R14.pretty/R_0603_1608Metric.kicad_mod",
+      "geometry_fingerprint": "507fec3366f1b6216f8f5830c5e79cf8f2cb0082b5e8dcd5e97da2c3a3087a0f",
+      "shared_with_refs": [
+        "R14"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "R1": {
+      "old_id": "CompactCarrierV1:R_0603_1608Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R1:R_0603_1608Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R1.pretty/R_0603_1608Metric.kicad_mod",
+      "geometry_fingerprint": "667ffc167f4971f628de8ce1ca00d20548d7346ae1689f6279924e00ab7811ae",
+      "shared_with_refs": [
+        "R1",
+        "R15"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": -90.0
+    },
+    "R15": {
+      "old_id": "CompactCarrierV1:R_0603_1608Metric",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1_R1:R_0603_1608Metric",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1_R1.pretty/R_0603_1608Metric.kicad_mod",
+      "geometry_fingerprint": "667ffc167f4971f628de8ce1ca00d20548d7346ae1689f6279924e00ab7811ae",
+      "shared_with_refs": [
+        "R1",
+        "R15"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "TP1": {
+      "old_id": "CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "geometry_fingerprint": "90d5ad7d2564879d1b796c8f4fb07c757336df7cc148c559f9a144a69fe3f2b6",
+      "shared_with_refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "TP2": {
+      "old_id": "CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "geometry_fingerprint": "90d5ad7d2564879d1b796c8f4fb07c757336df7cc148c559f9a144a69fe3f2b6",
+      "shared_with_refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "TP3": {
+      "old_id": "CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "geometry_fingerprint": "90d5ad7d2564879d1b796c8f4fb07c757336df7cc148c559f9a144a69fe3f2b6",
+      "shared_with_refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "TP4": {
+      "old_id": "CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "geometry_fingerprint": "90d5ad7d2564879d1b796c8f4fb07c757336df7cc148c559f9a144a69fe3f2b6",
+      "shared_with_refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "TP5": {
+      "old_id": "CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "geometry_fingerprint": "90d5ad7d2564879d1b796c8f4fb07c757336df7cc148c559f9a144a69fe3f2b6",
+      "shared_with_refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "TP6": {
+      "old_id": "CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "geometry_fingerprint": "90d5ad7d2564879d1b796c8f4fb07c757336df7cc148c559f9a144a69fe3f2b6",
+      "shared_with_refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "TP7": {
+      "old_id": "CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "geometry_fingerprint": "90d5ad7d2564879d1b796c8f4fb07c757336df7cc148c559f9a144a69fe3f2b6",
+      "shared_with_refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "TP8": {
+      "old_id": "CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:TestPoint_Pad_D1.5mm",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "geometry_fingerprint": "90d5ad7d2564879d1b796c8f4fb07c757336df7cc148c559f9a144a69fe3f2b6",
+      "shared_with_refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "TP6",
+        "TP7",
+        "TP8"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "U2": {
+      "old_id": "CompactCarrierV1:Texas_WSON-6_2x2mm_P0.65mm_EP1x1.6mm_TLV755_DRV_V2",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:Texas_WSON-6_2x2mm_P0.65mm_EP1x1.6mm_TLV755_DRV_V2",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/Texas_WSON-6_2x2mm_P0.65mm_EP1x1.6mm_TLV755_DRV_V2.kicad_mod",
+      "geometry_fingerprint": "ed8adce2b896a99af7c4bd552d1f2da34b56516de2bcc70b5d8e1b690ac8cacb",
+      "shared_with_refs": [
+        "U2"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "J4": {
+      "old_id": "CompactCarrierV1:USB_C_Receptacle_GCT_USB4110_GF_A_Horizontal",
+      "new_id": "CarrierDFM_V2_CompactCarrierV1:USB_C_Receptacle_GCT_USB4110_GF_A_Horizontal",
+      "library_file": "libraries/CarrierDFM_V2_CompactCarrierV1.pretty/USB_C_Receptacle_GCT_USB4110_GF_A_Horizontal.kicad_mod",
+      "geometry_fingerprint": "8316426d5b2fbcff8f87b324c87c3b9d18c068988bff59ba4242a486b6000ec6",
+      "shared_with_refs": [
+        "J4"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "D1": {
+      "old_id": "Diode_SMD:D_SMB",
+      "new_id": "CarrierDFM_V2_Diode_SMD:D_SMB",
+      "library_file": "libraries/CarrierDFM_V2_Diode_SMD.pretty/D_SMB.kicad_mod",
+      "geometry_fingerprint": "c221b6d96934fc59b0dacce1ac402f5b767da360cb3a0bba848ac1a13edbfcc5",
+      "shared_with_refs": [
+        "D1"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    },
+    "D2": {
+      "old_id": "LED_SMD:LED_0603_1608Metric",
+      "new_id": "CarrierDFM_V2_LED_SMD:LED_0603_1608Metric",
+      "library_file": "libraries/CarrierDFM_V2_LED_SMD.pretty/LED_0603_1608Metric.kicad_mod",
+      "geometry_fingerprint": "46eebc989f911d1cf57a38f4ec917a858425e9e89b6623c0eb5cd2b77ccb9d26",
+      "shared_with_refs": [
+        "D2"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 90.0
+    },
+    "R3": {
+      "old_id": "Resistor_SMD:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_Resistor_SMD_R3:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_Resistor_SMD_R3.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "131867bca7687f12f57734327a9267088901d5be1d61d983fa2278e21073db26",
+      "shared_with_refs": [
+        "R3"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 180.0
+    },
+    "R4": {
+      "old_id": "Resistor_SMD:R_0402_1005Metric",
+      "new_id": "CarrierDFM_V2_Resistor_SMD_R4:R_0402_1005Metric",
+      "library_file": "libraries/CarrierDFM_V2_Resistor_SMD_R4.pretty/R_0402_1005Metric.kicad_mod",
+      "geometry_fingerprint": "c267e2cfd03cd0fbac41f211decc59ef83c3d1075c01b32915cafaca590ba55f",
+      "shared_with_refs": [
+        "R4"
+      ],
+      "placed_layer": "B.Cu",
+      "placed_orientation_deg": 0.0
+    }
+  },
+  "notes": [
+    "No global library table edited",
+    "Original footprint item names retained so exact filters remain meaningful",
+    "Identical normalized geometry shares a master; instance-specific geometry gets a separate library nickname",
+    "Run native DRC/parity and semantic copper/pad/pose check after export"
+  ]
+}

@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "BackupR3")(type "KiCad")(uri "${KIPRJMOD}/libraries/BackupR3.kicad_sym")(options "")(descr "Inherited carrier connector symbols; MC1 placement defaults filled locally"))
+  (lib (name "BRK8305_A03")(type "KiCad")(uri "${KIPRJMOD}/libraries/BRK8305_A03.kicad_sym")(options "")(descr "BRK8305 A03 parts catalog; exact TPS54429ERSAR plus inherited symbols"))
+  (lib (name "CompactCarrierV1")(type "KiCad")(uri "${KIPRJMOD}/libraries/CompactCarrierV1.kicad_sym")(options "")(descr "24 October compact carrier parts and exact TLV75515 DQN pin map"))
+  (lib (name "Carrier_V7_Local")(type "KiCad")(uri "${KIPRJMOD}/libraries/Carrier_V7_Local.kicad_sym")(options "")(descr "Carrier V7 local symbols (U21 buffer from KiCad 10 stock 74LVC1G34; TPS7A20_DBV for U13-U15/U17, sch V2)"))
+  (lib (name "FPGA_LDO_V35A")(type "KiCad")(uri "${KIPRJMOD}/libraries/FPGA_LDO_V35A.kicad_sym")(options "")(descr "FPGA-LDO A V24 project library, copied 24 Nov 2026"))
+)

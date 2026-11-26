@@ -1,0 +1,209 @@
+(footprint
+  "NXP_NVT4858UK_WLCSP16_1.41x1.41mm_P0.35mm"
+  (version
+    20241229)
+  (generator
+    "pcbnew")
+  (layer
+    "F.Cu")
+  (descr
+    "NXP NVT4858UK SOT2127-1 WLCSP16 1.41x1.41mm P0.35mm. A1 top left. Package-specific NXP SOT2127-1 pp3-5: circular Cu0.20mm, NSMD opening0.27mm, paste0.23mm, recommended stencil0.08mm. Assembly process qualification required.")
+  (tags
+    "NXP NVT4858UK UKZ SOT2127-1 WLCSP16")
+  (attr
+    smd)
+  (property
+    "Reference"
+    "REF**"
+    (at 0 -1.35)
+    (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (property
+    "Value"
+    "NXP_NVT4858UK_WLCSP16_1.41x1.41mm_P0.35mm"
+    (at 0 1.35)
+    (layer "F.Fab")
+    (hide yes)
+    (effects (font (size 0.5 0.5) (thickness 0.08))))
+  (fp_rect
+    (start -0.705 -0.705)
+    (end 0.705 0.705)
+    (stroke (width 0.05) (type solid))
+    (fill none)
+    (layer "F.Fab"))
+  (fp_rect
+    (start -0.98 -0.98)
+    (end 0.98 0.98)
+    (stroke (width 0.05) (type solid))
+    (fill none)
+    (layer "F.CrtYd"))
+  (fp_line
+    (start -0.705 -0.505)
+    (end -0.505 -0.705)
+    (stroke (width 0.05) (type solid))
+    (layer "F.Fab"))
+  (fp_circle
+    (center -0.52 -0.52)
+    (end -0.47 -0.52)
+    (stroke (width 0.02) (type solid))
+    (fill solid)
+    (layer "F.Fab"))
+  (fp_line
+    (start -0.92 -0.92)
+    (end -0.45 -0.92)
+    (stroke (width 0.15) (type solid))
+    (layer "F.SilkS"))
+  (fp_line
+    (start -0.92 -0.92)
+    (end -0.92 -0.45)
+    (stroke (width 0.15) (type solid))
+    (layer "F.SilkS"))
+  (pad
+    "A1"
+    smd
+    circle
+    (at -0.525 -0.525)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "A2"
+    smd
+    circle
+    (at -0.175 -0.525)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "A3"
+    smd
+    circle
+    (at 0.175 -0.525)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "A4"
+    smd
+    circle
+    (at 0.525 -0.525)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "B1"
+    smd
+    circle
+    (at -0.525 -0.175)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "B2"
+    smd
+    circle
+    (at -0.175 -0.175)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "B3"
+    smd
+    circle
+    (at 0.175 -0.175)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "B4"
+    smd
+    circle
+    (at 0.525 -0.175)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "C1"
+    smd
+    circle
+    (at -0.525 0.175)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "C2"
+    smd
+    circle
+    (at -0.175 0.175)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "C3"
+    smd
+    circle
+    (at 0.175 0.175)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "C4"
+    smd
+    circle
+    (at 0.525 0.175)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "D1"
+    smd
+    circle
+    (at -0.525 0.525)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "D2"
+    smd
+    circle
+    (at -0.175 0.525)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "D3"
+    smd
+    circle
+    (at 0.175 0.525)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (pad
+    "D4"
+    smd
+    circle
+    (at 0.525 0.525)
+    (size 0.2 0.2)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (solder_mask_margin 0.035)
+    (solder_paste_margin 0.015))
+  (model
+    "${KIPRJMOD}/3dmodels/NXP_NVT4858UK_WLCSP16_1.41x1.41mm_P0.35mm_Nominal.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))))

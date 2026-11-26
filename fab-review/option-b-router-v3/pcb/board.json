@@ -1,0 +1,16 @@
+{
+  "title": "Option B Router V3",
+  "revision": "V3 \u00b7 layout V1",
+  "sha256": "601210769bf932d43b0d7ceb55ea75dbe4f9de001b0c0d0c08fcb3c7bfd6adbb",
+  "defaults": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "expected": {
+    "copperLayers": 6
+  },
+  "native": "../../../boards/6_Option_B_Router_V3_and_LDO_Board_V3/router_V3_layout_V1/project/Option_B_Router_V3.kicad_pcb",
+  "vendor": "../../../presentation/meetings/2026-11-11-v1/assets/layout-viewer/vendor/kicanvas/",
+  "initialPlanes": false,
+  "source_note": "Unmodified copy of the saved native board in boards/."
+}
