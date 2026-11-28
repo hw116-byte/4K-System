@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G-chip Direct LDO Carrier · pinout</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23126a71'/%3E%3Ctext x='20' y='28' text-anchor='middle' fill='white' font-size='22' font-family='Arial'%3E4K%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../fab-review/assets/fab.css?v=20261127-p2">
+<style>
+:root{--out:#126a71;--out-bg:#e4f1f0;--in:#3f4fa0;--in-bg:#e8ebf7;--pwr:#172a32;--none:#f1f3f3}
+main.pin-page{max-width:1500px}
+.embed .bar,.embed .crumb{display:none}
+.embed main.pin-page{padding-top:14px}
+.embed h1{font-size:26px}
+h2{font-size:20px;font-weight:600;margin:34px 0 4px}
+h2+p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.45;max-width:1000px}
+.version{font-size:13px;color:var(--accent);margin:8px 0 0}
+.headrow{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+.downloads{display:flex;gap:6px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--edge);margin-top:20px}
+.facts div{padding:11px 14px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-size:19px;font-weight:600}
+.facts span{font-size:12.5px;color:var(--muted)}
+.key{display:flex;gap:16px;font-size:13px;color:var(--muted);margin:0 0 8px;flex-wrap:wrap;align-items:center}
+.key i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:-1px;border:1px solid transparent}
+.conn{border:1px solid var(--edge);padding:12px 14px 10px;background:#fbfcfc;overflow-x:auto}
+.conn .rowlab{font-size:12px;color:var(--muted);margin:2px 0}
+.pins{display:grid;grid-template-columns:repeat(25,minmax(34px,1fr));gap:3px;min-width:920px}
+.p{height:112px;border:1px solid var(--edge);border-radius:3px;background:var(--none);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:4px 0;font-size:11.5px;color:#7b8a8f;cursor:default}
+.p b{font-weight:600;font-size:12px}
+.p .n{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:600;letter-spacing:.2px;white-space:nowrap}
+.p small{font-size:10px}
+.p.out{background:var(--out-bg);border-color:var(--out);color:var(--out);cursor:pointer}
+.p.in{background:var(--in-bg);border-color:var(--in);color:var(--in);cursor:pointer}
+.p.pwr{background:var(--pwr);border-color:var(--pwr);color:#fff}
+.p.gnd{background:#cfd6d8;border-color:#9aa7ab;color:var(--ink)}
+.p.hot,tr.hot td{outline:2px solid var(--ink);outline-offset:-1px}
+tr.hot td{outline:0;background:#fff7c2!important}
+.tools{display:flex;gap:8px;align-items:center;margin:10px 0 8px;flex-wrap:wrap}
+.tools input{font:inherit;padding:7px 10px;border:1px solid var(--edge);border-radius:3px;width:300px}
+table.pt{border-collapse:collapse;width:100%;font-size:14px}
+.pt th{text-align:left;border-bottom:1px solid var(--edge);padding:7px 9px;font-weight:600;background:#f6faf9;position:sticky;top:0;white-space:nowrap}
+.embed .pt th{top:0}
+.pt td{border-bottom:1px solid var(--line);padding:6px 9px;vertical-align:top}
+.pt tr.g td{background:#f3f5f5;font-weight:600;font-size:12.5px;color:var(--muted);padding:5px 9px}
+.pt td.sig{font-weight:600;white-space:nowrap}
+.pt code,.small code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+.pt code.c{cursor:pointer;border-bottom:1px dotted var(--edge)}
+.pt code.c:hover{color:var(--accent)}
+.tag{display:inline-block;font-size:12px;font-weight:600;border-radius:3px;padding:2px 7px;white-space:nowrap}
+.tag.out{background:var(--out-bg);color:var(--out)}
+.tag.in{background:var(--in-bg);color:var(--in)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.small{font-size:14px;line-height:1.5}
+.small td,.small th{padding:5px 9px}
+ol.steps{margin:0;padding-left:20px;font-size:14px;line-height:1.6}
+pre.xdc{border:1px solid var(--edge);background:#fbfcfc;padding:12px 14px;font:12.5px/1.5 ui-monospace,Menlo,Consolas,monospace;overflow:auto;max-height:420px;margin:0}
+ul.open{font-size:14px;line-height:1.6;margin:0;padding-left:20px;max-width:1000px}
+#copied{font-size:13px;color:var(--accent);min-width:60px}
+@media(max-width:900px){.two,.facts{grid-template-columns:1fr}}
+</style>
+</head><body>
+<header class="bar"><a class="brand" href="../../">4K neural recording · System overview</a>
+<nav aria-label="Site links"><a class="bar-link" href="../../fab-review/g-chip-direct-ldo-v6/">Board files</a><a class="bar-link" href="../datasheet/">Carrier datasheet</a><a class="bar-link" href="../../fab-review/">Boards for fab review</a></nav></header>
+<main class="pin-page">
+<div class="headrow"><div><p class="crumb"><a href="../../fab-review/g-chip-direct-ldo-v6/">G-chip Direct LDO Carrier</a> · pinout</p>
+<h1>Pinout for programming</h1>
+<p class="sub">Where each of the chip's 23 lines lands on the FPGA (Opal Kelly XEM8305), for whoever writes the FPGA design.</p>
+<p class="version">Carrier V6 · edited 31 Oct 2026, 20:17 CST · pinout page V1 · 27 Nov 2026</p></div>
+<div class="downloads"><a class="dl" href="../datasheet/Direct_LDO_Carrier_V6_XEM8305.xdc" download>Constraints file (.xdc)</a><a class="dl" href="../datasheet/Direct_LDO_Carrier_V6_pin_map.csv" download>Pin map (.csv)</a><a class="dl ghost" href="../datasheet/" target="_top">Full datasheet ↗</a></div></div>
+
+<div class="facts">
+<div><b>XCAU15P</b><span>FPGA on the XEM8305 (XCAU15P-2FFVB676E)</span></div>
+<div><b>Bank 64</b><span>all 23 lines are on this one bank</span></div>
+<div><b>1.5 V</b><span>use <code>LVCMOS15</code> on every pin</span></div>
+<div><b>12 out · 11 in</b><span>FPGA → chip · chip → FPGA</span></div>
+<div><b>AD21</b><span>returned clock CLK32MHZ, on a global-clock pin</span></div>
+</div>
+
+<h2>Connector J1 (carrier → LDO board)</h2>
+<p>50-pin Hirose DF40C. Drawn by pin number, not to scale: odd numbers in one row, even numbers in the other. Click a pin to find it in the table.</p>
+<div class="key"><span><i style="background:var(--out-bg);border-color:var(--out)"></i>FPGA → chip (output)</span><span><i style="background:var(--in-bg);border-color:var(--in)"></i>chip → FPGA (input)</span><span><i style="background:var(--pwr)"></i>+3.3 V</span><span><i style="background:#cfd6d8;border-color:#9aa7ab"></i>GND</span><span><i style="background:var(--none);border-color:var(--edge)"></i>not connected</span></div>
+<div class="conn"><div class="rowlab">Odd pins 1 – 49</div><div class="pins" id="odd"></div><div class="rowlab" style="margin-top:8px">Even pins 2 – 50</div><div class="pins" id="even"></div></div>
+
+<h2>Pin table</h2>
+<p>Click a ball or a port name to copy it. The port names are the ones in the constraints file below.</p>
+<div class="tools"><input id="q" type="search" placeholder="Filter: signal, ball, pin number…"><button data-dir="" aria-pressed="true">All 23</button><button data-dir="out" aria-pressed="false">FPGA → chip (12)</button><button data-dir="in" aria-pressed="false">Chip → FPGA (11)</button><span class="hint" style="margin-left:8px">Order:</span><button data-sort="group" aria-pressed="true">By function</button><button data-sort="j1" aria-pressed="false">By J1 pin</button><button data-sort="ball" aria-pressed="false">By FPGA ball</button><span id="copied"></span></div>
+<table class="pt"><thead><tr><th>Signal</th><th>Direction</th><th>FPGA ball</th><th>Port in the design</th><th>FPGA pin name</th><th>J1 pin</th><th>XEM MC1 pin</th><th>What it does</th></tr></thead><tbody id="rows"></tbody></table>
+
+<div class="two">
+<div><h2>Loading the FPGA</h2>
+<p>The FPGA is blank after every power-up, so a design has to be loaded each time.</p>
+<table class="pt small"><thead><tr><th>Port</th><th>What it is</th><th>Use it with</th></tr></thead><tbody>
+<tr><td class="sig">J4 (USB-C, on the carrier)</td><td>JTAG, through an FT232H</td><td>Lab Tools → <b>FPGA board</b> (Mac), or Vivado after <code>program_ftdi</code></td></tr>
+<tr><td class="sig">USB 3 (on the XEM8305)</td><td>Opal Kelly FrontPanel: loads a design and carries the chip's data to the PC</td><td>FrontPanel SDK (not installed on the lab Mac)</td></tr>
+<tr><td class="sig">J3 (barrel jack)</td><td>12 V power in</td><td>Current-limited supply</td></tr>
+</tbody></table>
+<h2>In Lab Tools (Mac)</h2>
+<ol class="steps"><li>Power the board with 12 V and plug USB-C into J4.</li><li>Open Lab Tools and press <b>FPGA board</b> in the top bar.</li><li>Press <b>Run all steps</b>, or one at a time: <b>Check</b>, <b>Test</b>, <b>Load</b> (choose the <code>.bit</code> file), <b>Read</b>.</li><li><b>Practice</b> runs the same steps on a pretend FPGA, with no hardware.</li></ol></div>
+<div><h2>Test points on the carrier</h2>
+<p>Check these with a meter before the LDO board goes on.</p>
+<table class="pt small"><thead><tr><th>Point</th><th>Rail</th><th>Expect</th></tr></thead><tbody>
+<tr><td class="sig">TP1</td><td>12 V input</td><td>12 V</td></tr>
+<tr><td class="sig">TP2</td><td>Main 3.3 V (to J1 pins 1, 2)</td><td>3.3 V</td></tr>
+<tr><td class="sig">TP3</td><td>Bank 64 supply</td><td>1.5 V, with the XEM fitted</td></tr>
+<tr><td class="sig">TP4</td><td>XEM 1.8 V</td><td>1.8 V</td></tr>
+<tr><td class="sig">TP5 / TP6</td><td>USB 5 V / USB 3.3 V (JTAG side)</td><td>5 V / 3.3 V with J4 plugged in</td></tr>
+<tr><td class="sig">TP7 / TP8</td><td>Ground (power / USB)</td><td>0 V</td></tr>
+</tbody></table></div>
+</div>
+
+<h2>Constraints file</h2>
+<p>Paste into the Vivado project, or download it above. Add the FrontPanel host pins separately (Opal Kelly's sample file). <button id="copyxdc" style="margin-left:6px">Copy all</button></p>
+<pre class="xdc" id="xdc"># Direct LDO Carrier V6 -&gt; Opal Kelly XEM8305 (XCAU15P-2FFVB676E), Bank 64 at 1.5 V
+# Made 23 Nov 2026 from the V6 netlist (J1/MC1, board edited 31 Oct 2026, 20:17 CST) and the Opal Kelly XEM8305 pin list
+# (https://pins.opalkelly.com/pin_list/XEM8305). All 23 balls cross-checked.
+# Do NOT use the older xem8305_asic_bank64_candidate.xdc (5 Oct 2026): 22 of its 23 balls are wrong for V6.
+# Bank 64 VCCO is 1.5 V, made on the carrier by U2 (enabled by XEM8305_PG), so every pin is LVCMOS15.
+# Outputs start at low drive and slow slew: the carrier lines are about 55 mm long and unterminated.
+# Add the FrontPanel host-interface pins separately (Opal Kelly sample XDC or the Pins site generator).
+
+# ---- ASIC -&gt; FPGA (inputs) ----
+set_property -dict {PACKAGE_PIN AF22 IOSTANDARD LVCMOS15} [get_ports asic_d1]   ;# D1, J1.4, MC1.85
+set_property -dict {PACKAGE_PIN AE22 IOSTANDARD LVCMOS15} [get_ports asic_d2]   ;# D2, J1.6, MC1.83
+set_property -dict {PACKAGE_PIN AE23 IOSTANDARD LVCMOS15} [get_ports asic_d3]   ;# D3, J1.8, MC1.81
+set_property -dict {PACKAGE_PIN AD23 IOSTANDARD LVCMOS15} [get_ports asic_d4]   ;# D4, J1.10, MC1.79
+set_property -dict {PACKAGE_PIN AA19 IOSTANDARD LVCMOS15} [get_ports asic_sync]   ;# SYNC, J1.34, MC1.51
+set_property -dict {PACKAGE_PIN AD21 IOSTANDARD LVCMOS15} [get_ports asic_clk32mhz]   ;# CLK32MHZ, J1.36, MC1.67
+set_property -dict {PACKAGE_PIN AA20 IOSTANDARD LVCMOS15} [get_ports asic_d5]   ;# D5, J1.38, MC1.47
+set_property -dict {PACKAGE_PIN AC17 IOSTANDARD LVCMOS15} [get_ports asic_d6]   ;# D6, J1.40, MC1.45
+set_property -dict {PACKAGE_PIN AB17 IOSTANDARD LVCMOS15} [get_ports asic_d7]   ;# D7, J1.42, MC1.43
+set_property -dict {PACKAGE_PIN AA17 IOSTANDARD LVCMOS15} [get_ports asic_d8]   ;# D8, J1.44, MC1.41
+set_property -dict {PACKAGE_PIN Y17  IOSTANDARD LVCMOS15} [get_ports asic_read]   ;# READ, J1.46, MC1.39
+
+# ---- FPGA -&gt; ASIC (outputs) ----
+set_property -dict {PACKAGE_PIN AC23 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_clkh]   ;# CLKH, J1.12, MC1.77
+set_property -dict {PACKAGE_PIN AC22 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_chip_reset]   ;# CHIP_RESET, J1.14, MC1.75
+set_property -dict {PACKAGE_PIN AA22 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_imp_test]   ;# IMP_TEST, J1.18, MC1.71
+set_property -dict {PACKAGE_PIN AE21 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_fe_reset]   ;# FE_RESET, J1.20, MC1.69
+set_property -dict {PACKAGE_PIN AB20 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_spi_clk]   ;# SPI_CLK, J1.22, MC1.49
+set_property -dict {PACKAGE_PIN AC21 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_spi_latch]   ;# SPI_LATCH, J1.24, MC1.65
+set_property -dict {PACKAGE_PIN AB21 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_spi_dinl]   ;# SPI_DINL, J1.26, MC1.63
+set_property -dict {PACKAGE_PIN AB22 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_stim_start]   ;# STIM_START, J1.27, MC1.73
+set_property -dict {PACKAGE_PIN Y21  IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_spi_dinr]   ;# SPI_DINR, J1.28, MC1.57
+set_property -dict {PACKAGE_PIN Y20  IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_stim_clk]   ;# STIM_CLK, J1.29, MC1.55
+set_property -dict {PACKAGE_PIN AB19 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_stim_en]   ;# STIM_EN, J1.31, MC1.53
+set_property -dict {PACKAGE_PIN AA18 IOSTANDARD LVCMOS15 DRIVE 4 SLEW SLOW} [get_ports asic_stim_chb]   ;# STIM_CHB, J1.33, MC1.37
+
+# Returned ASIC clock. 31.25 ns = 32 MHz. If CLKH is run at 16 MHz (as the 2026 bench firmware did), use 62.5.
+create_clock -period 31.250 -name asic_clk32 [get_ports asic_clk32mhz]
+# Input delays of D1-D8/READ/SYNC relative to asic_clk32 are not specified by any source yet; measure, then add
+# set_input_delay constraints. Capture on the falling edge of asic_clk32 (see the datasheet, section 8).
+</pre>
+
+<h2>Not known or not checked yet</h2>
+<ul class="open">
+<li>No FPGA design for this board exists yet. A safe-idle design (all 12 outputs low, reads the 11 inputs) is written but not built: it needs a PC with Vivado.</li>
+<li>The constraints file has not been run in Vivado.</li>
+<li>Timing of D1–D8, READ and SYNC against CLK32MHZ is not specified by any source. Measure it, then add input-delay constraints.</li>
+<li>Whether the chip treats CHIP_RESET and FE_RESET low as "in reset" is not confirmed.</li>
+<li>Loading a design from Lab Tools has only run on a pretend FPGA. Checking the board and testing the loading path ran on the real board on 25 Nov 2026.</li>
+</ul>
+<p class="hint" style="margin-top:22px">Sources: carrier V6 netlist (J1 ↔ MC1) joined with the <a href="https://pins.opalkelly.com/pin_list/XEM8305" target="_blank" rel="noopener">Opal Kelly XEM8305 pin list</a> (read 23 Nov 2026); all 23 balls cross-checked. Details in the <a href="../datasheet/" target="_top">carrier datasheet</a>, sections 5 to 8.</p>
+</main>
+<script>
+const DATA = [{"sig": "D1", "dir": "in", "port": "asic_d1", "j1": 4, "mc1": 85, "ball": "AF22", "pin": "B64_L7N", "what": "Recording data line 1 of 8 (serial ADC bits).", "group": "Recording data"}, {"sig": "D2", "dir": "in", "port": "asic_d2", "j1": 6, "mc1": 83, "ball": "AE22", "pin": "B64_L7P", "what": "Recording data line 2.", "group": "Recording data"}, {"sig": "D3", "dir": "in", "port": "asic_d3", "j1": 8, "mc1": 81, "ball": "AE23", "pin": "B64_L8N", "what": "Recording data line 3.", "group": "Recording data"}, {"sig": "D4", "dir": "in", "port": "asic_d4", "j1": 10, "mc1": 79, "ball": "AD23", "pin": "B64_L8P", "what": "Recording data line 4.", "group": "Recording data"}, {"sig": "D5", "dir": "in", "port": "asic_d5", "j1": 38, "mc1": 47, "ball": "AA20", "pin": "B64_L21P", "what": "Recording data line 5.", "group": "Recording data"}, {"sig": "D6", "dir": "in", "port": "asic_d6", "j1": 40, "mc1": 45, "ball": "AC17", "pin": "B64_L22N", "what": "Recording data line 6.", "group": "Recording data"}, {"sig": "D7", "dir": "in", "port": "asic_d7", "j1": 42, "mc1": 43, "ball": "AB17", "pin": "B64_L22P", "what": "Recording data line 7.", "group": "Recording data"}, {"sig": "D8", "dir": "in", "port": "asic_d8", "j1": 44, "mc1": 41, "ball": "AA17", "pin": "B64_L23N", "what": "Recording data line 8.", "group": "Recording data"}, {"sig": "READ", "dir": "in", "port": "asic_read", "j1": 46, "mc1": 39, "ball": "Y17", "pin": "B64_L23P", "what": "Group marker from the ASIC: high on the cycle that starts each 64-cycle READ slot.", "group": "Recording data"}, {"sig": "SYNC", "dir": "in", "port": "asic_sync", "j1": 34, "mc1": 51, "ball": "AA19", "pin": "B64_L20P", "what": "Frame marker from the ASIC.", "group": "Recording data"}, {"sig": "CLK32MHZ", "dir": "in", "port": "asic_clk32mhz", "j1": 36, "mc1": 67, "ball": "AD21", "pin": "B64_L11P_GC", "what": "Clock returned by the ASIC. Capture D1\u2013D8 and READ with it. On a global-clock pin.", "group": "Recording data"}, {"sig": "CLKH", "dir": "out", "port": "asic_clkh", "j1": 12, "mc1": 77, "ball": "AC23", "pin": "B64_L9N", "what": "Master clock to the ASIC (intended 32 MHz).", "group": "Clock and reset"}, {"sig": "CHIP_RESET", "dir": "out", "port": "asic_chip_reset", "j1": 14, "mc1": 75, "ball": "AC22", "pin": "B64_L9P", "what": "Whole-chip reset, active high.", "group": "Clock and reset"}, {"sig": "FE_RESET", "dir": "out", "port": "asic_fe_reset", "j1": 20, "mc1": 69, "ball": "AE21", "pin": "B64_L11N_GC", "what": "Amplifier (front-end) reset, high = reset.", "group": "Clock and reset"}, {"sig": "IMP_TEST", "dir": "out", "port": "asic_imp_test", "j1": 18, "mc1": 71, "ball": "AA22", "pin": "B64_L10P", "what": "Impedance-test control. Hold low unless testing.", "group": "Clock and reset"}, {"sig": "SPI_CLK", "dir": "out", "port": "asic_spi_clk", "j1": 22, "mc1": 49, "ball": "AB20", "pin": "B64_L21N", "what": "Settings clock, shared by both settings data lines.", "group": "Settings (SPI)"}, {"sig": "SPI_LATCH", "dir": "out", "port": "asic_spi_latch", "j1": 24, "mc1": 65, "ball": "AC21", "pin": "B64_L12N_GC", "what": "Settings latch: one high pulse after the last bit.", "group": "Settings (SPI)"}, {"sig": "SPI_DINL", "dir": "out", "port": "asic_spi_dinl", "j1": 26, "mc1": 63, "ball": "AB21", "pin": "B64_L12P_GC", "what": "Settings data, left half of the chip.", "group": "Settings (SPI)"}, {"sig": "SPI_DINR", "dir": "out", "port": "asic_spi_dinr", "j1": 28, "mc1": 57, "ball": "Y21", "pin": "B64_L19N", "what": "Settings data, right half of the chip (carries the 12-bit gain/DAC suffix).", "group": "Settings (SPI)"}, {"sig": "STIM_START", "dir": "out", "port": "asic_stim_start", "j1": 27, "mc1": 73, "ball": "AB22", "pin": "B64_L10N", "what": "Stimulation start pulse. Low at idle.", "group": "Stimulation"}, {"sig": "STIM_CLK", "dir": "out", "port": "asic_stim_clk", "j1": 29, "mc1": 55, "ball": "Y20", "pin": "B64_L19P", "what": "Stimulation timing clock.", "group": "Stimulation"}, {"sig": "STIM_EN", "dir": "out", "port": "asic_stim_en", "j1": 31, "mc1": 53, "ball": "AB19", "pin": "B64_L20N", "what": "Stimulation enable. Low at idle.", "group": "Stimulation"}, {"sig": "STIM_CHB", "dir": "out", "port": "asic_stim_chb", "j1": 33, "mc1": 37, "ball": "AA18", "pin": "B64_L24N", "what": "Charge-balance phase. Low at idle.", "group": "Stimulation"}], J1 = {"1": "+3V3", "2": "+3V3", "49": "GND", "50": "GND"};
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+if (new URLSearchParams(location.search).has('embed')) document.body.classList.add('embed');
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const byJ1 = Object.fromEntries(DATA.map(d => [d.j1, d]));
+function pinBox(n) {
+  const d = byJ1[n], other = J1[n];
+  const cls = d ? d.dir : other === 'GND' ? 'gnd' : other ? 'pwr' : '';
+  const name = d ? d.sig : other || '';
+  const tip = d ? `J1 pin ${n}: ${d.sig}, ${d.dir === 'out' ? 'FPGA → chip' : 'chip → FPGA'}, ball ${d.ball}` : `J1 pin ${n}: ${other || 'not connected'}`;
+  return `<div class="p ${cls}" data-j1="${n}" title="${esc(tip)}"><b>${n}</b><span class="n">${esc(name)}</span><small>${d ? d.ball : ''}</small></div>`;
+}
+$('#odd').innerHTML = Array.from({length: 25}, (_, i) => pinBox(2 * i + 1)).join('');
+$('#even').innerHTML = Array.from({length: 25}, (_, i) => pinBox(2 * i + 2)).join('');
+let dir = '', sort = 'group';
+function ballKey(b) { const m = b.match(/^([A-Z]+)(\d+)$/); return m[1].padStart(2, ' ') + m[2].padStart(2, '0'); }
+function draw() {
+  const q = $('#q').value.trim().toLowerCase();
+  let list = DATA.filter(d => (!dir || d.dir === dir) && (!q || [d.sig, d.port, d.ball, d.pin, 'j1.' + d.j1, 'mc1.' + d.mc1, d.what, d.group].join(' ').toLowerCase().includes(q)));
+  if (sort === 'j1') list = [...list].sort((a, b) => a.j1 - b.j1);
+  if (sort === 'ball') list = [...list].sort((a, b) => ballKey(a.ball).localeCompare(ballKey(b.ball)));
+  let out = '', group = null;
+  for (const d of list) {
+    if (sort === 'group' && d.group !== group) { group = d.group; out += `<tr class="g"><td colspan="8">${esc(group)}</td></tr>`; }
+    out += `<tr data-j1="${d.j1}"><td class="sig">${esc(d.sig)}</td><td><span class="tag ${d.dir}">${d.dir === 'out' ? 'FPGA → chip' : 'chip → FPGA'}</span></td><td><code class="c">${d.ball}</code></td><td><code class="c">${d.port}</code></td><td><code>${d.pin}</code></td><td>${d.j1}</td><td>${d.mc1}</td><td>${esc(d.what)}</td></tr>`;
+  }
+  $('#rows').innerHTML = out || '<tr><td colspan="8" class="hint">Nothing matches.</td></tr>';
+}
+function say(t) { $('#copied').textContent = t; clearTimeout(say.t); say.t = setTimeout(() => $('#copied').textContent = '', 1600); }
+async function copy(text, what) { try { await navigator.clipboard.writeText(text); say('Copied ' + what); } catch (e) { say('Copy not allowed here'); } }
+$('#q').oninput = draw;
+for (const b of $$('[data-dir]')) b.onclick = () => { dir = b.dataset.dir; $$('[data-dir]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); draw(); };
+for (const b of $$('[data-sort]')) b.onclick = () => { sort = b.dataset.sort; $$('[data-sort]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); draw(); };
+$('#rows').onclick = e => { const c = e.target.closest('code.c'); if (c) copy(c.textContent, c.textContent); };
+$('#copyxdc').onclick = () => copy($('#xdc').textContent, 'the constraints');
+function hot(n) {
+  $$('.hot').forEach(x => x.classList.remove('hot'));
+  $$(`[data-j1="${n}"]`).forEach(x => x.classList.add('hot'));
+}
+for (const id of ['#odd', '#even']) $(id).onclick = e => {
+  const p = e.target.closest('.p.in,.p.out'); if (!p) return;
+  if (!$(`#rows tr[data-j1="${p.dataset.j1}"]`)) { dir = ''; $('#q').value = ''; $$('[data-dir]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.dir === ''))); draw(); }
+  hot(p.dataset.j1); $(`#rows tr[data-j1="${p.dataset.j1}"]`).scrollIntoView({block: 'center', behavior: 'smooth'});
+};
+$('#rows').onmouseover = e => { const r = e.target.closest('tr[data-j1]'); if (r) hot(r.dataset.j1); };
+draw();
+</script>
+</body></html>
